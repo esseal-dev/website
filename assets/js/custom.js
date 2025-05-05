@@ -1,130 +1,29 @@
-(function ($) {
-	"use strict";
 
-	// Page Ready
+// TABS JS
 
-	// Welcome Area background image
-	// if($('.welcome-area').length){
-	// 	$('.welcome-area .welcome-bg').css("background-image", "url(" + $('.welcome-area .welcome-bg').data('bg') + ")");
-	// }
+function makeTabActive() {
 
-	// Menu Dropdown Toggle
-	if ($(".menu-trigger").length) {
-		$(".menu-trigger").on("click", function () {
-			$(this).toggleClass("active");
-			$(".header-area .nav").slideToggle(200);
-		});
-	}
+    var url = window.location.href;
 
-	// Scroll animation init
-	window.sr = new scrollReveal();
+    var indexof = url.indexOf("#");
 
-	// Home number counterup
-	if ($(".count-item").length) {
-		$(".count-item strong").counterUp({
-			delay: 10,
-			time: 1000,
-		});
-	}
+    if (indexof > 0) {
 
-	// App single gallery
-	if ($(".gallery").length && $(".gallery-item").length) {
-		$(".gallery-item").magnificPopup({
-			type: "image",
-			gallery: {
-				enabled: true,
-			},
-			zoom: {
-				enabled: true,
-				duration: 300,
-				easing: "ease-in-out",
-			},
-		});
-	}
+        var activeTab = url.substring(indexof + 1);
 
-	// Page standard gallery
-	if ($(".page-gallery").length && $(".page-gallery-wrapper").length) {
-		$(".page-gallery").imgfix({
-			scale: 1.1,
-		});
+        if (typeof activeTab != 'undefined' && activeTab != '' && activeTab != '#') {
 
-		$(".page-gallery").magnificPopup({
-			type: "image",
-			gallery: {
-				enabled: true,
-			},
-			zoom: {
-				enabled: true,
-				duration: 300,
-				easing: "ease-in-out",
-			},
-		});
-	}
+            // to dispaly give tab content
 
-	// About Us Image
-	if ($(".about-image").length) {
-		$(".about-image").imgfix({
-			scale: 1.1,
-		});
-	}
+            jQuery(".tab-pane").removeClass("active in show");
 
-	// Blog cover image
-	if ($(".blog-post-thumb").length) {
-		$(".blog-post-thumb .img").imgfix();
-	}
+            jQuery("#" + activeTab).addClass("active in show")
 
-	// Services page cover image
-	if ($(".services-post").length) {
-		$(".services-post .img").imgfix();
-	}
+            // to make active given tab
 
-	// Page loading animation
-	$(window).on("load", function () {
-		if ($(".cover").length) {
-			$(".cover").parallax({
-				imageSrc: $(".cover").data("image"),
-				zIndex: "1",
-			});
-		}
+            jQuery(".nav-tabs li a").removeClass("active");
 
-		$(".loader-wrapper").animate(
-			{
-				opacity: "0",
-			},
-			600,
-			function () {
-				setTimeout(function () {
-					// Parallax init
-					if ($(".parallax").length) {
-						$(".parallax").parallax({
-							imageSrc: "assets/images/photos/parallax.jpg",
-							zIndex: "1",
-						});
-					}
-					$(".loader-wrapper").css("visibility", "hidden").fadeOut();
-				}, 300);
-			}
-		);
-	});
-
-	// Header Scrolling Set White Background
-	$(window).on("scroll", function () {
-		var width = $(window).width();
-		if ($(".header-white").length) {
-			return false;
-		} else {
-			if (width > 991) {
-				var scroll = $(window).scrollTop();
-				if (scroll >= 30) {
-					$(".header-area").addClass("header-sticky");
-					$(".header-area .dark-logo").css("display", "block");
-					$(".header-area .light-logo").css("display", "none");
-				} else {
-					$(".header-area").removeClass("header-sticky");
-					$(".header-area .dark-logo").css("display", "none");
-					$(".header-area .light-logo").css("display", "block");
-				}
-			}
-		}
-	});
-})(window.jQuery);
+            jQuery(".nav-tabs li a[href='#" + activeTab + "']").addClass("active");
+        }
+    }
+}

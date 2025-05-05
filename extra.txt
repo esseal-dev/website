@@ -1,0 +1,15 @@
+// BULLET LIST
+<ul class="list-unstyled mb-0">
+                <li class="text">
+                  <i class="circle fa-duotone fa-check"></i>Quisquam est, rui dolorem ipsum quia dolor cororis.
+                </li>
+                <li class="text">
+                  <i class="circle fa-duotone fa-check"></i>Rem aperiam, eaque ipsa quae ab illo inventore.
+                </li>
+                <li class="text">
+                  <i class="circle fa-duotone fa-check"></i>Duis aute irure dolor in reprehenderit in voluptatar.
+                </li>
+                <li class="text text1">
+                  <i class="circle fa-duotone fa-check"></i>Molestiae non recusandae itarue earum rerum ma.
+                </li>
+              </ul>
