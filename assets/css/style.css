@@ -106,7 +106,11 @@ p {
 /* Home Page Style */
 
 .banner_outer {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -298,7 +302,11 @@ p {
   margin-right: 10px;
 }
 .banner-section .banner_content .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -383,7 +391,11 @@ p {
   transition: transform ease 300ms;
 }
 .banner-section .social-icons ul li .social-networks:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   color: var(--e-global-color-white);
   transform: translateY(-5px);
 }
@@ -430,7 +442,11 @@ p {
   box-shadow: 1px 21px 46px rgb(0 0 0 / 4%);
 }
 .service-section .service_contentbox .service-box:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   transform: translateY(-5px);
 }
 .service-section .service-box:hover h4 {
@@ -461,7 +477,11 @@ p {
   filter: brightness(0) invert(1);
 }
 .service-section .service-box .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 45px;
   width: 45px;
@@ -475,7 +495,12 @@ p {
   transform: translateY(-5px);
 }
 .service-section .service-box:hover .circle {
-  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 51%, #ffffff 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 51%,
+    #ffffff 100%
+  );
 }
 .service-section .service-box .circle:before {
   font-size: 18px;
@@ -513,7 +538,11 @@ p {
   color: var(--e-global-color-secondary);
 }
 .service-section .service_content ul li .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 18px;
   width: 18px;
@@ -535,7 +564,11 @@ p {
   margin-bottom: 36px;
 }
 .service-section .service_content .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -611,7 +644,11 @@ p {
   border-radius: 10px 10px 0 0;
 }
 .offer-section .offer_boxcontent .upper_portion .image_content {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   box-shadow: 8px 2px 20px rgb(0 0 0 / 10%);
   border-radius: 100px;
   height: 105px;
@@ -624,7 +661,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .offer-section .offer_boxcontent .upper_portion .image_content:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-2) 0%, var(--e-button-gradient-1) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-2) 0%,
+    var(--e-button-gradient-1) 100%
+  );
   transform: translateY(-5px);
 }
 .offer-section .offer_boxcontent .lower_portion_wrapper {
@@ -637,7 +678,11 @@ p {
 /* About us */
 
 .about-section {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -772,7 +817,11 @@ p {
   margin-bottom: 38px;
 }
 .about-section .about_content .read_more {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -827,7 +876,11 @@ p {
   margin-bottom: 38px;
 }
 .achievement-section .achievement_content .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -864,7 +917,11 @@ p {
   position: absolute;
 }
 .achievement-section .achievement_wrapper .achievement-box:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   transform: translateY(-5px);
 }
 .achievement-section .achievement_wrapper .achievement-box .achievement-icon {
@@ -1008,7 +1065,11 @@ p {
   margin-bottom: 12px;
 }
 .project-section .case-box .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 45px;
   width: 45px;
@@ -1028,7 +1089,12 @@ p {
   right: -50px;
 }
 .project-section .case-box:hover .circle {
-  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 51%, #ffffff 100%);
+  background-image: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 51%,
+    #ffffff 100%
+  );
 }
 .project-section .case-box:hover .circle:before {
   color: var(--e-global-color-secondary);
@@ -1053,10 +1119,18 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .project-section .owl-carousel .owl-dots .owl-dot:hover span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
 }
 .project-section .owl-carousel .owl-dots .owl-dot.active span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   width: 20px;
   height: 20px;
 }
@@ -1107,7 +1181,11 @@ p {
 .testimonial-section .testimonial_wrapper .circle_wrapper figure img {
   border-radius: 100px;
 }
-.testimonial-section .testimonial_wrapper .circle_wrapper .center-circle .testimonial-centerimage {
+.testimonial-section
+  .testimonial_wrapper
+  .circle_wrapper
+  .center-circle
+  .testimonial-centerimage {
   position: absolute;
   top: 6px;
   left: -4px;
@@ -1118,7 +1196,10 @@ p {
   top: -78px;
   transition: all 0.3s ease-in-out;
 }
-.testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image1:hover {
+.testimonial-section
+  .testimonial_wrapper
+  .circle_wrapper
+  .testimonial-image1:hover {
   transform: translateY(-5px);
 }
 .testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image2 {
@@ -1126,7 +1207,10 @@ p {
   top: 32px;
   transition: all 0.3s ease-in-out;
 }
-.testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image2:hover {
+.testimonial-section
+  .testimonial_wrapper
+  .circle_wrapper
+  .testimonial-image2:hover {
   transform: translateY(-5px);
 }
 .testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image3 {
@@ -1134,7 +1218,10 @@ p {
   bottom: -100px;
   transition: all 0.3s ease-in-out;
 }
-.testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image3:hover {
+.testimonial-section
+  .testimonial_wrapper
+  .circle_wrapper
+  .testimonial-image3:hover {
   transform: translateY(-5px);
 }
 .testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image4 {
@@ -1142,7 +1229,10 @@ p {
   bottom: 10px;
   transition: all 0.3s ease-in-out;
 }
-.testimonial-section .testimonial_wrapper .circle_wrapper .testimonial-image4:hover {
+.testimonial-section
+  .testimonial_wrapper
+  .circle_wrapper
+  .testimonial-image4:hover {
   transform: translateY(-5px);
 }
 .testimonial-section .testimonial_contentwrapper {
@@ -1155,7 +1245,11 @@ p {
   display: flex;
 }
 .testimonial-section .testimonial_content .content .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 64px;
   width: 64px;
@@ -1169,7 +1263,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .testimonial-section .testimonial_content .content .circle:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-2) 0%, var(--e-button-gradient-1) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-2) 0%,
+    var(--e-button-gradient-1) 100%
+  );
   transform: translateY(-5px);
 }
 .testimonial-section .testimonial_content p {
@@ -1275,7 +1373,11 @@ p {
   border-radius: 10px 10px 0 0;
 }
 .blog-section .blog_boxcontent .upper_portion .image_content {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   box-shadow: 8px 2px 20px rgb(0 0 0 / 10%);
   border-radius: 100px;
   height: 93px;
@@ -1288,7 +1390,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .blog-section .blog_boxcontent .upper_portion .image_content:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-2) 0%, var(--e-button-gradient-1) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-2) 0%,
+    var(--e-button-gradient-1) 100%
+  );
   transform: translateY(-5px);
 }
 .blog-section .blog_boxcontent .upper_portion .image_content .content {
@@ -1352,10 +1458,18 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .blog-section .owl-carousel .owl-dots .owl-dot:hover span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
 }
 .blog-section .owl-carousel .owl-dots .owl-dot.active span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   width: 20px;
   height: 20px;
 }
@@ -1366,7 +1480,11 @@ p {
 /* Footer */
 
 .footer-section {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   position: relative;
   padding: 94px 0 0;
 }
@@ -1573,7 +1691,11 @@ p {
 /* Sub-banner */
 
 .sub-banner {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   position: relative;
 }
 .sub-banner::before {
@@ -1780,7 +1902,11 @@ p {
   color: var(--e-global-color-secondary);
 }
 .aboutus-section .service_content ul li .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 18px;
   width: 18px;
@@ -1802,7 +1928,11 @@ p {
   margin-bottom: 36px;
 }
 .aboutus-section .service_content .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -1869,7 +1999,11 @@ p {
   position: relative;
 }
 .aboutoffer-section .achievement_wrapper .achievement-box:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   transform: translateY(-5px);
 }
 .aboutoffer-section .achievement_wrapper .achievement-box .achievement-icon {
@@ -1945,7 +2079,11 @@ p {
   margin-bottom: 35px;
 }
 .expert-section .expert_content .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -2008,7 +2146,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .expert-section .team-box i {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 35px;
   width: 35px;
@@ -2124,7 +2266,11 @@ p {
   z-index: 1;
 }
 .pricing-section .price-block .price_content:hover {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
 }
 .pricing-section .price_content .icon figure {
   background: var(--e-global-color-very-pale-orange);
@@ -2178,7 +2324,11 @@ p {
   text-align: left;
 }
 .pricing-section .price_content ul li .circle {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 16px;
   width: 16px;
@@ -2189,7 +2339,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .pricing-section .price-block .price_content:hover .circle {
-  background-image: linear-gradient(to right, var(--e-global-color-white) 0%, var(--e-global-color-white) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-global-color-white) 0%,
+    var(--e-global-color-white) 100%
+  );
 }
 .pricing-section .price_content ul li .circle:before {
   font-size: 12px;
@@ -2210,7 +2364,11 @@ p {
 }
 .pricing-section .price_content .get_started {
   box-shadow: 1px 1px 50px rgb(0 0 0 / 10%);
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   color: var(--e-global-color-white);
   font-size: 20px;
   line-height: 30px;
@@ -2229,7 +2387,11 @@ p {
   color: var(--e-global-color-white);
 }
 .pricing-section .price-block .price_content:hover .get_started {
-  background-image: linear-gradient(to right, var(--e-global-color-white) 0%, var(--e-global-color-white) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-global-color-white) 0%,
+    var(--e-global-color-white) 100%
+  );
   color: var(--e-global-color-secondary);
 }
 
@@ -2289,10 +2451,18 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .servicepage-section .owl-carousel .owl-dots .owl-dot:hover span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
 }
 .servicepage-section .owl-carousel .owl-dots .owl-dot.active span {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   width: 20px;
   height: 20px;
 }
@@ -2340,7 +2510,11 @@ p {
   top: -38px;
 }
 .consultation-section .consultation_wrapper .get_started {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -2407,7 +2581,11 @@ p {
   line-height: 130px;
   border-radius: 100px;
   border: 2px solid var(--e-global-color-white);
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
 }
 .vedio-section .vedio-circle .service-vedioicon {
   position: absolute;
@@ -2505,7 +2683,11 @@ p {
   color: var(--e-global-color-white);
 }
 .team-section .team_contentbox .team-box .box-content i {
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 100px;
   height: 35px;
   width: 35px;
@@ -2601,7 +2783,11 @@ p {
   font-size: 10px;
   line-height: 14px;
   text-align: center;
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   border-radius: 10px;
 }
 .skill-section .skill_content .skill-measure .progress-bar1 {
@@ -2723,7 +2909,11 @@ p {
   width: 100%;
   margin-top: 40px;
   padding: 56px 50px;
-  background-image: linear-gradient(to right, var(--e-button-gradient-1) 0%, var(--e-button-gradient-2) 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--e-button-gradient-1) 0%,
+    var(--e-button-gradient-2) 100%
+  );
   transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 1;
@@ -2767,7 +2957,6 @@ p {
 }
 .contact-section .need_content .send_now {
   border: 1px solid #ffffff;
-  background: transparent;
   font-size: 20px;
   line-height: 30px;
   font-weight: 600;
@@ -2778,6 +2967,7 @@ p {
   transition: all 0.3s ease-in-out;
   width: 100%;
   margin-bottom: 10px;
+  background: var(--e-global-color-desaturated-blue);
 }
 .contact-section .need_content .send_now:hover {
   border: 1px solid var(--e-global-color-desaturated-blue);

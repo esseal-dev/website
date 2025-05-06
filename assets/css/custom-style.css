@@ -760,3 +760,15 @@ a.item-link {
   right: -270px !important;
   top: -84px;
 }
+
+.send_now:disabled {
+  background-color: #cccccc !important; /* A light gray color */
+  color: #666666 !important; /* A darker gray text */
+  cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+  opacity: 0.7; /* Reduce the opacity slightly */
+  /* You can add other styles as well, like a different border, etc. */
+}
+
+.send_now:disabled i.circle {
+  opacity: 0.5; /* Optionally style the icon as well */
+}

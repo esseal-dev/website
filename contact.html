@@ -102,6 +102,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
@@ -210,11 +214,6 @@
                             >Tools & Dashboards Development</a
                           >
                         </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item nav-link" href="./team.html"
-                            >SEO & Marketing</a
-                          >
-                        </li>
                       </ul>
                     </div>
                   </li>
@@ -265,8 +264,7 @@
                 </figure>
                 <h1 class="text-white">Contact Us</h1>
                 <p>
-                  Eoidunt eget semper nec ruam sed hendrerit morbi ac feliseao
-                  augue pellentesue morbi acer.
+                  Your questions are welcome – contact us without hesitation.
                 </p>
                 <div class="box">
                   <span class="mb-0">Home</span>
@@ -315,7 +313,7 @@
               <h6>Contact Info</h6>
               <h2>Get in Touch</h2>
               <div class="contact-box">
-                <div class="box-image">
+                <div class="box-image" style="margin-top: 40px">
                   <figure class="contact-location">
                     <img
                       src="./assets/images/contact-location.png"
@@ -327,12 +325,16 @@
                 <div class="box-content">
                   <h4>Location:</h4>
                   <p class="text">
-                    121 King Street, Melbourne Victoria 3000 Australia
+                    Global Heights, Johor Town, Lahore, Pakistan
+                  </p>
+                  <hr />
+                  <p class="text">
+                    Gerrads cross, Oxford Street, London Sl98TD
                   </p>
                 </div>
               </div>
               <div class="contact-box">
-                <div class="box-image">
+                <div class="box-image" style="margin-top: 20px">
                   <figure class="contact-email">
                     <img
                       src="./assets/images/contact-email.png"
@@ -351,17 +353,18 @@
                       >support@esseal.net</a
                     >
                   </p>
+                  <hr />
                   <p>
                     <a
-                      href="mailto:sales@esseal.com"
+                      href="mailto:inquiry@esseal.com"
                       class="mb-0 text-decoration-none"
-                      >sales@esseal.com</a
+                      >inquiry@esseal.com</a
                     >
                   </p>
                 </div>
               </div>
               <div class="contact-box box-mb">
-                <div class="box-image">
+                <div class="box-image" style="margin-top: 20px">
                   <figure class="contact-phone">
                     <img
                       src="./assets/images/contact-phone.png"
@@ -379,6 +382,7 @@
                       >+1 (619) 701-6020</a
                     >
                   </p>
+                  <hr />
                   <p>
                     <a
                       href="tel:+17207738119"
@@ -402,19 +406,17 @@
               <div class="need_content">
                 <h6 class="text-white">Write to us</h6>
                 <h2 class="text-white">send us a Message</h2>
-                <form
-                  id="contactpage"
-                  method="POST"
-                  action="./contact-form.php"
-                >
+                <form id="contactForm">
                   <div class="row">
                     <div class="col-12">
                       <div class="form-group mb-0">
                         <input
                           type="text"
                           class="form_style"
-                          placeholder="Your Name:"
-                          name="name"
+                          placeholder="*Your Name:"
+                          name="from_name"
+                          required
+                          aria-required="true"
                         />
                       </div>
                     </div>
@@ -423,8 +425,10 @@
                         <input
                           type="email"
                           class="form_style"
-                          placeholder="Your Email:"
-                          name="emailid"
+                          placeholder="*Your Email:"
+                          name="from_email"
+                          required
+                          aria-required="true"
                         />
                       </div>
                     </div>
@@ -432,9 +436,11 @@
                       <div class="form-group mb-0">
                         <textarea
                           class="form_style"
-                          placeholder="Message"
+                          placeholder="*Message"
                           rows="3"
-                          name="msg"
+                          name="message"
+                          required
+                          aria-required="true"
                         ></textarea>
                       </div>
                     </div>
@@ -644,14 +650,6 @@
                       >Scaling</a
                     >
                   </li>
-                  <li>
-                    <a
-                      href="./pricing.html"
-                      class="text-size-18 text text-decoration-none"
-                      aria-label="footer quick link to service page for seo and marketing solutions "
-                      >SEO & Marketing</a
-                    >
-                  </li>
                 </ul>
               </div>
             </div>
@@ -730,5 +728,57 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/animation_links.js"></script>
     <script src="assets/js/animation.js"></script>
+    <script>
+      (function () {
+        emailjs.init("1ssh26nIcSiMeiMGr"); // Replace with your actual Public Key
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const serviceID = "service_ez4tmyo"; // Replace with your EmailJS Service ID
+          const templateID = "template_t2ldo5w"; // Replace with the Template ID you created
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            function () {
+              document.getElementById("contactForm").reset(); // Clear the form
+            },
+            function (error) {}
+          );
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const nameInput = contactForm.querySelector('input[name="from_name"]');
+        const emailInput = contactForm.querySelector(
+          'input[name="from_email"]'
+        );
+        const messageInput = contactForm.querySelector(
+          'textarea[name="message"]'
+        );
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+
+        submitButton.disabled = true;
+
+        function checkFields() {
+          if (
+            nameInput.value.trim() !== "" &&
+            emailInput.value.trim() !== "" &&
+            messageInput.value.trim() !== ""
+          ) {
+            submitButton.disabled = false;
+          } else {
+            submitButton.disabled = true;
+          }
+        }
+
+        nameInput.addEventListener("input", checkFields);
+        emailInput.addEventListener("input", checkFields);
+        messageInput.addEventListener("input", checkFields);
+      });
+    </script>
   </body>
 </html>
