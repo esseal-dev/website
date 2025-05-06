@@ -106,6 +106,23 @@
   <body>
     <!-- Header  -->
     <div class="banner_outer">
+      <svg width="0" height="0" style="position:absolute;">
+        <defs>
+          <clipPath id="customBlob" clipPathUnits="objectBoundingBox">
+            <path d="
+              M0.1,0 
+              Q0,0,0,0.1 
+              V0.8 
+              Q0,0.95,0.2,1 
+              H0.8 
+              Q1,1,1,0.8 
+              V0.1 
+              Q1,0,0.9,0 
+              Z
+            " />
+          </clipPath>
+        </defs>
+      </svg>
       <header class="header">
         <div class="main-header">
           <div class="container-fluid">
@@ -261,31 +278,26 @@
                 <ul class="list-unstyled position-absolute">
                   <li>
                     <a
-                      href=""
+                      href="https://www.linkedin.com/company/esseal"
                       class="text-decoration-none"
-                      aria-label="social media link for "
-                      ><i class="fa-brands fa-facebook-f social-networks"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="text-decoration-none"
+                      target="_blank"
                       aria-label="social media link for "
                       ><i class="fa-brands fa-linkedin social-networks"></i
                     ></a>
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="https://github.com/esseal-dev"
                       class="text-decoration-none"
+                      target="_blank"
                       aria-label="social media link for "
                       ><i class="fa-brands fa-github social-networks"></i
                     ></a>
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="https://wa.me/923072909555"
+                      target="_blank"
                       class="text-decoration-none"
                       aria-label="social media link for "
                       ><i class="fa-brands fa-whatsapp social-networks"></i
@@ -478,10 +490,10 @@
                           class="img-fluid"
                         />
                       </figure>
-                      <h4>SEO & Marketing</h4>
+                      <h4>Codebase Upgrade</h4>
                       <p class="text-size-18">
-                        Drive business growth with results-driven SEO and
-                        marketing campaigns.
+                        Transform legacy systems into modern, efficient, and
+                        scalable software solutions.
                       </p>
                       <a
                         class="arrow text-decoration-none"
@@ -508,31 +520,31 @@
                 />
               </figure>
               <h6>Our Services</h6>
-              <h2>We engineer apps that bolster revenue</h2>
+              <h2>Reliable, scalable apps built to grow your business</h2>
               <p>
-                From bespoke portfolios to e-commerce stores; we create
-                products, dashboards, and applications that elevate your brand.
-                Our expert team builds intuitive & user-friendly interfaces that
-                are mobile-responsive and designed to simplify & achieve your
-                goals
+                From custom websites to e-commerce platforms, we design and
+                develop intuitive products, dashboards, and applications that
+                elevate your brand. Our team focuses on clean, mobile-responsive
+                interfaces built to simplify your workflows and support your
+                business goals.
               </p>
               <ul class="list-unstyled mb-0">
                 <li class="text">
-                  <i class="circle fa-duotone fa-check"></i>Rapid & agile
-                  development process for faster turnaround times.
+                  <i class="circle fa-duotone fa-check"></i><b>Fast, agile
+                  development</b> for quicker delivery and faster time-to-market.
                 </li>
                 <li class="text">
-                  <i class="circle fa-duotone fa-check"></i>Collaborative &
-                  client-focused approach; making you in charge of results.
+                  <i class="circle fa-duotone fa-check"></i><b>Client-first,
+                  collaborative process</b> — you're involved every step of the way.
                 </li>
                 <li class="text">
-                  <i class="circle fa-duotone fa-check"></i>Extensive experience
-                  in healthcare, education, construction and travel industries.
+                  <i class="circle fa-duotone fa-check"></i><b>Industry expertise</b>
+                  in healthcare, education, construction, and travel.
                 </li>
                 <li class="text text1">
-                  <i class="circle fa-duotone fa-check"></i>24/7 support and
-                  ongoing maintenance for all our clients, with the provision of
-                  a dedicated Site Reliability Engineer (SRE).
+                  <i class="circle fa-duotone fa-check"></i></b>Ongoing support</b> with
+                  24/7 maintenance and a dedicated Site Reliability Engineer
+                  (SRE).
                 </li>
               </ul>
               <a
@@ -756,22 +768,33 @@
           <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2">
             <div class="about_wrapper">
               <figure class="mb-0 about-image1">
-                <img src="./assets/images/about-image1.jpg" alt="" class="" />
-              </figure>
-              <figure class="mb-0 about-image2">
-                <img
-                  src="./assets/images/about-image2.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
+                <video
+                width="100%"
+                style="
+                  clip-path: url(#customBlob); -webkit-clip-path: url(#customBlob); width: 115%; height: auto; object-fit: cover;
+                  margin-top: 95px;
+                  margin-left: -60px;
+                "
+                height="auto"
+                playsinline
+                muted
+                autoplay
+                loop
+                preload="none"
+                poster="fallback.jpg"
+                loading="lazy"
+              >
+                <source src="./assets/videos/home_our_vision.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               </figure>
               <div class="image-circle">
-                <div class="years">
+                <div class="years years-2">
                   <span class="text-white value counter">7</span>
                   <sup class="text-white mb-0 plus">+</sup>
                   <span class="text-white text">Years of Experience</span>
                 </div>
-                <figure class="mb-0 about-imagecircle">
+                <figure class="mb-0 about-imagecircle-2">
                   <img
                     src="./assets/images/about-imagecircle.png"
                     alt=""

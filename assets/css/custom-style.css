@@ -739,3 +739,24 @@ a.item-link {
     font-size: 18px;
   }
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+.about-imagecircle-2 {
+  position: absolute;
+  right: -80px;
+  top: -130px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.years-2 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  right: -270px !important;
+  top: -84px;
+}
