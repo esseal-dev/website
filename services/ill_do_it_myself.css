@@ -1,0 +1,271 @@
+.single-service-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-column: span 2 / span 2;
+  grid-row: span 5 / span 5;
+  grid-column-start: 2;
+  padding: 40px;
+}
+
+.related-services-item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e3e8;
+}
+
+.related-services-item:hover {
+  background-color: #f86823;
+  color: #ffffff;
+}
+
+.contact-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  background-color: #010521;
+  color: #ffffff;
+  justify-content: center;
+  position: sticky;
+  top: 40px; /* distance from top when sticking */
+  z-index: 100;
+  border-radius: 20px;
+}
+
+.contact-widget * {
+  color: #ffffff;
+}
+
+/* MAIN CONTENT */
+.header-image {
+  margin-bottom: 30px;
+}
+
+.main-content {
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.why-us-section {
+  display: flex;
+  direction: row;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.why-us-section * {
+  color: white !important;
+}
+
+.why-us-image {
+  width: 40%;
+  z-index: 2;
+  margin: auto;
+}
+
+.why-us-content {
+  width: 60%;
+  z-index: 2;
+}
+
+.curved-background {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f36b32; /* Orange color */
+}
+
+.curved-background::before {
+  background-color: #010521; /* Dark navy/black color */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 100% 0;
+}
+
+/* Tech Stack Section Start */
+.technologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.technologies-header {
+  margin-top: 60px;
+  text-shadow: 1px 1px 4px #f36b323f;
+}
+
+.service-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover .service-title {
+  background-color: #f36b32;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 8px #f36b322f;
+  transform: translateY(-5px);
+}
+
+.service-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-content > img {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.service-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  width: 100%;
+  text-align: center;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+/*  Tech Stack Section End  */
+
+/* BOTTOM CTA */
+.bottom-cta {
+  grid-column: span 4 / span 4;
+  grid-column-start: 4;
+  grid-row-start: 5;
+  background-color: #010521;
+  height: 280px;
+  padding: 40px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.bottom-cta * {
+  color: #e0e3e8;
+}
+
+.quote-button {
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.quote-button:hover,
+.quote-button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #f36b32;
+}
+
+.quote-button:active {
+  opacity: 0.5;
+}
+
+.highlighted {
+  color: #f36b32;
+}
+
+a {
+  color: #202020;
+}
+
+a:hover {
+  color: #f36b32;
+}
+
+/*  */
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+}
+
+.cta-button input[type="email"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  color: #010521;
+}
+
+.cta-button input[type="email"]::placeholder {
+  color: #010521;
+}
+
+.cta-button button {
+  background-color: #f36b32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button button:hover {
+  background-color: #d45824;
+}
