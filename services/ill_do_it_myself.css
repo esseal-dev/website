@@ -6,12 +6,6 @@
 }
 
 /* SIDEBAR */
-.sidebar {
-  grid-column: span 2 / span 2;
-  grid-row: span 5 / span 5;
-  grid-column-start: 2;
-  padding: 40px;
-}
 
 .related-services-item {
   padding: 10px;
@@ -24,13 +18,9 @@
 }
 
 .contact-widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 400px;
+  /* height: 400px; */
   background-color: #010521;
   color: #ffffff;
-  justify-content: center;
   position: sticky;
   top: 40px; /* distance from top when sticking */
   z-index: 100;
@@ -72,25 +62,22 @@
   margin: auto;
 }
 
-.why-us-content {
-  width: 60%;
-  z-index: 2;
-}
-
 .curved-background {
   position: relative;
   width: 100%;
   overflow: hidden;
   background-color: #f36b32; /* Orange color */
+  z-index: 1;
 }
 
 .curved-background::before {
+  z-index: -1;
   background-color: #010521; /* Dark navy/black color */
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 90%;
   height: 100%;
   border-radius: 0 0 100% 0;
 }
@@ -115,9 +102,7 @@
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  width: 280px;
   transition: transform 0.3s ease;
-  position: relative;
 }
 
 .service-card:hover .service-title {
@@ -144,6 +129,7 @@
 }
 
 .service-title {
+  margin-top: 15px;
   font-size: 24px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -169,13 +155,7 @@
 
 /* BOTTOM CTA */
 .bottom-cta {
-  grid-column: span 4 / span 4;
-  grid-column-start: 4;
-  grid-row-start: 5;
   background-color: #010521;
-  height: 280px;
-  padding: 40px;
-  margin-bottom: 10px;
   border-radius: 10px;
 }
 .bottom-cta * {
@@ -183,8 +163,8 @@
 }
 
 .quote-button {
-  background: #ff4742;
-  border: 1px solid #ff4742;
+  background: #f36b32;
+  border: 1px solid #f36b32;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
@@ -212,7 +192,7 @@
 .quote-button:active {
   background-color: initial;
   background-position: 0 0;
-  color: #f36b32;
+  color: #ffffff;
 }
 
 .quote-button:active {
@@ -229,16 +209,6 @@ a {
 
 a:hover {
   color: #f36b32;
-}
-
-/*  */
-
-.cta-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 20px;
 }
 
 .cta-button input[type="email"] {
@@ -259,8 +229,9 @@ a:hover {
   background-color: #f36b32;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 5px 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease;
@@ -268,4 +239,5 @@ a:hover {
 
 .cta-button button:hover {
   background-color: #d45824;
+  color: white;
 }
