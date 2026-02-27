@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO METADATA -->
+    <title>Engineering Insights & Strategy Blog | Esseal UK</title>
+    <meta
+      name="description"
+      content="Expert insights on legacy software modernization, MVP development, and SRE strategy. Discover how Esseal helps businesses escape technical debt and scale reliably."
+    />
+    <meta
+      name="keywords"
+      content="Software Development Blog, Legacy Code Modernization, MVP Strategy, SRE, Tech Debt, Laravel Migration, Construction Tech"
+    />
+    <meta name="author" content="Esseal" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://esseal.net/blogs" />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="Engineering Insights & Strategy Blog | Esseal UK"
+    />
+    <meta
+      property="og:description"
+      content="Deep dives into software engineering, architectural strategy, and technical rescue missions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://esseal.net/blogs" />
+    <meta
+      property="og:image"
+      content="https://esseal.net/assets/blogs-og-cover.jpg"
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-dark: #0f172a;
+        --primary-blue: #2563eb;
+        --accent-orange: #ea580c;
+        --text-main: #334155;
+        --text-heading: #1e293b;
+        --bg-page: #f8fafc;
+        --bg-card: #ffffff;
+        --border-color: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-page);
+        color: var(--text-main);
+        line-height: 1.6;
+      }
+      a {
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      /* Navbar */
+      .esseal-nav {
+        background-color: #020412;
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav-logo img {
+        height: 40px;
+        width: auto;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      .nav-item {
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .nav-item:hover {
+        color: var(--accent-orange);
+      }
+      .nav-btn {
+        background-color: var(--accent-orange);
+        color: white;
+        padding: 12px 28px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      /* Hero Section */
+      .blog-hero {
+        background-color: var(--primary-dark);
+        padding: 6rem 5% 8rem 5%;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-deco {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(37, 99, 235, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .blog-hero h1 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .blog-hero p {
+        font-size: 1.25rem;
+        color: #94a3b8;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Main Grid */
+      .blog-container {
+        max-width: 1200px;
+        margin: -4rem auto 6rem auto;
+        padding: 0 1.5rem;
+        position: relative;
+        z-index: 10;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.5rem;
+      }
+
+      /* Blog Card */
+      .blog-card {
+        background: var(--bg-card);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-blue);
+      }
+      .card-content {
+        padding: 2rem;
+        flex-grow: 1;
+      }
+      .category-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        background: #eff6ff;
+        color: var(--primary-blue);
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-radius: 99px;
+        margin-bottom: 1rem;
+      }
+      .blog-card h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 1.4rem;
+        color: var(--text-heading);
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+      .blog-card p {
+        color: #64748b;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .read-more {
+        font-weight: 700;
+        color: var(--primary-blue);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.95rem;
+      }
+      .read-more:hover {
+        gap: 10px;
+      }
+
+      /* Footer */
+      .esseal-footer {
+        background-color: #020412;
+        color: #94a3b8;
+        padding: 5rem 5% 2rem 5%;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-col h4 {
+        color: var(--accent-orange);
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .footer-links {
+        list-style: none;
+      }
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+      .footer-links a {
+        color: #e2e8f0;
+      }
+      .footer-links a:hover {
+        color: var(--accent-orange);
+      }
+      .copyright {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+      }
+
+      /* Mobile */
+      @media (max-width: 900px) {
+        .blog-hero h1 {
+          font-size: 2.5rem;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      @media (max-width: 600px) {
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="esseal-nav">
+      <a href="https://esseal.net" class="nav-logo">
+        <img
+          src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+          alt="Esseal IT Solutions"
+        />
+      </a>
+      <div class="nav-links">
+        <a href="https://esseal.net" class="nav-item">Home</a>
+        <a href="https://esseal.net/#about-us" class="nav-item">About Us</a>
+        <a href="https://esseal.net/services" class="nav-item">Services</a>
+        <a href="https://esseal.net/contact-us" class="nav-item">Contact Us</a>
+      </div>
+      <a href="https://calendly.com/esseal/discovery-call" class="nav-btn"
+        >Discovery Call &rarr;</a
+      >
+    </nav>
+
+    <!-- HERO -->
+    <section class="blog-hero">
+      <div class="hero-deco"></div>
+      <h1>
+        Insights & Engineering
+        <span style="color: var(--accent-orange)">Strategy</span>
+      </h1>
+      <p>
+        Technical deep-dives, architectural guidance, and tactical advice for
+        founders and technical leaders navigating modern software complexity.
+      </p>
+    </section>
+
+    <!-- BLOG GRID -->
+    <main class="blog-container">
+      <div class="blog-grid">
+        <!-- 1. Black Box -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Outsourcing</span>
+            <h2>The "Black Box" Problem in Outsourcing</h2>
+            <p>
+              Why project visibility is the difference between a successful
+              launch and a silent failure. Learn how to demand transparency from
+              your partners.
+            </p>
+            <a
+              href="https://esseal.net/blog/the-black-box-problem-in-outsourcing"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 2. Bespoke Outsourcing -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Strategy</span>
+            <h2>Bespoke Software Development: Outsource Roulette</h2>
+            <p>
+              Stop gambling with your project. Discover the frameworks used by
+              industry leaders to pick reliable development partners.
+            </p>
+            <a
+              href="https://esseal.net/blog/bespoke-software-development-outsource-roulette"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 3. Security Risks -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Security</span>
+            <h2>Hidden Risks of Outdated Software</h2>
+            <p>
+              Security and compliance aren't just IT issues; they are
+              existential business risks. How to audit your legacy stack for
+              vulnerabilities.
+            </p>
+            <a
+              href="https://esseal.net/blog/hidden-risks-outdated-software-security-compliance"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 4. Senior vs Junior -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Startup</span>
+            <h2>Senior-Led MVP vs. Junior Teams</h2>
+            <p>
+              A junior team might be cheaper today, but it's often more
+              expensive tomorrow. Why technical leadership is essential for V1.
+            </p>
+            <a
+              href="https://esseal.net/blog/senior-led-mvp-vs-junior-team"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 5. Buy vs Build -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">SaaS Strategy</span>
+            <h2>Buying vs. Building Software: The SaaS Failure</h2>
+            <p>
+              When does an off-the-shelf solution stop making sense? A guide to
+              the "Tipping Point" of custom software development.
+            </p>
+            <a
+              href="https://esseal.net/blog/buying-vs-building-software-saas-failure"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 6. Scalable MVP -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Architecture</span>
+            <h2>Scalable and Secure MVP Architecture</h2>
+            <p>
+              Don't let your success break your servers. How to build a Minimum
+              Viable Product that is actually ready for 10x growth.
+            </p>
+            <a
+              href="https://esseal.net/blog/scalable-and-secure-mvp-architecture"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 7. Excel to Web App -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Digitization</span>
+            <h2>From Excel to Web App: The Path to Digitisation</h2>
+            <p>
+              Spreadsheets are the backbone of early business, but they scale
+              poorly. Learn how to migrate your workflows safely.
+            </p>
+            <a
+              href="https://esseal.net/blog/from-excel-to-web-app-digitization"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 8. Rewrite vs Refactor -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Engineering</span>
+            <h2>The Rewrite vs. Refactor Dilemma</h2>
+            <p>
+              The ultimate CTO guide to deciding when to fix what you have or
+              start from scratch. Avoid the 'Second System' trap.
+            </p>
+            <a
+              href="https://esseal.net/blog/rewrite-vs-refactor-dilemma-cto-guide"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 9. Post-Launch Reality -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Growth</span>
+            <h2>Post-Launch Reality: What Happens After MVP?</h2>
+            <p>
+              The champagne is gone. Now the real work begins. surviving the Day
+              2 hangover and building for long-term retention.
+            </p>
+            <a
+              href="https://esseal.net/blog/post-launch-reality-mvp-maintenance"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 10. Temporary Code -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Tech Debt</span>
+            <h2>Why Temporary Code Kills Growth</h2>
+            <p>
+              Quick hacks win battles but lose wars. How to balance speed with
+              the architectural integrity your business needs to survive.
+            </p>
+            <a
+              href="https://esseal.net/blog/why-temporary-code-kills-growth"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 11. Laravel Rescue -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Modernization</span>
+            <h2>PHP 3 to Laravel 12: Legacy Code Modernization</h2>
+            <p>
+              Anatomy of a rescue mission for a mission-critical US logistics
+              platform. From museum pieces to modern performance.
+            </p>
+            <a
+              href="https://esseal.net/blog/php-3-to-laravel-12-legacy-code-modernization"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 12. Construction Excel -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Construction</span>
+            <h2>Escaping 'Excel Hell' in Construction</h2>
+            <p>
+              Stop managing £10M projects with brittle spreadsheets. How custom
+              construction portals recover thousands in project margin.
+            </p>
+            <a
+              href="https://esseal.net/blog/convert-excel-sheet-to-web-app-construction"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 13. Monolith SRE -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">DevOps / SRE</span>
+            <h2>Modernizing Monoliths without Downtime</h2>
+            <p>
+              The Strangler Fig pattern in action. How to migrate
+              mission-critical legacy systems while keeping the lights on.
+            </p>
+            <a
+              href="https://esseal.net/blog/modernizing-monoliths-zero-downtime"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+
+        <!-- 14. Fractional SRE -->
+        <article class="blog-card">
+          <div class="card-content">
+            <span class="category-tag">Startup Strategy</span>
+            <h2>What is SRE and Why Does My Startup Need It?</h2>
+            <p>
+              Demystifying Site Reliability Engineering for non-technical
+              founders. The insurance policy your growth roadmap requires.
+            </p>
+            <a
+              href="https://esseal.net/blog/what-is-sre-fractional-sre-for-startups"
+              class="read-more"
+              >Read Full Article &rarr;</a
+            >
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="esseal-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img
+            src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+            alt="Esseal"
+            style="height: 40px; width: auto"
+          />
+          <p class="footer-desc">
+            Reliable Software Development. Scalable Results. We help companies
+            build high-performance, custom applications — from MVP to enterprise
+            scale.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="https://esseal.net/#about-us">• About Us</a></li>
+            <li><a href="https://esseal.net/#why-us">• Why Us</a></li>
+            <li><a href="https://esseal.net/services">• Our Services</a></li>
+            <li><a href="https://esseal.net/contact-us">• Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Misc Links</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://esseal.net/privacy-policy">• Privacy Policy</a>
+            </li>
+            <li>
+              <a href="https://esseal.net/terms-of-service"
+                >• Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="https://esseal.net/lodge-complaint">• Lodge Complaint</a>
+            </li>
+            <li><a href="https://esseal.net/blogs">• Blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Most Requested Services</h4>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://esseal.net/services/legacy-modernization-strategy/"
+                >• Legacy Codebase Modernization</a
+              >
+            </li>
+            <li><a href="#">• Codebase Health Check & Audit</a></li>
+            <li>
+              <a href="https://esseal.net/services/full-stack-development/"
+                >• Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="https://esseal.net/services/strategic-mvp-development/"
+                >• Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://esseal.net/services/custom-internal-tools-dashboards/"
+                >• Tools & Dashboards</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 <span>Esseal</span>. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "headline": "Engineering Insights & Strategy Blog",
+        "description": "Expert insights on legacy software modernization, MVP development, and SRE strategy.",
+        "url": "https://esseal.net/blogs",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "logo": "https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+
+    <!-- Add to <head> of every page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- GLOBAL RESET --- */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* --- NAVBAR STYLES --- */
+      .esseal-nav {
+        background-color: #020412; /* Deep Navy */
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .nav-logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      .nav-item {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.2s;
+      }
+      .nav-item:hover {
+        color: #f97316;
+      }
+
+      .nav-btn {
+        background-color: #ea580c; /* Esseal Orange */
+        color: white;
+        padding: 12px 28px;
+        border-radius: 4px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: background 0.2s;
+        font-size: 0.95rem;
+      }
+      .nav-btn:hover {
+        background-color: #c2410c;
+      }
+
+      /* --- FOOTER STYLES --- */
+      .esseal-footer {
+        background-color: #020412;
+        color: #94a3b8;
+        padding: 5rem 5% 2rem 5%;
+        font-size: 0.95rem;
+        font-family: "Inter", sans-serif;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+      .footer-col h4 {
+        color: #ea580c; /* Orange Heading */
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 0.8rem;
+      }
+      .footer-links a {
+        color: #e2e8f0;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: #ea580c;
+      }
+
+      .footer-desc {
+        line-height: 1.6;
+        margin-top: 1.5rem;
+        max-width: 320px;
+        color: #cbd5e1;
+      }
+
+      .copyright {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        font-size: 0.9rem;
+        color: #cbd5e1;
+      }
+      .copyright span {
+        color: #ea580c;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 900px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+        }
+        .nav-links {
+          display: none;
+        } /* Hide menu on mobile for now */
+      }
+      @media (max-width: 600px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-btn {
+          display: none;
+        } /* Hide button on very small screens */
+        .esseal-nav {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR (Right after Body Tag)-->
+    <nav class="esseal-nav">
+      <a href="https://esseal.net" class="nav-logo">
+        <img
+          src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+          alt="Esseal IT Solutions"
+        />
+      </a>
+
+      <div class="nav-links">
+        <a href="https://esseal.net" class="nav-item">Home</a>
+        <a href="https://esseal.net/#about-us" class="nav-item">About Us</a>
+        <a href="https://esseal.net/services" class="nav-item">Services</a>
+        <a href="https://esseal.net/contact-us" class="nav-item">Contact Us</a>
+      </div>
+
+      <a href="https://calendly.com/esseal/discovery-call" class="nav-btn">
+        Book A Meeting <span>&rarr;</span>
+      </a>
+    </nav>
+
+    <!-- FOOTER (Right before Body Tag End) -->
+    <footer class="esseal-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img
+            src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+            alt="Esseal"
+            style="height: 40px; width: auto"
+          />
+          <p class="footer-desc">
+            Reliable Software Development. Scalable Results. We help companies
+            build high-performance, custom applications — from MVP to enterprise
+            scale.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="https://esseal.net/#about-us">• About Us</a></li>
+            <li><a href="https://esseal.net/#why-us">• Why Us</a></li>
+            <li><a href="https://esseal.net/services">• Our Services</a></li>
+            <li><a href="https://esseal.net/contact-us">• Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Misc Links</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://esseal.net/privacy-policy">• Privacy Policy</a>
+            </li>
+            <li>
+              <a href="https://esseal.net/terms-of-service"
+                >• Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="https://esseal.net/lodge-complaint">• Lodge Complaint</a>
+            </li>
+            <li><a href="https://esseal.net/blogs">• Blogs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Most Requested Services</h4>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://esseal.net/services/legacy-modernization-strategy/"
+                >• Legacy Codebase Modernization</a
+              >
+            </li>
+            <li><a href="#">• Codebase Health Check & Audit</a></li>
+            <li>
+              <a href="https://esseal.net/services/full-stack-development/"
+                >• Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="https://esseal.net/services/strategic-mvp-development/"
+                >• Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://esseal.net/services/custom-internal-tools-dashboards/"
+                >• Tools & Dashboards</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2025 <span>Esseal</span>. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>
