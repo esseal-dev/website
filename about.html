@@ -16,11 +16,88 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://www.esseal.co.uk",
+          "logo": "https://www.esseal.co.uk/esseal-logo.webp",
+          "employee": [
+            {
+              "@type": "Person",
+              "name": "Muhammad Talha Qureshi",
+              "image": "https://www.esseal.co.uk/muhammad-talha-qureshi.webp",
+              "jobTitle": "Co-Founder & Principal Solutions Architect",
+              "sameAs": [
+                "https://www.linkedin.com/in/talhanb/",
+                "https://github.com/TalhaNB"
+              ],
+              "knowsAbout": [
+                "System Architecture",
+                "Frontend Engineering",
+                "Full-Stack Development",
+                "React",
+                "Ruby on Rails",
+                "Flutter",
+                "Mobile Applciation Development"
+              ]
+            },
+            {
+              "@type": "Person",
+              "name": "Basil Meer",
+              "image": "https://www.esseal.co.uk/basil-meer.webp",
+              "jobTitle": "Co-Founder & Head of Infrastructure",
+              "sameAs": [
+                "https://www.linkedin.com/in/basilmeer/",
+                "https://github.com/basilmeer"
+              ],
+              "knowsAbout": [
+                "DevOps",
+                "Backend Engineering",
+                "Infrastructure Architecture",
+                "UI/UX Design",
+                "Docker",
+                "AWS",
+                "Digital Ocean",
+                "AI Agents"
+              ]
+            },
+            {
+              "@type": "Person",
+              "name": "Bilal Ahmed Rafiqi",
+              "image": "https://www.esseal.co.uk/bilal-ahmed-rafiqi.webp",
+              "jobTitle": "Co-Founder & Head of Engineering Management",
+              "sameAs": [
+                "https://www.linkedin.com/in/rafiqi47/",
+                "https://github.com/rafiqi47"
+              ],
+              "knowsAbout": [
+                "Backend Development",
+                "Engineering Management",
+                "Resource Training",
+                "Data Systems",
+                "Fintech"
+              ]
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="navbar">
       <div class="container nav-container">
-        <a href="/" class="logo">Esseal<span>.</span></a>
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
         <nav aria-label="Main Navigation">
           <ul class="nav-links">
             <li><a href="/services.html">Services</a></li>
@@ -65,13 +142,26 @@
             </p>
           </div>
           <div class="philosophy-stats">
-            <div class="stat-box">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Senior-Level Code</span>
+            <div class="stat-card">
+              <div class="stat-content">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Senior-Level Code</span>
+                <p class="stat-desc">
+                  Zero junior hand-offs. Every line written by a partner.
+                </p>
+              </div>
+              <div class="stat-accent"></div>
             </div>
-            <div class="stat-box">
-              <span class="stat-number">0</span>
-              <span class="stat-label">Hidden Workflows</span>
+
+            <div class="stat-card">
+              <div class="stat-content">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Hidden Workflows</span>
+                <p class="stat-desc">
+                  Full access to our task boards, PRs, and architecture logs.
+                </p>
+              </div>
+              <div class="stat-accent"></div>
             </div>
           </div>
         </div>
@@ -89,49 +179,107 @@
 
           <div class="team-grid">
             <article class="team-card">
-              <div class="team-image-placeholder"></div>
+              <div class="team-image">
+                <img
+                  src="/muhammad-talha-qureshi.webp"
+                  alt="Muhammad Talha Qureshi - Solutions Architect at Esseal"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
               <div class="team-info">
-                <h3>Partner Name 1</h3>
-                <p class="role">Co-Founder & Full-Stack Architect</p>
+                <h3>Muhammad Talha Qureshi</h3>
+                <p class="role">Co-Founder & Solutions Architect</p>
                 <p class="bio">
-                  Leading system architecture and complex SaaS development.
-                  Specializing in scalable React and Ruby on Rails environments.
+                  With a background in executive operations, Talha bridges the
+                  gap between high-level system architecture and business goals.
+                  He leads client technical strategy and frontend ecosystems.
                 </p>
                 <div class="social-links">
-                  <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-                  <a href="#" target="_blank" rel="noopener">GitHub</a>
+                  <a
+                    href="https://www.linkedin.com/in/talhanb/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                  <a
+                    href="https://github.com/TalhaNB"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
                 </div>
               </div>
             </article>
 
             <article class="team-card">
-              <div class="team-image-placeholder"></div>
+              <div class="team-image">
+                <img
+                  src="/basil-meer.webp"
+                  alt="Basil Meer - Head of Infrastructure at Esseal"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
               <div class="team-info">
-                <h3>Partner Name 2</h3>
-                <p class="role">Co-Founder & Backend Lead</p>
+                <h3>Basil Meer</h3>
+                <p class="role">Co-Founder & Head of Infrastructure</p>
                 <p class="bio">
-                  Driving backend infrastructure, API design, and legacy
-                  codebase modernization for high-demand corporate systems.
+                  A decade of experience spanning game development and
+                  professional UI/UX design. Basil architects backend systems
+                  and DevOps pipelines that are as intuitive as they are robust.
                 </p>
                 <div class="social-links">
-                  <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-                  <a href="#" target="_blank" rel="noopener">GitHub</a>
+                  <a
+                    href="https://www.linkedin.com/in/basilmeer/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                  <a
+                    href="https://github.com/basilmeer"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
                 </div>
               </div>
             </article>
 
             <article class="team-card">
-              <div class="team-image-placeholder"></div>
+              <div class="team-image">
+                <img
+                  src="/bilal-ahmed-rafiqi.webp"
+                  alt="Bilal Ahmed Rafiqi - Head of Engineering Management at Esseal"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
               <div class="team-info">
-                <h3>Partner Name 3</h3>
-                <p class="role">Co-Founder & Frontend Lead</p>
+                <h3>Bilal Ahmed Rafiqi</h3>
+                <p class="role">Co-Founder & Head of Engineering Management</p>
                 <p class="bio">
-                  Crafting highly responsive, conversion-driven frontends and
-                  cross-platform mobile experiences.
+                  A pure-play backend specialist since 2017. Bilal leads
+                  Esseal’s internal resource management and technical
+                  mentorship, ensuring engineering output remains consistent and
+                  senior-led.
                 </p>
                 <div class="social-links">
-                  <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-                  <a href="#" target="_blank" rel="noopener">GitHub</a>
+                  <a
+                    href="https://www.linkedin.com/in/rafiqi47/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                  <a
+                    href="https://github.com/rafiqi47"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
                 </div>
               </div>
             </article>
@@ -143,10 +291,20 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">Esseal<span>.</span></a>
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
           <p>
             Senior-Led Software Solutions That Drive Corporate Growth. On time,
             on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England & Wales No. 17026190
           </p>
         </div>
         <div class="footer-links">
@@ -154,23 +312,49 @@
           <ul>
             <li><a href="/about.html">About Us</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/expertise.html">Expertise</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards.html"
+                >Tools & Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development.html"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development.html"
+                >Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>&copy; 2026 Esseal. All rights reserved.</p>
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
       </div>
     </footer>
-
-    <script src="main.js"></script>
   </body>
 </html>

@@ -160,6 +160,9 @@ h4 {
 .hero {
   padding: 120px 0 100px;
   text-align: center;
+  height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
   background: radial-gradient(
     circle at center top,
     var(--bg-navy-light) 0%,
@@ -303,7 +306,7 @@ h4 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
   gap: 64px;
   margin-bottom: 64px;
 }
@@ -1098,4 +1101,204 @@ h4 {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 32px;
   }
+}
+
+/* 1. Make the parent card the relative boundary */
+.service-card {
+  position: relative;
+  /* Keep your other existing styles here (padding, bg, etc.) */
+}
+
+/* 2. Style the link and stretch it */
+.hidden-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* This ::after pseudo-element creates an invisible box over the whole card */
+.hidden-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* Ensures it sits on top of the text */
+}
+
+/* Optional: Keep your hover effects looking sharp */
+.service-card:hover .hidden-link {
+  color: var(--brand-orange);
+}
+
+.philosophy-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.stat-card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 48px 32px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(250, 98, 32, 0.4);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 4rem; /* Increased size for impact */
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -2px;
+}
+
+.stat-label {
+  display: block;
+  color: var(--brand-orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+}
+
+.stat-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* The "Glow" Accent */
+.stat-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(
+    circle at top right,
+    rgba(250, 98, 32, 0.15),
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+.team-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background-color: var(--bg-navy-light);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(
+    20%
+  ); /* Optional: Adds a slightly more uniform, corporate look */
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.map-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.map-link:hover {
+  color: var(--brand-orange);
+}
+
+.form-privacy-notice {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 2px solid var(--brand-orange);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 4px 4px 0;
+}
+
+.form-privacy-notice p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.form-privacy-notice strong {
+  color: var(--text-main);
+}
+
+.service-card {
+  position: relative; /* Essential for absolute child positioning */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* Makes the entire parent card clickable */
+}
+
+.service-card:hover {
+  border-color: var(--brand-orange);
+  transform: translateY(-4px);
+}
+
+/* Target the link inside the service card h3 */
+.service-card h3 a {
+  color: inherit; /* Inherits the color from the H3 or parent */
+  text-decoration: none; /* Removes the default underline */
+}
+
+/* Ensure it stays consistent when visited or hovered */
+.service-card h3 a:visited {
+  color: inherit;
+}
+
+/* If you want the title to change color on hover to match your brand */
+.service-card:hover h3 a {
+  color: var(--brand-orange);
+  transition: color 0.3s ease;
 }

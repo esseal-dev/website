@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact Esseal to discuss your enterprise software, MVP development, or legacy modernization project. We operate globally from the UK and Pakistan."
+      content="Securely contact Esseal for enterprise software, MVP development, or legacy modernization. Direct access to our senior leadership team in London and Lahore."
     />
-    <title>Contact Us | Esseal - Software Engineering</title>
+    <title>Contact Our Engineering Leadership | Esseal</title>
 
+    <link rel="canonical" href="https://www.esseal.co.uk/contact.html" />
+
+    <link rel="icon" href="/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,11 +19,70 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://www.esseal.co.uk",
+          "logo": "https://www.esseal.co.uk/esseal-logo.webp",
+          "sameAs": [
+            "https://www.linkedin.com/company/esseal",
+            "https://github.com/esseal",
+            "https://maps.app.goo.gl/g2ptQKNsJo399b2F7"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "email": "inquiry@esseal.net",
+              "contactType": "customer service",
+              "areaServed": "Global",
+              "availableLanguage": "en"
+            }
+          ],
+          "location": [
+            {
+              "@type": "LocalBusiness",
+              "name": "Esseal UK",
+              "hasMap": "https://maps.app.goo.gl/g2ptQKNsJo399b2F7",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "128 City Road",
+                "addressLocality": "London",
+                "postalCode": "EC1V 2NX",
+                "addressCountry": "UK"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Esseal PK",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "College, 114-A Gul E Daman Society",
+                "addressLocality": "Lahore",
+                "postalCode": "54400",
+                "addressCountry": "PK"
+              }
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="navbar">
       <div class="container nav-container">
-        <a href="/" class="logo">Esseal<span>.</span></a>
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development"
+          />
+        </a>
         <nav aria-label="Main Navigation">
           <ul class="nav-links">
             <li><a href="/services.html">Services</a></li>
@@ -61,9 +123,6 @@
               <div class="contact-method">
                 <h3>Email Us</h3>
                 <a href="mailto:inquiry@esseal.net">inquiry@esseal.net</a>
-                <a href="mailto:collaborate@esseal.net"
-                  >collaborate@esseal.net</a
-                >
               </div>
 
               <div class="contact-method">
@@ -80,7 +139,15 @@
             <div class="locations">
               <h3>Our Offices</h3>
               <div class="location-card">
-                <h4>United Kingdom</h4>
+                <h4>
+                  <a
+                    href="https://maps.app.goo.gl/g2ptQKNsJo399b2F7"
+                    target="_blank"
+                    rel="noopener"
+                    class="map-link"
+                    >United Kingdom <span class="arrow">→</span></a
+                  >
+                </h4>
                 <address>
                   128, City Road<br />
                   London, EC1V 2NX<br />
@@ -100,26 +167,53 @@
           </div>
 
           <div class="contact-form-panel">
-            <form action="#" method="POST" class="project-form">
+            <form action="send-email.php" method="POST" class="project-form">
+              <div style="display: none">
+                <label>Leave this field blank</label>
+                <input type="text" name="honeypot" value="" />
+              </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" required />
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Jane"
+                    required
+                  />
                 </div>
                 <div class="form-group">
                   <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" required />
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Doe"
+                    required
+                  />
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="workEmail">Work Email</label>
-                <input type="email" id="workEmail" name="workEmail" required />
+                <input
+                  type="email"
+                  id="workEmail"
+                  name="workEmail"
+                  placeholder="jane@company.com"
+                  required
+                />
               </div>
 
               <div class="form-group">
                 <label for="company">Company / Organization</label>
-                <input type="text" id="company" name="company" />
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="e.g. Acme Corp"
+                />
               </div>
 
               <div class="form-group">
@@ -147,6 +241,15 @@
                 ></textarea>
               </div>
 
+              <div class="form-privacy-notice">
+                <p>
+                  <strong>Privacy Promise:</strong> We do not use tracking
+                  analytics. Your data is strictly internal and is purged from
+                  our servers after 15 days unless we enter a contractual
+                  agreement.
+                </p>
+              </div>
+
               <button type="submit" class="btn-primary btn-submit">
                 Submit Inquiry
               </button>
@@ -159,7 +262,14 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">Esseal<span>.</span></a>
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
           <p>
             Senior-Led Software Solutions That Drive Corporate Growth. On time,
             on budget, always.
@@ -173,23 +283,64 @@
           <ul>
             <li><a href="/about.html">About Us</a></li>
             <li><a href="/services.html">Services</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/expertise.html">Expertise</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards.html"
+                >Tools & Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development.html"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development.html"
+                >Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>&copy; 2026 Esseal. All rights reserved.</p>
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
       </div>
     </footer>
-
-    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("status") === "success") {
+          const formPanel = document.querySelector(".contact-form-panel");
+          formPanel.innerHTML = `
+            <div class="form-success-message">
+                <h3>Inquiry Received</h3>
+                <p>Thank you, Talha or one of the partners will review your requirements and reach out within 24 hours.</p>
+                <a href="/contact.html" class="btn-secondary">Send another message</a>
+            </div>
+        `;
+        }
+      });
+    </script>
   </body>
 </html>

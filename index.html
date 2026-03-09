@@ -7,7 +7,20 @@
       name="description"
       content="Esseal provides expert full-stack development, rapid MVP creation, and legacy codebase modernization for SMEs and enterprise clients."
     />
+
+    <meta
+      property="og:title"
+      content="Esseal | MVP & Enterprise Software Development"
+    />
+    <meta
+      property="og:description"
+      content="Expert full-stack development and legacy codebase modernization for SMEs and enterprise clients."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.esseal.net/" />
+
     <title>Esseal | MVP Development & Enterprise Software Development</title>
+
     <link rel="icon" href="/favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,13 +29,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Esseal LTD",
+        "url": "https://www.esseal.co.uk",
+        "logo": "https://www.esseal.co.uk/esseal-logo.webp",
+        "description": "Senior-led custom software engineering firm specializing in full-stack development, MVP creation, and legacy system modernization.",
+        "foundingLocation": "United Kingdom",
+        "sameAs": [
+          "https://www.linkedin.com/company/esseal",
+          "https://github.com/esseal.dev"
+        ],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "128 City Road",
+            "addressLocality": "London",
+            "postalCode": "EC1V 2NX",
+            "addressCountry": "UK"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "College, 114-A Gul E Daman Society",
+            "addressLocality": "Lahore",
+            "postalCode": "54400",
+            "addressCountry": "PK"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="navbar">
       <div class="container nav-container">
-        <a href="/" class="logo"
-          ><img src="/esseal-logo.webp" width="180px" height="48px"
-        /></a>
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
         <nav aria-label="Main Navigation">
           <ul class="nav-links">
             <li><a href="#services">Services</a></li>
@@ -35,7 +85,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container">
           <h1>Engineering Scalable Software for SMEs & Enterprise</h1>
           <p class="hero-subtitle">
@@ -60,7 +110,13 @@
           </div>
           <div class="service-grid">
             <article class="service-card">
-              <h3>Full Stack Development Services</h3>
+              <h3>
+                <a
+                  href="/services/fullstack-development.html"
+                  class="hidden-link"
+                  >Full Stack Development Services</a
+                >
+              </h3>
               <p>
                 Hire us as your full stack developer — frontend, backend, DevOps
                 — we build for scale from day one.
@@ -68,7 +124,11 @@
             </article>
 
             <article class="service-card">
-              <h3>Backend Development Services</h3>
+              <h3>
+                <a href="/services/backend-development.html" class="hidden-link"
+                  >Backend Development Services</a
+                >
+              </h3>
               <p>
                 Secure, scalable APIs and infrastructure built to power complex
                 business logic and high-demand systems.
@@ -76,7 +136,13 @@
             </article>
 
             <article class="service-card">
-              <h3>Front End Development Services</h3>
+              <h3>
+                <a
+                  href="/services/frontend-development.html"
+                  class="hidden-link"
+                  >Front End Development Services</a
+                >
+              </h3>
               <p>
                 Sleek, responsive interfaces crafted for usability, performance,
                 and modern user experience standards.
@@ -84,7 +150,11 @@
             </article>
 
             <article class="service-card">
-              <h3>MVP Development Services</h3>
+              <h3>
+                <a href="/services/mvp-development.html" class="hidden-link"
+                  >MVP Development Services</a
+                >
+              </h3>
               <p>
                 Go to market faster with lean, high-impact MVPs — tested,
                 validated, and ready to evolve.
@@ -92,7 +162,11 @@
             </article>
 
             <article class="service-card">
-              <h3>Product Development</h3>
+              <h3>
+                <a href="/services/product-development.html" class="hidden-link"
+                  >Product Development</a
+                >
+              </h3>
               <p>
                 From idea to full-scale product, we handle the entire lifecycle
                 — design, code, launch, iterate.
@@ -100,7 +174,13 @@
             </article>
 
             <article class="service-card">
-              <h3>Legacy Codebase Upgrade & Modernization</h3>
+              <h3>
+                <a
+                  href="/services/legacy-codebase-upgrade-modernization.html"
+                  class="hidden-link"
+                  >Legacy Codebase Upgrade</a
+                >
+              </h3>
               <p>
                 Replace fragile systems with maintainable, high-performing
                 software — without business disruption.
@@ -124,7 +204,13 @@
             </article>
 
             <article class="service-card">
-              <h3>Tools & Dashboards Development</h3>
+              <h3>
+                <a
+                  href="/services/internal-tools-dashboards.html"
+                  class="hidden-link"
+                  >Tools & Dashboards Development</a
+                >
+              </h3>
               <p>
                 Internal tools, admin panels, and data dashboards built for
                 clarity, speed, and insight-driven decisions.
@@ -162,7 +248,7 @@
             Let's discuss how Esseal can help you build, scale, or upgrade your
             digital infrastructure.
           </p>
-          <a href="mailto:hello@esseal.net" class="btn-primary btn-large"
+          <a href="/contact.html" class="btn-primary btn-large"
             >Schedule a Consultation</a
           >
         </div>
@@ -172,36 +258,94 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo"
-            ><img src="/esseal-logo.webp" width="180px" height="48px"
-          /></a>
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
           <p>
             Senior-Led Software Solutions That Drive Corporate Growth. On time,
             on budget, always.
           </p>
-          <p>Engineering robust digital solutions for businesses globally.</p>
+          <p class="company-registration">
+            Registered in England & Wales No. 17026190
+          </p>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
             <li><a href="/about.html">About Us</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="/services.html">Services</a></li>
             <li><a href="#work">Our Work</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards.html"
+                >Tools & Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development.html"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development.html"
+                >Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>&copy; 2026 Esseal. All rights reserved.</p>
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
       </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="./three.r134.min.js" defer></script>
+    <script src="./vanta.net.min.js" defer></script>
+    <script>
+      window.addEventListener("load", () => {
+        if (typeof VANTA !== "undefined") {
+          VANTA.NET({
+            el: "#hero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: "#fa6220",
+            backgroundColor: "#000621",
+            points: 10.0,
+            maxDistance: 20.0,
+            spacing: 20.0,
+          });
+        }
+      });
+    </script>
   </body>
 </html>

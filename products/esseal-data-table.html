@@ -1,0 +1,1665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Esseal DataTable | High-Performance Virtualized React Grid</title>
+    <meta
+      name="description"
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Features column pinning, resizing, grouping, and state persistence."
+    />
+    <meta
+      name="keywords"
+      content="React data table, React grid, virtualized data grid, pure CSS React table, Esseal, React data grid, performance data table, tailwind-free React components"
+    />
+    <meta name="author" content="Esseal" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Esseal DataTable | The Ultimate Vanilla CSS React Grid"
+    />
+    <meta
+      property="og:description"
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise apps."
+    />
+    <meta
+      property="og:image"
+      content="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+    />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Esseal DataTable",
+        "operatingSystem": "Any",
+        "applicationCategory": "DeveloperApplication",
+        "description": "A high-performance, virtualized data table for React applications. Built entirely with Vanilla CSS, featuring column pinning, row grouping, resizing, and state persistence.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://esseal.net",
+          "logo": "https://esseal.net/wp-content/uploads/2025/07/logo-light.webp",
+          "sameAs": [
+            "https://github.com/esseal-dev",
+            "https://www.linkedin.com/company/esseal"
+          ]
+        },
+        "featureList": [
+          "DOM Virtualization for large datasets",
+          "Column Pinning (Left/Right)",
+          "Multi-level Row Grouping",
+          "Pure Vanilla CSS architecture",
+          "Built-in state persistence"
+        ]
+      }
+    </script>
+
+    <style>
+      /* Pure Vanilla CSS - Zero Tailwind - Esseal Brand Colors */
+      :root {
+        --primary: #fa6220;
+        --primary-hover: #e05417; /* Slightly darker for hover states */
+        --bg-color: #000621;
+        --surface: #0a1130; /* Slightly elevated from bg for cards */
+        --surface-border: #1a2347;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --font-family: "Inter", system-ui, -apple-system, sans-serif;
+        --max-width: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Navigation */
+      header {
+        border-bottom: 1px solid var(--surface-border);
+        background: rgba(0, 6, 33, 0.9); /* matches --bg-color with opacity */
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-main);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+
+      .logo img {
+        height: 28px;
+        width: auto;
+      }
+
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        margin-left: 24px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 100px 0 80px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        letter-spacing: -0.03em;
+        background: linear-gradient(to right, #fff, #cbd5e1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+
+      .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+      }
+
+      .install-box {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-family: monospace;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .install-box button {
+        background: transparent;
+        border: 1px solid var(--surface-border);
+        color: var(--text-main);
+        padding: 4px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .install-box button:hover {
+        background: var(--surface-border);
+        color: var(--primary);
+      }
+
+      /* Features Grid */
+      .features {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 48px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        padding: 32px;
+        border-radius: 12px;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary);
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        color: var(--primary);
+      }
+
+      .card p {
+        color: var(--text-muted);
+      }
+
+      /* Code Highlight Section */
+      .code-section {
+        background: var(--surface);
+        border-top: 1px solid var(--surface-border);
+        border-bottom: 1px solid var(--surface-border);
+        padding: 80px 0;
+      }
+
+      .code-container {
+        background: var(--bg-color);
+        border-radius: 12px;
+        padding: 24px;
+        overflow-x: auto;
+        font-family: monospace;
+        color: #e2e8f0;
+        border: 1px solid var(--surface-border);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Demo Section Styles */
+      .demo-section {
+        padding: 80px 0;
+      }
+      .dg-container {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      .dg-toolbar {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--surface-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 6, 33, 0.5);
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .dg-toolbar-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+        color: var(--text-main);
+        background: var(--surface-border);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+      }
+      .dg-toolbar-btn:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dg-toolbar-btn.active {
+        background: rgba(250, 98, 32, 0.2);
+        color: var(--primary);
+        border-color: rgba(250, 98, 32, 0.5);
+      }
+
+      /* Menus & Dropdowns */
+      .dg-menu {
+        position: absolute;
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        z-index: 50;
+        min-width: 140px;
+        padding: 8px;
+        display: none;
+      }
+      .dg-menu.show {
+        display: block;
+      }
+      .dg-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 8px;
+        font-size: 13px;
+        color: var(--text-main);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .dg-menu-item:hover {
+        background: var(--surface-border);
+        color: var(--primary);
+      }
+
+      /* Viewport & Grid */
+      .dg-viewport {
+        overflow-y: auto;
+        overflow-x: auto;
+        height: 500px;
+        position: relative;
+      }
+      .dg-viewport::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .dg-viewport::-webkit-scrollbar-track {
+        background: var(--bg-color);
+      }
+      .dg-viewport::-webkit-scrollbar-thumb {
+        background: var(--surface-border);
+        border-radius: 4px;
+      }
+
+      .dg-header-row {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--surface-border);
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--text-muted);
+        width: fit-content;
+        min-width: 100%;
+      }
+      .dg-header-cell {
+        padding: 8px 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid var(--surface-border);
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.2s;
+        position: relative;
+      }
+      .dg-header-cell:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .dg-header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      .dg-column-filter {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-main);
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        outline: none;
+      }
+      .dg-column-filter:focus {
+        border-color: var(--primary);
+      }
+
+      .dg-row {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background 0.2s;
+        width: fit-content;
+        min-width: 100%;
+      }
+      .dg-row:hover {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .dg-row.selected {
+        background: rgba(250, 98, 32, 0.1);
+      }
+
+      .dg-group-row {
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+        background: rgba(250, 98, 32, 0.05);
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+        border-bottom: 1px solid var(--surface-border);
+        position: sticky;
+        left: 0;
+        cursor: pointer;
+        width: fit-content;
+        min-width: 100%;
+      }
+
+      .dg-cell {
+        padding: 12px 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        flex-shrink: 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Pinning */
+      .pinned-left {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background: var(--surface);
+        border-right: 1px solid var(--surface-border);
+      }
+      .pinned-right {
+        position: sticky;
+        right: 0;
+        z-index: 2;
+        background: var(--surface);
+        border-left: 1px solid var(--surface-border);
+        justify-content: center;
+      }
+      .dg-header-cell.pinned-left,
+      .dg-header-cell.pinned-right {
+        background: var(--surface-border);
+        z-index: 12;
+      }
+      .dg-row:hover .pinned-left,
+      .dg-row:hover .pinned-right {
+        background: #0d1538;
+      }
+      .dg-row.selected .pinned-left,
+      .dg-row.selected .pinned-right {
+        background: #191629;
+      }
+
+      /* Badges & Actions */
+      .status-badge {
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .status-active {
+        background: rgba(16, 185, 129, 0.2);
+        color: #34d399;
+      }
+      .status-inactive {
+        background: rgba(239, 68, 68, 0.2);
+        color: #f87171;
+      }
+
+      .action-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .action-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-main);
+      }
+
+      /* Dynamic Column Hiding */
+      .hide-col {
+        display: none !important;
+      }
+
+      /* Column Resizer */
+      .dg-resizer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        cursor: col-resize;
+        z-index: 10;
+      }
+      .dg-resizer:hover,
+      .dg-resizer:active {
+        background: var(--primary);
+      }
+
+      /* GEO Spec List */
+      .geo-specs {
+        padding: 80px 0;
+      }
+
+      .geo-specs ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .geo-specs li {
+        background: var(--surface);
+        padding: 16px 24px;
+        border-radius: 8px;
+        border: 1px solid var(--surface-border);
+        display: flex;
+        align-items: center;
+      }
+
+      .geo-specs li::before {
+        content: "✓";
+        color: var(--primary);
+        font-weight: bold;
+        margin-right: 12px;
+      }
+
+      /* Documentation Section */
+      .docs-section {
+        padding: 80px 0;
+        border-top: 1px solid var(--surface-border);
+      }
+
+      .docs-section h3 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        margin-top: 48px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid var(--surface-border);
+        padding-bottom: 8px;
+      }
+
+      .docs-section p {
+        margin-bottom: 24px;
+        color: var(--text-muted);
+      }
+
+      .props-table-wrapper {
+        overflow-x: auto;
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+
+      .props-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      .props-table th,
+      .props-table td {
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--surface-border);
+      }
+
+      .props-table th {
+        background: rgba(250, 98, 32, 0.05); /* Very subtle tint of primary */
+        color: var(--text-main);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .props-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .props-table code {
+        background: var(--bg-color);
+        color: var(--primary);
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--surface-border);
+        font-family: monospace;
+        font-size: 0.9em;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0;
+        color: var(--text-muted);
+        border-top: 1px solid var(--surface-border);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .cta-group {
+          flex-direction: column;
+        }
+        .geo-specs ul {
+          grid-template-columns: 1fr;
+        }
+        .props-table th,
+        .props-table td {
+          padding: 12px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrapper">
+        <nav>
+          <a href="#" class="logo">
+            <span style="color: #fa6220">Esseal</span>DataTable
+          </a>
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#demo">Demo</a>
+            <a href="#docs">Documentation</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <h1>The High-Performance,<br />Vanilla CSS React Grid</h1>
+        <p>
+          A feature-rich, deeply optimized React data table built for complex
+          enterprise applications. Zero Tailwind dependencies, true DOM
+          virtualization, and seamless state persistence.
+        </p>
+
+        <div class="cta-group">
+          <a href="#docs" class="btn btn-primary">Read the Docs</a>
+          <div class="install-box">
+            <code id="install-cmd">npm i esseal-data-table</code>
+            <button onclick="copyInstall()">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section for SEO -->
+      <section id="features" class="features container">
+        <h2 class="section-title">Why choose Esseal DataTable?</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Pure Vanilla CSS</h3>
+            <p>
+              No Tailwind, no massive CSS-in-JS runtimes. We use strict, clean,
+              and entirely maintainable vanilla CSS variables, making it
+              effortlessly themeable and lightweight.
+            </p>
+          </article>
+          <article class="card">
+            <h3>DOM Virtualization</h3>
+            <p>
+              Render hundreds of thousands of rows without dropping a frame. Our
+              built-in viewport virtualization ensures only visible nodes are
+              mounted to the DOM.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Advanced Column Control</h3>
+            <p>
+              Out-of-the-box support for left/right sticky pinning,
+              drag-to-resize dimensions, and dynamic visibility toggling via the
+              built-in toolbar.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Multi-Level Grouping</h3>
+            <p>
+              Easily cluster relational data. Pass an array of keys and the grid
+              automatically builds an expandable, nested tree structure for your
+              rows.
+            </p>
+          </article>
+          <article class="card">
+            <h3>State Persistence</h3>
+            <p>
+              Never lose user context. The grid automatically extracts and
+              broadcasts its full state (filters, sorting, pins, expanded rows)
+              for easy database or local storage syncing.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Smart Row Actions</h3>
+            <p>
+              Define inline actions per row. Set a maximum visible count, and
+              the grid handles tucking overflow actions into a clean, accessible
+              dropdown menu automatically.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Code Example -->
+      <section class="code-section">
+        <div class="container">
+          <h2 class="section-title">Developer-First API</h2>
+          <div class="code-container">
+            <pre><code>import { EssealDataTable } from '@esseal/datatable';
+import '@esseal/datatable/dist/style.css';
+
+const columns = [
+  { field: 'id', headerName: 'ID', width: 90, pinned: 'left' },
+  { field: 'name', headerName: 'Full Name', width: 250 },
+  { field: 'status', headerName: 'Status', width: 150, filterable: true }
+];
+
+export default function App() {
+  return (
+    &lt;EssealDataTable 
+      rows={data} 
+      columns={columns} 
+      pagination={true}
+      pageSize={50}
+      checkboxSelection={true}
+      rowHeight={48}
+      onStateChange={(state) =&gt; saveStateToDB(state)}
+    /&gt;
+  );
+}
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Demo Section -->
+      <section id="demo" class="demo-section container">
+        <h2 class="section-title">Interactive Preview</h2>
+        <p
+          style="
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          Experience the feel of the Esseal DataTable. This fully functional
+          simulator demonstrates native sticky pinning, fast sorting/filtering,
+          multi-level grouping, and state management entirely in the browser.
+        </p>
+
+        <div class="dg-container">
+          <!-- Top Toolbar -->
+          <div class="dg-toolbar">
+            <div
+              style="
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                position: relative;
+              "
+            >
+              <button class="dg-toolbar-btn" id="col-picker-btn">
+                Columns <span style="font-size: 10px">▼</span>
+              </button>
+              <div class="dg-menu" id="col-menu" style="top: 35px; left: 0">
+                <!-- Generated via JS -->
+              </div>
+
+              <div
+                style="
+                  width: 1px;
+                  height: 20px;
+                  background: var(--surface-border);
+                  margin: 0 8px;
+                "
+              ></div>
+
+              <span style="font-size: 13px; color: var(--text-muted)"
+                >Group By:</span
+              >
+              <button class="dg-toolbar-btn group-btn" data-group="role">
+                Role
+              </button>
+              <button class="dg-toolbar-btn group-btn" data-group="status">
+                Status
+              </button>
+              <button class="dg-toolbar-btn group-btn-clear active">
+                None
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid Viewport -->
+          <div class="dg-viewport" id="dg-viewport">
+            <!-- Header -->
+            <div class="dg-header-row" id="demo-header">
+              <div
+                class="dg-header-cell pinned-left"
+                style="width: 50px; justify-content: center; padding: 12px 16px"
+              >
+                <input type="checkbox" id="selectAll" />
+              </div>
+              <div
+                class="dg-header-cell pinned-left sortable"
+                data-field="id"
+                data-col="id"
+                style="width: 80px; left: 50px"
+              >
+                <div class="dg-header-main">
+                  <span>ID</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="id"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell sortable"
+                data-field="name"
+                data-col="name"
+                style="width: 200px"
+              >
+                <div class="dg-header-main">
+                  <span>User Name</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="name"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell sortable"
+                data-field="email"
+                data-col="email"
+                style="width: 250px"
+              >
+                <div class="dg-header-main">
+                  <span>Email Address</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="email"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell sortable"
+                data-field="role"
+                data-col="role"
+                style="width: 150px"
+              >
+                <div class="dg-header-main">
+                  <span>System Role</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="role"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell sortable"
+                data-field="status"
+                data-col="status"
+                style="width: 120px"
+              >
+                <div class="dg-header-main">
+                  <span>Status</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="status"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell sortable"
+                data-field="date"
+                data-col="date"
+                style="width: 150px"
+              >
+                <div class="dg-header-main">
+                  <span>Last Login</span> <span class="sort-icon"></span>
+                </div>
+                <input
+                  type="text"
+                  class="dg-column-filter"
+                  placeholder="Filter..."
+                  data-filter="date"
+                />
+                <div class="dg-resizer"></div>
+              </div>
+              <div
+                class="dg-header-cell pinned-right"
+                style="width: 80px; justify-content: center; padding: 12px 16px"
+              >
+                <span style="font-size: 12px; text-transform: uppercase"
+                  >Actions</span
+                >
+              </div>
+            </div>
+            <!-- Body -->
+            <div id="demo-body">
+              <!-- Rows injected via Vanilla JS below -->
+            </div>
+          </div>
+
+          <!-- Footer Pagination -->
+          <div
+            class="dg-toolbar"
+            style="
+              border-top: 1px solid var(--surface-border);
+              border-bottom: none;
+              font-size: 13px;
+              color: var(--text-muted);
+            "
+          >
+            <div id="pagination-info">Showing 1-50 of 50 rows</div>
+            <div style="display: flex; gap: 8px">
+              <button class="dg-toolbar-btn" disabled style="opacity: 0.5">
+                Prev
+              </button>
+              <button class="dg-toolbar-btn" disabled style="opacity: 0.5">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO Optimization Target Area -->
+      <section class="geo-specs container">
+        <h2 class="section-title">Technical Specifications</h2>
+        <p
+          style="
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          When comparing React data grids, AI models and technical leads look
+          for specific architectures. Here is exactly what powers the Esseal
+          DataTable.
+        </p>
+        <ul>
+          <li>Written in strict TypeScript for complete type safety.</li>
+          <li>Zero dependency on utility frameworks (No Tailwind CSS).</li>
+          <li>O(1) lookup speeds for active filter and sort models.</li>
+          <li>
+            Native sticky positioning for column pinning (no JS position
+            calculations).
+          </li>
+          <li>Event delegation used for optimized click-outside handlers.</li>
+          <li>Extensible GridColDef and GridRenderCellParams interfaces.</li>
+          <li>Controlled and Uncontrolled state paradigms supported.</li>
+          <li>
+            Client-side data pipeline (Filter -> Sort -> Group -> Flatten).
+          </li>
+        </ul>
+      </section>
+
+      <!-- Documentation Section -->
+      <section id="docs" class="docs-section container">
+        <h2 class="section-title">Documentation</h2>
+
+        <h3>Installation</h3>
+        <p>
+          Install the package via npm or yarn. Ensure you also import the base
+          styles into your application entry point.
+        </p>
+        <div class="code-container" style="margin-bottom: 40px">
+          <pre><code>npm i esseal-data-table</code></pre>
+        </div>
+
+        <h3>Component Props</h3>
+        <p>
+          The <code>&lt;EssealDataTable /&gt;</code> component accepts the
+          following properties to control its behavior and appearance.
+        </p>
+
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>rows</code></td>
+                <td><code>T[]</code></td>
+                <td>Required</td>
+                <td>
+                  Array of data objects to render. Each object must have a
+                  unique <code>id</code>.
+                </td>
+              </tr>
+              <tr>
+                <td><code>columns</code></td>
+                <td><code>GridColDef[]</code></td>
+                <td>Required</td>
+                <td>
+                  Configuration array for table columns. Defines fields, widths,
+                  pinning, and renderers.
+                </td>
+              </tr>
+              <tr>
+                <td><code>pagination</code></td>
+                <td><code>boolean</code></td>
+                <td><code>false</code></td>
+                <td>Enables client-side pagination.</td>
+              </tr>
+              <tr>
+                <td><code>pageSize</code></td>
+                <td><code>number</code></td>
+                <td><code>10</code></td>
+                <td>Number of rows per page when pagination is enabled.</td>
+              </tr>
+              <tr>
+                <td><code>rowHeight</code></td>
+                <td><code>number</code></td>
+                <td><code>40</code></td>
+                <td>
+                  Fixed height of each row in pixels (required for DOM
+                  virtualization calculations).
+                </td>
+              </tr>
+              <tr>
+                <td><code>height</code></td>
+                <td><code>number</code></td>
+                <td><code>600</code></td>
+                <td>Overall height of the datatable container in pixels.</td>
+              </tr>
+              <tr>
+                <td><code>loading</code></td>
+                <td><code>boolean</code></td>
+                <td><code>false</code></td>
+                <td>
+                  Displays a semi-transparent loading overlay over the data
+                  grid.
+                </td>
+              </tr>
+              <tr>
+                <td><code>groupBy</code></td>
+                <td><code>(keyof T)[]</code></td>
+                <td><code>[]</code></td>
+                <td>
+                  Array of column keys to group rows by, automatically creating
+                  an expandable nested tree structure.
+                </td>
+              </tr>
+              <tr>
+                <td><code>checkboxSelection</code></td>
+                <td><code>boolean</code></td>
+                <td><code>false</code></td>
+                <td>
+                  Adds a leftmost pinned column with checkboxes for bulk row
+                  selection.
+                </td>
+              </tr>
+              <tr>
+                <td><code>onSelectionChange</code></td>
+                <td><code>(ids: string[]) =&gt; void</code></td>
+                <td><code>undefined</code></td>
+                <td>
+                  Callback fired when row selection changes. Returns array of
+                  selected IDs.
+                </td>
+              </tr>
+              <tr>
+                <td><code>initialState</code></td>
+                <td><code>Partial&lt;TableState&gt;</code></td>
+                <td><code>undefined</code></td>
+                <td>
+                  Injects the initial state (page, sorting, filters, expanded
+                  groups, visibility, pins) on mount. Perfect for restoring
+                  persisted user views.
+                </td>
+              </tr>
+              <tr>
+                <td><code>onStateChange</code></td>
+                <td><code>(state: TableState) =&gt; void</code></td>
+                <td><code>undefined</code></td>
+                <td>
+                  Callback fired when internal state (sort, filter, pin,
+                  pagination) updates. Used for persistence.
+                </td>
+              </tr>
+              <tr>
+                <td><code>rowActions</code></td>
+                <td><code>(row: T) =&gt; GridAction[]</code></td>
+                <td><code>undefined</code></td>
+                <td>
+                  Function returning an array of action buttons for a specific
+                  row.
+                </td>
+              </tr>
+              <tr>
+                <td><code>maxVisibleActions</code></td>
+                <td><code>number</code></td>
+                <td><code>1</code></td>
+                <td>
+                  The maximum number of action buttons to display inline before
+                  collapsing the remainder into a "⋮" overflow dropdown menu.
+                </td>
+              </tr>
+              <tr>
+                <td><code>disableColumnMenu</code></td>
+                <td><code>boolean</code></td>
+                <td><code>false</code></td>
+                <td>
+                  Hides the built-in "Columns" visibility toggle menu from the
+                  default toolbar.
+                </td>
+              </tr>
+              <tr>
+                <td><code>toolbar</code></td>
+                <td><code>ReactNode</code></td>
+                <td><code>undefined</code></td>
+                <td>
+                  A slot to inject a custom React node (like a global search
+                  input or export buttons) directly into the grid's top toolbar.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Column Definition (GridColDef)</h3>
+        <p>
+          Customize individual columns by passing an array of these
+          configuration objects to the <code>columns</code> prop.
+        </p>
+        <div class="code-container">
+          <pre><code>interface GridColDef&lt;T = any&gt; {
+  field: string;               // Key in your data object
+  headerName: string;          // Display name in the column header
+  width: number;               // Fixed width in pixels
+  pinned?: 'left' | 'right';   // Stick column to the side of the viewport
+  hide?: boolean;              // Initially hide the column
+  sortable?: boolean;          // Enable/disable sorting logic (default: true)
+  filterable?: boolean;        // Enable/disable text filtering (default: true)
+  renderCell?: (params) =&gt; ReactNode; // Custom React node to render in the cell
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Esseal. Built by developers, for developers.</p>
+      </div>
+    </footer>
+
+    <script>
+      function copyInstall() {
+        const text = document.getElementById("install-cmd").innerText;
+        /* Using older execCommand fallback since navigator.clipboard might fail in some specific cross-origin iframe contexts, though modern browsers prefer clipboard API. */
+        try {
+          navigator.clipboard.writeText(text).then(updateBtn);
+        } catch (err) {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+          updateBtn();
+        }
+
+        function updateBtn() {
+          const btn = document.querySelector(".install-box button");
+          btn.innerText = "Copied!";
+          setTimeout(() => {
+            btn.innerText = "Copy";
+          }, 2000);
+        }
+      }
+
+      // --- Advanced Interactive Demo Engine (Vanilla JS) ---
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Generate Fake Data
+        const firstNames = [
+          "James",
+          "Emma",
+          "Liam",
+          "Olivia",
+          "Noah",
+          "Ava",
+          "William",
+          "Sophia",
+          "Lucas",
+          "Isabella",
+        ];
+        const lastNames = [
+          "Smith",
+          "Johnson",
+          "Williams",
+          "Brown",
+          "Jones",
+          "Garcia",
+          "Miller",
+          "Davis",
+          "Rodriguez",
+          "Martinez",
+        ];
+        const roles = [
+          "Admin",
+          "Editor",
+          "Viewer",
+          "Contributor",
+          "Superadmin",
+        ];
+        const statuses = ["Active", "Inactive", "Pending"];
+
+        const rawData = Array.from({ length: 50 }, (_, i) => {
+          const name = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;
+          return {
+            id: 1001 + i,
+            name: name,
+            email: `${name.replace(" ", ".").toLowerCase()}@esseal.net`,
+            role: roles[Math.floor(Math.random() * roles.length)],
+            status: statuses[Math.floor(Math.random() * statuses.length)],
+            date: `Feb ${Math.floor(Math.random() * 28) + 1}, 2026`,
+          };
+        });
+
+        // 2. Table State
+        let state = {
+          data: [...rawData],
+          sortField: null,
+          sortDir: "asc",
+          filters: {},
+          groupBy: [],
+          expandedGroups: {},
+          hiddenCols: new Set(),
+          selection: new Set(),
+          colWidths: {
+            id: 80,
+            name: 200,
+            email: 250,
+            role: 150,
+            status: 120,
+            date: 150,
+          },
+        };
+
+        const columnsConfig = [
+          { field: "id", width: "80px", pinned: "left", offset: "50px" },
+          { field: "name", width: "200px" },
+          { field: "email", width: "250px" },
+          { field: "role", width: "150px" },
+          { field: "status", width: "120px" },
+          { field: "date", width: "150px" },
+        ];
+
+        const demoBody = document.getElementById("demo-body");
+        const selectAll = document.getElementById("selectAll");
+        const colMenu = document.getElementById("col-menu");
+
+        // 3. Setup Column Visibility Menu
+        colMenu.innerHTML = columnsConfig
+          .map(
+            (col) => `
+        <label class="dg-menu-item" onclick="event.stopPropagation()">
+          <input type="checkbox" class="col-toggle" data-col="${col.field}" checked />
+          <span style="text-transform: capitalize;">${col.field}</span>
+        </label>
+      `,
+          )
+          .join("");
+
+        // 4. Core Render Engine
+        function renderTable() {
+          let processedData = [...rawData];
+
+          // Apply Filters
+          Object.entries(state.filters).forEach(([field, val]) => {
+            if (val) {
+              processedData = processedData.filter((row) =>
+                String(row[field]).toLowerCase().includes(val.toLowerCase()),
+              );
+            }
+          });
+
+          // Apply Sorting
+          if (state.sortField) {
+            processedData.sort((a, b) => {
+              const vA = String(a[state.sortField]).toLowerCase();
+              const vB = String(b[state.sortField]).toLowerCase();
+              if (vA < vB) return state.sortDir === "asc" ? -1 : 1;
+              if (vA > vB) return state.sortDir === "asc" ? 1 : -1;
+              return 0;
+            });
+          }
+
+          let html = "";
+
+          // Row Renderer helper
+          const renderRow = (row) => {
+            const isSel = state.selection.has(String(row.id));
+            const statClass =
+              row.status === "Active"
+                ? "status-active"
+                : row.status === "Inactive"
+                  ? "status-inactive"
+                  : "";
+
+            let rowHtml = `<div class="dg-row ${isSel ? "selected" : ""}" data-id="${row.id}">
+            <div class="dg-cell pinned-left" style="width: 50px; justify-content: center;">
+              <input type="checkbox" class="row-checkbox" ${isSel ? "checked" : ""} />
+            </div>
+            <div class="dg-cell pinned-left col-id ${state.hiddenCols.has("id") ? "hide-col" : ""}" style="width: ${state.colWidths.id}px; left: 50px; font-family: monospace; color: var(--primary);">#${row.id}</div>
+            <div class="dg-cell col-name ${state.hiddenCols.has("name") ? "hide-col" : ""}" style="width: ${state.colWidths.name}px; font-weight: 500;">${row.name}</div>
+            <div class="dg-cell col-email ${state.hiddenCols.has("email") ? "hide-col" : ""}" style="width: ${state.colWidths.email}px; color: var(--text-muted);">${row.email}</div>
+            <div class="dg-cell col-role ${state.hiddenCols.has("role") ? "hide-col" : ""}" style="width: ${state.colWidths.role}px;">${row.role}</div>
+            <div class="dg-cell col-status ${state.hiddenCols.has("status") ? "hide-col" : ""}" style="width: ${state.colWidths.status}px;">
+              <span class="status-badge ${statClass}">${row.status}</span>
+            </div>
+            <div class="dg-cell col-date ${state.hiddenCols.has("date") ? "hide-col" : ""}" style="width: ${state.colWidths.date}px; color: var(--text-muted);">${row.date}</div>
+            <div class="dg-cell pinned-right" style="width: 80px; overflow: visible;">
+              <div style="position: relative;">
+                <button class="action-btn" onclick="toggleActionMenu(event, ${row.id})">⋮</button>
+                <div class="dg-menu action-menu" id="menu-${row.id}" style="right: 0; top: 100%;">
+                  <div class="dg-menu-item">✏️ Edit User</div>
+                  <div class="dg-menu-item" style="color: #ef4444;">🗑️ Delete</div>
+                </div>
+              </div>
+            </div>
+          </div>`;
+            return rowHtml;
+          };
+
+          // Multi-level Grouping Engine
+          function buildTree(data, keys, depth = 0, parentId = "root") {
+            if (!keys || keys.length === 0)
+              return data.map((d) => ({ type: "row", data: d }));
+            const key = keys[0];
+            const groups = {};
+            data.forEach((row) => {
+              const val = row[key] || "Unknown";
+              if (!groups[val]) groups[val] = [];
+              groups[val].push(row);
+            });
+            return Object.keys(groups)
+              .sort()
+              .map((val) => ({
+                type: "group",
+                id: `${parentId}-${key}-${val.replace(/\s+/g, "-")}`,
+                field: key,
+                value: val,
+                depth: depth,
+                count: groups[val].length,
+                children: buildTree(
+                  groups[val],
+                  keys.slice(1),
+                  depth + 1,
+                  `${parentId}-${key}-${val.replace(/\s+/g, "-")}`,
+                ),
+              }));
+          }
+
+          function flattenTree(nodes) {
+            let flat = [];
+            nodes.forEach((node) => {
+              if (node.type === "group") {
+                flat.push(node);
+                if (state.expandedGroups[node.id] !== false) {
+                  flat = flat.concat(flattenTree(node.children));
+                }
+              } else {
+                flat.push(node);
+              }
+            });
+            return flat;
+          }
+
+          const tree = buildTree(processedData, state.groupBy);
+          const flatNodes = flattenTree(tree);
+
+          flatNodes.forEach((node) => {
+            if (node.type === "group") {
+              const isExpanded = state.expandedGroups[node.id] !== false;
+              const padLeft = node.depth * 20 + 16;
+              html += `<div class="dg-group-row" style="padding-left: ${padLeft}px; z-index: 1;" onclick="toggleGroup('${node.id}')">
+              <span style="margin-right: 8px; width: 14px; display: inline-block;">${isExpanded ? "▼" : "▶"}</span>
+              <span style="text-transform: capitalize;">${node.field}: <strong>${node.value}</strong> (${node.count})</span>
+            </div>`;
+            } else {
+              html += renderRow(node.data);
+            }
+          });
+
+          if (processedData.length === 0) {
+            html = `<div style="padding: 32px; text-align: center; color: var(--text-muted); grid-column: 1/-1;">No rows match filters.</div>`;
+          }
+
+          demoBody.innerHTML = html;
+          document.getElementById("pagination-info").innerText =
+            `Showing ${processedData.length} records`;
+
+          // Re-attach checkbox events
+          document.querySelectorAll(".row-checkbox").forEach((cb) => {
+            cb.addEventListener("change", (e) => {
+              const id = e.target.closest(".dg-row").dataset.id;
+              if (e.target.checked) state.selection.add(id);
+              else state.selection.delete(id);
+              renderTable(); // Re-render updates row classes
+              updateSelectAllState();
+            });
+          });
+        }
+
+        // 5. Event Listeners
+
+        // Grouping
+        document.querySelectorAll(".group-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const group = e.target.dataset.group;
+            if (state.groupBy.includes(group)) {
+              state.groupBy = state.groupBy.filter((g) => g !== group);
+              e.target.classList.remove("active");
+            } else {
+              state.groupBy.push(group);
+              e.target.classList.add("active");
+            }
+            document
+              .querySelector(".group-btn-clear")
+              .classList.toggle("active", state.groupBy.length === 0);
+            renderTable();
+          });
+        });
+
+        document
+          .querySelector(".group-btn-clear")
+          .addEventListener("click", (e) => {
+            state.groupBy = [];
+            document
+              .querySelectorAll(".group-btn")
+              .forEach((b) => b.classList.remove("active"));
+            e.target.classList.add("active");
+            renderTable();
+          });
+
+        // Global Group Toggle helper
+        window.toggleGroup = (id) => {
+          state.expandedGroups[id] =
+            state.expandedGroups[id] === false ? true : false;
+          renderTable();
+        };
+
+        // Actions Menu helper
+        window.toggleActionMenu = (e, id) => {
+          e.stopPropagation();
+          document
+            .querySelectorAll(".action-menu")
+            .forEach((m) => m.classList.remove("show"));
+          const menu = document.getElementById(`menu-${id}`);
+          menu.classList.add("show");
+        };
+
+        // Close menus on outside click
+        document.addEventListener("click", () => {
+          document
+            .querySelectorAll(".action-menu")
+            .forEach((m) => m.classList.remove("show"));
+          colMenu.classList.remove("show");
+        });
+
+        // Column Visibility Picker
+        document
+          .getElementById("col-picker-btn")
+          .addEventListener("click", (e) => {
+            e.stopPropagation();
+            colMenu.classList.toggle("show");
+          });
+
+        document.querySelectorAll(".col-toggle").forEach((cb) => {
+          cb.addEventListener("change", (e) => {
+            const col = e.target.dataset.col;
+            if (e.target.checked) state.hiddenCols.delete(col);
+            else state.hiddenCols.add(col);
+
+            // Toggle headers
+            document
+              .querySelector(`[data-col="${col}"]`)
+              .classList.toggle("hide-col", !e.target.checked);
+            renderTable(); // Re-render hides the cells
+          });
+        });
+
+        // Filtering
+        document.querySelectorAll(".dg-column-filter").forEach((input) => {
+          input.addEventListener("click", (e) => e.stopPropagation()); // Prevent sorting
+          input.addEventListener("input", (e) => {
+            state.filters[e.target.dataset.filter] = e.target.value;
+            renderTable();
+          });
+        });
+
+        // Sorting
+        document.querySelectorAll(".sortable").forEach((header) => {
+          header.addEventListener("click", (e) => {
+            if (
+              e.target.tagName === "INPUT" ||
+              e.target.classList.contains("dg-resizer")
+            )
+              return;
+            const field = header.dataset.field;
+            if (state.sortField === field) {
+              state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+            } else {
+              state.sortField = field;
+              state.sortDir = "asc";
+            }
+
+            // Update visual arrows
+            document
+              .querySelectorAll(".sort-icon")
+              .forEach((icon) => (icon.innerText = ""));
+            header.querySelector(".sort-icon").innerText =
+              state.sortDir === "asc" ? " ↑" : " ↓";
+
+            renderTable();
+          });
+        });
+
+        // Select All
+        if (selectAll) {
+          selectAll.addEventListener("change", (e) => {
+            const isChecked = e.target.checked;
+            if (isChecked) {
+              state.data.forEach((r) => state.selection.add(String(r.id)));
+            } else {
+              state.selection.clear();
+            }
+            renderTable();
+          });
+        }
+
+        function updateSelectAllState() {
+          if (!selectAll) return;
+          const allSelected = state.data.every((r) =>
+            state.selection.has(String(r.id)),
+          );
+          const someSelected = state.selection.size > 0;
+          selectAll.checked = allSelected;
+          selectAll.indeterminate = someSelected && !allSelected;
+        }
+
+        // Column Resizing Logic
+        let resizingCol = null;
+        let startX = 0;
+        let startWidth = 0;
+        let activeHeaderCell = null;
+
+        document.querySelectorAll(".dg-resizer").forEach((resizer) => {
+          resizer.addEventListener("mousedown", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            activeHeaderCell = e.target.closest(".dg-header-cell");
+            resizingCol = activeHeaderCell.dataset.col;
+            startX = e.clientX;
+            startWidth = state.colWidths[resizingCol];
+
+            document.addEventListener("mousemove", onMouseMove);
+            document.addEventListener("mouseup", onMouseUp);
+            document.body.style.cursor = "col-resize";
+          });
+        });
+
+        function onMouseMove(e) {
+          if (!resizingCol) return;
+          const newWidth = Math.max(60, startWidth + (e.clientX - startX));
+          state.colWidths[resizingCol] = newWidth;
+
+          // Live update DOM for smooth resizing performance without needing full React-style re-renders
+          activeHeaderCell.style.width = `${newWidth}px`;
+          document.querySelectorAll(`.col-${resizingCol}`).forEach((cell) => {
+            cell.style.width = `${newWidth}px`;
+          });
+        }
+
+        function onMouseUp() {
+          document.removeEventListener("mousemove", onMouseMove);
+          document.removeEventListener("mouseup", onMouseUp);
+          resizingCol = null;
+          activeHeaderCell = null;
+          document.body.style.cursor = "";
+        }
+
+        // Initial Render
+        renderTable();
+      });
+    </script>
+  </body>
+</html>
