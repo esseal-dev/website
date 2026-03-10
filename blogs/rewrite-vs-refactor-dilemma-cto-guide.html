@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO METADATA -->
-    <title>
-      The "Rewrite vs. Refactor" Dilemma: A Guide for CTOs | Esseal UK
-    </title>
     <meta
       name="description"
       content="Should you burn the code or fix it? A strategic guide to Software Refactoring vs Rewriting, the Strangler Fig Pattern, and successful Legacy System Modernisation."
@@ -18,12 +13,15 @@
     />
     <meta name="author" content="Esseal" />
     <meta name="robots" content="index, follow" />
+
+    <title>The "Rewrite vs. Refactor" Dilemma: A Guide for CTOs | Esseal</title>
+
     <link
       rel="canonical"
-      href="https://esseal.net/blog/rewrite-vs-refactor-dilemma-cto-guide"
+      href="https://www.esseal.co.uk/blogs/rewrite-vs-refactor-dilemma-cto-guide.html"
     />
 
-    <!-- OPEN GRAPH (Social Media) -->
+    <!-- Open Graph / Social -->
     <meta
       property="og:title"
       content="The 'Rewrite vs. Refactor' Dilemma: A Guide for CTOs"
@@ -35,594 +33,332 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://esseal.net/blog/rewrite-vs-refactor-dilemma-cto-guide"
+      content="https://www.esseal.co.uk/blogs/rewrite-vs-refactor-dilemma-cto-guide.html"
     />
     <meta
       property="og:image"
-      content="https://esseal.net/assets/blog/rewrite-refactor-cover.jpg"
+      content="https://www.esseal.co.uk/assets/blog/rewrite-refactor-cover.jpg"
     />
 
-    <!-- FONTS -->
+    <link rel="icon" href="../favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.esseal.co.uk/blogs/rewrite-vs-refactor-dilemma-cto-guide.html"
+            },
+            "headline": "The \"Rewrite vs. Refactor\" Dilemma: A Guide for CTOs",
+            "description": "Should you burn the code or fix it? A strategic guide to Software Refactoring vs Rewriting, the Strangler Fig Pattern, and successful Legacy System Modernisation.",
+            "image": "https://www.esseal.co.uk/assets/blog/rewrite-refactor-cover.jpg",
+            "author": {
+              "@type": "Person",
+              "name": "Talha Qureshi"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.esseal.co.uk/esseal-logo.webp"
+              }
+            },
+            "datePublished": "2024-01-28",
+            "dateModified": "2024-01-28"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why do full software rewrites often fail for companies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Full rewrites essentially freeze business logic while competitors continue to move forward. By throwing away legacy code, companies also discard years of bug fixes and edge-case handling, trading known problems for entirely unknown ones."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Strangler Fig Pattern in engineering?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Strangler Fig Pattern involves building new microservices alongside a legacy monolith. Traffic is incrementally routed to the new services until the old system is eventually 'strangled' and can be decommissioned without downtime."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is it actually appropriate to rewrite a legacy system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A rewrite should only be considered if the technology is completely obsolete and unpatchable, if there's a fundamental paradigm shift required (monolith to cloud-native), or if the cost of making a simple change is consistently higher than the value of the feature."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
 
     <style>
-      /* --- GLOBAL & NAVIGATION STYLES --- */
-      :root {
-        --primary-dark: #0f172a;
-        --primary-blue: #2563eb;
-        --accent-orange: #ea580c;
-        --text-main: #334155;
-        --bg-page: #f8fafc;
+      /* Typography & Layout optimized for Long-Form Reading in Dark Theme */
+      .article-header {
+        padding: 80px 0 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .article-tag {
+        color: var(--brand-orange);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+        background: rgba(250, 98, 32, 0.1);
+        padding: 4px 12px;
+        border-radius: 4px;
+      }
+      .article-title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      .article-title span {
+        color: var(--brand-orange);
+      }
+      .article-meta {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
       }
 
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-page);
+      .article-container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+      }
+
+      .article-content {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #d1d5db;
+      }
+      .article-content h2 {
+        font-size: 2rem;
+        margin: 3rem 0 1.25rem;
         color: var(--text-main);
       }
-      * {
-        box-sizing: border-box;
+      .article-content h3 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        color: var(--text-main);
       }
-      a {
-        text-decoration: none;
-      }
-
-      /* Navbar */
-      .esseal-nav {
-        background-color: #020412;
-        padding: 1rem 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-      .nav-logo img {
-        height: 40px;
-        width: auto;
-        display: block;
-      }
-      .nav-links {
-        display: flex;
-        gap: 2.5rem;
-        align-items: center;
-      }
-      .nav-item {
-        color: #ffffff;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: color 0.2s;
-      }
-      .nav-item:hover {
-        color: var(--accent-orange);
-      }
-      .nav-btn {
-        background-color: var(--accent-orange);
-        color: white;
-        padding: 12px 28px;
-        border-radius: 4px;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: background 0.2s;
-        font-size: 0.95rem;
-      }
-      .nav-btn:hover {
-        background-color: #c2410c;
-      }
-
-      /* Footer */
-      .esseal-footer {
-        background-color: #020412;
-        color: #94a3b8;
-        padding: 5rem 5% 2rem 5%;
-        font-size: 0.95rem;
-        font-family: "Inter", sans-serif;
-      }
-      .footer-grid {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-        gap: 4rem;
-        margin-bottom: 4rem;
-      }
-      .footer-col h4 {
-        color: var(--accent-orange);
-        font-size: 1.1rem;
-        margin: 0 0 1.5rem 0;
-        font-weight: 600;
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer-links li {
-        margin-bottom: 0.8rem;
-      }
-      .footer-links a {
-        color: #e2e8f0;
-        transition: color 0.2s;
-      }
-      .footer-links a:hover {
-        color: var(--accent-orange);
-      }
-      .footer-desc {
-        line-height: 1.6;
-        margin-top: 1.5rem;
-        max-width: 320px;
-        color: #cbd5e1;
-      }
-      .copyright {
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 2rem;
-        font-size: 0.9rem;
-        color: #cbd5e1;
-      }
-      .copyright span {
-        color: var(--accent-orange);
-      }
-
-      /* Mobile */
-      @media (max-width: 900px) {
-        .footer-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 2rem;
-        }
-        .nav-links {
-          display: none;
-        }
-      }
-      @media (max-width: 600px) {
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
-        .nav-btn {
-          display: none;
-        }
-        .esseal-nav {
-          justify-content: center;
-        }
-      }
-
-      /* --- BLOG SPECIFIC SCOPED STYLES --- */
-      .esseal-blog-scoped {
-        max-width: 900px;
-        margin: 2rem auto 4rem auto;
-        padding: 0 1rem;
-
-        /* Local Vars */
-        --blog-blue: #2563eb;
-        --blog-bg: #ffffff;
-        --blog-radius: 16px;
-      }
-
-      .esseal-blog-scoped .blog-card {
-        background-color: var(--blog-bg);
-        border-radius: var(--blog-radius);
-        overflow: hidden;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      }
-
-      /* Header */
-      .esseal-blog-scoped .blog-header {
-        background-color: var(--primary-dark);
-        color: white;
-        padding: 4rem 3rem;
-        position: relative;
-        overflow: hidden;
-      }
-      .esseal-blog-scoped .header-deco {
-        position: absolute;
-        top: -50px;
-        right: -50px;
-        width: 300px;
-        height: 300px;
-        background: var(--blog-blue);
-        opacity: 0.15;
-        filter: blur(60px);
-        border-radius: 50%;
-        pointer-events: none;
-      }
-      .esseal-blog-scoped .category-tag {
-        display: inline-block;
-        padding: 4px 12px;
-        background-color: rgba(30, 58, 138, 0.5);
-        border: 1px solid rgba(59, 130, 246, 0.3);
-        color: #bfdbfe;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        border-radius: 999px;
+      .article-content p {
         margin-bottom: 1.5rem;
       }
-      .esseal-blog-scoped .blog-title {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 800;
-        line-height: 1.2;
-        margin: 0 0 1.5rem 0;
-        color: white;
+      .article-content strong {
+        color: var(--text-main);
       }
-      .esseal-blog-scoped .title-accent {
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+      }
+      .article-content li {
+        margin-bottom: 0.75rem;
+      }
+      .article-content a {
+        color: var(--brand-orange);
+        text-decoration: underline;
+        text-decoration-color: rgba(250, 98, 32, 0.4);
+        text-underline-offset: 4px;
+        transition: text-decoration-color 0.2s;
+      }
+      .article-content a:hover {
+        text-decoration-color: var(--brand-orange);
+      }
+
+      /* Custom Callout Boxes for TLDR & Hooks */
+      .content-callout {
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 4px solid var(--brand-orange);
+        padding: 2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 2.5rem 0;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .content-callout h3 {
+        margin-top: 0;
+        color: var(--brand-orange);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .content-callout.alt {
+        background: rgba(0, 10, 51, 0.4);
+        border-left: none;
+        border-top: 4px solid var(--brand-orange);
+        border-radius: 8px;
+        text-align: center;
+      }
+      .content-callout.alt h3 {
+        justify-content: center;
+        color: var(--text-main);
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1.5rem;
+      }
+
+      /* Info/Blue tint for Case Studies or Logic Lessons */
+      .content-callout.info {
+        border-top-color: #3b82f6;
+        background: rgba(59, 130, 246, 0.05);
+      }
+      .content-callout.info h3 {
         color: #60a5fa;
       }
-      .esseal-blog-scoped .blog-meta {
-        display: flex;
-        color: #94a3b8;
-        font-size: 0.9rem;
-        gap: 1rem;
-        align-items: center;
-      }
-      .esseal-blog-scoped .meta-icon {
-        width: 16px;
-        height: 16px;
-        stroke: currentColor;
-        margin-right: 6px;
-      }
 
-      /* Content Body */
-      .esseal-blog-scoped .blog-body {
-        padding: 3rem;
-      }
-      .esseal-blog-scoped p {
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        font-size: 1.125rem;
-        color: #475569;
-      }
-      .esseal-blog-scoped h2 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: #1e293b;
-        margin-top: 3rem;
-        margin-bottom: 1.25rem;
-      }
-      .esseal-blog-scoped h3 {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: #1e293b;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
-      .esseal-blog-scoped strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
-      .esseal-blog-scoped a {
-        color: var(--blog-blue);
-        text-decoration: underline;
-        text-underline-offset: 4px;
-      }
-
-      /* GENERAL LISTS */
-      .esseal-blog-scoped ul,
-      .esseal-blog-scoped ol {
-        margin-bottom: 2rem;
-        padding-left: 0;
-        list-style: none;
-      }
-      .esseal-blog-scoped li {
-        display: flex;
-        margin-bottom: 1rem;
-        color: #475569;
-        line-height: 1.6;
-      }
-
-      /* Numbered List Styling for Strangler Fig */
-      .esseal-blog-scoped ol {
-        counter-reset: blog-counter;
-      }
-      .esseal-blog-scoped ol li {
-        position: relative;
-        padding-left: 2rem;
-      }
-      .esseal-blog-scoped ol li::before {
-        counter-increment: blog-counter;
-        content: counter(blog-counter) ".";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--blog-blue);
-        font-weight: 800;
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-
-      /* CONCEPT BOX (New for this post) */
-      .esseal-blog-scoped .concept-box {
-        background-color: #f1f5f9;
-        border-radius: 12px;
-        padding: 2rem;
-        margin: 2rem 0;
-        border-left: 4px solid #1e293b;
-      }
-      .esseal-blog-scoped .concept-box h4 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
-        color: var(--primary-dark);
-        font-weight: 700;
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-
-      /* TLDR BOX */
-      .esseal-blog-scoped .tldr-box {
-        background-color: #f8fafc;
-        border-left: 5px solid var(--accent-orange);
-        border-radius: 4px;
-        padding: 2rem;
-        margin-bottom: 3rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-      }
-      .esseal-blog-scoped .tldr-header {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 1.25rem;
-      }
-      .esseal-blog-scoped .tldr-title {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--primary-dark);
-      }
-      .esseal-blog-scoped .tldr-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .esseal-blog-scoped .tldr-list li {
-        display: block;
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.75rem;
-        font-size: 1rem;
-        color: #475569;
-      }
-      .esseal-blog-scoped .tldr-list li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--accent-orange);
-        font-weight: bold;
-        font-size: 1.2rem;
-        line-height: 1.5;
-      }
-      .esseal-blog-scoped .tldr-list strong {
-        color: var(--accent-orange);
-        font-weight: 700;
-      }
-
-      /* Hook Box */
-      .esseal-blog-scoped .hook-box {
-        background: linear-gradient(to right, #eff6ff, white);
-        border: 1px solid #dbeafe;
-        padding: 2.5rem;
-        border-radius: 12px;
-        margin: 3rem 0;
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-      }
-      .esseal-blog-scoped .hook-icon {
-        font-size: 2.5rem;
-        flex-shrink: 0;
-      }
-      .esseal-blog-scoped .hook-content h3 {
-        margin: 0 0 0.5rem 0;
-        color: #1e293b;
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-      .esseal-blog-scoped .hook-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        color: var(--blog-blue);
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-decoration: none;
-        margin-top: 1rem;
-      }
-      .esseal-blog-scoped .hook-link:hover {
-        text-decoration: underline;
-      }
-
-      /* CTA Bottom */
-      .esseal-blog-scoped .cta-bottom {
-        background-color: var(--primary-dark);
-        color: white;
+      .cta-bottom {
         text-align: center;
-        padding: 4rem 3rem;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 3rem 2rem;
         border-radius: 12px;
         margin-top: 4rem;
+        border: 1px solid var(--border-color);
       }
-      .esseal-blog-scoped .cta-bottom h3 {
-        font-size: 1.8rem;
-        margin: 1rem 0;
-        color: white;
-        font-family: "Plus Jakarta Sans", sans-serif;
-      }
-      .esseal-blog-scoped .cta-bottom p {
-        color: #cbd5e1;
-        max-width: 600px;
-        margin: 0 auto 2rem auto;
-      }
-      .esseal-blog-scoped .btn-primary {
-        display: inline-block;
-        background-color: var(--blog-blue);
-        color: white;
-        font-weight: 600;
-        padding: 14px 36px;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: transform 0.2s, background-color 0.2s;
-      }
-      .esseal-blog-scoped .btn-primary:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-2px);
+      .cta-bottom h3 {
+        margin-top: 1rem;
       }
 
-      /* Mobile */
-      @media (max-width: 768px) {
-        .esseal-blog-scoped .blog-header {
-          padding: 3rem 1.5rem;
-        }
-        .esseal-blog-scoped .blog-title {
-          font-size: 2rem;
-        }
-        .esseal-blog-scoped .blog-body {
-          padding: 2rem 1.5rem;
-        }
-        .esseal-blog-scoped .hook-box {
-          flex-direction: column;
-          text-align: center;
-          gap: 1rem;
-        }
+      code {
+        font-family: "Fira Code", monospace;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        color: var(--brand-orange);
       }
     </style>
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="esseal-nav">
-      <a href="https://esseal.net" class="nav-logo">
-        <img
-          src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
-          alt="Esseal IT Solutions"
-        />
-      </a>
-      <div class="nav-links">
-        <a href="https://esseal.net" class="nav-item">Home</a>
-        <a href="https://esseal.net/#about-us" class="nav-item">About Us</a>
-        <a href="https://esseal.net/services" class="nav-item">Services</a>
-        <a href="https://esseal.net/contact-us" class="nav-item">Contact Us</a>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../" class="logo"
+          ><img
+            src="../esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li>
+              <a href="../contact.html" class="btn-primary"
+                >Book Discovery Call</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <a href="https://calendly.com/esseal/discovery-call" class="nav-btn">
-        Book A Meeting <span>&rarr;</span>
-      </a>
-    </nav>
+    </header>
 
-    <!-- BLOG CONTENT -->
-    <div class="esseal-blog-scoped">
-      <article class="blog-card">
-        <!-- Header -->
-        <header class="blog-header">
-          <div class="header-deco"></div>
-          <div class="header-content">
-            <span class="category-tag">Engineering Strategy</span>
-            <h1 class="blog-title">
-              The "Rewrite vs. Refactor" Dilemma:
-              <span class="title-accent">A Guide for CTOs</span>
-            </h1>
-            <div class="blog-meta">
-              <div style="display: flex; align-items: center">
-                <svg
-                  class="meta-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  ></path>
-                </svg>
-                <span>Talha Qureshi</span>
-              </div>
-              <span>•</span>
-              <div style="display: flex; align-items: center">
-                <svg
-                  class="meta-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-                <span>8 min read</span>
-              </div>
-            </div>
+    <main>
+      <article>
+        <!-- Header Section -->
+        <header class="article-header">
+          <span class="article-tag">Engineering Strategy</span>
+          <h1 class="article-title">
+            The "Rewrite vs. Refactor" Dilemma: <br />
+            <span>A Guide for CTOs</span>
+          </h1>
+          <div class="article-meta">
+            <span>By <strong>Talha Qureshi</strong></span>
+            <span>&bull;</span>
+            <span>Jan 28, 2024</span>
+            <span>&bull;</span>
+            <span>8 min read</span>
           </div>
         </header>
 
-        <!-- Body -->
-        <div class="blog-body">
-          <!-- EXECUTIVE SUMMARY (TLDR) -->
-          <div class="tldr-box">
-            <div class="tldr-header">
-              <span style="color: #ea580c; font-size: 1.2rem">⚡</span>
-              <span class="tldr-title">Executive Summary</span>
+        <!-- Main Content Section -->
+        <div class="article-container">
+          <div class="article-content">
+            <!-- EXECUTIVE SUMMARY (TLDR) -->
+            <div class="content-callout">
+              <h3>⚡ Executive Summary</h3>
+              <ul>
+                <li>
+                  <strong>The Dilemma:</strong> Engineering teams often face a
+                  choice: struggle with slow, buggy legacy code or pause
+                  everything for a risky "Version 2.0" rewrite.
+                </li>
+                <li>
+                  <strong>The Risk:</strong> Full rewrites are statistically
+                  likely to fail. They freeze business logic while competitors
+                  move forward, often leading to market obsolescence.
+                </li>
+                <li>
+                  <strong>The Strategy:</strong> Use the "Strangler Fig Pattern"
+                  to migrate incrementally—delivering value instantly while
+                  modernizing the system piece by piece.
+                </li>
+              </ul>
             </div>
-            <ul class="tldr-list">
-              <li>
-                <strong>The Dilemma:</strong> Engineering teams often face a
-                choice: struggle with slow, buggy legacy code or pause
-                everything for a risky "Version 2.0" rewrite.
-              </li>
-              <li>
-                <strong>The Risk:</strong> Full rewrites are statistically
-                likely to fail. They freeze business logic while competitors
-                move forward, often leading to market obsolescence.
-              </li>
-              <li>
-                <strong>The Strategy:</strong> Use the "Strangler Fig Pattern"
-                to migrate incrementally—delivering value instantly while
-                modernizing the system piece by piece.
-              </li>
-            </ul>
-          </div>
 
-          <!-- Intro -->
-          <p class="intro">
-            It is the decision that keeps every CTO awake at night.
-          </p>
-          <p>
-            Your team is moving slower every sprint. The backlog is growing.
-            Every new feature breaks two old ones. Your engineers are
-            frustrated, and the Board is asking why "simple updates" take three
-            weeks.
-          </p>
-          <p>
-            Then, someone says it:
-            <em
-              >"We should just rewrite it from scratch. It will be faster this
-              time. We know what we're doing now."</em
-            >
-          </p>
-          <p>
-            It sounds seductive. It sounds clean. And statistically, it is the
-            decision most likely to kill your company.
-          </p>
-          <p>
-            This is the definitive guide to the
-            <strong>Software Refactoring vs Rewriting</strong> dilemma. We’re
-            going to look at why rewrites fail, why refactoring feels slow, and
-            the architectural "Third Way" that mature engineering organizations
-            use to survive.
-          </p>
+            <!-- Intro -->
+            <p class="intro">
+              It is the decision that keeps every CTO awake at night.
+            </p>
+            <p>
+              Your team is moving slower every sprint. The backlog is growing.
+              Every new feature breaks two old ones. Your engineers are
+              frustrated, and the Board is asking why "simple updates" take
+              three weeks.
+            </p>
+            <p>
+              Then, someone says it:
+              <em
+                >"We should just rewrite it from scratch. It will be faster this
+                time. We know what we're doing now."</em
+              >
+            </p>
+            <p>
+              It sounds seductive. It sounds clean. And statistically, it is the
+              decision most likely to kill your company.
+            </p>
+            <p>
+              This is the definitive guide to the
+              <strong>Software Refactoring vs Rewriting</strong> dilemma. We’re
+              going to look at why rewrites fail, why refactoring feels slow,
+              and the architectural "Third Way" that mature engineering
+              organizations use to survive.
+            </p>
 
-          <section>
-            <h2>The Siren Song of the Rewrite (And Why It Traps You)</h2>
+            <h2>The Siren Song of the Rewrite</h2>
             <p>
               The desire to rewrite is usually driven by optimism. You look at
               your legacy codebase—the "spaghetti code"—and you see only the
@@ -634,13 +370,15 @@
               <strong>Legacy System Modernisation</strong>:
             </p>
 
-            <div class="concept-box">
-              <h4>The Netscape Lesson</h4>
-              <p style="margin-bottom: 0">
+            <!-- Concept Box / Callout Info -->
+            <div class="content-callout info">
+              <h3>📖 The Netscape Lesson</h3>
+              <p style="text-align: left; margin-bottom: 0">
                 Netscape (the precursor to Firefox) decided to rewrite their
                 browser from scratch in 1998. They spent three years releasing
                 nothing new. In that time, Internet Explorer took the entire
                 market. They never recovered.
+                <br /><br />
                 <strong
                   >A rewrite is a decision to freeze your business logic while
                   your competitors keep moving.</strong
@@ -653,9 +391,7 @@
               handling that live in that "ugly" code. You trade known problems
               for unknown problems.
             </p>
-          </section>
 
-          <section>
             <h2>The "Brownfield" Reality</h2>
             <p>
               Most engineering work is not "Greenfield" (building new). It is
@@ -669,40 +405,30 @@
               been servicing the engine, and now you want to buy a new car
               because the oil light is on.
             </p>
-          </section>
 
-          <!-- Hook 1 -->
-          <aside class="hook-box">
-            <div class="hook-icon">☕</div>
-            <div class="hook-content">
-              <h3>Stuck at this crossroads?</h3>
+            <!-- Hook Box -->
+            <div class="content-callout alt">
+              <h3>☕ Stuck at this crossroads?</h3>
               <p>
                 Deciding to rewrite is a million-pound decision. Before you pull
-                the trigger, let’s have a coffee. We can provide a neutral,
-                third-party architectural review to see if there is a way to
-                save the ship without sinking it.
+                the trigger, let’s have a technical discovery session. We
+                provide a neutral, third-party architectural review to help you
+                save the ship.
               </p>
-              <a href="https://esseal.net/contact-us" class="hook-link">
-                Book an Architecture Review
-                <svg
-                  style="width: 16px; height: 16px; margin-left: 6px"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  ></path>
-                </svg>
+              <a
+                href="../contact.html"
+                style="
+                  font-weight: 600;
+                  font-size: 1.1rem;
+                  display: inline-block;
+                  margin-top: 1rem;
+                "
+              >
+                Book an Architecture Review &rarr;
               </a>
             </div>
-          </aside>
 
-          <section>
-            <h2>The Decision Matrix: When to Actually Rewrite</h2>
+            <h2>Decision Matrix: When to Actually Rewrite</h2>
             <p>
               We are not saying never rewrite. We are saying don't rewrite
               <em>blindly</em>. Here is the threshold.
@@ -721,12 +447,11 @@
               </li>
               <li>
                 <strong>Cost of Change > Value of Feature:</strong> It takes
-                longer to fix a bug than it would to rebuild the module.
+                longer to fix a bug than it would to rebuild the module
+                entirely.
               </li>
             </ul>
-          </section>
 
-          <section>
             <h2>The Third Way: The "Strangler Fig Pattern"</h2>
             <p>
               This is how the best engineering teams in the world handle this
@@ -734,20 +459,19 @@
               choose <strong>Strangulation</strong>.
             </p>
             <p>
-              The <strong>Strangler Fig Pattern</strong> (named after the tree
-              that grows around another tree) allows you to migrate a legacy
-              system incrementally without downtime.
+              The <strong>Strangler Fig Pattern</strong> allows you to migrate a
+              legacy system incrementally without downtime.
             </p>
-            <h3>How it works:</h3>
             <ol>
               <li>
                 <strong>Identify the Edges:</strong> Find one specific module
-                (e.g., "User Authentication" or "Billing") that is causing pain.
+                (e.g., "User Authentication" or "Billing") causing excessive
+                pain.
               </li>
               <li>
                 <strong>Build the Shadow:</strong> Build a new, modern
                 microservice <em>alongside</em> the monolith that does just that
-                one job.
+                one job perfectly.
               </li>
               <li>
                 <strong>Route the Traffic:</strong> Use a load balancer or API
@@ -756,18 +480,17 @@
               </li>
               <li>
                 <strong>Repeat:</strong> Do this feature by feature. Over 12-18
-                months, the "Old" system slowly does less and less until it can
-                be turned off safely.
+                months, the "Old" system slowly withers until it can be turned
+                off safely.
               </li>
             </ol>
             <p>
               This approach reduces risk to near zero. You deliver value
               instantly (the new Billing system works <em>now</em>), rather than
-              waiting two years for a "Big Bang" launch that might crash.
+              waiting two years for a "Big Bang" launch that might crash on day
+              one.
             </p>
-          </section>
 
-          <section>
             <h2>It’s Not Just Code, It’s Strategy</h2>
             <p>
               Managing a legacy codebase isn't a janitorial task; it is an
@@ -777,7 +500,7 @@
               If you treat refactoring as something engineers do "if they have
               time," you will fail. You must allocate 20-30% of every sprint to
               your <strong>Technical Debt Management Strategy</strong>. This is
-              the tax you pay to keep moving fast.
+              the "tax" you pay to keep moving fast.
             </p>
             <p>
               At Esseal, we specialize in being the "adults in the room" for
@@ -785,131 +508,120 @@
               Strangulation strategy, set up the safety nets, and ensure that
               while we change the engine, the plane keeps flying.
             </p>
-          </section>
 
-          <!-- Hook 2: Bottom CTA -->
-          <div class="cta-bottom">
-            <span style="font-size: 3rem; display: block; margin-bottom: 1rem"
-              >☕</span
+            <!-- Bottom CTA -->
+            <div class="cta-bottom">
+              <span
+                style="font-size: 3rem; display: block; margin-bottom: 0.5rem"
+                >☕</span
+              >
+              <h3 style="margin-top: 0">Let’s map your escape route.</h3>
+              <p style="margin-bottom: 2rem">
+                Whether it's a Strangler Fig migration or a strategic refactor,
+                you need a plan before you need code. Let’s build a roadmap that
+                makes sense for your business.
+              </p>
+              <a
+                href="../contact.html"
+                class="btn-primary"
+                style="padding: 14px 32px; text-decoration: none"
+              >
+                Schedule a Strategy Session
+              </a>
+            </div>
+          </div>
+
+          <!-- Back to Blog Link -->
+          <div
+            style="
+              margin-top: 4rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--border-color);
+              text-align: center;
+            "
+          >
+            <a
+              href="./index.html"
+              style="
+                color: var(--text-main);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
             >
-            <h3>Let’s map your escape route.</h3>
-            <p>
-              Whether it's a Strangler Fig migration or a strategic refactor,
-              you need a plan before you need code. Let’s sit down, look at the
-              architecture, and build a roadmap that makes sense for your
-              business.
-            </p>
-            <a href="https://esseal.net/contact-us" class="btn-primary">
-              Schedule a Strategy Session
+              <span aria-hidden="true">&larr;</span> Back to All Articles
             </a>
           </div>
         </div>
       </article>
-    </div>
+    </main>
 
-    <!-- FOOTER -->
-    <footer class="esseal-footer">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <img
-            src="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
-            alt="Esseal"
-            style="height: 40px; width: auto"
-          />
-          <p class="footer-desc">
-            Reliable Software Development. Scalable Results. We help companies
-            build high-performance, custom applications — from MVP to enterprise
-            scale.
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="logo"
+            ><img
+              src="../esseal-logo.webp"
+              width="180px"
+              height="48px"
+              alt="Esseal Logo"
+          /></a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
           </p>
+          <p>Engineering robust digital solutions for businesses globally.</p>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="https://esseal.net/#about-us">• About Us</a></li>
-            <li><a href="https://esseal.net/#why-us">• Why Us</a></li>
-            <li><a href="https://esseal.net/services">• Our Services</a></li>
-            <li><a href="https://esseal.net/contact-us">• Contact Us</a></li>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../#work">Our Work</a></li>
+            <li><a href="./index.html">Blogs</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>Misc Links</h4>
-          <ul class="footer-links">
-            <li>
-              <a href="https://esseal.net/privacy-policy">• Privacy Policy</a>
-            </li>
-            <li>
-              <a href="https://esseal.net/terms-of-service"
-                >• Terms of Service</a
-              >
-            </li>
-            <li>
-              <a href="https://esseal.net/lodge-complaint">• Lodge Complaint</a>
-            </li>
-            <li><a href="https://esseal.net/blogs">• Blogs</a></li>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-links">
           <h4>Most Requested Services</h4>
-          <ul class="footer-links">
+          <ul>
             <li>
-              <a
-                href="https://esseal.net/services/legacy-modernization-strategy/"
-                >• Legacy Codebase Modernization</a
-              >
-            </li>
-            <li><a href="#">• Codebase Health Check & Audit</a></li>
-            <li>
-              <a href="https://esseal.net/services/full-stack-development/"
-                >• Full Stack Development</a
+              <a href="../services/internal-tools-dashboards.html"
+                >Tools & Dashboards</a
               >
             </li>
             <li>
-              <a href="https://esseal.net/services/strategic-mvp-development/"
-                >• Strategic MVP Development</a
+              <a href="../services/fullstack-development.html"
+                >Full Stack Development</a
               >
             </li>
             <li>
-              <a
-                href="https://esseal.net/services/custom-internal-tools-dashboards/"
-                >• Tools & Dashboards</a
+              <a href="../services/mvp-development.html"
+                >Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a href="../services/legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
               >
             </li>
           </ul>
         </div>
       </div>
-      <div class="copyright">
-        &copy; 2025 <span>Esseal</span>. All Rights Reserved.
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
       </div>
     </footer>
-
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://esseal.net/blog/rewrite-vs-refactor-dilemma-cto-guide"
-        },
-        "headline": "The \"Rewrite vs. Refactor\" Dilemma: A Guide for CTOs",
-        "description": "Should you burn the code or fix it? A strategic guide to Software Refactoring vs Rewriting, the Strangler Fig Pattern, and successful Legacy System Modernisation.",
-        "image": "https://esseal.net/assets/blog/rewrite-refactor-cover.jpg",
-        "author": {
-          "@type": "Organization",
-          "name": "Esseal",
-          "url": "https://esseal.net"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Esseal",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
-          }
-        },
-        "datePublished": "2024-01-28",
-        "dateModified": "2024-01-28"
-      }
-    </script>
   </body>
 </html>

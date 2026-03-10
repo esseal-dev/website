@@ -18,6 +18,8 @@
 
     <title>Engineering Blog & Technical Insights | Esseal</title>
 
+    <link rel="canonical" href="https://www.esseal.co.uk/blogs/" />
+
     <link rel="icon" href="../favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +28,76 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Blog",
+            "@id": "https://www.esseal.co.uk/blogs/#blog",
+            "name": "Esseal Engineering Insights",
+            "description": "Architecture deep-dives, legacy modernization strategies, and technical opinions from our senior engineering team.",
+            "url": "https://www.esseal.co.uk/blogs/",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "url": "https://www.esseal.co.uk",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.esseal.co.uk/esseal-logo.webp"
+              }
+            }
+          },
+          {
+            "@type": "ItemList",
+            "name": "Featured Engineering Articles",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization.html",
+                "name": "From PHP 3 to Laravel 12: A Legacy Code Modernization Story"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://www.esseal.co.uk/blogs/modernizing-monoliths-zero-downtime.html",
+                "name": "Modernizing Monoliths: A Guide to Zero-Downtime Migration"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://www.esseal.co.uk/blogs/convert-excel-sheet-to-web-app.html",
+                "name": "How to Convert Complex Excel Sheets into Scalable Web Apps"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What topics does the Esseal engineering blog cover?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our senior engineering team shares deep-dives into enterprise software architecture, legacy codebase modernization (like PHP and Ruby framework upgrades), scalable MVP development, and strategic advice for CTOs and founders."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does Esseal strongly advocate for Vanilla CSS over utility frameworks like Tailwind?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We believe utility frameworks introduce massive technical debt in long-term enterprise products. We strictly use pure Vanilla CSS and CSS variables to keep HTML semantic, universally maintainable, and independent of build-step dependencies."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
 
     <style>
       /* Blog Specific Enhancements (Reuses core CSS variables) */
