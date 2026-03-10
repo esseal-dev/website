@@ -31,13 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 4. Send the Email
     if (mail($to, $subject, $message, $headers)) {
-        // Success redirect (you can create a success.html page)
-        header("Location: /contact.html?status=success");
+        // Success redirect (you can create a success page)
+        header("Location: /contact?status=success");
     } else {
         // Error redirect
-        header("Location: /contact.html?status=error");
+        header("Location: /contact?status=error");
     }
 } else {
-    header("Location: /contact.html");
+    header("Location: /contact");
 }
 ?>
