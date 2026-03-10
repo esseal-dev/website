@@ -1,45 +1,109 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- SEO STUFF START-->
-    <meta
-      name="title"
-      content="EssealDatePicker - Lightweight JS Date Picker Library"
-    />
+    <!-- SEO & GEO Tags START -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      EssealDatePicker | Enterprise-Grade Lightweight JS Date Picker
+    </title>
     <meta
       name="description"
-      content="A zero-dependency, enterprise-grade JavaScript date picker. Under 5kb gzipped, framework-agnostic, and highly customizable for modern web apps."
+      content="Download EssealDatePicker: A zero-dependency, enterprise-grade JavaScript date picker. Under 5kb gzipped, framework-agnostic, and highly customizable."
     />
     <meta
       name="keywords"
-      content="javascript date picker, js calendar library, lightweight datepicker, esseal date picker, react date picker, vanilla js datepicker, datepicker package"
+      content="javascript date picker, js calendar library, lightweight datepicker, esseal date picker, react date picker, vanilla js datepicker, momentjs alternative datepicker, tailwind-free datepicker"
+    />
+    <meta name="author" content="Esseal" />
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/products/esseal-date-picker.html"
     />
 
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://esseal.net/esseal-date-picker" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/products/esseal-date-picker.html"
+    />
     <meta
       property="og:title"
-      content="EssealDatePicker | Enterprise-Grade Date Picker"
+      content="EssealDatePicker | Enterprise-Grade Vanilla JS Date Picker"
     />
     <meta
       property="og:description"
-      content="The zero-dependency solution engineered for reliability. Built for complex dashboards."
+      content="The zero-dependency solution engineered for reliability. Built for complex enterprise dashboards and web applications."
     />
     <meta
       property="og:image"
-      content="https://esseal.net/esseal-date-picker-banner.png"
+      content="https://www.esseal.co.uk/esseal-logo.webp"
     />
 
-    <link rel="canonical" href="https://esseal.net/esseal-date-picker" />
-    <!-- SEO STUFF END -->
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="https://esseal.net/wp-content/uploads/2025/07/favicon-300x300.webp"
-      sizes="192x192"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EssealDatePicker | Enterprise-Grade Date Picker</title>
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "EssealDatePicker",
+            "operatingSystem": "Web",
+            "applicationCategory": "DeveloperApplication",
+            "description": "A high-performance, zero-dependency JavaScript date picker library engineered for enterprise web applications.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "url": "https://www.esseal.co.uk",
+              "logo": "https://www.esseal.co.uk/esseal-logo.webp"
+            },
+            "featureList": [
+              "Zero external dependencies",
+              "Under 5kb gzipped size",
+              "Framework-agnostic (React, Vue, Angular, Vanilla JS)",
+              "Pure Vanilla CSS architecture without Tailwind"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does EssealDatePicker require Moment.js or jQuery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. EssealDatePicker is a strictly zero-dependency library. It does not require Moment.js, jQuery, or any other external date manipulation libraries, ensuring maximum performance and security."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is EssealDatePicker compatible with React and Vue?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. As a framework-agnostic vanilla JavaScript library, EssealDatePicker integrates seamlessly into React, Vue, Angular, and standard server-rendered HTML applications without conflicting with virtual DOMs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How large is the EssealDatePicker package?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "EssealDatePicker is highly optimized, weighing in at under 5kb when gzipped. This lightweight footprint prevents layout shifts and guarantees instant load times for enterprise dashboards."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- SEO & GEO Tags END -->
+
+    <link rel="icon" href="/favicon.webp" sizes="192x192" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -447,6 +511,64 @@
         line-height: 1.7;
       }
 
+      /* --- FAQ Section --- */
+      .faq-section {
+        padding: 120px 0;
+        background: var(--brand-dark);
+        position: relative;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .faq-item {
+        background: var(--brand-surface);
+        border: 1px solid var(--border-dark);
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        padding: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        color: var(--text-main);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--brand-primary);
+        font-size: 1.5rem;
+      }
+
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+
+      .faq-content {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+      }
+
       /* --- Code Section --- */
       .code-section {
         padding: 120px 0;
@@ -582,10 +704,12 @@
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          Esseal<span>DatePicker</span>
+          <a href="../" style="text-decoration: none; color: inherit"
+            >Esseal<span>DatePicker</span></a
+          >
         </div>
         <div class="nav-links">
-          <a href="https://esseal.net">Home</a>
+          <a href="../">Home</a>
           <a href="#features">Features</a>
           <a href="#usage">Docs</a>
           <a
@@ -680,12 +804,13 @@
       </div>
     </section>
 
+    <!-- Semantic Feature Descriptions for SEO/GEO -->
     <section id="features" class="features-section">
       <div class="section-header">
         <h2>Why Leading Teams Choose Esseal</h2>
         <p>
           Engineered for performance, maintainability, and senior-level
-          standards.
+          architectural standards.
         </p>
       </div>
       <div class="grid-3">
@@ -702,10 +827,11 @@
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
             </svg>
           </div>
-          <h3>High Performance</h3>
+          <h3>High Performance Architecture</h3>
           <p>
-            Zero bloat. Clocking in at &lt;5kb gzipped, it ensures your
-            dashboards load instantly without layout shifts or jank.
+            EssealDatePicker guarantees zero bloat. Clocking in at under 5kb
+            gzipped, it ensures your enterprise dashboards load instantly
+            without layout shifts, jank, or main-thread blocking.
           </p>
         </div>
         <div class="feature-item">
@@ -721,10 +847,11 @@
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
           </div>
-          <h3>Dependency Free</h3>
+          <h3>Strictly Dependency Free</h3>
           <p>
-            No Moment.js, no jQuery. Pure, vanilla JavaScript that integrates
-            seamlessly into any legacy or modern codebase.
+            EssealDatePicker does not rely on Moment.js or jQuery. It is built
+            using pure vanilla JavaScript, allowing it to integrate seamlessly
+            and securely into any legacy or modern codebase.
           </p>
         </div>
         <div class="feature-item">
@@ -744,12 +871,55 @@
               ></path>
             </svg>
           </div>
-          <h3>Framework Agnostic</h3>
+          <h3>Framework Agnostic Integration</h3>
           <p>
-            Architected to respect the DOM. Works flawlessly alongside React,
-            Vue, Angular, or solid server-rendered apps.
+            Architected to respect the DOM. EssealDatePicker works flawlessly
+            alongside React, Vue, Angular, or standard server-rendered HTML
+            applications without virtual DOM conflicts.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Declarative GEO FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header" style="margin-bottom: 40px">
+        <h2 style="color: white">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Does EssealDatePicker require Moment.js or jQuery?</summary>
+          <div class="faq-content">
+            <p>
+              No. EssealDatePicker is a strictly zero-dependency library. It
+              does not require Moment.js, jQuery, or any other external date
+              manipulation libraries, ensuring maximum performance and security
+              for your application.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is EssealDatePicker compatible with React and Vue?</summary>
+          <div class="faq-content">
+            <p>
+              Yes. As a framework-agnostic vanilla JavaScript library,
+              EssealDatePicker integrates seamlessly into React, Vue, Angular,
+              and standard server-rendered HTML applications without conflicting
+              with virtual DOMs.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How large is the EssealDatePicker package?</summary>
+          <div class="faq-content">
+            <p>
+              EssealDatePicker is highly optimized, weighing in at under 5kb
+              when gzipped. This lightweight footprint prevents layout shifts
+              and guarantees instant load times for complex enterprise
+              dashboards.
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -886,7 +1056,9 @@
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          Esseal<span>DatePicker</span>
+          <a href="../" style="text-decoration: none; color: inherit"
+            >Esseal<span>DatePicker</span></a
+          >
         </div>
         <p>&copy; 2026 Esseal. Engineered for Excellence. MIT Licensed.</p>
       </div>
@@ -915,28 +1087,6 @@
           log.parentElement.style.borderColor = "#FA6220";
         },
       });
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "EssealDatePicker",
-        "operatingSystem": "Web",
-        "applicationCategory": "DeveloperApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Esseal"
-        },
-        "description": "A high-performance, zero-dependency JavaScript date picker library for enterprise web applications.",
-        "softwareVersion": "1.0.0",
-        "license": "https://opensource.org/licenses/MIT",
-        "downloadUrl": "https://www.npmjs.com/package/esseal-date-picker"
-      }
     </script>
   </body>
 </html>

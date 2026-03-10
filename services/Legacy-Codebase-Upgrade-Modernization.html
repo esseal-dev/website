@@ -1,221 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Legacy Application Modernization | Esseal</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font for a clean corporate look -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light grey background */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esseal provides legacy codebase modernization. We securely upgrade outdated PHP and Ruby applications to the latest stable versions with zero production downtime."
+    />
+
+    <meta
+      property="og:title"
+      content="Legacy Codebase Modernization | PHP & Ruby Upgrades | Esseal"
+    />
+    <meta
+      property="og:description"
+      content="Secure, risk-free legacy system upgrades. We reverse engineer, refactor deprecated code, and run extensive parallel QA against production environments."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/services/legacy-codebase-upgrade-modernization.html"
+    />
+
+    <title>Legacy Codebase Modernization & System Upgrades | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Legacy Software Modernization",
+        "provider": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://www.esseal.co.uk"
+        },
+        "description": "Systematic upgrading and refactoring of legacy PHP and Ruby codebases. Comprehensive reverse engineering, staging deployment, and production-parity QA.",
+        "areaServed": ["GB", "US", "Global"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Codebase Modernization Offerings",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "PHP & Ruby Framework Upgrades"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Deprecated Code Refactoring & Security Patching"
+              }
+            }
+          ]
         }
-    </style>
-</head>
-<body>
+      }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../" class="logo"
+          ><img
+            src="../esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li>
+              <a href="../contact.html" class="btn-primary"
+                >Book Discovery Call</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header class="bg-gray-900 text-white py-4 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-xl font-semibold">Esseal</p>
-    </div>
-</header>
-
-<main>
-    <!-- 1. HERO SECTION: Risk Mitigation and Core Promise -->
-    <section class="py-20 bg-white border-b-4 border-indigo-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Text Content -->
-            <div class="space-y-6">
-                <!-- H1 - Primary Keyword Target -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-                    Future-Proof Your Core Systems: <span class="text-indigo-600">Enterprise Legacy Application Modernization</span>
-                </h1>
-                <!-- Subheading - Core B2B Value -->
-                <p class="text-xl text-gray-600">
-                    Stop hemorrhaging budget on fragile systems. We deliver scalable, secure, and maintainable software with <strong class="font-semibold text-gray-800">zero business disruption</strong>.
-                </p>
-                <!-- SEO Keyword Weaving -->
-                <p class="text-sm text-gray-500 italic">
-                    Focusing on **reducing technical debt** and providing a strong **risk mitigation strategy** for high-value corporate clients.
-                </p>
-
-                <!-- CTA Button -->
-                <a href="#contact" class="inline-block px-8 py-3 bg-indigo-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
-                    Request a Risk Assessment & Strategy Session
-                </a>
-            </div>
-
-            <!-- Suggested Visual/Image Placeholder -->
-            <div class="flex justify-center">
-                 <!-- Placeholder image visualizing the transition from mess to order -->
-                 <img src="https://placehold.co/450x300/e0e7ff/4338ca?text=Mess+to+Modern+Architecture" alt="Visual representation of legacy system modernization" class="rounded-xl shadow-2xl transition duration-500 hover:shadow-indigo-500/50">
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. THE CORPORATE CHALLENGE: Validation of Pain -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The Hidden Costs of Legacy Systems</h2>
-            
-            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg mb-10 shadow-md">
-                <p class="text-xl font-semibold text-red-800 italic">
-                    "The Cost of Complacency is Unacceptable. Your legacy system isn't just outdated—it’s a ticking financial and security risk. We transform these liabilities into competitive assets."
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Financial Drain</h3>
-                    <p class="text-gray-600">Excessive OpEx spent on patching and firefighting instead of strategic innovation. We quantify your current **TCO (Total Cost of Ownership)** vs. the projected ROI.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Security & Compliance</h3>
-                    <p class="text-gray-600">Critical non-compliance risk from outdated frameworks that fail modern audits (GDPR, SOC 2, HIPAA, etc.). Protecting sensitive data is our top priority.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Talent Scarcity</h3>
-                    <p class="text-gray-600">Inability to recruit and retain engineers proficient in obsolete languages, making maintenance difficult and unpredictable. Modern code attracts top talent.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. OUR STRATEGY: Phased, Controlled Execution -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Modernization Strategy: Built for Stability and ROI</h2>
-            
-            <div class="space-y-12">
-                
-                <!-- Strategy Step 1 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-indigo-600 text-3xl font-extrabold p-3 bg-indigo-100 rounded-full">1</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Discovery & Strategic Planning</h3>
-                        <p class="text-gray-600">We analyze your codebase, map all critical dependencies, and quantify **technical debt** to establish a clear **Return on Investment (ROI)** for modernization. This includes detailed Architecture Blueprinting for a future-state, cloud-native solution.</p>
-                    </div>
-                </div>
-
-                <!-- Strategy Step 2 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-indigo-600 text-3xl font-extrabold p-3 bg-indigo-100 rounded-full">2</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phased, Zero-Downtime Execution</h3>
-                        <p class="text-gray-600">We prioritize the **Strangler Fig Pattern** to replace components module by module. This guarantees **business continuity** while integrating comprehensive automated testing to ensure the new application logic maintains data integrity.</p>
-                    </div>
-                </div>
-                
-                <!-- Strategy Step 3 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-indigo-600 text-3xl font-extrabold p-3 bg-indigo-100 rounded-full">3</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Long-Term Resilience & SRE</h3>
-                        <p class="text-gray-600">We implement **Site Reliability Engineering (SRE)** principles from day one, focusing on observability tools and monitoring systems to ensure the modernized application achieves **99.99% uptime**. Full documentation and knowledge transfer secure your investment.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. MODERNIZATION PATHWAYS: The How-To -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Modernization Pathways We Specialize In</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-indigo-600 text-2xl mb-2">☁️</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Re-platforming</h3>
-                    <p class="text-gray-600 text-sm">Migrating applications to a new runtime environment, typically cloud-based, to immediately reduce infrastructure costs and improve agility.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-indigo-600 text-2xl mb-2">🧱</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Re-architecting</h3>
-                    <p class="text-gray-600 text-sm">Breaking down monolithic structures into modular microservices for better scalability, developer velocity, and system resilience.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-indigo-600 text-2xl mb-2">🧹</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Code Refactoring</h3>
-                    <p class="text-gray-600 text-sm">Cleaning, restructuring, and documenting existing code without changing external behavior to significantly reduce technical debt.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-indigo-600 text-2xl mb-2">🔄</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Component Replacement</h3>
-                    <p class="text-gray-600 text-sm">Gradually swapping out high-risk legacy modules with new, API-driven services using the **Strangler Fig approach**.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. WHY ESSEAL IS THE TRUSTED PARTNER & CASE STUDY SNIPPET -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-12">
-            
-            <!-- Trust Factors Column -->
-            <div class="md:col-span-2 space-y-6">
-                <h2 class="text-3xl font-bold text-gray-900">Why Esseal is the Trusted Partner for Corporate Modernization</h2>
-                <ul class="space-y-4 text-gray-700">
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Senior-Led, In-House Talent:** Direct access to experienced architects—no junior resources.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Financial Accountability:** Clear **TCO** and **ROI projection** provided before development starts.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Proven Industry Experience:** Expertise across Finance, Logistics, and Regulated Healthcare.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Case Study Snippet Column -->
-            <div class="md:col-span-3 bg-indigo-50 p-8 rounded-xl shadow-xl border-t-4 border-indigo-600">
-                <h3 class="text-2xl font-bold text-indigo-800 mb-4">Success Story Spotlight: $2.5M Saved in OpEx</h3>
-                <p class="text-indigo-700 mb-4">
-                    We partnered with a global logistics provider to re-platform their core warehouse management system, running on a decades-old framework.
-                </p>
-                <div class="bg-indigo-100 p-4 rounded-lg">
-                    <p class="text-lg font-semibold text-indigo-900">
-                        **Result:** Cut system-related downtime by **98%** and achieved an estimated **35% reduction in annual operational maintenance costs** in the first 18 months.
-                    </p>
-                </div>
-                <a href="#" class="mt-5 inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">
-                    → View Full Corporate Case Study
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 6. FINAL CTA BLOCK -->
-    <section id="contact" class="py-20 bg-gray-900">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-white mb-4">Ready to Start Building Your Future?</h2>
-            <p class="text-xl text-gray-300 mb-8">
-                Stop managing risk and start planning growth. Schedule a confidential discussion with our lead architect to assess the current health of your codebase and map a zero-disruption path to modernization.
+    <main>
+      <!-- Hero Section -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Legacy Modernization</span>
+            <h1 class="hero-title">
+              Upgrading Outdated Systems with <span>Zero Downtime</span>
+            </h1>
+            <p class="lead-text">
+              We rescue aging PHP and Ruby projects. Through rigorous reverse
+              engineering and staging upgrades, we refactor deprecated code to
+              the latest stable versions without risking your live production
+              environment.
             </p>
-            <a href="#" class="inline-block px-10 py-4 bg-green-500 text-gray-900 font-bold text-xl rounded-xl shadow-2xl hover:bg-green-600 transition duration-300 transform hover:scale-[1.02]">
-                Schedule Your Codebase Health Check
-            </a>
+            <div class="cta-group">
+              <a
+                href="https://calendly.com/your-booking-link"
+                class="btn-primary"
+                >Schedule a Technical Scoping Call</a
+              >
+              <a href="#process" class="btn-secondary"
+                >View Our Upgrade Process</a
+              >
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
 
-<footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        &copy; 2025 Esseal. All Rights Reserved.
-    </div>
-</footer>
+      <!-- The Core Offerings / Process -->
+      <section id="process" class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>The Codebase Upgrade Methodology</h2>
+            <p class="text-muted">
+              A strict, risk-averse process to modernize your core business
+              logic.
+            </p>
+          </div>
 
-</body>
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🗺️</div>
+              <h3>1. System Mapping & Discovery</h3>
+              <p>
+                We do not guess. We meticulously reverse engineer your existing
+                application, taking extensive notes on critical architectural
+                structures and mapping hidden business logic before touching a
+                single line of code.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🛠️</div>
+              <h3>2. Staged Refactoring</h3>
+              <p>
+                Operating entirely within an isolated staging environment, we
+                carefully rewrite and upgrade the codebase. We remove deprecated
+                functions, patch security vulnerabilities, and upgrade to the
+                latest stable PHP or Ruby versions.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">⚖️</div>
+              <h3>3. Production-Parity QA</h3>
+              <p>
+                Our senior QA engineers run exhaustive testing protocols on the
+                newly upgraded staging environment, comparing every output
+                directly against your live production system to guarantee
+                absolute functional parity.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Stack -->
+      <section id="stack" class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div class="stack-content">
+              <h2>Modernization Targets</h2>
+              <p class="mb-2">
+                We specialize in rescuing projects written in older, unsupported
+                versions of PHP and Ruby, upgrading them to secure,
+                high-performance modern frameworks while maintaining your data
+                integrity.
+              </p>
+
+              <ul class="tech-list">
+                <li>
+                  <strong>Legacy Targets:</strong> Outdated PHP scripts, legacy
+                  Laravel, old Ruby on Rails versions.
+                </li>
+                <li>
+                  <strong>Upgrade Path:</strong> Latest stable Laravel (PHP) and
+                  Rails 7/8 (Ruby) ecosystems.
+                </li>
+                <li>
+                  <strong>Refactoring Focus:</strong> Deprecated package
+                  replacement, ORM upgrades, routing modernization.
+                </li>
+                <li>
+                  <strong>Testing Infrastructure:</strong> Parallel staging
+                  environments and automated QA suites.
+                </li>
+              </ul>
+            </div>
+            <div class="stack-visual">
+              <!-- Visual representation of modernization -->
+              <div class="server-rack">
+                <div class="server-blade status-database" style="opacity: 0.6">
+                  <span>Legacy Monolith (Deprecated)</span>
+                </div>
+                <div class="server-blade status-active">
+                  <span>Staging & Refactoring Layer</span>
+                </div>
+                <div
+                  class="server-blade status-active"
+                  style="border-color: var(--brand-orange)"
+                >
+                  <span>Modernized Production Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Trigger -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <h2 class="text-center mb-4">The Senior-Led Advantage</h2>
+          <div class="comparison-table">
+            <div class="comparison-column traditional">
+              <h4>The "Big Bang" Rewrite</h4>
+              <ul>
+                <li class="negative">
+                  Attempting to rewrite from scratch, causing years of delays
+                </li>
+                <li class="negative">
+                  Losing undocumented business logic during the transition
+                </li>
+                <li class="negative">
+                  Testing directly in production, causing critical downtime
+                </li>
+                <li class="negative">
+                  Junior devs blindly replacing code without understanding the
+                  architecture
+                </li>
+              </ul>
+            </div>
+            <div class="comparison-column esseal">
+              <h4>The Esseal Upgrade Standard</h4>
+              <ul>
+                <li class="positive">
+                  Meticulous reverse-engineering of existing business logic
+                </li>
+                <li class="positive">
+                  Isolated staging environments to protect live user data
+                </li>
+                <li class="positive">
+                  Strict QA comparing the new build directly against production
+                </li>
+                <li class="positive">
+                  Executed exclusively by senior PHP and Ruby veterans
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO FAQ Section -->
+      <section class="section-padding">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Technical FAQs</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                Do you rewrite the application from scratch or upgrade the
+                existing code?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  We strongly advocate against "big bang" rewrites from scratch,
+                  as they often lead to lost business logic and extended delays.
+                  Instead, we reverse engineer your existing codebase, map the
+                  critical structures, and carefully rewrite and upgrade
+                  deprecated sections within an isolated staging environment.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                How do you ensure the upgrade doesn't break our live
+                application?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Risk mitigation is our top priority. We never modify your live
+                  application during the development phase. All deprecated code
+                  is rewritten in a dedicated staging environment. Once
+                  complete, our QA team runs thorough side-by-side testing,
+                  comparing the behavior of the upgraded staging environment
+                  directly to your production environment before deploying.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Which legacy languages and frameworks do you specialize in?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Our senior engineers primarily focus on modernizing outdated
+                  PHP and Ruby projects. This includes migrating legacy custom
+                  PHP scripts into modern frameworks like Laravel, or upgrading
+                  very old, unsupported versions of Ruby on Rails to the latest,
+                  secure, and stable releases.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Stop Running on Outdated, Vulnerable Code.</h2>
+          <p class="lead-text mt-2">
+            Speak directly with our engineering leads to map out a safe upgrade
+            strategy for your legacy system.
+          </p>
+          <a
+            href="https://calendly.com/your-booking-link"
+            class="btn-primary mt-4 btn-large"
+            >Book Your Technical Discovery Call</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="logo"
+            ><img
+              src="../esseal-logo.webp"
+              width="180px"
+              height="48px"
+              alt="Esseal Logo"
+          /></a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p>Engineering robust digital solutions for businesses globally.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../#work">Our Work</a></li>
+            <li><a href="../blogs/">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="./internal-tools-dashboards.html">Tools & Dashboards</a>
+            </li>
+            <li>
+              <a href="./fullstack-development.html">Full Stack Development</a>
+            </li>
+            <li>
+              <a href="./mvp-development.html">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="./legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

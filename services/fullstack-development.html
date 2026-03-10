@@ -1,222 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title Tag -->
-    <title>Enterprise Full Stack Development for Scalable Apps | Esseal</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font for a clean corporate look -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light grey background */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esseal provides end-to-end full stack development. We deploy veteran engineering pairs to build scalable applications from concept to deployment using React, Rails, Node, and Docker."
+    />
+
+    <meta
+      property="og:title"
+      content="Enterprise Full Stack Development | Esseal"
+    />
+    <meta
+      property="og:description"
+      content="Senior-led full stack engineering. Rapid time-to-market with a single point of accountability, utilizing Next.js, Ruby on Rails, Docker, and GitHub Actions."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/services/fullstack-development.html"
+    />
+
+    <title>
+      Full Stack Development Services | End-to-End Engineering | Esseal
+    </title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Full Stack Software Development",
+        "provider": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://www.esseal.co.uk"
+        },
+        "description": "End-to-end enterprise software development from concept to deployment. Single point of accountability utilizing veteran full stack engineers.",
+        "areaServed": ["GB", "US", "Global"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Full Stack Engineering Offerings",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "End-to-End Product Development"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "CI/CD & DevOps Architecture"
+              }
+            }
+          ]
         }
-    </style>
-</head>
-<body>
+      }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../" class="logo"
+          ><img
+            src="../esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li>
+              <a href="../contact.html" class="btn-primary"
+                >Book Discovery Call</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header class="bg-gray-900 text-white py-4 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-xl font-semibold">Esseal</p>
-    </div>
-</header>
-
-<main>
-    <!-- 1. HERO SECTION: Reliability and Unified Stack Focus -->
-    <section class="py-20 bg-white border-b-4 border-cyan-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Text Content -->
-            <div class="space-y-6">
-                <!-- H1 - Primary Keyword Target -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-                    End-to-End Reliability: <span class="text-cyan-600">Enterprise Full Stack Development</span>
-                </h1>
-                <!-- Subheading - Core B2B Value -->
-                <p class="text-xl text-gray-600">
-                    We eliminate the risk of fragmentation by delivering high-performance, unified applications across the entire stack—from database to user interface.
-                </p>
-                <!-- SEO Keyword Weaving -->
-                <p class="text-sm text-gray-500 italic">
-                    Targeting: **Hire full stack development team for scale-up** and **trusted full stack agency for B2B platforms**.
-                </p>
-
-                <!-- CTA Button -->
-                <a href="#contact" class="inline-block px-8 py-3 bg-cyan-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
-                    Discuss Your Scalability Requirements
-                </a>
-            </div>
-
-            <!-- Suggested Visual/Image Placeholder -->
-            <div class="flex justify-center">
-                 <!-- Placeholder image visualizing full stack integration -->
-                 <img src="https://placehold.co/450x300/e0f7fa/00bcd4?text=Unified+Codebase+Architecture" alt="Visual representation of unified full stack architecture" class="rounded-xl shadow-2xl transition duration-500 hover:shadow-cyan-500/50">
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. THE CORPORATE CHALLENGE: Validation of Pain (Fragmentation) -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The Risk of Fragmented Development</h2>
-            
-            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg mb-10 shadow-md">
-                <p class="text-xl font-semibold text-red-800 italic">
-                    "When different teams handle the front-end and back-end, integration risks and technical debt skyrocket. We offer a single, accountable source for application quality."
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Integration Failures</h3>
-                    <p class="text-gray-600">Mismatched requirements and API conflicts lead to costly delays and bugs when the front and back ends are finally connected.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Blame Shifting & Delays</h3>
-                    <p class="text-gray-600">Lack of clear ownership across the stack creates accountability gaps, slowing down problem resolution and system iteration.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Uncontrolled Scalability</h3>
-                    <p class="text-gray-600">Back-end architectures are often not optimized to handle the traffic or data demands of the modern, responsive front end.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. OUR FRAMEWORK: The Unified Stack Approach -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">The Esseal Unified Full Stack Development Framework</h2>
-            
-            <div class="space-y-12">
-                
-                <!-- Strategy Step 1 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-cyan-600 text-3xl font-extrabold p-3 bg-cyan-100 rounded-full">1</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Single-Team Accountability</h3>
-                        <p class="text-gray-600">One dedicated senior team manages the project from database schema design (PostgreSQL/Redis) through to the final component implementation (React/Next.js). This guarantees **architectural coherence** and single-point accountability.</p>
-                    </div>
-                </div>
-
-                <!-- Strategy Step 2 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-cyan-600 text-3xl font-extrabold p-3 bg-cyan-100 rounded-full">2</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Built-in DevOps & CI/CD</h3>
-                        <p class="text-gray-600">Deployment and monitoring are architected alongside development. We integrate robust CI/CD pipelines and use modern DevOps practices to ensure automated testing, near-zero downtime deployment, and simplified long-term maintenance.</p>
-                    </div>
-                </div>
-                
-                <!-- Strategy Step 3 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-cyan-600 text-3xl font-extrabold p-3 bg-cyan-100 rounded-full">3</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Architecting for Enterprise Scale</h3>
-                        <p class="text-gray-600">All applications are designed with future load in mind, utilizing microservices architecture and cloud-native services (AWS/Azure) to handle massive user volume and data transaction velocity without degradation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. DELIVERABLES: Specific Outputs -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Tangible Deliverables: Applications That Perform</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-cyan-600 text-2xl mb-2">🖥️</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">High-Speed Frontends</h3>
-                    <p class="text-gray-600 text-sm">Lightning-fast, accessible user interfaces built on modern JavaScript frameworks like React, Next.js, and Flutter for web/mobile.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-cyan-600 text-2xl mb-2">🔒</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Secure, Scalable Backends</h3>
-                    <p class="text-gray-600 text-sm">API-first architecture using Ruby on Rails, Node.js, and Python, focused on transactional integrity and enterprise-grade security protocols.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-cyan-600 text-2xl mb-2">⚙️</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Automated Deployment</h3>
-                    <p class="text-gray-600 text-sm">Full CI/CD integration using tools like GitHub Actions and Kubernetes, ensuring seamless, non-disruptive updates.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-cyan-600 text-2xl mb-2">📊</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Cloud-Native Architectures</h3>
-                    <p class="text-gray-600 text-sm">Leveraging the full power of cloud services (AWS, Google Cloud) for elasticity, cost management, and future-proofing your application.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. WHY ESSEAL IS THE TRUSTED PARTNER & CASE STUDY SNIPPET -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-12">
-            
-            <!-- Trust Factors Column -->
-            <div class="md:col-span-2 space-y-6">
-                <h2 class="text-3xl font-bold text-gray-900">Why Choose Esseal for Enterprise Full Stack</h2>
-                <ul class="space-y-4 text-gray-700">
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**One Team, Zero Gaps:** Unified delivery ensures seamless integration and single-point accountability.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Modern Tech Stack:** Deep expertise in React, Next.js, and Ruby on Rails for optimal performance.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-cyan-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Security by Design:** Full-stack security audits and implementation from project inception.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Case Study Snippet Column -->
-            <div class="md:col-span-3 bg-cyan-50 p-8 rounded-xl shadow-xl border-t-4 border-cyan-600">
-                <h3 class="text-2xl font-bold text-cyan-800 mb-4">Success Story Spotlight: 15 Million Users Supported</h3>
-                <p class="text-cyan-700 mb-4">
-                    We developed a unified customer portal for a major EU telecom provider, consolidating three legacy systems into one high-performance platform.
-                </p>
-                <div class="bg-cyan-100 p-4 rounded-lg">
-                    <p class="text-lg font-semibold text-cyan-900">
-                        **Result:** Scalability exceeded requirements, handling a 400% traffic surge during a major campaign with **100% uptime** and reducing customer friction metrics by 22%.
-                    </p>
-                </div>
-                <a href="#" class="mt-5 inline-block text-cyan-600 font-semibold hover:text-cyan-800 transition duration-300">
-                    → View Full Enterprise Scale Case Study
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 6. FINAL CTA BLOCK -->
-    <section id="contact" class="py-20 bg-gray-900">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-white mb-4">Need a Seamless, Scalable Platform?</h2>
-            <p class="text-xl text-gray-300 mb-8">
-                End development fragmentation now. Speak with an Esseal architect about building your next unified, high-scale application.
+    <main>
+      <!-- Hero Section -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Full Stack Engineering</span>
+            <h1 class="hero-title">
+              End-to-End Execution with a
+              <span>Single Point of Accountability</span>
+            </h1>
+            <p class="lead-text">
+              We eliminate the gap between frontend and backend teams. We deploy
+              veteran full stack pairs to architect, build, and launch highly
+              scalable enterprise applications with rapid time-to-market.
             </p>
-            <a href="#" class="inline-block px-10 py-4 bg-cyan-500 text-gray-900 font-bold text-xl rounded-xl shadow-2xl hover:bg-cyan-600 transition duration-300 transform hover:scale-[1.02]">
-                Schedule Your Architecture Review
-            </a>
+            <div class="cta-group">
+              <a
+                href="https://calendly.com/your-booking-link"
+                class="btn-primary"
+                >Schedule a Technical Scoping Call</a
+              >
+              <a href="#stack" class="btn-secondary"
+                >Explore Our Architecture</a
+              >
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
 
-<footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        &copy; 2025 Esseal. All Rights Reserved.
-    </div>
-</footer>
+      <!-- The Core Offerings -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Our Core Full Stack Capabilities</h2>
+            <p class="text-muted">
+              Concept to deployment execution by senior engineering leads.
+            </p>
+          </div>
 
-</body>
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🚀</div>
+              <h3>Rapid Time-to-Market</h3>
+              <p>
+                We leverage cohesive team structures and powerful frameworks to
+                move products from concept to production faster, without ever
+                sacrificing architectural integrity or scalability.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">⚙️</div>
+              <h3>DevOps & CI/CD Pipelines</h3>
+              <p>
+                Deployment isn't an afterthought. We implement robust Docker
+                containers and automated GitHub Actions from day one, ensuring
+                seamless, risk-free production rollouts.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🤝</div>
+              <h3>Uncompromised Accountability</h3>
+              <p>
+                No more frontend teams blaming backend teams for delays. We
+                manage the entire lifecycle—database schema to UI
+                layer—guaranteeing feature delivery.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Stack -->
+      <section id="stack" class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div class="stack-content">
+              <h2>The Esseal Full Stack Ecosystem</h2>
+              <p class="mb-2">
+                We pair dynamic, high-performance frontend interfaces with
+                robust, heavily tested backend logic. Our deployment strategies
+                are automated and reproducible.
+              </p>
+
+              <ul class="tech-list">
+                <li>
+                  <strong>Frontend Interfaces:</strong> React, Next.js, Strict
+                  TypeScript
+                </li>
+                <li>
+                  <strong>Backend Architecture:</strong> Ruby on Rails, Node.js,
+                  Laravel
+                </li>
+                <li>
+                  <strong>Database & Caching:</strong> PostgreSQL, Redis,
+                  MongoDB
+                </li>
+                <li>
+                  <strong>DevOps & Deployment:</strong> Docker, GitHub Actions,
+                  Custom Cloud Infrastructure
+                </li>
+              </ul>
+            </div>
+            <div class="stack-visual">
+              <!-- Full Stack Representation -->
+              <div class="server-rack">
+                <div class="server-blade status-active">
+                  <span>UI / UX Layer (Next.js & React)</span>
+                </div>
+                <div class="server-blade status-active">
+                  <span>API & Business Logic (Rails / Node)</span>
+                </div>
+                <div class="server-blade status-database">
+                  <span>Infrastructure (Docker / CI/CD)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Trigger -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <h2 class="text-center mb-4">The Senior-Led Advantage</h2>
+          <div class="comparison-table">
+            <div class="comparison-column traditional">
+              <h4>Traditional Outsourcing</h4>
+              <ul>
+                <li class="negative">Siloed frontend and backend teams</li>
+                <li class="negative">
+                  Finger-pointing when API integrations fail
+                </li>
+                <li class="negative">
+                  Manual, error-prone deployment processes
+                </li>
+                <li class="negative">
+                  Junior developers needing constant oversight
+                </li>
+              </ul>
+            </div>
+            <div class="comparison-column esseal">
+              <h4>The Esseal Standard</h4>
+              <ul>
+                <li class="positive">
+                  Veteran pairs (1 Frontend-leaning, 1 Backend-leaning)
+                </li>
+                <li class="positive">
+                  Single point of accountability for features
+                </li>
+                <li class="positive">
+                  Automated Docker and GitHub Actions pipelines
+                </li>
+                <li class="positive">
+                  Zero hand-holding required from your CTO
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO FAQ Section -->
+      <section class="section-padding">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Technical FAQs</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                How do you structure your full stack development teams?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Every member on a project is a veteran full stack developer.
+                  While each engineer can handle the entire application solo, we
+                  deploy them in strategic pairs: one leaning towards frontend,
+                  one leaning towards backend. This guarantees rapid delivery
+                  speed and strict code redundancy without the bloat of large,
+                  fragmented teams.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What is your approach to DevOps and deployment?</summary>
+              <div class="faq-content">
+                <p>
+                  We believe in reliable, automated infrastructure. As a
+                  standard, we containerize applications using Docker and
+                  orchestrate deployments via GitHub Actions. If a project
+                  requires custom cloud implementations (AWS, GCP, or
+                  specialized VPCs), our senior engineers architect bespoke
+                  CI/CD pipelines to match your specific compliance and scale
+                  needs.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Why choose a full stack firm over specialized frontend/backend
+                agencies?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Splitting development across multiple agencies drastically
+                  increases communication overhead and time-to-market. Working
+                  with Esseal provides a single point of accountability. We
+                  manage the entire flow—from the database queries to the UI
+                  interaction—ensuring that features are delivered quickly and
+                  holistically, not blocked by cross-team dependencies.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Accelerate Your Time-to-Market.</h2>
+          <p class="lead-text mt-2">
+            Deploy a veteran full stack engineering pair to your project today.
+          </p>
+          <a
+            href="https://calendly.com/your-booking-link"
+            class="btn-primary mt-4 btn-large"
+            >Book Your Technical Discovery Call</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="logo"
+            ><img
+              src="../esseal-logo.webp"
+              width="180px"
+              height="48px"
+              alt="Esseal Logo"
+          /></a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p>Engineering robust digital solutions for businesses globally.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../#work">Our Work</a></li>
+            <li><a href="../blogs/">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="./internal-tools-dashboards.html">Tools & Dashboards</a>
+            </li>
+            <li>
+              <a href="./fullstack-development.html">Full Stack Development</a>
+            </li>
+            <li>
+              <a href="./mvp-development.html">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="./legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

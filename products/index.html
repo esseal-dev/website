@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore Esseal's in-house software products, including NPM packages, inventory management systems, and developer tools, built for performance and available for free."
+      content="Explore Esseal's suite of enterprise-grade internal systems and open-source UI components. Featuring our high-performance React Data Table, vanilla JS Date Picker, and custom IMS."
     />
-    <title>In-House Products & Tools | Esseal</title>
 
+    <meta
+      property="og:title"
+      content="Enterprise Software Products & UI Components | Esseal"
+    />
+    <meta
+      property="og:description"
+      content="High-performance, dependency-free UI components for developers, and bespoke operational systems for enterprise management."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.esseal.co.uk/products/" />
+
+    <title>Software Products & Open Source Components | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,164 +29,356 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Esseal Software Products & Components",
+        "description": "A collection of premium UI components and enterprise management systems built by Esseal.",
+        "itemListElement": [
+          {
+            "@type": "SoftwareApplication",
+            "position": 1,
+            "name": "Esseal Data Table",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 2,
+            "name": "Esseal Date Picker",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 3,
+            "name": "Esseal Project Manager",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "position": 4,
+            "name": "Esseal IMS",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web"
+          }
+        ]
+      }
+    </script>
+    <style>
+      /* Minor Product-Specific Tweaks reusing our core layout variables */
+      .product-card {
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card .card-footer {
+        margin-top: auto;
+        padding-top: 1.5rem;
+      }
+      .product-card .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+      .product-card .btn-primary {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+      .badge-free {
+        font-size: 0.6em;
+        vertical-align: middle;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        margin-left: 8px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+      }
+    </style>
   </head>
   <body>
     <header class="navbar">
       <div class="container nav-container">
-        <a href="/" class="logo">Esseal<span>.</span></a>
+        <a href="../" class="logo"
+          ><img
+            src="../esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
         <nav aria-label="Main Navigation">
           <ul class="nav-links">
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/expertise.html">Expertise</a></li>
-            <li><a href="/about.html">About</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About</a></li>
             <li>
-              <a href="/products.html" class="active" aria-current="page"
-                >Products</a
+              <a href="../contact.html" class="btn-primary"
+                >Book Discovery Call</a
               >
             </li>
-            <li><a href="/contact.html" class="btn-primary">Let's Talk</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="products-page">
-      <section class="page-hero">
+    <main>
+      <!-- Hero Section -->
+      <section class="service-hero">
         <div class="container">
-          <h1>Our In-House Products</h1>
-          <p class="hero-subtitle">
-            We build the tools we want to use. From high-performance NPM
-            packages to streamlined SaaS applications, explore our proprietary
-            software solutions—available for anyone to use.
-          </p>
-        </div>
-      </section>
-
-      <section class="products-section">
-        <div class="container">
-          <div class="product-grid">
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-npm">NPM Package</span>
-                <h3>Esseal Data Table</h3>
-              </div>
-              <p>
-                A highly performant, enterprise-ready data grid component built
-                from scratch using React and TypeScript. Engineered to handle
-                complex datasets smoothly, serving as a lean, powerful
-                alternative to heavy premium grid libraries.
-              </p>
-              <div class="product-actions">
-                <a
-                  href="https://www.npmjs.com/package/esseal-data-table"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-secondary btn-sm"
-                  >View on NPM</a
-                >
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-npm">NPM Package</span>
-                <h3>Esseal Date Picker</h3>
-              </div>
-              <p>
-                A standalone, dependency-free vanilla JavaScript date-picker
-                package. Designed for developers who need a lightweight, highly
-                customizable UI component without the bloat of massive external
-                frameworks.
-              </p>
-              <div class="product-actions">
-                <a
-                  href="https://www.npmjs.com/package/esseal-date-picker"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-secondary btn-sm"
-                  >View on NPM</a
-                >
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-saas">SaaS Application</span>
-                <h3>Simple IMS</h3>
-              </div>
-              <p>
-                A barebones, highly effective Inventory Management System. It
-                strips away enterprise clutter to focus on managing products,
-                customers, and vendors. Features advanced OCR integration to
-                automatically parse handwritten and printed receipts into system
-                entries.
-              </p>
-              <div class="product-actions">
-                <a href="#" class="btn-secondary btn-sm">Explore Platform</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-saas">SaaS Application</span>
-                <h3>Esseal Project Manager</h3>
-              </div>
-              <p>
-                A streamlined project management tool designed as a lean
-                alternative to Jira. Manage tickets, assign team members, handle
-                client invoicing, and configure distinct brand identities per
-                project—all without the unnecessary complexity.
-              </p>
-              <div class="product-actions">
-                <a href="#" class="btn-secondary btn-sm">Explore Platform</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-js">JS Package</span>
-                <h3>Booker</h3>
-              </div>
-              <p>
-                A Calendly-style meeting scheduler that opens in a native modal.
-                It returns user input as an object via a callback function,
-                allowing developers to maintain 100% data privacy and handle
-                lead generation independently without relying on third-party
-                services.
-              </p>
-              <div class="product-actions">
-                <a href="#" class="btn-secondary btn-sm">View Documentation</a>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-header">
-                <span class="badge badge-web">Web App</span>
-                <h3>Puzzled</h3>
-              </div>
-              <p>
-                A fun, interactive web application demonstrating dynamic
-                frontend image manipulation. Upload any image, and the system
-                instantly converts it into a playable jigsaw puzzle. Generate a
-                unique link and challenge your friends to solve it.
-              </p>
-              <div class="product-actions">
-                <a href="#" class="btn-secondary btn-sm">Play Puzzled</a>
-              </div>
-            </article>
+          <div class="hero-content">
+            <span class="badge">Esseal Products</span>
+            <h1 class="hero-title">
+              Engineering Excellence, <span>Packaged.</span>
+            </h1>
+            <p class="lead-text">
+              Explore our suite of enterprise-grade internal systems and premium
+              open-source UI components. Built with strict typing, zero bloat,
+              and dependency-free CSS.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="cta-section">
-        <div class="container cta-container">
-          <h2>Need a custom tool for your team?</h2>
-          <p>
-            We build bespoke software solutions to solve complex operational
-            bottlenecks.
+      <!-- The Products Grid -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center mb-4">
+            <h2>Developer Components</h2>
+            <p class="text-muted">
+              High-performance, unopinionated UI tools given back to the
+              community.
+            </p>
+          </div>
+
+          <div class="grid-2-col mt-4">
+            <!-- Esseal Data Table -->
+            <div class="service-card hover-glow product-card">
+              <div class="card-icon">🗂️</div>
+              <h3>Esseal Data Table</h3>
+              <p>
+                A lightning-fast, dependency-free React data grid. Engineered
+                specifically for complex enterprise applications requiring
+                advanced sorting, filtering, and massive dataset virtualization
+                without the typical framework bloat.
+              </p>
+              <ul
+                class="tech-list mb-4"
+                style="
+                  margin-top: 1rem;
+                  border-top: 1px solid var(--border-color);
+                  padding-top: 1rem;
+                "
+              >
+                <li><strong>Stack:</strong> React, Strict TypeScript</li>
+                <li><strong>Styling:</strong> Pure Vanilla CSS</li>
+              </ul>
+              <div class="card-footer">
+                <a href="./esseal-data-table.html" class="btn-secondary"
+                  >View Documentation & Code</a
+                >
+              </div>
+            </div>
+
+            <!-- Esseal Date Picker -->
+            <div class="service-card hover-glow product-card">
+              <div class="card-icon">📅</div>
+              <h3>Esseal Date Picker</h3>
+              <p>
+                A highly accessible, lightweight vanilla JavaScript date picker.
+                Designed to drop into any technology stack with zero external
+                dependencies. Fully customizable via standard CSS variables.
+              </p>
+              <ul
+                class="tech-list mb-4"
+                style="
+                  margin-top: 1rem;
+                  border-top: 1px solid var(--border-color);
+                  padding-top: 1rem;
+                "
+              >
+                <li><strong>Stack:</strong> Vanilla JS / TypeScript</li>
+                <li><strong>Styling:</strong> Pure Vanilla CSS</li>
+              </ul>
+              <div class="card-footer">
+                <a href="./esseal-date-picker.html" class="btn-secondary"
+                  >View Documentation & Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Internal Systems Section -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center mb-4">
+            <h2>Enterprise Management Systems</h2>
+            <p class="text-muted">
+              Bespoke operational software ready to be tailored to your business
+              rules.
+            </p>
+          </div>
+
+          <div class="grid-2-col mt-4">
+            <!-- Esseal Project Manager -->
+            <div class="service-card hover-glow product-card">
+              <div class="card-icon">🎯</div>
+              <h3>
+                Esseal Project Manager
+                <span class="badge-free">Free to Self-Host</span>
+              </h3>
+              <p>
+                A highly focused project management suite engineered for
+                high-velocity technical teams. Stop adapting your processes to
+                fragmented SaaS tools. We deploy and customize this core engine
+                to fit your exact operational workflow, or you can download and
+                self-host it completely for free.
+              </p>
+              <ul
+                class="tech-list mb-4"
+                style="
+                  margin-top: 1rem;
+                  border-top: 1px solid var(--border-color);
+                  padding-top: 1rem;
+                "
+              >
+                <li><strong>Target:</strong> Engineering & Ops Teams</li>
+                <li>
+                  <strong>Deployment:</strong> Bespoke / Free to Self-Host
+                </li>
+              </ul>
+              <div class="card-footer">
+                <a
+                  href="../contact.html"
+                  class="btn-primary"
+                  style="background: var(--brand-orange); color: #fff"
+                  >Request a Demo</a
+                >
+              </div>
+            </div>
+
+            <!-- Esseal IMS -->
+            <div class="service-card hover-glow product-card">
+              <div class="card-icon">📦</div>
+              <h3>
+                Esseal IMS <span class="badge-free">Free to Self-Host</span>
+              </h3>
+              <p>
+                An enterprise-grade Inventory Management System built for
+                complex supply chains. Features real-time tracking,
+                multi-warehouse support, and deep API integration capabilities
+                to replace legacy spreadsheet workflows. Available as a custom
+                bespoke deployment or free to self-host.
+              </p>
+              <ul
+                class="tech-list mb-4"
+                style="
+                  margin-top: 1rem;
+                  border-top: 1px solid var(--border-color);
+                  padding-top: 1rem;
+                "
+              >
+                <li><strong>Target:</strong> Logistics & Manufacturing</li>
+                <li>
+                  <strong>Deployment:</strong> Bespoke / Free to Self-Host
+                </li>
+              </ul>
+              <div class="card-footer">
+                <a
+                  href="../contact.html"
+                  class="btn-primary"
+                  style="background: var(--brand-orange); color: #fff"
+                  >Request a Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Trigger -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div class="stack-content">
+              <h2>The Esseal Engineering Philosophy</h2>
+              <p class="mb-4">
+                Whether we are giving back to the developer community with
+                open-source components, or deploying massive internal ERPs for
+                our enterprise clients, our architectural rules never change.
+              </p>
+
+              <div
+                class="comparison-column esseal"
+                style="padding: 0; background: transparent; border: none"
+              >
+                <ul>
+                  <li class="positive">
+                    <strong>No Utility Bloat:</strong> We strictly write pure
+                    vanilla CSS. No Tailwind, no heavy UI frameworks.
+                  </li>
+                  <li class="positive">
+                    <strong>Strictly Typed:</strong> All logic is governed by
+                    strict TypeScript to eliminate runtime errors.
+                  </li>
+                  <li class="positive">
+                    <strong>Ownership:</strong> When we deploy an internal
+                    system for you, you own the IP. No per-seat licenses.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="stack-visual">
+              <!-- Reusing the 3D Server Rack visual to keep visual consistency -->
+              <div class="server-rack">
+                <div
+                  class="server-blade status-active"
+                  style="border-color: #3b82f6"
+                >
+                  <span>Performance (Zero Dependencies)</span>
+                </div>
+                <div
+                  class="server-blade status-active"
+                  style="border-color: var(--brand-orange)"
+                >
+                  <span>Scalability (Strict TypeScript)</span>
+                </div>
+                <div
+                  class="server-blade status-active"
+                  style="border-color: #10b981"
+                >
+                  <span>Ownership (Bespoke Deployment)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Need a Custom System?</h2>
+          <p class="lead-text mt-2">
+            If our existing products don't cover your needs, our senior
+            engineers will architect one from scratch.
           </p>
-          <a href="/contact.html" class="btn-primary btn-large"
-            >Discuss Your Requirements</a
+          <a href="../contact.html" class="btn-primary mt-4 btn-large"
+            >Book a Scoping Call</a
           >
         </div>
       </section>
@@ -182,37 +387,67 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">Esseal<span>.</span></a>
+          <a href="../" class="logo"
+            ><img
+              src="../esseal-logo.webp"
+              width="180px"
+              height="48px"
+              alt="Esseal Logo"
+          /></a>
           <p>
             Senior-Led Software Solutions That Drive Corporate Growth. On time,
             on budget, always.
           </p>
-          <p class="company-registration">
-            Registered in England & Wales No. 17026190
-          </p>
+          <p>Engineering robust digital solutions for businesses globally.</p>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../#work">Our Work</a></li>
+            <li><a href="../blogs/">Blogs</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="../services/internal-tools-dashboards.html"
+                >Tools & Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="../services/fullstack-development.html"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="../services/mvp-development.html"
+                >Strategic MVP Development</a
+              >
+            </li>
+            <li>
+              <a href="../services/legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>&copy; 2026 Esseal. All rights reserved.</p>
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
       </div>
     </footer>
-
-    <script src="main.js"></script>
   </body>
 </html>

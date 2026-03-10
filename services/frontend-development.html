@@ -1,222 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title Tag -->
-    <title>High-Performance Frontend Development & UX | Esseal</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font for a clean corporate look -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Light grey background */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esseal provides senior-led frontend development. We engineer blazing-fast, accessible interfaces using React, Next.js, and strict TypeScript."
+    />
+
+    <meta
+      property="og:title"
+      content="Enterprise Frontend Development | Esseal"
+    />
+    <meta
+      property="og:description"
+      content="Expert frontend engineering focusing on Core Web Vitals, Server-Side Rendering (SSR), and scalable design systems using Next.js and React."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/services/frontend-development.html"
+    />
+
+    <title>Frontend Development Services | React & Next.js | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- GEO & SEO Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Frontend Software Development",
+        "provider": {
+          "@type": "Organization",
+          "name": "Esseal",
+          "url": "https://www.esseal.co.uk"
+        },
+        "description": "Enterprise-grade frontend architecture, specializing in React, Next.js, and TypeScript. Focus on high-performance SSR and seamless UX.",
+        "areaServed": ["GB", "US", "Global"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Frontend Engineering Offerings",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "React & Next.js Web Applications"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Design System Integration & Component Libraries"
+              }
+            }
+          ]
         }
-    </style>
-</head>
-<body>
+      }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../" class="logo"
+          ><img
+            src="../esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../expertise.html">Expertise</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li>
+              <a href="../contact.html" class="btn-primary"
+                >Book Discovery Call</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header class="bg-gray-900 text-white py-4 shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-xl font-semibold">Esseal</p>
-    </div>
-</header>
-
-<main>
-    <!-- 1. HERO SECTION: Productivity and UX Focus -->
-    <section class="py-20 bg-white border-b-4 border-emerald-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Text Content -->
-            <div class="space-y-6">
-                <!-- H1 - Primary Keyword Target -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-                    Maximize Employee Productivity: <span class="text-emerald-600">Enterprise Front End Engineering</span>
-                </h1>
-                <!-- Subheading - Core B2B Value -->
-                <p class="text-xl text-gray-600">
-                    We craft high-performance, intuitive user interfaces that streamline complex corporate workflows and drive measurable user adoption rates.
-                </p>
-                <!-- SEO Keyword Weaving -->
-                <p class="text-sm text-gray-500 italic">
-                    Focusing on **professional UI/UX for internal corporate tools** and **modernize user interface for legacy system**.
-                </p>
-
-                <!-- CTA Button -->
-                <a href="#contact" class="inline-block px-8 py-3 bg-emerald-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-emerald-700 transition duration-300 transform hover:scale-105">
-                    Schedule a UX Audit & Strategy Session
-                </a>
-            </div>
-
-            <!-- Suggested Visual/Image Placeholder -->
-            <div class="flex justify-center">
-                 <!-- Placeholder image visualizing a clean, modern data dashboard -->
-                 <img src="https://placehold.co/450x300/d1fae5/059669?text=Intuitive+Corporate+Dashboard" alt="Visual representation of a clean, intuitive corporate dashboard" class="rounded-xl shadow-2xl transition duration-500 hover:shadow-emerald-500/50">
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. THE CORPORATE CHALLENGE: Validation of Pain (Efficiency and Errors) -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The Hidden Cost of Poor Corporate UX</h2>
-            
-            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg mb-10 shadow-md">
-                <p class="text-xl font-semibold text-red-800 italic">
-                    "Clunky interfaces lead to critical data entry errors, high employee frustration, and exponentially higher training costs."
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Low Productivity</h3>
-                    <p class="text-gray-600">Employees spend valuable time navigating confusing systems, reducing operational output and delaying key business processes.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">High Training Overhead</h3>
-                    <p class="text-gray-600">Non-intuitive UIs require lengthy, expensive onboarding sessions and continuous support, draining HR and IT resources.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-300">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Brand Perception Risk</h3>
-                    <p class="text-gray-600">Poor external-facing UX erodes customer trust and negatively impacts your digital brand perception and conversion rates.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. OUR FRAMEWORK: The UX and Performance Process -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Our Framework for Usability & Engineering Excellence</h2>
-            
-            <div class="space-y-12">
-                
-                <!-- Strategy Step 1 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-emerald-600 text-3xl font-extrabold p-3 bg-emerald-100 rounded-full">1</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">User-Centric Workflow Mapping</h3>
-                        <p class="text-gray-600">We conduct deep user research and journey mapping to understand *how* your employees or customers work, designing the interface to support and accelerate their tasks.</p>
-                    </div>
-                </div>
-
-                <!-- Strategy Step 2 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-emerald-600 text-3xl font-extrabold p-3 bg-emerald-100 rounded-full">2</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Component Library & Design Systems</h3>
-                        <p class="text-gray-600">We build reusable component libraries using React and Next.js, ensuring design consistency across all applications and dramatically speeding up future feature development.</p>
-                    </div>
-                </div>
-                
-                <!-- Strategy Step 3 -->
-                <div class="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-8">
-                    <div class="flex-shrink-0 text-emerald-600 text-3xl font-extrabold p-3 bg-emerald-100 rounded-full">3</div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Performance-Driven Implementation</h3>
-                        <p class="text-gray-600">We optimize every page for Core Web Vitals (LCP, FID, CLS), ensuring sub-second load times and flawless responsiveness crucial for large-scale application adoption.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. CORE DELIVERABLES: UX Outputs -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Deliverables: Interfaces Built for Efficiency</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-emerald-600 text-2xl mb-2">🎨</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Accessibility Compliance</h3>
-                    <p class="text-gray-600 text-sm">Interfaces built to meet WCAG standards, ensuring legal compliance and universal usability for all employees.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-emerald-600 text-2xl mb-2">🚀</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Optimized Performance Metrics</h3>
-                    <p class="text-gray-600 text-sm">Front ends rigorously tested for speed, minimizing latency and maximizing perceived performance for users globally.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-emerald-600 text-2xl mb-2">📱</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Cross-Device Responsiveness</h3>
-                    <p class="text-gray-600 text-sm">Flawless functionality and design consistency across desktop, tablet, and mobile, supporting modern remote workforces.</p>
-                </div>
-                
-                <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-emerald-600 text-2xl mb-2">🏗️</p>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Reusable Component Libraries</h3>
-                    <p class="text-gray-600 text-sm">A centralized, documented library that empowers your internal teams to build new features faster and cheaper.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. WHY ESSEAL IS THE TRUSTED PARTNER & CASE STUDY SNIPPET -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-12">
-            
-            <!-- Trust Factors Column -->
-            <div class="md:col-span-2 space-y-6">
-                <h2 class="text-3xl font-bold text-gray-900">Why Trust Esseal with Your User Experience</h2>
-                <ul class="space-y-4 text-gray-700">
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Productivity Focus:** We measure success by time-on-task reduction, not just aesthetics.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Senior UI Architects:** Our team builds stable, maintainable interfaces designed for long-term evolution.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        <span>**Scalable Technology:** Deep experience in React, Next.js, and modern state management for complex UIs.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Case Study Snippet Column -->
-            <div class="md:col-span-3 bg-emerald-50 p-8 rounded-xl shadow-xl border-t-4 border-emerald-600">
-                <h3 class="text-2xl font-bold text-emerald-800 mb-4">Success Story Spotlight: 30% Reduction in Training Time</h3>
-                <p class="text-emerald-700 mb-4">
-                    We redesigned the internal asset management tool for a major construction firm, simplifying the data entry and tracking workflow.
-                </p>
-                <div class="bg-emerald-100 p-4 rounded-lg">
-                    <p class="text-lg font-semibold text-emerald-900">
-                        **Result:** Employee errors dropped by **18%**, and the average time required to onboard a new user was reduced by **30%**.
-                    </p>
-                </div>
-                <a href="#" class="mt-5 inline-block text-emerald-600 font-semibold hover:text-emerald-800 transition duration-300">
-                    → View Full Workflow Efficiency Case Study
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 6. FINAL CTA BLOCK -->
-    <section id="contact" class="py-20 bg-gray-900">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-white mb-4">Is Your Interface Holding Your Team Back?</h2>
-            <p class="text-xl text-gray-300 mb-8">
-                Unlock your team's full potential with an interface designed for speed, clarity, and zero friction.
+    <main>
+      <!-- Hero Section -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Frontend Engineering</span>
+            <h1 class="hero-title">
+              Engineering <span>High-Performance</span> Interfaces for
+              Enterprise Scale
+            </h1>
+            <p class="lead-text">
+              We build fast, accessible, and type-safe frontends using React,
+              Next.js, and TypeScript. Zero layout shifts, uncompromising
+              performance, and pixel-perfect execution.
             </p>
-            <a href="#" class="inline-block px-10 py-4 bg-emerald-500 text-white font-bold text-xl rounded-xl shadow-2xl hover:bg-emerald-600 transition duration-300 transform hover:scale-[1.02]">
-                Start Your Interface Optimization
-            </a>
+            <div class="cta-group">
+              <a
+                href="https://calendly.com/your-booking-link"
+                class="btn-primary"
+                >Schedule a Technical Scoping Call</a
+              >
+              <a href="#stack" class="btn-secondary">Explore Our Stack</a>
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
 
-<footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-        &copy; 2025 Esseal. All Rights Reserved.
-    </div>
-</footer>
+      <!-- The Core Offerings -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Our Core Frontend Capabilities</h2>
+            <p class="text-muted">
+              Senior-led execution bridging the gap between complex logic and
+              seamless UX.
+            </p>
+          </div>
 
-</body>
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">⚡</div>
+              <h3>Next.js Architecture</h3>
+              <p>
+                We leverage Next.js App Router and Server-Side Rendering (SSR)
+                to deliver applications optimized for technical SEO and
+                sub-second initial load times.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🛡️</div>
+              <h3>Type-Safe Components</h3>
+              <p>
+                Strict TypeScript integration across the entire frontend
+                ecosystem. We eliminate runtime errors and ensure predictable
+                state management in complex React applications.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🎨</div>
+              <h3>Bespoke Design Systems</h3>
+              <p>
+                We translate complex Figma designs into semantic, accessible
+                HTML and vanilla CSS. No bloated frameworks, just clean,
+                maintainable style architectures.
+              </p>
+              <a href="../contact.html" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Stack -->
+      <section id="stack" class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div class="stack-content">
+              <h2>The Esseal Frontend Stack</h2>
+              <p class="mb-2">
+                We optimize for Core Web Vitals and long-term maintainability.
+                Our frontend stack is deliberately chosen to support rapid
+                iteration without sacrificing code quality.
+              </p>
+
+              <ul class="tech-list">
+                <li>
+                  <strong>Core Frameworks:</strong> React, Next.js (App Router /
+                  SSR)
+                </li>
+                <li><strong>Language:</strong> Strict TypeScript</li>
+                <li>
+                  <strong>State & Fetching:</strong> Zustand, React Query, Redux
+                  Toolkit
+                </li>
+                <li>
+                  <strong>Styling:</strong> Pure Semantic CSS, Custom CSS
+                  Variables
+                </li>
+              </ul>
+            </div>
+            <div class="stack-visual">
+              <!-- Reusing the CSS 3D rack layout adapted for Frontend Architecture -->
+              <div class="server-rack">
+                <div class="server-blade status-active">
+                  <span>Interactive Client (React / Zustand)</span>
+                </div>
+                <div class="server-blade status-active">
+                  <span>Server Layer (Next.js SSR)</span>
+                </div>
+                <div class="server-blade status-database">
+                  <span>Type Definitions (Strict TypeScript)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Trigger -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <h2 class="text-center mb-4">The Senior-Led Advantage</h2>
+          <div class="comparison-table">
+            <div class="comparison-column traditional">
+              <h4>Traditional Outsourcing</h4>
+              <ul>
+                <li class="negative">
+                  Slow load times and failing Core Web Vitals
+                </li>
+                <li class="negative">
+                  Messy prop-drilling and untyped JavaScript
+                </li>
+                <li class="negative">Inconsistent Figma-to-code translation</li>
+                <li class="negative">Over-reliance on bloated UI frameworks</li>
+              </ul>
+            </div>
+            <div class="comparison-column esseal">
+              <h4>The Esseal Standard</h4>
+              <ul>
+                <li class="positive">Lighthouse scores optimized for SEO</li>
+                <li class="positive">
+                  Strict TypeScript for zero runtime errors
+                </li>
+                <li class="positive">
+                  Pixel-perfect, accessible component design
+                </li>
+                <li class="positive">Clean, dependency-free vanilla CSS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO FAQ Section -->
+      <section class="section-padding">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Technical FAQs</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                Why do you prefer Next.js over a standard React SPA?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  While standard Single Page Applications (SPAs) are fine for
+                  internal tools, public-facing products require excellent SEO
+                  and fast initial load times. We use Next.js for its advanced
+                  Server-Side Rendering (SSR) and Static Site Generation (SSG),
+                  ensuring search engines can perfectly index your content while
+                  users get instant page loads.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Do you use utility frameworks like Tailwind CSS?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  No. We build highly bespoke, scalable applications using pure
+                  vanilla CSS and standard CSS variables. This ensures your
+                  codebase remains completely independent of third-party utility
+                  dependencies, making it infinitely customizable, easier to
+                  debug, and drastically reducing HTML bloat.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                How do you handle state management in complex applications?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  We avoid over-engineering. For server state and caching, we
+                  rely on tools like React Query. For global client state, we
+                  prefer lightweight, highly performant solutions like Zustand,
+                  moving away from heavy Redux boilerplate unless specifically
+                  required by an existing enterprise architecture.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Ready to Upgrade Your User Experience?</h2>
+          <p class="lead-text mt-2">
+            Speak directly with our senior frontend architects to scope your
+            UI/UX requirements.
+          </p>
+          <a
+            href="https://calendly.com/your-booking-link"
+            class="btn-primary mt-4 btn-large"
+            >Book Your Technical Discovery Call</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="logo"
+            ><img
+              src="../esseal-logo.webp"
+              width="180px"
+              height="48px"
+              alt="Esseal Logo"
+          /></a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p>Engineering robust digital solutions for businesses globally.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services/">Services</a></li>
+            <li><a href="../#work">Our Work</a></li>
+            <li><a href="../blogs/">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="./internal-tools-dashboards.html">Tools & Dashboards</a>
+            </li>
+            <li>
+              <a href="./fullstack-development.html">Full Stack Development</a>
+            </li>
+            <li>
+              <a href="./mvp-development.html">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="./legacy-codebase-upgrade-modernization.html"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK & Lahore, PK
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

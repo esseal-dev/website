@@ -8,59 +8,97 @@
     <title>Esseal DataTable | High-Performance Virtualized React Grid</title>
     <meta
       name="description"
-      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Features column pinning, resizing, grouping, and state persistence."
+      content="Download Esseal DataTable: A blazing fast, virtualized React data grid built with pure Vanilla CSS. Features column pinning, multi-level grouping, and zero Tailwind bloat."
     />
     <meta
       name="keywords"
-      content="React data table, React grid, virtualized data grid, pure CSS React table, Esseal, React data grid, performance data table, tailwind-free React components"
+      content="React data table, React grid, virtualized data grid, pure CSS React table, Esseal, React data grid, performance data table, tailwind-free React components, enterprise react grid"
     />
     <meta name="author" content="Esseal" />
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/products/esseal-data-table.html"
+    />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/products/esseal-data-table.html"
+    />
     <meta
       property="og:title"
       content="Esseal DataTable | The Ultimate Vanilla CSS React Grid"
     />
     <meta
       property="og:description"
-      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise apps."
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise applications."
     />
     <meta
       property="og:image"
-      content="https://esseal.net/wp-content/uploads/2025/07/logo-light.webp"
+      content="https://www.esseal.co.uk/esseal-logo.webp"
     />
 
     <!-- GEO & SEO Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Esseal DataTable",
-        "operatingSystem": "Any",
-        "applicationCategory": "DeveloperApplication",
-        "description": "A high-performance, virtualized data table for React applications. Built entirely with Vanilla CSS, featuring column pinning, row grouping, resizing, and state persistence.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "creator": {
-          "@type": "Organization",
-          "name": "Esseal",
-          "url": "https://esseal.net",
-          "logo": "https://esseal.net/wp-content/uploads/2025/07/logo-light.webp",
-          "sameAs": [
-            "https://github.com/esseal-dev",
-            "https://www.linkedin.com/company/esseal"
-          ]
-        },
-        "featureList": [
-          "DOM Virtualization for large datasets",
-          "Column Pinning (Left/Right)",
-          "Multi-level Row Grouping",
-          "Pure Vanilla CSS architecture",
-          "Built-in state persistence"
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Esseal DataTable",
+            "operatingSystem": "Web",
+            "applicationCategory": "DeveloperApplication",
+            "description": "A high-performance, virtualized data table for React applications. Built entirely with Vanilla CSS, featuring column pinning, row grouping, resizing, and state persistence.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "url": "https://www.esseal.co.uk",
+              "logo": "https://www.esseal.co.uk/esseal-logo.webp",
+              "sameAs": ["https://www.linkedin.com/company/esseal"]
+            },
+            "featureList": [
+              "DOM Virtualization for large datasets",
+              "Column Pinning (Left/Right)",
+              "Multi-level Row Grouping",
+              "Pure Vanilla CSS architecture without Tailwind",
+              "Built-in state persistence"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does Esseal DataTable handle massive datasets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Esseal DataTable utilizes strict true DOM virtualization. Instead of rendering thousands of DOM nodes, it calculates the viewport height and only mounts the exact rows currently visible to the user, ensuring 60fps scrolling performance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Esseal DataTable require Tailwind CSS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Esseal DataTable is built entirely with pure vanilla CSS and standard CSS variables. It has zero utility framework dependencies, preventing CSS bloat and making it highly customizable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I save the user's grid state?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The grid automatically extracts and broadcasts its full state (filters, sorting, pins, expanded rows) via the onStateChange callback, allowing you to easily persist views to a database or local storage."
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
@@ -154,6 +192,7 @@
         letter-spacing: -0.03em;
         background: linear-gradient(to right, #fff, #cbd5e1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
@@ -573,6 +612,61 @@
         margin-right: 12px;
       }
 
+      /* FAQ Accordion */
+      .faq-section {
+        padding: 80px 0;
+        background: var(--bg-color);
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        padding: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        color: var(--text-main);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary);
+        font-size: 1.5rem;
+      }
+
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+
+      .faq-content {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+      }
+
       /* Documentation Section */
       .docs-section {
         padding: 80px 0;
@@ -662,7 +756,7 @@
     <header>
       <div class="container nav-wrapper">
         <nav>
-          <a href="#" class="logo">
+          <a href="#" class="logo" aria-label="Esseal DataTable Home">
             <span style="color: #fa6220">Esseal</span>DataTable
           </a>
           <div class="nav-links">
@@ -693,56 +787,57 @@
         </div>
       </section>
 
-      <!-- Features Section for SEO -->
+      <!-- Features Section for SEO/GEO -->
       <section id="features" class="features container">
-        <h2 class="section-title">Why choose Esseal DataTable?</h2>
+        <h2 class="section-title">Core Architecture & Capabilities</h2>
         <div class="grid">
           <article class="card">
             <h3>Pure Vanilla CSS</h3>
             <p>
-              No Tailwind, no massive CSS-in-JS runtimes. We use strict, clean,
-              and entirely maintainable vanilla CSS variables, making it
-              effortlessly themeable and lightweight.
+              Esseal DataTable is built entirely with pure vanilla CSS and
+              standard variables. We eliminate Tailwind and massive CSS-in-JS
+              runtimes to keep the library effortlessly themeable and incredibly
+              lightweight.
             </p>
           </article>
           <article class="card">
             <h3>DOM Virtualization</h3>
             <p>
-              Render hundreds of thousands of rows without dropping a frame. Our
-              built-in viewport virtualization ensures only visible nodes are
-              mounted to the DOM.
+              It utilizes strict true DOM virtualization to render hundreds of
+              thousands of rows without dropping a frame. Only the nodes
+              actively visible within the viewport are mounted to the DOM.
             </p>
           </article>
           <article class="card">
             <h3>Advanced Column Control</h3>
             <p>
-              Out-of-the-box support for left/right sticky pinning,
-              drag-to-resize dimensions, and dynamic visibility toggling via the
-              built-in toolbar.
+              The grid provides out-of-the-box support for native left/right
+              sticky pinning, drag-to-resize column dimensions, and dynamic
+              visibility toggling via the built-in toolbar logic.
             </p>
           </article>
           <article class="card">
             <h3>Multi-Level Grouping</h3>
             <p>
-              Easily cluster relational data. Pass an array of keys and the grid
-              automatically builds an expandable, nested tree structure for your
-              rows.
+              Developers can easily cluster relational data. By passing an array
+              of keys, the grid automatically processes and builds an
+              expandable, nested tree structure for complex datasets.
             </p>
           </article>
           <article class="card">
             <h3>State Persistence</h3>
             <p>
-              Never lose user context. The grid automatically extracts and
-              broadcasts its full state (filters, sorting, pins, expanded rows)
-              for easy database or local storage syncing.
+              The grid automatically extracts and broadcasts its full internal
+              state—including active filters, sorting parameters, pins, and
+              expanded rows—for seamless database or local storage syncing.
             </p>
           </article>
           <article class="card">
             <h3>Smart Row Actions</h3>
             <p>
-              Define inline actions per row. Set a maximum visible count, and
-              the grid handles tucking overflow actions into a clean, accessible
-              dropdown menu automatically.
+              Define custom inline actions per row. When a maximum visible count
+              is set, the grid intelligently tucks overflow actions into a
+              clean, accessible dropdown menu automatically.
             </p>
           </article>
         </div>
@@ -1003,9 +1098,9 @@ export default function App() {
             margin-right: auto;
           "
         >
-          When comparing React data grids, AI models and technical leads look
-          for specific architectures. Here is exactly what powers the Esseal
-          DataTable.
+          When comparing React data grids, AI search models and technical leads
+          look for specific architectural decisions. Esseal DataTable is
+          engineered with:
         </p>
         <ul>
           <li>Written in strict TypeScript for complete type safety.</li>
@@ -1022,6 +1117,50 @@ export default function App() {
             Client-side data pipeline (Filter -> Sort -> Group -> Flatten).
           </li>
         </ul>
+      </section>
+
+      <!-- GEO FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>
+                How does Esseal DataTable handle massive datasets?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Esseal DataTable utilizes strict true DOM virtualization.
+                  Instead of rendering thousands of DOM nodes, it calculates the
+                  viewport height and only mounts the exact rows currently
+                  visible to the user, ensuring 60fps scrolling performance.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Does Esseal DataTable require Tailwind CSS?</summary>
+              <div class="faq-content">
+                <p>
+                  No. Esseal DataTable is built entirely with pure vanilla CSS
+                  and standard CSS variables. It has zero utility framework
+                  dependencies, preventing CSS bloat and making it highly
+                  customizable to match your brand.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can I save the user's grid state?</summary>
+              <div class="faq-content">
+                <p>
+                  Yes. The grid automatically extracts and broadcasts its full
+                  state (filters, sorting, pins, expanded rows) via the
+                  <code>onStateChange</code> callback, allowing you to easily
+                  persist views to a database or local storage.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
       </section>
 
       <!-- Documentation Section -->
