@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>404 - Page Not Found | Esseal</title>
+
+    <link rel="icon" href="favicon.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Specific styles for the 404 layout */
+      .error-wrapper {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: radial-gradient(
+          circle at center,
+          rgba(250, 98, 32, 0.05) 0%,
+          transparent 70%
+        );
+      }
+      .error-container {
+        max-width: 600px;
+        padding: 40px 20px;
+      }
+      .error-code {
+        font-size: clamp(6rem, 15vw, 10rem);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          180deg,
+          var(--text-main) 0%,
+          var(--brand-orange) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.9;
+      }
+      .error-message {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+      }
+      .error-desc {
+        color: var(--text-muted);
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Visual decorative element */
+      .glitch-layer {
+        position: relative;
+        display: inline-block;
+      }
+      .glitch-layer::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 20%;
+        right: 20%;
+        height: 2px;
+        background: var(--brand-orange);
+        box-shadow: 0 0 15px var(--brand-orange);
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo"
+          ><img
+            src="esseal-logo.webp"
+            width="180px"
+            height="48px"
+            alt="Esseal Logo"
+        /></a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/expertise">Expertise</a></li>
+            <li><a href="/about">About</a></li>
+            <li>
+              <a href="/contact" class="btn-primary">Book Discovery Call</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="error-wrapper">
+      <div class="error-container">
+        <div class="glitch-layer">
+          <h1 class="error-code">404</h1>
+        </div>
+        <p class="error-message">Looks like this path is under construction.</p>
+        <p class="error-desc">
+          The page you are looking for might have been moved, deleted, or
+          perhaps it never existed in this architecture. Let's get you back on
+          track.
+        </p>
+        <div class="cta-group">
+          <a href="/" class="btn-primary back-home">
+            &larr; Return to Safety
+          </a>
+          <a href="/contact" class="btn-secondary"> Report a Problem </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Engineering robust digital
+          solutions globally.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

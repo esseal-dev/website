@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.esseal.co.uk/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.esseal.co.uk/about</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.esseal.co.uk/expertise</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.esseal.co.uk/contact</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.esseal.co.uk/blogs/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://www.esseal.co.uk/blogs/bespoke-software-development-outsource-roulette</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/buying-vs-building-software-saas-failure</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/convert-excel-sheet-to-web-app</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/from-excel-to-web-app-digitization</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/hidden-risks-outdated-software-security-compliance</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/modernizing-monoliths-zero-downtime</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/post-launch-reality-mvp-maintenance</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/rewrite-vs-refactor-dilemma-cto-guide</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/scalable-and-secure-mvp-architecture</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/senior-led-mvp-vs-junior-team</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/the-black-box-problem-in-outsourcing</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/what-is-sre-fractional-sre-for-startups</loc></url>
+  <url><loc>https://www.esseal.co.uk/blogs/why-temporary-code-kills-growth</loc></url>
+
+  <url>
+    <loc>https://www.esseal.co.uk/services/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://www.esseal.co.uk/services/backend-development</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/frontend-development</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/fullstack-development</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/internal-tools-dashboards</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/legacy-codebase-upgrade-modernization</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/mvp-development</loc></url>
+  <url><loc>https://www.esseal.co.uk/services/product-development</loc></url>
+
+  <url>
+    <loc>https://www.esseal.co.uk/products/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url><loc>https://www.esseal.co.uk/products/esseal-data-table</loc></url>
+  <url><loc>https://www.esseal.co.uk/products/esseal-date-picker</loc></url>
+
+  <url><loc>https://www.esseal.co.uk/privacy</loc></url>
+  <url><loc>https://www.esseal.co.uk/terms-of-service</loc></url>
+</urlset>

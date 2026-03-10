@@ -1,0 +1,6 @@
+# Allow all crawlers to access the main site and directories
+User-agent: *
+Allow: /
+
+# Point to your newly generated sitemap
+Sitemap: https://www.esseal.co.uk/sitemap.xml

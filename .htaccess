@@ -1,53 +1,40 @@
-<IfModule mod_rewrite.c>
+# Esseal UK - Server Configuration
+
 RewriteEngine On
 RewriteBase /
 
-RewriteRule ^esseal-date-picker$ esseal-date-picker.html [L]
-RewriteRule ^blogs$ blogs.html [L]
-RewriteRule ^blog/([^/]+)$ $1.html [L]
-</IfModule>
+# 1. Force HTTPS and WWW (Recommended for SEO consistency)
 
-# BEGIN LSCACHE
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-<IfModule LiteSpeed>
-RewriteEngine on
-CacheLookup on
-RewriteRule .* - [E=Cache-Control:no-autoflush]
-RewriteRule litespeed/debug/.*\.log$ - [F,L]
-RewriteRule \.litespeed_conf\.dat - [F,L]
+RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.\*)$ https://www.esseal.co.uk/$1 [L,R=301]
 
-### marker ASYNC start ###
-RewriteCond %{REQUEST_URI} /wp-admin/admin-ajax\.php
-RewriteCond %{QUERY_STRING} action=async_litespeed
-RewriteRule .* - [E=noabort:1]
-### marker ASYNC end ###
+# 2. Redirect /index.html to / (Prevent duplicate content)
 
-### marker DROPQS start ###
-CacheKeyModify -qs:fbclid
-CacheKeyModify -qs:gclid
-CacheKeyModify -qs:utm*
-CacheKeyModify -qs:_ga
-### marker DROPQS end ###
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
 
-</IfModule>
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-# END LSCACHE
-# BEGIN NON_LSCACHE
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-# END NON_LSCACHE
-# BEGIN WordPress
-# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
-# dynamically generated, and should only be modified via WordPress filters.
-# Any changes to the directives between these markers will be overwritten.
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
+# 3. Externally redirect any .html request to the extensionless version
+
+# Example: /about.html -> /about
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# 4. Internally rewrite requests without extensions back to .html
+
+# Example: User visits /about -> Server serves /about.html
+
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
 
-# END WordPress
+# 5. Handle subdirectories internally (blogs, services, products)
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.\*)$ $1.html [L]
+
+# Custom Error Pages
+
+ErrorDocument 404 /404.html
