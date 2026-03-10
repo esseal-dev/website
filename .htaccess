@@ -1,40 +1,19 @@
-# Esseal UK - Server Configuration
-
 RewriteEngine On
-RewriteBase /
 
-# 1. Force HTTPS and WWW (Recommended for SEO consistency)
+# 1. Remove .html from the URL (Redirects user to clean URL)
 
-RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
-RewriteCond %{HTTPS} off
-RewriteRule ^(.\*)$ https://www.esseal.co.uk/$1 [L,R=301]
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
 
-# 2. Redirect /index.html to / (Prevent duplicate content)
-
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ / [R=301,L]
-
-# 3. Externally redirect any .html request to the extensionless version
-
-# Example: /about.html -> /about
-
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
-
-# 4. Internally rewrite requests without extensions back to .html
-
-# Example: User visits /about -> Server serves /about.html
+# 2. Map Clean URL to .html file (Internal rewrite)
 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
 
-# 5. Handle subdirectories internally (blogs, services, products)
+# 3. Handle directories (Optional: ensures /services/ works)
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.\*)$ $1.html [L]
-
-# Custom Error Pages
-
-ErrorDocument 404 /404.html
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.\*)$ $1/index.html [L]
