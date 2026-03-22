@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000a33;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000621;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fa6220;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c4a;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.045)" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Top orange accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#orangeGrad)" />
+
+  <!-- Left accent line -->
+  <rect x="80" y="110" width="3" height="360" fill="#fa6220" opacity="0.5" />
+
+  <!-- Calendar widget container -->
+  <rect x="730" y="88" width="430" height="416" rx="12" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+  <!-- Calendar header area -->
+  <rect x="730" y="88" width="430" height="56" rx="12" fill="rgba(250,98,32,0.06)" />
+  <rect x="730" y="122" width="430" height="22" fill="rgba(250,98,32,0.06)" />
+
+  <!-- Month/Year label -->
+  <text x="945" y="123" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.75)" text-anchor="middle" letter-spacing="0.3">March 2026</text>
+
+  <!-- Prev / Next arrows -->
+  <text x="762" y="124" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.2)" text-anchor="middle">&#8249;</text>
+  <text x="1128" y="124" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.2)" text-anchor="middle">&#8250;</text>
+
+  <!-- Divider under header -->
+  <line x1="750" y1="150" x2="1140" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+  <!-- Day-of-week labels (S M T W T F S) -->
+  <!-- Column centers: 778, 836, 894, 952, 1010, 1068, 1126 (step 58px) -->
+  <text x="778" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">S</text>
+  <text x="836" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">M</text>
+  <text x="894" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">T</text>
+  <text x="952" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">W</text>
+  <text x="1010" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">T</text>
+  <text x="1068" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">F</text>
+  <text x="1126" y="174" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.22)" text-anchor="middle">S</text>
+
+  <!-- RANGE HIGHLIGHT STRIPS (drawn before dates so circles sit on top) -->
+  <!-- Week 2: from date 10 center (x=894) to row end (x=1155), strip height 34px centred on y=252 -->
+  <rect x="894" y="235" width="261" height="34" fill="rgba(250,98,32,0.18)" />
+  <!-- Week 3: full row -->
+  <rect x="749" y="275" width="406" height="34" fill="rgba(250,98,32,0.18)" />
+  <!-- Week 4: from row start (x=749) to date 23 center (x=836) -->
+  <rect x="749" y="315" width="87" height="34" fill="rgba(250,98,32,0.18)" />
+
+  <!-- Week 1: 1–7 (outside range, dim) -->
+  <text x="778" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">1</text>
+  <text x="836" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">2</text>
+  <text x="894" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">3</text>
+  <text x="952" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">4</text>
+  <text x="1010" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">5</text>
+  <text x="1068" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">6</text>
+  <text x="1126" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">7</text>
+
+  <!-- Week 2: 8–14 (8–9 outside range, 10 = start, 11–14 in range) -->
+  <text x="778" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">8</text>
+  <text x="836" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">9</text>
+  <!-- Start date: 10 -->
+  <circle cx="894" cy="252" r="16" fill="#fa6220" />
+  <text x="894" y="257" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+  <!-- In-range dates 11–14 (brighter) -->
+  <text x="952" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">11</text>
+  <text x="1010" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">12</text>
+  <text x="1068" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">13</text>
+  <text x="1126" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">14</text>
+
+  <!-- Week 3: 15–21 (all in range, bright) -->
+  <text x="778" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">15</text>
+  <text x="836" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">16</text>
+  <text x="894" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">17</text>
+  <text x="952" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">18</text>
+  <text x="1010" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">19</text>
+  <text x="1068" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">20</text>
+  <text x="1126" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">21</text>
+
+  <!-- Week 4: 22 in range, 23 = end, 24–28 outside range -->
+  <text x="778" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">22</text>
+  <!-- End date: 23 -->
+  <circle cx="836" cy="332" r="16" fill="#fa6220" />
+  <text x="836" y="337" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">23</text>
+  <!-- Outside range 24–28 (dim) -->
+  <text x="894" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">24</text>
+  <text x="952" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">25</text>
+  <text x="1010" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">26</text>
+  <text x="1068" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">27</text>
+  <text x="1126" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">28</text>
+
+  <!-- Week 5: 29–31 (outside range, dim) -->
+  <text x="778" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">29</text>
+  <text x="836" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">30</text>
+  <text x="894" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">31</text>
+
+  <!-- Divider before footer -->
+  <line x1="750" y1="392" x2="1140" y2="392" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+  <!-- Range input footer: start field → end field + confirm -->
+  <rect x="750" y="404" width="148" height="28" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(250,98,32,0.3)" stroke-width="1" />
+  <text x="824" y="423" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)" text-anchor="middle">10 Mar 2026</text>
+
+  <text x="912" y="423" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(250,98,32,0.7)" text-anchor="middle">&#8594;</text>
+
+  <rect x="934" y="404" width="148" height="28" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(250,98,32,0.3)" stroke-width="1" />
+  <text x="1008" y="423" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)" text-anchor="middle">23 Mar 2026</text>
+
+  <rect x="1096" y="404" width="64" height="28" rx="5" fill="rgba(250,98,32,0.14)" stroke="rgba(250,98,32,0.3)" stroke-width="1" />
+  <text x="1128" y="423" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="600" fill="#fa6220" text-anchor="middle">Apply</text>
+
+  <!-- ESSEAL wordmark -->
+  <text x="116" y="178" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="5" fill="#fa6220">ESSEAL</text>
+  <circle cx="228" cy="172" r="2" fill="rgba(255,255,255,0.2)" />
+  <text x="238" y="178" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.35)" letter-spacing="0.5">Open Source Component</text>
+
+  <!-- Main headline -->
+  <text x="116" y="278" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="64" font-weight="700" fill="#f4f4f5" letter-spacing="-2">Zero Deps.</text>
+  <text x="116" y="354" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-2">
+    <tspan fill="#f4f4f5">Date </tspan><tspan fill="#fa6220">Ranges.</tspan>
+  </text>
+
+  <!-- Sub-line -->
+  <text x="116" y="402" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.2">Range selection most free pickers skip. Under 5kb. Framework-agnostic.</text>
+
+  <!-- Feature pills -->
+  <rect x="116" y="432" width="136" height="32" rx="6" fill="rgba(250,98,32,0.1)" stroke="rgba(250,98,32,0.25)" stroke-width="1" />
+  <text x="184" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="#fa6220" text-anchor="middle">Date Range</text>
+
+  <rect x="264" y="432" width="118" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="323" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">&lt; 5kb Gzipped</text>
+
+  <rect x="394" y="432" width="148" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="468" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">Zero Dependencies</text>
+
+  <rect x="554" y="432" width="72" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="590" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">React</text>
+
+  <rect x="638" y="432" width="60" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="668" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">Vue</text>
+
+  <!-- Bottom divider -->
+  <rect x="116" y="508" width="968" height="1" fill="rgba(255,255,255,0.08)" />
+
+  <!-- Bottom row -->
+  <text x="116" y="544" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.3)" letter-spacing="0.3">esseal.co.uk/products/esseal-date-picker</text>
+
+  <rect x="912" y="524" width="172" height="30" rx="5" fill="rgba(250,98,32,0.08)" stroke="rgba(250,98,32,0.2)" stroke-width="1" />
+  <text x="998" y="544" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="500" fill="rgba(250,98,32,0.8)" text-anchor="middle" letter-spacing="0.3">Free to Download · MIT Licensed</text>
+</svg>
