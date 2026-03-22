@@ -1,6 +1,152 @@
-# Allow all crawlers to access the main site and directories
+# esseal.co.uk — robots.txt
+# All search engines and AI crawlers are explicitly welcome.
+
+# -----------------------------------------------
+# Catch-all: allow everything by default
+# -----------------------------------------------
 User-agent: *
 Allow: /
 
-# Point to your newly generated sitemap
+# -----------------------------------------------
+# Google
+# -----------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AI (Gemini training)
+User-agent: Google-Extended
+Allow: /
+
+# -----------------------------------------------
+# Bing / Microsoft
+# -----------------------------------------------
+User-agent: bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# -----------------------------------------------
+# Apple
+# -----------------------------------------------
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# -----------------------------------------------
+# Meta / Facebook
+# -----------------------------------------------
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# -----------------------------------------------
+# OpenAI / ChatGPT
+# -----------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# -----------------------------------------------
+# Anthropic / Claude
+# -----------------------------------------------
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# -----------------------------------------------
+# Perplexity
+# -----------------------------------------------
+User-agent: PerplexityBot
+Allow: /
+
+# -----------------------------------------------
+# You.com
+# -----------------------------------------------
+User-agent: YouBot
+Allow: /
+
+# -----------------------------------------------
+# Cohere
+# -----------------------------------------------
+User-agent: cohere-ai
+Allow: /
+
+# -----------------------------------------------
+# Amazon / Alexa
+# -----------------------------------------------
+User-agent: Amazonbot
+Allow: /
+
+# -----------------------------------------------
+# Common Crawl (used by many AI training pipelines)
+# -----------------------------------------------
+User-agent: CCBot
+Allow: /
+
+# -----------------------------------------------
+# DuckDuckGo
+# -----------------------------------------------
+User-agent: DuckDuckBot
+Allow: /
+
+# -----------------------------------------------
+# Yahoo
+# -----------------------------------------------
+User-agent: Slurp
+Allow: /
+
+# -----------------------------------------------
+# Baidu
+# -----------------------------------------------
+User-agent: Baiduspider
+Allow: /
+
+# -----------------------------------------------
+# Yandex
+# -----------------------------------------------
+User-agent: YandexBot
+Allow: /
+
+# -----------------------------------------------
+# LinkedIn
+# -----------------------------------------------
+User-agent: LinkedInBot
+Allow: /
+
+# -----------------------------------------------
+# Twitter / X
+# -----------------------------------------------
+User-agent: Twitterbot
+Allow: /
+
+# -----------------------------------------------
+# Sitemap
+# -----------------------------------------------
 Sitemap: https://www.esseal.co.uk/sitemap.xml
