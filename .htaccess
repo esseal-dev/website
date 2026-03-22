@@ -1,19 +1,82 @@
-RewriteEngine On
+# ============================================================
+# ESSEAL.CO.UK — APACHE CONFIGURATION
+# ============================================================
 
-# 1. Remove .html from the URL (Redirects user to clean URL)
+# Prevent directory listing
+Options -Indexes
 
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [L,R=301]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
 
-# 2. Map Clean URL to .html file (Internal rewrite)
+    # --------------------------------------------------------
+    # 1. FORCE HTTPS + WWW
+    # Redirect all non-www and non-HTTPS traffic to canonical domain
+    # --------------------------------------------------------
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^ https://www.esseal.co.uk%{REQUEST_URI} [R=301,L]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
+    # --------------------------------------------------------
+    # 2. INDEX FILE REDIRECTS (prevent duplicate content)
+    # --------------------------------------------------------
 
-# 3. Handle directories (Optional: ensures /services/ works)
+    # /index or /index.html → /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?\ HTTP/
+    RewriteRule ^index(\.html)?$ https://www.esseal.co.uk/ [R=301,L]
 
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.\*)$ $1/index.html [L]
+    # /blogs/index or /blogs/index.html → /blogs/ (same for products, services)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(blogs|products|services)/index(\.html)?\ HTTP/
+    RewriteRule ^(blogs|products|services)/index(\.html)?$ https://www.esseal.co.uk/$1/ [R=301,L]
+
+    # --------------------------------------------------------
+    # 3. REMOVE .HTML EXTENSION (301 redirect to clean URL)
+    # --------------------------------------------------------
+    RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # --------------------------------------------------------
+    # 4. INTERNAL REWRITE: serve .html file for clean URLs
+    # --------------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+)$ $1.html [L]
+
+    # --------------------------------------------------------
+    # 5. DIRECTORY HANDLING: /services/ → /services/index.html
+    # --------------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_FILENAME}/index.html -f
+    RewriteRule ^(.*)$ $1/index.html [L]
+
+</IfModule>
+
+# ============================================================
+# CANONICAL HEADER
+# Sends a Link: rel="canonical" header on all 200 responses.
+# REQUEST_URI is captured into an env var (required by mod_headers).
+# .html redirects in section 3 above mean this will always be a clean URL.
+# ============================================================
+<IfModule mod_headers.c>
+    SetEnvIf Request_URI "^(.*)$" CANONICAL_PATH=$1
+    Header set Link '<https://www.esseal.co.uk%{CANONICAL_PATH}e>; rel="canonical"'
+</IfModule>
+
+# ============================================================
+# CACHING — 1-year TTL for versioned static assets
+# ============================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript        "access plus 1 year"
+    ExpiresByType font/woff2             "access plus 1 year"
+    ExpiresByType image/webp             "access plus 1 year"
+    ExpiresByType text/css               "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|woff2|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
