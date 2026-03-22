@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000a33;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000621;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fa6220;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c4a;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.045)" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#dotGrid)" />
+
+  <!-- Top orange accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#orangeGrad)" />
+
+  <!-- Left accent line -->
+  <rect x="80" y="110" width="3" height="360" fill="#fa6220" opacity="0.5" />
+
+  <!-- Decorative rings -->
+  <circle cx="1080" cy="560" r="240" fill="none" stroke="rgba(250,98,32,0.05)" stroke-width="1" />
+  <circle cx="1080" cy="560" r="160" fill="none" stroke="rgba(250,98,32,0.06)" stroke-width="1" />
+  <circle cx="1080" cy="560" r="80" fill="none" stroke="rgba(250,98,32,0.07)" stroke-width="1" />
+
+  <!-- Stat boxes top-right -->
+  <rect x="840" y="110" width="150" height="80" rx="8" fill="rgba(250,98,32,0.08)" stroke="rgba(250,98,32,0.2)" stroke-width="1" />
+  <text x="915" y="148" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#fa6220" text-anchor="middle">11</text>
+  <text x="915" y="170" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="0.5">MVPs DELIVERED</text>
+
+  <rect x="1006" y="110" width="150" height="80" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="1081" y="148" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" fill="#f4f4f5" text-anchor="middle">5+</text>
+  <text x="1081" y="170" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="11" font-weight="500" fill="rgba(255,255,255,0.45)" text-anchor="middle" letter-spacing="0.5">YRS PER DEV</text>
+
+  <!-- ESSEAL wordmark -->
+  <text x="116" y="178" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="5" fill="#fa6220">ESSEAL</text>
+  <circle cx="228" cy="172" r="2" fill="rgba(255,255,255,0.2)" />
+  <text x="238" y="178" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.35)" letter-spacing="0.5">For Founders &amp; Startups</text>
+
+  <!-- Main headline -->
+  <text x="116" y="278" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="64" font-weight="700" fill="#f4f4f5" letter-spacing="-2">Your MVP in 4–6 Weeks.</text>
+  <text x="116" y="354" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-2">
+    <tspan fill="#f4f4f5">Built by </tspan><tspan fill="#fa6220">Seniors Only.</tspan>
+  </text>
+
+  <!-- Sub-line -->
+  <text x="116" y="402" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.2">No juniors. No handoffs. No surprise invoices. Your name on every commit.</text>
+
+  <!-- Value pills -->
+  <rect x="116" y="432" width="170" height="32" rx="6" fill="rgba(250,98,32,0.1)" stroke="rgba(250,98,32,0.25)" stroke-width="1" />
+  <text x="201" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="#fa6220" text-anchor="middle">Rapid Delivery</text>
+
+  <rect x="298" y="432" width="170" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="383" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">Senior-Only Team</text>
+
+  <rect x="480" y="432" width="170" height="32" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+  <text x="565" y="453" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.55)" text-anchor="middle">Transparent Billing</text>
+
+  <!-- Bottom divider -->
+  <rect x="116" y="508" width="968" height="1" fill="rgba(255,255,255,0.08)" />
+
+  <!-- Bottom row -->
+  <text x="116" y="544" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.3)" letter-spacing="0.3">esseal.co.uk/services/mvp-development</text>
+
+  <!-- Equity badge -->
+  <rect x="782" y="524" width="302" height="30" rx="5" fill="rgba(250,98,32,0.08)" stroke="rgba(250,98,32,0.2)" stroke-width="1" />
+  <text x="933" y="544" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="500" fill="rgba(250,98,32,0.8)" text-anchor="middle" letter-spacing="0.3">3 Equity Partnerships · 11 MVPs Launched</text>
+</svg>
