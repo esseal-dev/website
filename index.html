@@ -22,14 +22,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.esseal.co.uk/" />
-    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/social-card-default.webp"
+    />
 
     <link rel="canonical" href="https://www.esseal.co.uk/" />
 
     <title>Esseal | MVP Development & Enterprise Software Development</title>
 
     <link rel="icon" href="/favicon.webp" />
-<link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <script type="application/ld+json">
       {
@@ -63,9 +66,18 @@
       }
     </script>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Esseal | MVP & Enterprise Software Development" />
-    <meta name="twitter:description" content="Expert full-stack development and legacy codebase modernization for SMEs and enterprise clients." />
-    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+    <meta
+      name="twitter:title"
+      content="Esseal | MVP & Enterprise Software Development"
+    />
+    <meta
+      name="twitter:description"
+      content="Expert full-stack development and legacy codebase modernization for SMEs and enterprise clients."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.esseal.co.uk/social-card-default.webp"
+    />
 
     <script type="application/ld+json">
       {
@@ -118,7 +130,13 @@
             modernizing legacy codebases to future-proof your business.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Start Your Project</a>
+            <button
+              type="button"
+              class="btn-primary start-project"
+              id="open-project-modal"
+            >
+              Start Your Project
+            </button>
             <a href="#services" class="btn-secondary">Explore Services</a>
           </div>
         </div>
@@ -269,9 +287,7 @@
             Let's discuss how Esseal can help you build, scale, or upgrade your
             digital infrastructure.
           </p>
-          <a href="/contact" class="btn-primary btn-large"
-            >Schedule a Consultation</a
-          >
+          <button type="button" class="btn-primary btn-large" data-open-booking>Schedule a Consultation</button>
         </div>
       </section>
     </main>
@@ -343,6 +359,232 @@
       </div>
     </footer>
 
+    <!-- Project Modal -->
+    <div
+      id="project-modal"
+      class="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal">
+        <button
+          class="modal-close"
+          id="close-project-modal"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h2 id="modal-title">Start Your Project</h2>
+        <p class="modal-subtitle">
+          Tell us a little about what you're building.
+        </p>
+        <form id="project-form" novalidate>
+          <div class="form-group">
+            <label for="f-name"
+              >Your Name <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="text"
+              id="f-name"
+              name="name"
+              autocomplete="name"
+              placeholder="Jane Smith"
+            />
+            <span class="field-error" id="err-name" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-email"
+              >Email Address <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="email"
+              id="f-email"
+              name="email"
+              autocomplete="email"
+              placeholder="jane@company.com"
+            />
+            <span class="field-error" id="err-email" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-company"
+              >Company <span class="optional">(optional)</span></label
+            >
+            <input
+              type="text"
+              id="f-company"
+              name="company"
+              autocomplete="organization"
+              placeholder="Acme Corp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="f-description"
+              >Project Description <span aria-hidden="true">*</span></label
+            >
+            <textarea
+              id="f-description"
+              name="description"
+              placeholder="Briefly describe what you're looking to build or the problem you're solving…"
+            ></textarea>
+            <span
+              class="field-error"
+              id="err-description"
+              aria-live="polite"
+            ></span>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const overlay = document.getElementById("project-modal");
+        const form = document.getElementById("project-form");
+
+        function openModal() {
+          overlay.classList.add("is-open");
+          document.body.style.overflow = "hidden";
+          document.getElementById("f-name").focus();
+        }
+
+        function closeModal() {
+          overlay.classList.remove("is-open");
+          document.body.style.overflow = "";
+        }
+
+        document
+          .getElementById("open-project-modal")
+          .addEventListener("click", openModal);
+        document
+          .getElementById("close-project-modal")
+          .addEventListener("click", closeModal);
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("is-open"))
+            closeModal();
+        });
+
+        function setError(inputId, errorId, message) {
+          const input = document.getElementById(inputId);
+          const error = document.getElementById(errorId);
+          input.classList.toggle("is-invalid", !!message);
+          error.textContent = message;
+        }
+
+        function validateEmail(email) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
+        }
+
+        function validate() {
+          let valid = true;
+          const name = document.getElementById("f-name").value.trim();
+          const email = document.getElementById("f-email").value.trim();
+          const description = document
+            .getElementById("f-description")
+            .value.trim();
+
+          if (!name) {
+            setError("f-name", "err-name", "Please enter your name.");
+            valid = false;
+          } else {
+            setError("f-name", "err-name", "");
+          }
+
+          if (!email) {
+            setError(
+              "f-email",
+              "err-email",
+              "Please enter your email address.",
+            );
+            valid = false;
+          } else if (!validateEmail(email)) {
+            setError(
+              "f-email",
+              "err-email",
+              "Please enter a valid email address.",
+            );
+            valid = false;
+          } else {
+            setError("f-email", "err-email", "");
+          }
+
+          if (!description) {
+            setError(
+              "f-description",
+              "err-description",
+              "Please describe your project.",
+            );
+            valid = false;
+          } else if (description.length < 20) {
+            setError(
+              "f-description",
+              "err-description",
+              "Please add a bit more detail (at least 20 characters).",
+            );
+            valid = false;
+          } else {
+            setError("f-description", "err-description", "");
+          }
+
+          return valid;
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!validate()) return;
+
+          const submitBtn = form.querySelector("[type=submit]");
+          const name        = document.getElementById("f-name").value.trim();
+          const email       = document.getElementById("f-email").value.trim();
+          const company     = document.getElementById("f-company").value.trim() || null;
+          const description = document.getElementById("f-description").value.trim();
+
+          submitBtn.textContent = "Sending…";
+          submitBtn.disabled = true;
+
+          window.postToSlack([
+            {
+              type: "header",
+              text: { type: "plain_text", text: "🚀 New Project Enquiry", emoji: true },
+            },
+            {
+              type: "section",
+              fields: [
+                { type: "mrkdwn", text: "*Name:*\n" + name },
+                { type: "mrkdwn", text: "*Email:*\n" + email },
+                { type: "mrkdwn", text: "*Company:*\n" + (company || "—") },
+                { type: "mrkdwn", text: "*Source:*\n" + window.location.href },
+              ],
+            },
+            {
+              type: "section",
+              text: { type: "mrkdwn", text: "*Project Description:*\n" + description },
+            },
+          ]).then(function () {
+            form.reset();
+            closeModal();
+          });
+        });
+
+        // Clear individual field errors on input
+        ["f-name", "f-email", "f-description"].forEach(function (id) {
+          document.getElementById(id).addEventListener("input", function () {
+            this.classList.remove("is-invalid");
+            document.getElementById("err-" + id.replace("f-", "")).textContent =
+              "";
+          });
+        });
+      })();
+    </script>
+
     <script src="./three.r134.min.js" defer></script>
     <script src="./vanta.net.min.js" defer></script>
     <script>
@@ -366,5 +608,6 @@
         }
       });
     </script>
+  <script src="/booking-modal.js" defer></script>
   </body>
 </html>
