@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal built an AI-powered construction management SaaS from scratch — replacing hundreds of Excel sheets with a platform managing 700+ projects and £40–60M in active work."
+    />
+
+    <meta property="og:title" content="AI-Powered Construction Management SaaS — Case Study | Esseal" />
+    <meta property="og:description" content="A UK construction company owner managed £40–60M of projects across Excel sheets and email chains. We built him a full AI-powered SaaS platform. Now launching commercially in Q4 2026." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/ai-powered-construction-management-saas" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI-Powered Construction Management SaaS — Case Study | Esseal" />
+    <meta name="twitter:description" content="A UK construction company owner managed £40–60M of projects across Excel sheets and email chains. We built him a full AI-powered SaaS platform. Now launching commercially in Q4 2026." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/ai-powered-construction-management-saas" />
+    <title>AI-Powered Construction Management SaaS Development — Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "AI-Powered Construction Management SaaS — From Excel Chaos to £40M Portfolio",
+      "description": "How Esseal built a bespoke AI-powered construction project management SaaS from scratch for a UK construction group — replacing Excel workflows with NEC-compliant software managing 700+ projects.",
+      "url": "https://www.esseal.co.uk/case-studies/ai-powered-construction-management-saas",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["AI construction management software", "custom construction SaaS development", "NEC contract management software", "bespoke construction project management platform", "AI scheduling software construction", "construction management system UK", "full-stack SaaS development agency", "software development case study"],
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you build custom construction management software from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal built a full AI-powered construction management SaaS from scratch for a UK construction group — covering project management, NEC contract compliance, AI-assisted scheduling, resource planning, and reporting. The platform is live across three companies managing over 700 projects and £40–60M in active work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI improve construction project management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In this platform, localised AI analyses project data to suggest optimal scheduling windows, flag pricing risks, and predict future events such as resource conflicts or deadline slippage — before they happen. AI also assists with NEC contract creation and estimation quotes, reducing manual effort and human error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is NEC contract management software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NEC (New Engineering Contract) is the standard contract framework used across UK commercial construction. Managing NEC compliance traditionally requires reading through long email chains and manually tracking document versions. This platform automates NEC notice tracking, stores full audit trails, and uses AI to assist with contract creation — eliminating the manual overhead entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you build software for non-technical users in construction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The client's guiding principle was: if it's confusing, no one will use it. Every screen in the platform was designed for a low-tech user base — tradespeople and site managers, not software professionals. Esseal translated complex Excel and email-based workflows into a system that's immediately intuitive, with no training required."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.esseal.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://www.esseal.co.uk/case-studies/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI-Powered Construction Management SaaS",
+          "item": "https://www.esseal.co.uk/case-studies/ai-powered-construction-management-saas"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — Product Development &amp; Full-Stack</span>
+            <h1 class="hero-title">
+              From Hundreds of Excel Sheets to an <span>AI-Powered Construction SaaS</span>
+            </h1>
+            <p class="lead-text">
+              A UK construction group owner was managing £40–60M worth of projects across
+              spreadsheets and email chains. No system. No structure. Just years of accumulated
+              complexity held together by institutional knowledge. We built the platform that
+              replaced all of it — and it's now launching as a commercial SaaS product.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Ruby on Rails</span>
+              <span class="cs-tag">React</span>
+              <span class="cs-tag">GraphQL</span>
+              <span class="cs-tag">PostgreSQL</span>
+              <span class="cs-tag">Redis</span>
+              <span class="cs-tag">WebSockets</span>
+              <span class="cs-tag">AI Integration</span>
+              <span class="cs-tag">AWS S3</span>
+              <span class="cs-tag neutral">Full-Stack Development</span>
+              <span class="cs-tag neutral">Product Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">700+</span>
+          <span class="cs-stat-label">Projects Managed</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">£40–60M</span>
+          <span class="cs-stat-label">Portfolio Value</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">3</span>
+          <span class="cs-stat-label">Companies Live</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Q4 '26</span>
+          <span class="cs-stat-label">Commercial Launch</span>
+        </div>
+      </div>
+
+      <!-- The Situation -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Why UK Construction Companies Still Run on Excel</h2>
+              <p class="mt-2">
+                Our client owns two commercial construction companies and a consultation firm in the UK.
+                Between them, they manage hundreds of active and historical projects — NEC contracts,
+                resource schedules, kick-off meetings, compliance notices, subcontractor relationships,
+                and reporting chains that span months.
+              </p>
+              <p class="mt-2">
+                All of it lived in Excel. Hundreds of sheets. Cross-referenced manually. Updated
+                inconsistently. Stored across inboxes and shared drives with no single source of truth.
+              </p>
+              <p class="mt-2">
+                The problems weren't abstract. NEC compliance required reading through entire email
+                chains to find the latest version of a document referencing a specific topic. Checking
+                for scheduling conflicts meant sifting through sheets made months in advance — and
+                conflicts still slipped through due to spelling differences and minor discrepancies
+                between entries. Every answer required someone who already knew where to look.
+              </p>
+              <p class="mt-2">
+                He came to Esseal with his spreadsheets, walked us through his workflows, and asked
+                us to build something better. Esseal proposed and led the entire <a href="/services/product-development">product development</a> process from that point forward.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — project management dashboard overview">
+              Screenshot: Project management dashboard
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- The AI Layer -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — AI scheduling and prediction interface">
+              Screenshot: AI scheduling suggestions
+            </figure>
+            <div>
+              <h2>Built-In AI That Knows Your Projects</h2>
+              <p class="mt-2">
+                The platform's AI layer is what separates it from off-the-shelf construction software.
+                Rather than generic recommendations, the AI is localised to each project's own data —
+                it learns from the patterns already present in the platform and applies that context
+                directly.
+              </p>
+              <ul class="tech-list mt-2">
+                <li>
+                  <strong>Scheduling suggestions:</strong> The AI analyses current resource allocation,
+                  project timelines, and historical patterns to recommend optimal scheduling windows —
+                  flagging conflicts before they're confirmed.
+                </li>
+                <li>
+                  <strong>Pricing intelligence:</strong> Estimation quotes are AI-assisted, drawing on
+                  project data to surface relevant cost considerations and flag anomalies against
+                  comparable past work.
+                </li>
+                <li>
+                  <strong>Event prediction:</strong> The system predicts future events — resource
+                  bottlenecks, deadline risks, compliance notice deadlines — based on how the project
+                  is currently tracking. Problems are surfaced before they become incidents.
+                </li>
+                <li>
+                  <strong>NEC contract creation:</strong> AI assists in drafting NEC contract documents,
+                  pulling from project context to reduce manual drafting time and ensure compliance
+                  with contractual obligations.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Built -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Custom Construction Management Software — What We Delivered</h2>
+            <p class="text-muted">A full monorepo — four dashboards, one backend, shared component library.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🏗️</div>
+              <h3>Manager Dashboard</h3>
+              <p>
+                The core of the platform. Project creation and tracking, NEC notice management,
+                kick-off workflows, document storage, and full audit trails. Everything a project
+                manager needs in one place — with real-time updates via WebSockets so the view
+                is always current.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">📅</div>
+              <h3>Scheduler Dashboard</h3>
+              <p>
+                Resource scheduling across personnel, equipment, and subcontractors. Conflict
+                detection that actually works — no spelling mismatches, no missed entries.
+                The AI layer surfaces scheduling suggestions and flags future conflicts
+                before they're locked in.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">📈</div>
+              <h3>Reports Dashboard</h3>
+              <p>
+                Analytics and reporting across the entire project portfolio. Progress tracking,
+                financial summaries, compliance status, and exportable reports — designed to
+                give both site managers and company owners exactly the view they need
+                without navigating away.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Challenges -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Building Bespoke Construction Software — The Hard Parts</h2>
+            <p class="text-muted">Two challenges that required more than just engineering.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🧩</div>
+              <h3>Translating Human Systems into Software</h3>
+              <p>
+                The client's entire operation ran on a mix of spreadsheets, mental models, and
+                institutional knowledge built over years. There was no spec to work from — just
+                a stack of Excel files and a set of pain points. Esseal's job was to extract
+                the logic embedded in those workflows, identify what the software actually
+                needed to do, and design a system that matched how the business already thought.
+                That translation process — from human system to product — was the longest and
+                most critical phase of the engagement.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🎯</div>
+              <h3>Radical Simplicity for a Non-Technical User Base</h3>
+              <p>
+                The client's instruction was clear: if it's confusing, no one will use it.
+                The end users — site managers, tradespeople, project coordinators — are not
+                software professionals. Every screen had to be immediately intuitive. No
+                onboarding flow, no tutorial, no manual. The platform is built on a 160+
+                type GraphQL schema with hundreds of mutations and queries, but none of that
+                complexity is visible to the person using it. That gap between backend depth
+                and frontend simplicity was deliberate and hard-won.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Results: A £40M Construction Portfolio, Off Excel for Good</h2>
+              <p class="mt-2">
+                The platform is live across all three of the client's companies. It currently
+                manages over 700 commercial construction projects — 68 active, with the remainder
+                backfilled from prior years — representing £40–60M in portfolio value.
+              </p>
+              <p class="mt-2">
+                The Excel sheets are gone. NEC compliance is tracked automatically. Scheduling
+                conflicts are caught before they're made. The AI surfaces risks and suggestions
+                that previously required someone to already know where to look.
+              </p>
+              <p class="mt-2">
+                Esseal's engagement covers the full product lifecycle — <a href="/services/fullstack-development">full-stack development</a>,
+                DevOps, QA, and ongoing maintenance. It remains our longest-running client relationship.
+                A bespoke solution, built by a London-based software development agency with deep experience
+                in data-heavy, multi-role SaaS platforms.
+              </p>
+              <p class="mt-2">
+                In Q4 2026, the platform launches as a standalone commercial SaaS product — opening
+                up to the wider UK construction industry. What started as one owner's internal tool
+                became a product with a market.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — NEC contract management and AI suggestions">
+              Screenshot: NEC compliance and AI predictions
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you build custom construction management software from scratch?</summary>
+              <div class="faq-content">
+                <p>Yes — this case study is a live example. Esseal built a full AI-powered construction management SaaS from scratch, covering project management, NEC contract compliance, AI-assisted scheduling, resource planning, and reporting. The platform is live across three companies managing over 700 projects and £40–60M in active work.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How does AI improve construction project management?</summary>
+              <div class="faq-content">
+                <p>In this platform, localised AI analyses each project's own data to suggest optimal scheduling windows, flag pricing risks, and predict future events such as resource conflicts or deadline slippage — before they happen. AI also assists with NEC contract creation and estimation quotes, reducing manual effort and human error at every stage.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What is NEC contract management software?</summary>
+              <div class="faq-content">
+                <p>NEC (New Engineering Contract) is the standard contract framework used across UK commercial construction. Managing NEC compliance traditionally requires reading through long email chains and manually tracking document versions. This platform automates NEC notice tracking, stores full audit trails, and uses AI to assist with contract creation — eliminating the manual overhead entirely.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How do you build software for non-technical users in construction?</summary>
+              <div class="faq-content">
+                <p>The client's guiding principle was: if it's confusing, no one will use it. Every screen was designed for a low-tech user base — tradespeople and site managers, not software professionals. Esseal translated complex Excel and email-based workflows into a system that's immediately intuitive with no training required. The complexity lives in the backend; the surface is clean and direct.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Need Bespoke Software for a Complex Industry?</h2>
+          <p class="lead-text mt-2">
+            We've built production SaaS platforms in construction, events, healthcare, and logistics.
+            If your business still runs on Excel and email, let's talk.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Schedule a Discovery Call</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>

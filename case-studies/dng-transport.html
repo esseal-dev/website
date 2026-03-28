@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal built a real-time freight shipment tracking system for DNG Transport — replacing manual Excel lookups and phone calls with a live customer-facing tracking portal."
+    />
+
+    <meta property="og:title" content="Real-Time Freight Shipment Tracking System — DNG Transport Case Study | Esseal" />
+    <meta property="og:description" content="DNG Transport staff were manually cross-referencing Excel sheets and a 2000s fleet tracker to answer customer tracking queries. Esseal automated the entire process. Zero staff intervention required." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/dng-transport" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Real-Time Freight Shipment Tracking System — DNG Transport | Esseal" />
+    <meta name="twitter:description" content="Manual Excel + phone queues replaced with an automated shipment tracking system. DNG Transport now handles all customer tracking queries without human intervention." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/dng-transport" />
+    <title>Freight Shipment Tracking System Development — DNG Transport Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "Real-Time Freight Shipment Tracking System — Replacing Manual Processes at DNG Transport",
+      "description": "How Esseal built a real-time shipment tracking dashboard and customer portal for DNG Transport, automating a manual process that required staff to cross-reference Excel sheets and a legacy fleet tracker for every customer query.",
+      "url": "https://www.esseal.co.uk/case-studies/dng-transport",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["freight shipment tracking software development", "custom logistics tracking system", "real-time fleet tracking dashboard", "internal tools freight company", "shipment tracking portal", "logistics software development agency", "Firebase real-time tracking", "internal tools and dashboards"],
+      "about": {
+        "@type": "Organization",
+        "name": "DNG Transport",
+        "url": "https://www.dngtransport.com"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you build a custom shipment tracking system for a freight company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal built a two-part tracking system for DNG Transport: an internal dashboard that maps shipments to trucks and pulls live location data from a third-party fleet tracker API into Firebase, and a customer-facing tracking portal where customers enter their tracking number and see their shipment's live location instantly — no staff involvement required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you integrate with existing fleet tracking software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esseal integrates via the fleet tracker's API. For DNG Transport, we connected to the mytracker.trackersystems.net API to pull live truck locations on a scheduled basis, storing the data in Firebase for fast real-time access. This means DNG's existing tracker continues operating as-is, while Esseal's system layers intelligent shipment-to-truck mapping on top."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What internal tools can Esseal build for logistics companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esseal builds bespoke internal tools for logistics and freight companies — shipment tracking dashboards, fleet management systems, customer portals, quote request tools, dispatch management, and warehouse management interfaces. Each tool is built to integrate with existing systems rather than replace them."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.esseal.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.esseal.co.uk/case-studies/" },
+        { "@type": "ListItem", "position": 3, "name": "DNG Transport", "item": "https://www.esseal.co.uk/case-studies/dng-transport" }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development Logo" />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — Internal Tools &amp; Full-Stack Development</span>
+            <h1 class="hero-title">
+              Automating Freight Shipment Tracking for <span>DNG Transport</span>
+            </h1>
+            <p class="lead-text">
+              Every customer tracking query at DNG Transport required a staff member to put
+              a caller on hold, look up the shipment in Excel, find the truck number, log
+              into a legacy fleet tracker, check the location, and relay it back. Esseal
+              eliminated that entire process. Customers now get live tracking without
+              speaking to anyone.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Firebase</span>
+              <span class="cs-tag">Fleet Tracker API</span>
+              <span class="cs-tag">Real-Time Data</span>
+              <span class="cs-tag">Customer Portal</span>
+              <span class="cs-tag neutral">Internal Tools</span>
+              <span class="cs-tag neutral">Full-Stack Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">0</span>
+          <span class="cs-stat-label">Staff Interventions Required</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Live</span>
+          <span class="cs-stat-label">Real-Time Location</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">2</span>
+          <span class="cs-stat-label">Systems Built</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">WhatsApp</span>
+          <span class="cs-stat-label">Bot in Progress</span>
+        </div>
+      </div>
+
+      <!-- The Problem -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Why Freight Companies Struggle With Real-Time Shipment Visibility</h2>
+              <p class="mt-2">
+                <a href="https://www.dngtransport.com" target="_blank" rel="noopener">DNG Transport</a>
+                is a US freight and logistics company operating out of Rahway NJ, Dallas TX, and
+                Memphis TN — with LTL, FTL, drayage, crossdocking, and over 50,000 sq ft of
+                warehouse capacity.
+              </p>
+              <p class="mt-2">
+                Like many logistics operators, DNG had an existing fleet tracker — a third-party
+                system that showed live GPS locations of every truck. The problem was that the
+                tracker had no awareness of what was inside each truck. Which shipment was in
+                which vehicle was a separate piece of information, tracked manually in Excel.
+              </p>
+              <p class="mt-2">
+                The result: when a customer called to ask where their shipment was, a staff member
+                had to put them on hold, look up the shipment number in the Excel sheet to find
+                the truck ID, log into the fleet tracker, find that truck's current location,
+                and relay the information back. Every single query. No automation. No self-service.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — internal tracking dashboard">
+              Screenshot: Internal shipment tracking dashboard
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Built -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>A Two-Part Freight Tracking System Built to Eliminate Manual Queries</h2>
+            <p class="text-muted">Internal dashboard for operations. Customer portal for self-service. No overlap, no duplication.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🗂️</div>
+              <h3>Internal Operations Dashboard</h3>
+              <p>
+                DNG staff log each shipment — assigning a tracking ID, linking it to the
+                relevant truck. The dashboard connects to the fleet tracker API on a scheduled
+                basis, pulling live truck locations and writing them to Firebase. Now the system
+                always knows: shipment X is in truck Y, and truck Y is at location Z. The
+                Excel sheet is gone.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">📍</div>
+              <h3>Customer-Facing Tracking Portal</h3>
+              <p>
+                A new page on the DNG Transport website. The customer enters their tracking number,
+                the form queries the dashboard in real time, and the truck's current location
+                is shown on the page. No hold music. No staff interaction. No waiting.
+                Customers get the same answer that previously required a phone call — instantly
+                and automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome + WhatsApp -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — customer tracking portal">
+              Screenshot: Customer tracking portal
+            </figure>
+            <div>
+              <h2>Results and What's Next for DNG Transport</h2>
+              <p class="mt-2">
+                DNG Transport now operates a fully automated shipment tracking system. Customer
+                tracking queries require zero staff involvement — the information is live,
+                accurate, and available around the clock directly on the website.
+              </p>
+              <p class="mt-2">
+                The <a href="/services/internal-tools-dashboards">internal tool</a> has removed
+                an entire category of manual work from daily operations — freeing up staff time
+                for higher-value tasks and eliminating a friction point that affected every
+                customer interaction.
+              </p>
+              <p class="mt-2">
+                The next phase is in progress: a WhatsApp bot that delivers the same shipment
+                tracking experience via message — so customers don't need to visit the website
+                at all. Same data, same automation, different channel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you build a custom shipment tracking system for a freight company?</summary>
+              <div class="faq-content">
+                <p>Yes. Esseal built a two-part tracking system for DNG Transport: an internal dashboard that maps shipments to trucks and pulls live location data from a third-party fleet tracker API into Firebase, and a customer-facing tracking portal where customers get their shipment's live location instantly — no staff involvement required.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How do you integrate with existing fleet tracking software?</summary>
+              <div class="faq-content">
+                <p>Esseal integrates via the fleet tracker's API. For DNG Transport, we connected to the existing tracker to pull live truck locations on a scheduled basis, storing the data in Firebase for fast real-time access. DNG's existing tracker continues operating as-is — Esseal's system layers intelligent shipment-to-truck mapping on top.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What internal tools can Esseal build for logistics companies?</summary>
+              <div class="faq-content">
+                <p>Esseal builds bespoke <a href="/services/internal-tools-dashboards">internal tools</a> for logistics and freight companies — shipment tracking dashboards, fleet management systems, customer portals, quote request tools, dispatch management, and warehouse management interfaces. Each tool is built to integrate with existing systems rather than replace them.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Still Answering Customer Queries Manually?</h2>
+          <p class="lead-text mt-2">
+            If your team is spending time answering questions that software could answer automatically,
+            we can fix that. Internal tools built specifically for how your operation works.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Schedule a Discovery Call</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development" />
+          </a>
+          <p>Senior-Led Software Solutions That Drive Corporate Growth. On time, on budget, always.</p>
+          <p class="company-registration">Registered in England &amp; Wales No. 17026190</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Esseal. All rights reserved. | Global Operations: London, UK &amp; Lahore, PK</p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>

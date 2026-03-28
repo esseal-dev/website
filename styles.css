@@ -2252,3 +2252,175 @@ h4 {
     margin-bottom: 0;
   }
 }
+
+/* ============================================================
+   CASE STUDY INDEX CARDS (homepage + index page)
+   ============================================================ */
+
+.cs-card-industry {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.cs-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.cs-card-outcome {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand-orange);
+  margin-top: 1rem;
+}
+
+/* Homepage case studies section */
+.cs-homepage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .cs-homepage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-homepage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   CASE STUDY PAGES
+   ============================================================ */
+
+.cs-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cs-stat {
+  background: var(--bg-navy);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.cs-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-orange);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cs-stat-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cs-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.cs-tag {
+  background: rgba(250, 98, 32, 0.12);
+  border: 1px solid rgba(250, 98, 32, 0.3);
+  color: var(--brand-orange);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.cs-tag.neutral {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+.cs-timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.cs-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.4375rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.cs-timeline li {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.cs-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -1.625rem;
+  top: 0.4375rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brand-orange);
+}
+
+.cs-timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.cs-timeline li strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.cs-figure {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .cs-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-stat-number {
+    font-size: 2rem;
+  }
+}

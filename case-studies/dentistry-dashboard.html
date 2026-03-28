@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal took a vibe-coded dental SaaS from a fragile alpha to an MHRA-certified, GDPR-compliant production platform — now trusted by 500+ UK dentists."
+    />
+
+    <meta property="og:title" content="From Vibe-Coded Alpha to MHRA-Certified Dental Platform — Dentistry Dashboard | Esseal" />
+    <meta property="og:description" content="A UK dentist built a vibe-coded dental SaaS with 5–10 live users and no path to production. Esseal stabilised the codebase, built Stripe and Meta integrations, implemented HIPAA & GDPR compliance, and set up proper CI/CD pipelines. Now trusted by 500+ UK dentists." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/dentistry-dashboard" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From Vibe-Coded Alpha to MHRA-Certified Dental Platform — Dentistry Dashboard | Esseal" />
+    <meta name="twitter:description" content="A UK dentist built a vibe-coded dental SaaS with 5–10 live users and no path to production. Esseal stabilised it and took it to market. Now trusted by 500+ UK dentists." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/dentistry-dashboard" />
+    <title>Rescuing a Vibe-Coded Dental SaaS — Dentistry Dashboard Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "Rescuing a Vibe-Coded Dental SaaS and Taking It to Production — Dentistry Dashboard",
+      "description": "How Esseal stabilised a vibe-coded dental SaaS, built Stripe and Meta integrations, implemented HIPAA and GDPR compliance, and set up production-grade CI/CD pipelines. Dentistry Dashboard now serves 500+ UK dentists.",
+      "url": "https://www.esseal.co.uk/case-studies/dentistry-dashboard",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["vibe coded app production ready", "dental SaaS development", "HIPAA GDPR compliant dental software", "dental practice management software development", "fix vibe coded codebase", "Stripe integration dental software", "Laravel Next.js SaaS", "codebase cleanup production", "medical software compliance UK", "software development agency London"],
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Dentistry Dashboard",
+        "url": "https://dentistrydashboard.com",
+        "applicationCategory": "HealthApplication"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you make a vibe-coded app production ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal specialises in taking vibe-coded or AI-generated codebases and making them stable, secure, and production-grade. For Dentistry Dashboard, we cleaned up the codebase while keeping the platform live for real users with real patient data — zero downtime tolerance. The platform is now MHRA Class I certified, GDPR compliant, and trusted by 500+ UK dentists."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you clean up a vibe-coded codebase without breaking production?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Carefully and incrementally. The challenge is that vibe-coded apps often have fragile interdependencies that aren't documented anywhere. Esseal's approach is to map the system thoroughly before touching anything, prioritise structural stability over speed, and make changes in a sequence that keeps the live product running throughout. For Dentistry Dashboard, active dental practices were using the system throughout the entire stabilisation process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does HIPAA and GDPR compliance involve for a dental SaaS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Dentistry Dashboard, Esseal implemented the full compliance layer — data handling policies, access controls, audit trails, encryption requirements, and the patient data protections required under both HIPAA (for US alignment) and UK GDPR. The platform also achieved MHRA Class I Medical Device registration and Cyber Essentials certification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your ongoing support model after a codebase rescue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After the initial stabilisation and feature work, Esseal transitioned to a maintenance retainer — covering regular bug fixes, security patches, and dependency updates. This gives the client a senior engineering team on-call without the overhead of hiring in-house."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.esseal.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://www.esseal.co.uk/case-studies/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dentistry Dashboard",
+          "item": "https://www.esseal.co.uk/case-studies/dentistry-dashboard"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — Codebase Rescue &amp; Product Development</span>
+            <h1 class="hero-title">
+              From Vibe-Coded Alpha to <span>MHRA-Certified Dental Platform</span>
+            </h1>
+            <p class="lead-text">
+              A UK dentist built his own dental practice management SaaS using AI-assisted
+              development tools — and got it live with real users faster than anyone expected.
+              The problem was what came next: a fragile codebase, no deployment pipeline,
+              no compliance layer, and active dental practices depending on it. Esseal took
+              it the rest of the way.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Laravel</span>
+              <span class="cs-tag">Next.js</span>
+              <span class="cs-tag">Stripe</span>
+              <span class="cs-tag">Meta API</span>
+              <span class="cs-tag">DigitalOcean</span>
+              <span class="cs-tag">Docker</span>
+              <span class="cs-tag">HIPAA &amp; GDPR</span>
+              <span class="cs-tag neutral">Codebase Modernisation</span>
+              <span class="cs-tag neutral">Product Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">500+</span>
+          <span class="cs-stat-label">UK Dentists</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">4.9★</span>
+          <span class="cs-stat-label">User Rating</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">MHRA</span>
+          <span class="cs-stat-label">Class I Certified</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">5→15</span>
+          <span class="cs-stat-label">Practices at Handover</span>
+        </div>
+      </div>
+
+      <!-- The Situation -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>What Happens After You Vibe-Code a SaaS Into Existence</h2>
+              <p class="mt-2">
+                <a href="https://dentistrydashboard.com" target="_blank" rel="noopener">Dentistry Dashboard</a>
+                was built by a UK dentist who identified a real gap in the market — dental
+                practice management software that was actually designed for dentists, not
+                administrators. Using AI-assisted development tools, he moved fast. The
+                product got live, attracted its first users, and proved the concept.
+              </p>
+              <p class="mt-2">
+                But moving fast with AI tooling leaves a trail. The codebase that got the
+                product to market was functional in the way that a prototype is functional —
+                it worked, until it didn't. No CI/CD pipeline. No compliance layer.
+                Structural decisions that made sense for a solo experiment but not for
+                a platform handling patient data at dental practices with regulatory obligations.
+              </p>
+              <p class="mt-2">
+                With 5–10 live users already on the platform, the client came to Esseal.
+                The ask: make it real. Not a rewrite — a stabilisation. The platform needed
+                to stay live throughout.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — Dentistry Dashboard main interface">
+              Screenshot: Dentistry Dashboard interface
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Esseal Did -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Making a Vibe-Coded Dental SaaS Production Ready</h2>
+            <p class="text-muted">Stabilisation, compliance, integrations, and deployment — without taking the platform offline.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🔧</div>
+              <h3>Codebase Stabilisation</h3>
+              <p>
+                Structural fixes, build errors, and dependency issues throughout the Laravel
+                backend and Next.js frontend. The goal wasn't to rewrite — it was to make the
+                existing codebase stable, maintainable, and safe to deploy. Every change made
+                while active dental practices were running on the live system.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🔒</div>
+              <h3>HIPAA &amp; GDPR Compliance</h3>
+              <p>
+                A dental platform handling clinical notes and patient data has no margin for
+                compliance shortcuts. Esseal implemented the full compliance layer — data handling
+                controls, access policies, audit trails, and the encryption and storage requirements
+                mandated under both UK GDPR and HIPAA. The platform subsequently achieved MHRA
+                Class I Medical Device registration and Cyber Essentials certification.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">💳</div>
+              <h3>Stripe &amp; Meta Integration</h3>
+              <p>
+                The entire subscription and billing flow was built from scratch — Stripe integration,
+                pricing tiers, and the full signup journey from landing page to active account.
+                Meta integration was added to enable targeted marketing for new practice acquisition,
+                completing the commercial layer the product needed to scale beyond its early adopters.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🚀</div>
+              <h3>Deployment Pipelines &amp; DevOps</h3>
+              <p>
+                Proper CI/CD pipelines set up on DigitalOcean via Docker — bringing predictable,
+                repeatable deployments to a codebase that previously had none. No more manual
+                deployments, no more uncertainty about what was live. A stable foundation
+                for everything that came after.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Challenge -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — AI clinical notes and compliance features">
+              Screenshot: AI clinical notes feature
+            </figure>
+            <div>
+              <h2>The Core Challenge: Cleaning Up Live Code with Zero Downtime</h2>
+              <p class="mt-2">
+                Vibe-coded applications have a particular failure mode: the fragilities are invisible
+                until they're not. Interdependencies don't follow patterns. Logic is scattered.
+                Things that look unrelated break each other.
+              </p>
+              <p class="mt-2">
+                The constraint here was absolute — active dental practices were using this platform
+                with real patient data. There was no maintenance window. No staging cutover. The
+                system needed to stay live and stable throughout the entire <a href="/services/legacy-codebase-upgrade-modernization">codebase modernisation</a> process.
+              </p>
+              <p class="mt-2">
+                Esseal's approach was methodical: map the system in full before touching anything,
+                sequence changes to preserve structural stability at every step, and treat each
+                deployment as a controlled intervention rather than a bulk update. The kind of
+                disciplined engineering that AI tooling cannot substitute for.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Results: From Fragile Prototype to a Platform Trusted by 500+ UK Dentists</h2>
+              <p class="mt-2">
+                By the time Esseal completed the initial engagement, Dentistry Dashboard had
+                grown from 5–10 early users to 15 onboarded practices, with a compliant,
+                stable, commercially ready platform underneath them.
+              </p>
+              <p class="mt-2">
+                The platform has since grown to over 500 UK dentists, holds a 4.9-star user
+                rating across 100+ reviews, and carries MHRA Class I Medical Device and
+                Cyber Essentials certifications — regulatory markers that would have been
+                impossible on the original codebase.
+              </p>
+              <p class="mt-2">
+                Esseal continues as a maintenance retainer partner — handling bug fixes, security
+                patches, and ongoing engineering support. A London-based <a href="/services/fullstack-development">full-stack development</a>
+                team the client can rely on without building one in-house.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — Dentistry Dashboard practice management view">
+              Screenshot: Practice management dashboard
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you make a vibe-coded app production ready?</summary>
+              <div class="faq-content">
+                <p>Yes. Esseal specialises in taking vibe-coded or AI-generated codebases and making them stable, secure, and production-grade. For Dentistry Dashboard, we cleaned up the codebase while keeping the platform live for real users with real patient data. The platform is now MHRA Class I certified, GDPR compliant, and trusted by 500+ UK dentists.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How do you clean up a vibe-coded codebase without breaking production?</summary>
+              <div class="faq-content">
+                <p>Carefully and incrementally. Vibe-coded apps often have fragile interdependencies that aren't documented anywhere. Esseal maps the system thoroughly before touching anything, prioritises structural stability over speed, and makes changes in a sequence that keeps the live product running throughout. For Dentistry Dashboard, active dental practices were using the platform throughout the entire stabilisation process.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What does HIPAA and GDPR compliance involve for a dental SaaS?</summary>
+              <div class="faq-content">
+                <p>For Dentistry Dashboard, Esseal implemented the full compliance layer — data handling policies, access controls, audit trails, encryption requirements, and the patient data protections required under both HIPAA and UK GDPR. The platform also achieved MHRA Class I Medical Device registration and Cyber Essentials certification.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What is your ongoing support model after a codebase rescue?</summary>
+              <div class="faq-content">
+                <p>After the initial stabilisation and feature work, Esseal transitions to a maintenance retainer — covering regular bug fixes, security patches, and dependency updates. This gives the client a senior engineering team on-call without the overhead of hiring in-house.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Built Something with AI Tools? Let's Make It Production Ready.</h2>
+          <p class="lead-text mt-2">
+            Vibe-coded MVPs can get you to market fast — but getting them stable, compliant,
+            and scalable requires a different kind of engineering. That's what we do.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Schedule a Discovery Call</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>

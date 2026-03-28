@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal built a Flutter MVP for a location-based local business discovery app in 5 weeks — 3 iterations, presented at pre-seed, secured $80k in funding."
+    />
+
+    <meta property="og:title" content="Flutter MVP Development — $80k Pre-Seed Funding Secured | Esseal Case Study" />
+    <meta property="og:description" content="A founder came to Esseal with a pre-seed idea: a discovery app for local businesses that don't exist on Google Maps. 5 weeks. 3 iterations. $80k funding secured." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/local-business-discovery-mvp" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flutter MVP Development — $80k Pre-Seed Funding Secured | Esseal" />
+    <meta name="twitter:description" content="5 weeks. 3 iterations. A location-based Flutter MVP that cleared a pre-seed round and secured $80k in funding." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/local-business-discovery-mvp" />
+    <title>Flutter MVP Development for Pre-Seed Funding — Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "Flutter MVP Development for Pre-Seed Funding — Location-Based Local Business Discovery App",
+      "description": "How Esseal built a Flutter MVP for a location-based local business discovery app in 5 weeks and 3 iterations. The MVP was presented at a pre-seed round and secured $80k in funding.",
+      "url": "https://www.esseal.co.uk/case-studies/local-business-discovery-mvp",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["Flutter MVP development", "mobile app MVP for pre-seed funding", "location-based app development", "Flutter app development agency", "investor-ready MVP", "build Flutter app from scratch", "MVP development 5 weeks", "pre-seed MVP agency UK"],
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you build a Flutter MVP for a pre-seed pitch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal built a full Flutter MVP — user app, vendor portal, and Ruby on Rails backend — in 5 weeks across 3 iterations. The final iteration was presented at a pre-seed round and secured $80k in funding. We build investor-ready MVPs that demonstrate the core concept without over-engineering the first version."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a Flutter app MVP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esseal delivers Flutter MVPs in 4 to 6 weeks. The first week typically produces a functional but unpolished core experience. Weeks two through four focus on UX, edge cases, and presentation quality. The final phase covers QA, device testing, and investor-facing polish. For this project, the full MVP — including a vendor-side portal — was complete in 5 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in a Flutter MVP from Esseal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard Flutter MVP from Esseal includes: iOS and Android builds from a single codebase, a Ruby on Rails API backend, core user flows implemented and tested, basic admin or vendor-side tooling if required, and a production-ready build suitable for investor demonstrations or closed beta distribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you build both the user app and the vendor or provider side?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For this project, Esseal built both the consumer-facing discovery app and a separate vendor portal — also in Flutter — that allowed business owners to receive real-time proximity alerts when a customer navigated to their location. Both apps shared the same Rails backend."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.esseal.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.esseal.co.uk/case-studies/" },
+        { "@type": "ListItem", "position": 3, "name": "Local Business Discovery MVP", "item": "https://www.esseal.co.uk/case-studies/local-business-discovery-mvp" }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development Logo" />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — MVP Development</span>
+            <h1 class="hero-title">
+              5 Weeks. 3 Iterations. <span>$80k Pre-Seed Funding Secured.</span>
+            </h1>
+            <p class="lead-text">
+              A founder came to Esseal with a pre-seed concept: a location-based discovery app
+              for the informal local businesses that Google Maps has never indexed — the cobbler
+              on the corner, the roadside tyre shop, the food stall that moves. We built the MVP
+              in 5 weeks. The final iteration was presented at the pre-seed round. The round closed.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Flutter</span>
+              <span class="cs-tag">Dart</span>
+              <span class="cs-tag">Ruby on Rails</span>
+              <span class="cs-tag">Geolocation</span>
+              <span class="cs-tag">Proximity Alerts</span>
+              <span class="cs-tag neutral">MVP Development</span>
+              <span class="cs-tag neutral">Mobile App Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">$80k</span>
+          <span class="cs-stat-label">Pre-Seed Funding Secured</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">5</span>
+          <span class="cs-stat-label">Weeks to MVP</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">3</span>
+          <span class="cs-stat-label">Iterations</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Beta</span>
+          <span class="cs-stat-label">Closed Beta Live</span>
+        </div>
+      </div>
+
+      <!-- The Idea -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>The Gap Google Maps Has Never Filled</h2>
+              <p class="mt-2">
+                Google Maps works well for registered businesses with an address, a phone number,
+                and a presence online. In dense urban markets across South Asia, that describes
+                a fraction of the actual local economy. The cobbler who sets up at the same corner
+                every morning. The tyre puncture shop with no signage. The cigarette vendor, the
+                ad hoc petrol station, the food stall that's been in the same spot for fifteen years
+                but has never appeared on any map.
+              </p>
+              <p class="mt-2">
+                These businesses exist in the knowledge of the people who live near them — and
+                nowhere else. The founder's idea was to digitise that knowledge: a discovery app
+                that surfaces local informal businesses to nearby users based on GPS proximity,
+                without requiring those businesses to have a website, a Google listing, or
+                any digital presence at all.
+              </p>
+              <p class="mt-2">
+                He came to Esseal at pre-seed stage with the concept, a clear target market
+                (Lahore, Pakistan), and a round to close. The ask was a working <a href="/services/mvp-development">MVP</a>
+                that could demonstrate the core mechanic to investors.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — discovery map interface showing local businesses">
+              Screenshot: Business discovery map
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Mechanic -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — vendor proximity alert notification">
+              Screenshot: Vendor proximity alert
+            </figure>
+            <div>
+              <h2>The Feature That Made Investors Take Notice</h2>
+              <p class="mt-2">
+                The core discovery mechanic — browse nearby businesses by category, navigate
+                via one-tap Google Maps integration — was table stakes. What differentiated
+                the product was the proximity alert system on the vendor side.
+              </p>
+              <p class="mt-2">
+                When a user navigates to a business and comes within 100 metres, the vendor
+                portal sends a real-time ping to the business owner: a customer found you
+                through the app and is on their way. For informal businesses with no visibility
+                into how customers discover them, this was a fundamentally new kind of signal.
+                Proof that the app was driving foot traffic. A reason for vendors to care.
+              </p>
+              <p class="mt-2">
+                This mechanic — the closed loop between user discovery and vendor notification —
+                was the insight that made the MVP compelling to investors, not just functional.
+                It demonstrated a network effect: the more vendors join, the more useful the
+                app becomes; the more users arrive, the more valuable the vendor data becomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Built -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Flutter MVP Development — Two Apps, One Backend, Five Weeks</h2>
+            <p class="text-muted">A complete product: consumer app, vendor portal, and Rails API — built for investor demonstration and closed beta.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">📍</div>
+              <h3>Consumer Discovery App</h3>
+              <p>
+                Flutter mobile app for iOS and Android. GPS-based location detection, browsable
+                directory of local businesses by category, open/closed status, distance from
+                the user's current position, and one-tap Google Maps navigation to any listing.
+                Designed for the informal economy — no internet presence required from the
+                business to appear in the app.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🔔</div>
+              <h3>Vendor Portal</h3>
+              <p>
+                A separate Flutter app for business owners — also built on the same Rails backend.
+                Vendors manage their listing details and receive real-time proximity alerts
+                when a customer navigates to their location. The portal gives informal businesses
+                their first direct signal of app-driven foot traffic — a compelling data point
+                for both vendor retention and investor narrative.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">⚙️</div>
+              <h3>Rails Backend &amp; 3-Iteration Process</h3>
+              <p>
+                Ruby on Rails API handling location data, vendor listings, and the proximity
+                alert logic. Esseal ran three full iterations over five weeks: iteration one
+                established functional core logic; iteration two addressed UX and edge cases;
+                iteration three delivered investor-presentation quality. The third iteration
+                was the version presented at the pre-seed round.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>The Outcome: Pre-Seed Round Cleared, Seed Round in View</h2>
+              <p class="mt-2">
+                The MVP delivered by Esseal was presented at the pre-seed round. The round closed.
+                The client secured $80k in pre-seed funding — enough to move the product into
+                closed beta and begin the next phase of development.
+              </p>
+              <p class="mt-2">
+                The platform is currently in closed beta. A seed round and Series A are planned
+                for 2026 as the product scales beyond the initial market and the vendor network grows.
+              </p>
+              <p class="mt-2">
+                This is what an <a href="/services/mvp-development">investor-ready MVP</a> looks like:
+                not the most feature-complete version of an idea, but the most convincing one.
+                Five weeks of focused, senior-led engineering — three iterations that stripped
+                the concept down to what investors needed to see, and built it well enough that
+                it stood up to scrutiny.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — vendor listing and distance view">
+              Screenshot: Vendor listing with distance and navigation
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you build a Flutter MVP for a pre-seed pitch?</summary>
+              <div class="faq-content">
+                <p>Yes. Esseal built a full Flutter MVP — user app, vendor portal, and Ruby on Rails backend — in 5 weeks across 3 iterations. The final iteration was presented at a pre-seed round and secured $80k in funding. We build investor-ready MVPs that demonstrate the core concept without over-engineering the first version.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How long does it take to build a Flutter app MVP?</summary>
+              <div class="faq-content">
+                <p>Esseal delivers Flutter MVPs in 4 to 6 weeks. The first week produces a functional but unpolished core experience. Weeks two through four address UX, edge cases, and presentation quality. The final phase covers QA, device testing, and investor-facing polish. For this project, the full MVP including a vendor portal was complete in 5 weeks.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What is included in a Flutter MVP from Esseal?</summary>
+              <div class="faq-content">
+                <p>A standard Flutter MVP from Esseal includes iOS and Android builds from a single codebase, a Ruby on Rails API backend, core user flows implemented and tested, basic admin or vendor-side tooling if required, and a production-ready build suitable for investor demonstrations or closed beta distribution.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can you build both the user app and the vendor or provider side?</summary>
+              <div class="faq-content">
+                <p>Yes. For this project, Esseal built both the consumer-facing discovery app and a separate vendor portal — also in Flutter — that gave business owners real-time proximity alerts when a customer navigated to their location. Both apps shared the same Rails backend.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Pre-Seed Stage With a Mobile App Idea?</h2>
+          <p class="lead-text mt-2">
+            We've built investor-ready Flutter MVPs in 5 weeks. Senior-led, no throwaway code,
+            and a process built around what you need to close the round — not just ship something.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Scope Your MVP</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development" />
+          </a>
+          <p>Senior-Led Software Solutions That Drive Corporate Growth. On time, on budget, always.</p>
+          <p class="company-registration">Registered in England &amp; Wales No. 17026190</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Esseal. All rights reserved. | Global Operations: London, UK &amp; Lahore, PK</p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal built a full-stack event ticketing platform from scratch — Rails, React, GraphQL, and a custom vanilla JS seat map builder. 5,000+ tickets sold since launch."
+    />
+
+    <meta property="og:title" content="From Internal Tool to Ticketing Platform — A Case Study | Esseal" />
+    <meta property="og:description" content="A US event organiser wanted to stop paying Ticketmaster commissions. We built him a full competitor platform. 5,000+ tickets sold since November 2025." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/event-ticketing-platform" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From Internal Tool to Ticketing Platform — A Case Study | Esseal" />
+    <meta name="twitter:description" content="A US event organiser wanted to stop paying Ticketmaster commissions. We built him a full competitor platform. 5,000+ tickets sold since November 2025." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/event-ticketing-platform" />
+    <title>Custom Event Ticketing Platform Development — Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "Custom Event Ticketing Platform Development — From Internal Tool to Full Platform",
+      "description": "How Esseal built a full-stack event ticketing platform from scratch for a US event organiser — Rails, React, GraphQL, and a custom vanilla JS seat map builder. 5,000+ tickets sold since launch.",
+      "url": "https://www.esseal.co.uk/case-studies/event-ticketing-platform",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["event ticketing platform development", "custom ticketing software", "build ticketing platform from scratch", "Ruby on Rails ticketing system", "React event management dashboard", "seat map builder", "full-stack development agency", "software development case study"],
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you build a custom ticketing platform from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal has built a full-stack event ticketing platform from scratch — including an organiser dashboard, venue seat map builder, check-in manager, admin panel, and public ticket sales site. The platform launched in November 2025 and has processed over 5,000 tickets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a ticketing platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esseal delivered this ticketing platform across three phases. The core organiser dashboard was functional within the first few weeks. The full platform — including seat map builder, check-in app, admin dashboard, and public sales site — was live within a few months of the initial brief."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tech stack do you use for event management software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For this project: Ruby on Rails backend with a GraphQL API, React for all dashboard frontends, vanilla JavaScript for the custom seat map builder, Rails SSR for the public ticket sales site, DigitalOcean hosting, Cloudflare CDN, and Twilio for transactional emails."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.esseal.co.uk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case Studies",
+          "item": "https://www.esseal.co.uk/case-studies/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "From Internal Tool to Ticketing Platform",
+          "item": "https://www.esseal.co.uk/case-studies/event-ticketing-platform"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — Full-Stack Development</span>
+            <h1 class="hero-title">
+              From Internal Tool to <span>Ticketing Platform</span>
+            </h1>
+            <p class="lead-text">
+              A US event organiser was tired of handing commissions to Ticketmaster and fighting
+              with outdated organiser dashboards. He came to us for a simple internal tool.
+              Five weeks in, he had a decision to make — and he went bigger.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Ruby on Rails</span>
+              <span class="cs-tag">React</span>
+              <span class="cs-tag">GraphQL</span>
+              <span class="cs-tag">Vanilla JS</span>
+              <span class="cs-tag">DigitalOcean</span>
+              <span class="cs-tag">Cloudflare</span>
+              <span class="cs-tag">Twilio</span>
+              <span class="cs-tag neutral">Full-Stack Development</span>
+              <span class="cs-tag neutral">Product Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">5,000+</span>
+          <span class="cs-stat-label">Tickets Sold</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">12</span>
+          <span class="cs-stat-label">Events Hosted</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">8</span>
+          <span class="cs-stat-label">Venues Onboarded</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Nov '25</span>
+          <span class="cs-stat-label">Live Since</span>
+        </div>
+      </div>
+
+      <!-- The Situation -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Why Event Organisers Build Their Own Ticketing Software</h2>
+              <p class="mt-2">
+                Our client had been running events across the US for years, and like most independent
+                organisers, he was entirely dependent on the big platforms. Ticketmaster, VBO Tickets,
+                and Eventbrite all got the job done — but each one came with the same set of
+                frustrations: per-ticket commissions that compounded with every sale, organiser
+                interfaces that felt like they hadn't been updated since 2008, and navigation flows
+                complex enough to make a simple task feel like a chore.
+              </p>
+              <p class="mt-2">
+                The platforms were designed for the platforms, not for him. He was producing the
+                events, filling the seats, and doing the hard work — but a meaningful cut of every
+                ticket went elsewhere.
+              </p>
+              <p class="mt-2">
+                He came to Esseal with a straightforward brief: our <a href="/services/fullstack-development">full-stack development</a> team would build an internal organiser dashboard
+                so he could manage his own events without touching a third-party platform.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — organiser dashboard overview">
+              Screenshot: Organiser dashboard overview
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Pivot -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>The Week 5 Pivot</h2>
+            <p class="text-muted">What started as internal tooling became something else entirely.</p>
+          </div>
+
+          <div class="mt-4">
+            <ul class="cs-timeline">
+              <li>
+                <strong>Phase 1 — The Organiser Dashboard</strong>
+                We built a clean, modern organiser dashboard on Rails and React with a GraphQL API.
+                Event creation, attendee management, basic analytics. Fast to navigate, nothing
+                unnecessary. The client started using it for his own events immediately.
+              </li>
+              <li>
+                <strong>Phase 2 — The Seat Map Builder</strong>
+                The original brief didn't include this. But once the dashboard was running, the
+                obvious next question was: how do we handle assigned seating? We built a custom
+                venue and seat map builder from scratch in vanilla JS — no dependencies, no
+                third-party libraries. Complex enough to model any layout. Simple enough that
+                a non-technical organiser could build one in minutes.
+              </li>
+              <li>
+                <strong>Week 5 — The Decision</strong>
+                With Phase 1 live and Phase 2 in progress, the client could see the full picture.
+                He had the core of a proper ticketing platform — one that did everything Ticketmaster
+                did but without the commissions and without the outdated UX. He decided to go
+                the distance. We scoped Phase 3.
+              </li>
+              <li>
+                <strong>Phase 3 — The Full Platform</strong>
+                Admin dashboard. A check-in manager app for door staff with QR code scanning and JWT
+                auth. A public-facing ticket sales site for attendees — built on Rails SSR, fast
+                to load, straightforward to buy from. Transactional emails via Twilio.
+                Deployed on DigitalOcean behind Cloudflare.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Challenges -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>The Hard Parts</h2>
+            <p class="text-muted">Two problems that had no obvious off-the-shelf solution.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">🗺️</div>
+              <h3>The Seat Map Builder</h3>
+              <p>
+                Existing venue builders are either too rigid or too complex for non-technical
+                users. We built ours from scratch in vanilla JS — zero dependencies, no
+                third-party library constraints. It needed to handle curved rows, accessible
+                sections, split pricing zones, and irregular layouts, while remaining usable
+                by someone who has never touched a technical tool in their life. The constraint
+                of "a non-technical 50-year-old should be able to use this without a tutorial"
+                drove every design decision.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">📊</div>
+              <h3>Analytics Without the Noise</h3>
+              <p>
+                The client wanted seat heatmaps showing which seats sell out fastest, user
+                segmentation, and per-event and per-ticket stats. Building the analytics
+                infrastructure was straightforward. The challenge was presenting it in a way
+                that didn't require interpretation — where every number is immediately
+                obvious and actionable without needing a dashboard walkthrough. Extreme
+                simplicity at the surface, with the full complexity living underneath.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Built -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — seat map builder interface">
+              Screenshot: Seat map builder interface
+            </figure>
+            <div>
+              <h2>Full-Stack Event Ticketing Platform — What We Built</h2>
+              <p class="mt-2 text-muted">Five applications. One platform.</p>
+              <ul class="tech-list mt-2">
+                <li><strong>Organiser Dashboard:</strong> Full event management — create events, manage attendees, monitor sales, view analytics.</li>
+                <li><strong>Seat Map Builder:</strong> Drag-and-drop venue layout tool built entirely in vanilla JS. Any layout, any complexity, zero dependencies.</li>
+                <li><strong>Admin Dashboard:</strong> Platform-level controls, user management, and oversight tools.</li>
+                <li><strong>Check-In Manager:</strong> Mobile-friendly door staff app with QR code scanning, real-time check-in status, and JWT authentication.</li>
+                <li><strong>Ticket Sales Site:</strong> Public-facing attendee experience — browse events, pick seats, buy tickets. Rails SSR for fast initial load.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>The Outcome</h2>
+              <p class="mt-2">
+                The platform went live in November 2025. In its first months of operation — with
+                the client hosting exclusively his own events — it processed over 5,000 tickets
+                across 12 events at 8 onboarded venues.
+              </p>
+              <p class="mt-2">
+                The client no longer pays commissions to Ticketmaster. He owns the platform,
+                controls the user experience end-to-end, and has a system that can onboard
+                other organisers when he's ready to open it up.
+              </p>
+              <p class="mt-2">
+                What began as a request to build one internal dashboard became a fully independent
+                ticketing platform — built from scratch, live in production, and already
+                processing real events and real sales. A textbook example of <a href="/services/product-development">product development</a> that starts focused and expands when the opportunity is right.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — ticket sales page and analytics">
+              Screenshot: Ticket sales page and analytics
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you build a custom ticketing platform from scratch?</summary>
+              <div class="faq-content">
+                <p>Yes. This case study is a live example. Esseal built a full-stack event ticketing platform from scratch — organiser dashboard, venue seat map builder, check-in manager, admin panel, and public ticket sales site. The platform launched in November 2025 and has processed over 5,000 tickets across 12 events at 8 venues.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How long does it take to build a ticketing platform?</summary>
+              <div class="faq-content">
+                <p>The core organiser dashboard was functional within the first few weeks. The full platform — including the seat map builder, check-in app, admin dashboard, and public sales site — was live within a few months of the initial brief. Timeline varies based on scope, but our <a href="/services/fullstack-development">full-stack development</a> process is built for speed without sacrificing code quality.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What tech stack do you use for event management software?</summary>
+              <div class="faq-content">
+                <p>For this project: Ruby on Rails backend with a GraphQL API, React for all dashboard frontends, vanilla JavaScript for the custom seat map builder (zero dependencies), Rails SSR for the public ticket sales site, DigitalOcean hosting, Cloudflare CDN, and Twilio for transactional emails.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Do I need to commit to a full platform upfront, or can we start smaller?</summary>
+              <div class="faq-content">
+                <p>You don't need to commit to anything beyond your first phase. This project started as a single organiser dashboard. The client only decided to expand to a full platform once he could see what was possible. We scope and build incrementally — you pay for what you need, when you need it.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Have a Product Idea? Let's Build It.</h2>
+          <p class="lead-text mt-2">
+            Whether you're starting with a simple internal tool or planning a full platform,
+            our senior engineers will get you to launch fast — and build it right the first time.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Schedule a Discovery Call</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>

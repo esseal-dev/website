@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="How Esseal built a full on-demand booking platform for an in-home beauty service — replacing form submissions and Excel sheets with an automated Uber-style booking system."
+    />
+
+    <meta property="og:title" content="On-Demand Booking Platform Development — Case Study | Esseal" />
+    <meta property="og:description" content="A NYC in-home beauty service was managing bookings through form submissions and Excel sheets. Esseal replaced it with a fully automated on-demand booking platform. No manual processing required." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.esseal.co.uk/case-studies/on-demand-booking-platform" />
+    <meta property="og:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="On-Demand Booking Platform Development — Case Study | Esseal" />
+    <meta name="twitter:description" content="Form submissions and Excel sheets replaced with a full on-demand booking platform. Automated end-to-end — think Uber, but for at-home spa sessions." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <link rel="canonical" href="https://www.esseal.co.uk/case-studies/on-demand-booking-platform" />
+    <title>On-Demand Booking Platform Development — Case Study | Esseal</title>
+
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "Case Study",
+      "headline": "Building an On-Demand Booking Platform for an In-Home Beauty Service",
+      "description": "How Esseal replaced a manual form-and-Excel booking process with a fully automated on-demand booking platform for a NYC in-home beauty service — handling scheduling, dispatch, and payments end-to-end.",
+      "url": "https://www.esseal.co.uk/case-studies/on-demand-booking-platform",
+      "image": "https://www.esseal.co.uk/social-card-default.webp",
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-28",
+      "keywords": ["on-demand booking platform development", "build booking app from scratch", "custom booking system development", "on-demand service platform", "at-home service booking software", "beauty booking app development", "automated booking system", "product development agency UK"],
+      "author": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Esseal",
+        "url": "https://www.esseal.co.uk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.esseal.co.uk/esseal-logo.webp"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you build a custom on-demand booking platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Esseal built a full on-demand booking platform from scratch for an in-home beauty service — covering customer-facing booking, provider scheduling and dispatch, availability management, payment processing, and notifications. The system replaced a manual form-and-Excel process entirely, with no human intervention required once a booking is placed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an on-demand booking platform need to function properly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At minimum: a customer-facing booking interface with service selection, real-time availability, and payment capture; a provider-side system for managing schedules, accepting bookings, and tracking jobs; and an admin layer for oversight and operations management. Automated notifications, cancellation handling, and rating systems are standard additions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a booking platform from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esseal can deliver a core booking platform — customer booking flow, provider dashboard, payment integration, and notifications — within 4 to 8 weeks depending on complexity. More sophisticated features like real-time provider matching, dynamic pricing, or multi-location support add to the timeline."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.esseal.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.esseal.co.uk/case-studies/" },
+        { "@type": "ListItem", "position": 3, "name": "On-Demand Booking Platform", "item": "https://www.esseal.co.uk/case-studies/on-demand-booking-platform" }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development Logo" />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="service-hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="badge">Case Study — Product Development &amp; Full-Stack</span>
+            <h1 class="hero-title">
+              From Form Submissions to a <span>Full On-Demand Booking Platform</span>
+            </h1>
+            <p class="lead-text">
+              A New York-based in-home beauty service was handling bookings the hard way —
+              customers submitted a form, staff logged it in Excel, and someone manually
+              coordinated the rest. Esseal replaced the entire process with an automated
+              end-to-end booking platform. Think Uber, but for at-home spa sessions.
+            </p>
+            <div class="cs-tech-tags">
+              <span class="cs-tag">Custom Booking System</span>
+              <span class="cs-tag">Real-Time Availability</span>
+              <span class="cs-tag">Payment Integration</span>
+              <span class="cs-tag">Provider Dispatch</span>
+              <span class="cs-tag neutral">Product Development</span>
+              <span class="cs-tag neutral">Full-Stack Development</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <div class="cs-stats-bar">
+        <div class="cs-stat">
+          <span class="cs-stat-number">0</span>
+          <span class="cs-stat-label">Manual Steps After Booking</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Full</span>
+          <span class="cs-stat-label">End-to-End Automation</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">NYC</span>
+          <span class="cs-stat-label">Market Served</span>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat-number">Scratch</span>
+          <span class="cs-stat-label">Built From</span>
+        </div>
+      </div>
+
+      <!-- The Problem -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <div>
+              <h2>Why Manual Booking Processes Break as a Service Business Grows</h2>
+              <p class="mt-2">
+                Our client provides in-home manicure and pedicure services across Manhattan,
+                Brooklyn, Queens, and Northern New Jersey — including corporate clients at
+                major real estate and property management firms. At small scale, a booking
+                form and an Excel sheet can hold a business together. At scale, they become
+                a bottleneck.
+              </p>
+              <p class="mt-2">
+                Every booking required staff to log the request, check provider availability
+                manually, confirm with the customer, assign a technician, and track the job
+                through to completion. Rescheduling, cancellations, and repeat bookings created
+                compounding administrative overhead. The system worked — but it consumed time
+                that should have been spent on the business, not on operating a booking
+                spreadsheet.
+              </p>
+              <p class="mt-2">
+                The brief to Esseal: build a <a href="/services/product-development">booking platform</a>
+                that removes the human from the middle. A customer books. The system handles everything else.
+              </p>
+            </div>
+            <figure class="cs-figure" aria-label="Screenshot placeholder — customer booking interface">
+              Screenshot: Customer booking interface
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Built -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>A Custom On-Demand Booking System Built End-to-End</h2>
+            <p class="text-muted">Customer booking. Provider dispatch. Admin oversight. One connected platform.</p>
+          </div>
+
+          <div class="services-grid mt-4">
+            <div class="service-card hover-glow">
+              <div class="card-icon">📱</div>
+              <h3>Customer Booking Flow</h3>
+              <p>
+                Customers select their service, choose a date and time window, provide their
+                location, and pay — all in one flow. Real-time availability reflects actual
+                provider capacity. Confirmation, reminders, and post-service follow-up are
+                automated. No back-and-forth. No waiting for a confirmation call.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">🗓️</div>
+              <h3>Provider Dashboard</h3>
+              <p>
+                Technicians see their schedule, accept or manage bookings, view customer
+                location and service details, and log job completion. The dashboard replaces
+                the manual assignment and coordination process — providers always know where
+                they're going and when, without a coordinator in between.
+              </p>
+            </div>
+            <div class="service-card hover-glow">
+              <div class="card-icon">📊</div>
+              <h3>Admin Operations Panel</h3>
+              <p>
+                Full oversight of all bookings, providers, customers, and revenue. The admin
+                panel gives the business owner the visibility that was previously buried in
+                Excel — bookings at a glance, provider utilisation, service area coverage,
+                and revenue tracking — without any of the manual data entry that created it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2-col align-center">
+            <figure class="cs-figure" aria-label="Screenshot placeholder — provider dispatch and admin dashboard">
+              Screenshot: Provider dispatch and admin view
+            </figure>
+            <div>
+              <h2>The Outcome: A Fully Automated On-Demand Service Platform</h2>
+              <p class="mt-2">
+                The booking platform replaced the entire manual process. A customer places
+                a booking — the system handles availability, assignment, confirmation,
+                reminders, and payment. Zero staff involvement between booking and completion.
+              </p>
+              <p class="mt-2">
+                The operational model shifted from "someone manages bookings" to "the system
+                manages bookings, and someone manages the business." That's the right order.
+                For a service business growing into new areas and corporate accounts, it's
+                also the only model that scales.
+              </p>
+              <p class="mt-2">
+                Esseal's <a href="/services/fullstack-development">full-stack development</a>
+                team built the platform from scratch — no off-the-shelf booking tool could
+                accommodate the specific service area logic, provider dispatch model, and
+                corporate account requirements this client needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-padding bg-navy-light border-y">
+        <div class="container faq-container">
+          <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Can you build a custom on-demand booking platform?</summary>
+              <div class="faq-content">
+                <p>Yes. Esseal built a full on-demand booking platform from scratch — covering customer-facing booking, provider scheduling and dispatch, availability management, payment processing, and notifications. The system replaced a manual process entirely, with no human intervention required once a booking is placed.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What does an on-demand booking platform need to function properly?</summary>
+              <div class="faq-content">
+                <p>At minimum: a customer-facing booking interface with service selection, real-time availability, and payment capture; a provider-side system for managing schedules and accepting bookings; and an admin layer for oversight. Automated notifications, cancellation handling, and rating systems are standard additions that Esseal includes as part of the build.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How long does it take to build a booking platform from scratch?</summary>
+              <div class="faq-content">
+                <p>Esseal can deliver a core booking platform — customer booking flow, provider dashboard, payment integration, and notifications — within 4 to 8 weeks depending on complexity. More sophisticated features like real-time provider matching, dynamic pricing, or multi-location support add to the timeline. We scope this clearly upfront.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-padding text-center">
+        <div class="container">
+          <h2>Still Coordinating Bookings Manually?</h2>
+          <p class="lead-text mt-2">
+            If your booking process still relies on a human in the middle, we can build the
+            platform that removes them. Custom-built for your service model — not adapted
+            from someone else's template.
+          </p>
+          <button type="button" class="btn-primary mt-4 btn-large" data-open-booking>Schedule a Discovery Call</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="/esseal-logo.webp" width="180" height="48" alt="Esseal Enterprise Software Development" />
+          </a>
+          <p>Senior-Led Software Solutions That Drive Corporate Growth. On time, on budget, always.</p>
+          <p class="company-registration">Registered in England &amp; Wales No. 17026190</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li><a href="/services/internal-tools-dashboards">Tools &amp; Dashboards</a></li>
+            <li><a href="/services/fullstack-development">Full Stack Development</a></li>
+            <li><a href="/services/mvp-development">Strategic MVP Development</a></li>
+            <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Esseal. All rights reserved. | Global Operations: London, UK &amp; Lahore, PK</p>
+      </div>
+    </footer>
+
+    <script src="/booking-modal.js" defer></script>
+  </body>
+</html>
