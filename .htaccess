@@ -53,17 +53,6 @@ Options -Indexes
 </IfModule>
 
 # ============================================================
-# CANONICAL HEADER
-# Sends a Link: rel="canonical" header on all 200 responses.
-# REQUEST_URI is captured into an env var (required by mod_headers).
-# .html redirects in section 3 above mean this will always be a clean URL.
-# ============================================================
-<IfModule mod_headers.c>
-    SetEnvIf Request_URI "^(.*)$" CANONICAL_PATH=$1
-    Header set Link '<https://www.esseal.co.uk%{CANONICAL_PATH}e>; rel="canonical"'
-</IfModule>
-
-# ============================================================
 # CACHING — 1-year TTL for versioned static assets
 # ============================================================
 <IfModule mod_expires.c>
