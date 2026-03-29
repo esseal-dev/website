@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="lpa"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="imgBg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8d8a0"/>
+      <stop offset="100%" stop-color="#e8f0d0"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#lpa)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Announcement bar -->
+  <rect x="0" y="0" width="1280" height="30" fill="#2b3a2b"/>
+  <text x="640" y="19" font-size="10" fill="#f5f5d6" text-anchor="middle">Aloha E Komo Mai — Women's Day Sale 15% off, use code: MEDICINEWOMAN</text>
+
+  <!-- Header -->
+  <rect x="0" y="30" width="1280" height="56" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="36" y="38" width="36" height="36" rx="18" fill="none" stroke="#2b3a2b" stroke-width="1.5"/>
+  <text x="54" y="60" font-size="15" font-weight="700" fill="#2b3a2b" text-anchor="middle" letter-spacing="1">L</text>
+  <text x="200" y="64" font-size="14" font-weight="700" fill="#2b3a2b" letter-spacing="2">LOKELANI ESSENTIALS</text>
+  <text x="720" y="64" font-size="12" fill="#2b3a2b">Home</text>
+  <text x="778" y="64" font-size="12" fill="#2b3a2b">About Us</text>
+  <text x="852" y="64" font-size="12" fill="#2b3a2b">Products</text>
+  <text x="942" y="64" font-size="12" fill="#2b3a2b">Contact</text>
+  <text x="1000" y="64" font-size="12" fill="#2b3a2b">More ▾</text>
+  <text x="1150" y="64" font-size="11" fill="#2b3a2b">Log in | Create account</text>
+  <text x="1248" y="64" font-size="15">🛒</text>
+
+  <!-- Breadcrumb -->
+  <rect x="0" y="86" width="1280" height="28" fill="#f9f9f2"/>
+  <text x="60" y="104" font-size="11" fill="#c2c874">All</text>
+  <text x="78" y="104" font-size="11" fill="#aaa"> / </text>
+  <text x="90" y="104" font-size="11" fill="#2b3a2b">Gardenia Hydrosol</text>
+
+  <!-- ── LEFT: Product image gallery ── -->
+  <!-- Thumbnail strip -->
+  <rect x="40" y="124" width="68" height="68" rx="4" fill="url(#imgBg)" stroke="#c2c874" stroke-width="2"/>
+  <text x="74" y="166" font-size="24" text-anchor="middle">🌸</text>
+  <rect x="40" y="202" width="68" height="68" rx="4" fill="#f5f5d6" stroke="#e8ead8" stroke-width="1"/>
+  <text x="74" y="244" font-size="24" text-anchor="middle">🌺</text>
+  <rect x="40" y="280" width="68" height="68" rx="4" fill="#dce6bc" opacity="0.5" stroke="#e8ead8" stroke-width="1"/>
+  <text x="74" y="322" font-size="24" text-anchor="middle">🍃</text>
+  <rect x="40" y="358" width="68" height="68" rx="4" fill="#f5f5d6" stroke="#e8ead8" stroke-width="1"/>
+  <text x="74" y="400" font-size="24" text-anchor="middle">✿</text>
+  <rect x="40" y="436" width="68" height="68" rx="4" fill="#f5f5d6" stroke="#e8ead8" stroke-width="1"/>
+  <text x="74" y="478" font-size="24" text-anchor="middle">🌿</text>
+
+  <!-- Main image -->
+  <rect x="120" y="114" width="450" height="540" rx="4" fill="url(#imgBg)"/>
+  <text x="345" y="370" font-size="100" text-anchor="middle">🌸</text>
+  <text x="345" y="500" font-size="15" fill="#2b3a2b" text-anchor="middle" opacity="0.5" font-weight="600">Gardenia Hydrosol</text>
+  <text x="345" y="524" font-size="12" fill="#2b3a2b" text-anchor="middle" opacity="0.4">100% Organic · Maui, Hawaii</text>
+
+  <!-- ── RIGHT: Product details ── -->
+  <!-- Vendor -->
+  <text x="610" y="142" font-size="12" fill="#c2c874" letter-spacing="1">Lokelani Skincare</text>
+  <!-- Title -->
+  <text x="610" y="182" font-size="30" font-weight="700" fill="#2b3a2b" letter-spacing="-0.5">Gardenia Hydrosol</text>
+  <!-- Social proof -->
+  <text x="610" y="206" font-size="12" fill="#c2c874">🔥</text>
+  <text x="626" y="206" font-size="11" fill="#888">Sold 24 products in last 3 hours</text>
+  <text x="610" y="222" font-size="11" fill="#888">👁 8 people are viewing this right now</text>
+
+  <!-- Price -->
+  <text x="610" y="258" font-size="22" font-weight="700" fill="#2b3a2b">$15.00 – $38.00</text>
+
+  <line x1="610" y1="276" x2="1230" y2="276" stroke="#e8ead8" stroke-width="1"/>
+
+  <!-- Size variant selector -->
+  <text x="610" y="302" font-size="13" font-weight="600" fill="#2b3a2b">Size</text>
+  <!-- Custom variant note -->
+  <rect x="610" y="314" width="560" height="24" rx="4" fill="#f5f5d6"/>
+  <text x="620" y="330" font-size="10" fill="#2b3a2b">⚙  Custom variant logic — beyond Shopify's native 100-variant limit</text>
+
+  <!-- Size options -->
+  <rect x="610" y="346" width="190" height="40" rx="4" fill="#2b3a2b"/>
+  <text x="705" y="363" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">100ml / 3.4oz</text>
+  <text x="705" y="378" font-size="10" fill="#aaa" text-anchor="middle">Sold Out</text>
+  <rect x="812" y="346" width="190" height="40" rx="4" fill="#f5f5d6" stroke="#dce6bc" stroke-width="1.5"/>
+  <text x="907" y="363" font-size="12" fill="#888" text-anchor="middle">15ml / 0.5oz</text>
+  <text x="907" y="378" font-size="10" fill="#aaa" text-anchor="middle">Sold Out</text>
+
+  <!-- Qty + Add to cart -->
+  <text x="610" y="416" font-size="13" font-weight="600" fill="#2b3a2b">Quantity</text>
+  <rect x="610" y="426" width="108" height="40" rx="4" fill="#ffffff" stroke="#dce6bc" stroke-width="1.5"/>
+  <text x="635" y="450" font-size="18" fill="#2b3a2b">−</text>
+  <text x="664" y="451" font-size="14" fill="#2b3a2b" font-weight="600">1</text>
+  <text x="693" y="450" font-size="18" fill="#2b3a2b">+</text>
+  <rect x="730" y="426" width="440" height="40" rx="4" fill="#2b3a2b"/>
+  <text x="950" y="451" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Add to Cart</text>
+
+  <!-- Subscribe toggle -->
+  <rect x="610" y="478" width="560" height="40" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="622" y="490" width="16" height="16" rx="3" fill="#ffffff" stroke="#dce6bc" stroke-width="1.5"/>
+  <text x="646" y="503" font-size="11" fill="#2b3a2b">Subscribe &amp; save — recurring delivery options available</text>
+
+  <!-- Action links -->
+  <text x="610" y="540" font-size="12" fill="#888">♡  Add to Wishlist</text>
+  <text x="730" y="540" font-size="12" fill="#888">⇄  Add to Compare</text>
+  <text x="860" y="540" font-size="12" fill="#888">↗  Share</text>
+
+  <line x1="610" y1="556" x2="1230" y2="556" stroke="#e8ead8" stroke-width="1"/>
+
+  <!-- Tab navigation -->
+  <text x="610" y="582" font-size="12" font-weight="600" fill="#2b3a2b">Description</text>
+  <rect x="608" y="584" width="82" height="3" rx="1" fill="#c2c874"/>
+  <text x="710" y="582" font-size="12" fill="#888">Shipping</text>
+  <text x="796" y="582" font-size="12" fill="#888">Reviews</text>
+  <text x="870" y="582" font-size="12" fill="#888">Product Enquiry</text>
+  <line x1="610" y1="590" x2="1230" y2="590" stroke="#e8ead8" stroke-width="1"/>
+
+  <!-- Description -->
+  <text x="610" y="614" font-size="12" fill="#2b3a2b">Celebrated as the best hydrosol for aging skin with powerful yet gentle botanical properties.</text>
+  <text x="610" y="632" font-size="12" fill="#555">100% organic gardenia flowers grown in Maui, Hawaii. Deep hydration and soothing for</text>
+  <text x="610" y="648" font-size="12" fill="#555">irritated skin, with natural antibacterial and antioxidant compounds.</text>
+
+  <!-- Feature bullets -->
+  <text x="618" y="672" font-size="11" fill="#2b3a2b">·  <tspan font-weight="600">Antioxidant Protection</tspan> — reduces oxidative stress, promotes youthful complexion</text>
+  <text x="618" y="690" font-size="11" fill="#2b3a2b">·  <tspan font-weight="600">Anti-Inflammatory</tspan> — soothes acne, rosacea and eczema</text>
+  <text x="618" y="708" font-size="11" fill="#2b3a2b">·  <tspan font-weight="600">Ingredients</tspan>: Gardenia and 9.5pH water</text>
+
+  </g>
+</svg>

@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="sc2"><rect width="1280" height="720"/></clipPath>
+  </defs>
+  <g clip-path="url(#sc2)">
+
+  <rect width="1280" height="720" fill="#0d1117"/>
+
+  <!-- Sidebar -->
+  <rect width="224" height="720" fill="#161b22"/>
+  <rect x="224" width="1" height="720" fill="#30363d"/>
+  <rect x="16" y="18" width="32" height="32" rx="6" fill="#fa6220"/>
+  <text x="32" y="39" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">B</text>
+  <text x="58" y="30" font-size="13" font-weight="600" fill="#e6edf3">BuildTrack</text>
+  <text x="58" y="44" font-size="10" fill="#7d8590">Pro</text>
+  <text x="40" y="90" font-size="13" fill="#7d8590">⊞  Dashboard</text>
+  <text x="40" y="122" font-size="13" fill="#7d8590">📋  Projects</text>
+  <rect x="8" y="132" width="208" height="34" rx="6" fill="#21262d"/>
+  <text x="40" y="155" font-size="13" fill="#e6edf3" font-weight="500">📅  Schedule</text>
+  <text x="40" y="187" font-size="13" fill="#7d8590">📄  Contracts</text>
+  <text x="40" y="219" font-size="13" fill="#7d8590">👷  Workforce</text>
+  <text x="40" y="251" font-size="13" fill="#7d8590">💷  Financials</text>
+  <text x="40" y="283" font-size="13" fill="#7d8590">⚠️  Issues</text>
+
+  <!-- Top bar -->
+  <rect x="224" y="0" width="1056" height="52" fill="#161b22"/>
+  <rect x="224" y="52" width="1056" height="1" fill="#30363d"/>
+  <text x="244" y="22" font-size="12" fill="#7d8590">Projects  /  Canary Wharf Tower E  /  Schedule</text>
+  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Construction Schedule — Phase 2</text>
+
+  <!-- AI badge -->
+  <rect x="958" y="13" width="132" height="28" rx="14" fill="#fa6220" opacity="0.15"/>
+  <rect x="958" y="13" width="132" height="28" rx="14" fill="none" stroke="#fa6220" stroke-width="1"/>
+  <text x="978" y="31" font-size="12" fill="#fa6220">✦ AI Scheduling On</text>
+
+  <rect x="1104" y="13" width="130" height="28" rx="6" fill="#fa6220"/>
+  <text x="1169" y="31" font-size="12" fill="#fff" text-anchor="middle" font-weight="500">+ Add Task</text>
+
+  <!-- Sub-tabs -->
+  <rect x="224" y="53" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="93" width="1056" height="1" fill="#30363d"/>
+  <text x="252" y="79" font-size="13" fill="#7d8590">Timeline</text>
+  <rect x="316" y="58" width="68" height="26" rx="5" fill="#21262d"/>
+  <text x="350" y="76" font-size="13" fill="#e6edf3" font-weight="500" text-anchor="middle">Gantt</text>
+  <text x="412" y="79" font-size="13" fill="#7d8590">Board</text>
+  <text x="468" y="79" font-size="13" fill="#7d8590">Calendar</text>
+  <text x="544" y="79" font-size="13" fill="#7d8590">Resources</text>
+
+  <!-- Gantt: column headers -->
+  <rect x="224" y="94" width="300" height="36" fill="#161b22"/>
+  <rect x="524" y="94" width="756" height="36" fill="#1c2128"/>
+  <rect x="224" y="130" width="1056" height="1" fill="#30363d"/>
+
+  <text x="240" y="117" font-size="11" fill="#7d8590">TASK NAME</text>
+  <text x="400" y="117" font-size="11" fill="#7d8590">OWNER</text>
+  <text x="472" y="117" font-size="11" fill="#7d8590">STATUS</text>
+
+  <!-- Month headers -->
+  <line x1="630" y1="94" x2="630" y2="131" stroke="#30363d" stroke-width="1"/>
+  <line x1="736" y1="94" x2="736" y2="131" stroke="#30363d" stroke-width="1"/>
+  <line x1="842" y1="94" x2="842" y2="131" stroke="#30363d" stroke-width="1"/>
+  <line x1="948" y1="94" x2="948" y2="131" stroke="#30363d" stroke-width="1"/>
+  <line x1="1054" y1="94" x2="1054" y2="131" stroke="#30363d" stroke-width="1"/>
+  <line x1="1160" y1="94" x2="1160" y2="131" stroke="#30363d" stroke-width="1"/>
+
+  <text x="577" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Jan 25</text>
+  <text x="683" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Feb 25</text>
+  <text x="789" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Mar 25</text>
+  <text x="895" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Apr 25</text>
+  <text x="1001" y="117" font-size="11" fill="#7d8590" text-anchor="middle">May 25</text>
+  <text x="1107" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Jun 25</text>
+  <text x="1213" y="117" font-size="11" fill="#7d8590" text-anchor="middle">Jul 25</text>
+
+  <!-- Today marker -->
+  <line x1="810" y1="94" x2="810" y2="720" stroke="#fa6220" stroke-width="1.5" opacity="0.7" stroke-dasharray="4,3"/>
+  <rect x="795" y="94" width="30" height="16" rx="3" fill="#fa6220"/>
+  <text x="810" y="106" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">TODAY</text>
+
+  <!-- Vertical month dividers (extending) -->
+  <line x1="630" y1="131" x2="630" y2="720" stroke="#21262d" stroke-width="1"/>
+  <line x1="736" y1="131" x2="736" y2="720" stroke="#21262d" stroke-width="1"/>
+  <line x1="842" y1="131" x2="842" y2="720" stroke="#21262d" stroke-width="1"/>
+  <line x1="948" y1="131" x2="948" y2="720" stroke="#21262d" stroke-width="1"/>
+  <line x1="1054" y1="131" x2="1054" y2="720" stroke="#21262d" stroke-width="1"/>
+  <line x1="1160" y1="131" x2="1160" y2="720" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Section: Groundworks -->
+  <rect x="224" y="131" width="1056" height="28" fill="#1c2128"/>
+  <text x="240" y="150" font-size="12" font-weight="600" fill="#e6edf3">▾  Groundworks &amp; Foundations</text>
+
+  <!-- Row 1 -->
+  <rect x="224" y="159" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="199" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="184" font-size="12" fill="#e6edf3">Piling works</text>
+  <text x="400" y="184" font-size="11" fill="#7d8590">R. Hadley</text>
+  <rect x="468" y="172" width="60" height="18" rx="9" fill="#1f3b1f"/>
+  <text x="498" y="185" font-size="10" fill="#3fb950" text-anchor="middle">Done</text>
+  <!-- Bar: completed -->
+  <rect x="530" y="169" width="200" height="20" rx="4" fill="#3fb950" opacity="0.25"/>
+  <rect x="530" y="169" width="200" height="20" rx="4" fill="none" stroke="#3fb950" stroke-width="1"/>
+  <rect x="530" y="169" width="200" height="20" rx="4" fill="#3fb950" opacity="0.6"/>
+  <text x="534" y="183" font-size="10" fill="#fff" opacity="0.9">Piling — Jan 6 → Jan 28</text>
+
+  <!-- Row 2 -->
+  <rect x="224" y="199" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="239" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="224" font-size="12" fill="#e6edf3">Concrete pour — B1 slab</text>
+  <text x="400" y="224" font-size="11" fill="#7d8590">T. Okafor</text>
+  <rect x="468" y="212" width="72" height="18" rx="9" fill="#1f2a3b"/>
+  <text x="504" y="225" font-size="10" fill="#58a6ff" text-anchor="middle">In Progress</text>
+  <!-- Bar: in progress, spans today -->
+  <rect x="654" y="209" width="180" height="20" rx="4" fill="#58a6ff" opacity="0.15"/>
+  <rect x="654" y="209" width="180" height="20" rx="4" fill="none" stroke="#58a6ff" stroke-width="1"/>
+  <rect x="654" y="209" width="104" height="20" rx="4" fill="#58a6ff" opacity="0.5"/>
+  <text x="658" y="223" font-size="10" fill="#fff" opacity="0.9">Feb 3 → Mar 4</text>
+
+  <!-- Row 3 -->
+  <rect x="224" y="239" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="279" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="264" font-size="12" fill="#e6edf3">Basement retaining walls</text>
+  <text x="400" y="264" font-size="11" fill="#7d8590">T. Okafor</text>
+  <rect x="468" y="252" width="60" height="18" rx="9" fill="#312a1f"/>
+  <text x="498" y="265" font-size="10" fill="#d29922" text-anchor="middle">Delayed</text>
+  <!-- Bar: delayed, AI annotation -->
+  <rect x="760" y="249" width="160" height="20" rx="4" fill="#d29922" opacity="0.15"/>
+  <rect x="760" y="249" width="160" height="20" rx="4" fill="none" stroke="#d29922" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="764" y="263" font-size="10" fill="#d29922" opacity="0.9">Mar 10 → Mar 28 (est.)</text>
+  <!-- AI suggestion tooltip -->
+  <rect x="820" y="228" width="220" height="44" rx="6" fill="#1c2128" stroke="#fa6220" stroke-width="1"/>
+  <text x="836" y="242" font-size="10" fill="#fa6220" font-weight="600">✦ AI Suggestion</text>
+  <text x="836" y="256" font-size="10" fill="#7d8590">Move to Mar 18 — steel delivery</text>
+  <text x="836" y="268" font-size="10" fill="#7d8590">now confirmed for Mar 15</text>
+  <line x1="900" y1="272" x2="900" y2="279" stroke="#fa6220" stroke-width="1"/>
+  <polygon points="894,279 906,279 900,286" fill="#1c2128" stroke="#fa6220" stroke-width="1"/>
+
+  <!-- Section: Structural Steel -->
+  <rect x="224" y="279" width="1056" height="28" fill="#1c2128"/>
+  <text x="240" y="298" font-size="12" font-weight="600" fill="#e6edf3">▾  Structural Steel Frame</text>
+
+  <!-- Row 4 -->
+  <rect x="224" y="307" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="347" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="332" font-size="12" fill="#e6edf3">Steel fabrication (offsite)</text>
+  <text x="400" y="332" font-size="11" fill="#7d8590">Severfield</text>
+  <rect x="468" y="320" width="60" height="18" rx="9" fill="#1f3b1f"/>
+  <text x="498" y="333" font-size="10" fill="#3fb950" text-anchor="middle">Done</text>
+  <rect x="530" y="317" width="250" height="20" rx="4" fill="#3fb950" opacity="0.5"/>
+  <text x="534" y="331" font-size="10" fill="#fff" opacity="0.9">Steel fab — Jan 2 → Feb 20</text>
+
+  <!-- Row 5 -->
+  <rect x="224" y="347" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="387" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="372" font-size="12" fill="#e6edf3">Ground floor erection</text>
+  <text x="400" y="372" font-size="11" fill="#7d8590">Severfield</text>
+  <rect x="468" y="360" width="72" height="18" rx="9" fill="#1f2a3b"/>
+  <text x="504" y="373" font-size="10" fill="#58a6ff" text-anchor="middle">In Progress</text>
+  <rect x="786" y="357" width="140" height="20" rx="4" fill="#58a6ff" opacity="0.15"/>
+  <rect x="786" y="357" width="140" height="20" rx="4" fill="none" stroke="#58a6ff" stroke-width="1"/>
+  <rect x="786" y="357" width="60" height="20" rx="4" fill="#58a6ff" opacity="0.5"/>
+  <text x="790" y="371" font-size="10" fill="#fff" opacity="0.9">Mar 3 → Mar 28</text>
+
+  <!-- Row 6 AI-predicted -->
+  <rect x="224" y="387" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="427" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="412" font-size="12" fill="#e6edf3">Floors 1–5 erection</text>
+  <text x="400" y="412" font-size="11" fill="#7d8590">Severfield</text>
+  <rect x="468" y="400" width="80" height="18" rx="9" fill="#1f2535"/>
+  <rect x="468" y="400" width="80" height="18" rx="9" fill="none" stroke="#fa6220" stroke-width="1" opacity="0.6"/>
+  <text x="508" y="413" font-size="10" fill="#fa6220" text-anchor="middle">AI Predicted</text>
+  <rect x="900" y="397" width="170" height="20" rx="4" fill="#fa6220" opacity="0.1"/>
+  <rect x="900" y="397" width="170" height="20" rx="4" fill="none" stroke="#fa6220" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="904" y="411" font-size="10" fill="#fa6220" opacity="0.9">Apr 2 → May 9 (predicted)</text>
+
+  <!-- Section: MEP -->
+  <rect x="224" y="427" width="1056" height="28" fill="#1c2128"/>
+  <text x="240" y="446" font-size="12" font-weight="600" fill="#e6edf3">▸  Mechanical, Electrical &amp; Plumbing</text>
+
+  <!-- Row 7 -->
+  <rect x="224" y="455" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="495" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="480" font-size="12" fill="#e6edf3">1st fix electrics</text>
+  <text x="400" y="480" font-size="11" fill="#7d8590">Clarkson Evans</text>
+  <rect x="468" y="468" width="80" height="18" rx="9" fill="#1f2535"/>
+  <rect x="468" y="468" width="80" height="18" rx="9" fill="none" stroke="#fa6220" stroke-width="1" opacity="0.6"/>
+  <text x="508" y="481" font-size="10" fill="#fa6220" text-anchor="middle">AI Predicted</text>
+  <rect x="1000" y="465" width="180" height="20" rx="4" fill="#fa6220" opacity="0.1"/>
+  <rect x="1000" y="465" width="180" height="20" rx="4" fill="none" stroke="#fa6220" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="1004" y="479" font-size="10" fill="#fa6220" opacity="0.9">May 12 → Jun 30 (predicted)</text>
+
+  <!-- Section: Envelope -->
+  <rect x="224" y="495" width="1056" height="28" fill="#1c2128"/>
+  <text x="240" y="514" font-size="12" font-weight="600" fill="#e6edf3">▸  Building Envelope &amp; Cladding</text>
+
+  <!-- Row 8 -->
+  <rect x="224" y="523" width="1056" height="40" fill="#161b22"/>
+  <rect x="224" y="563" width="1056" height="1" fill="#21262d"/>
+  <text x="252" y="548" font-size="12" fill="#e6edf3">Curtain wall installation</text>
+  <text x="400" y="548" font-size="11" fill="#7d8590">Schüco / TBC</text>
+  <rect x="468" y="536" width="80" height="18" rx="9" fill="#1f2535"/>
+  <rect x="468" y="536" width="80" height="18" rx="9" fill="none" stroke="#fa6220" stroke-width="1" opacity="0.6"/>
+  <text x="508" y="549" font-size="10" fill="#fa6220" text-anchor="middle">AI Predicted</text>
+  <rect x="1054" y="533" width="150" height="20" rx="4" fill="#fa6220" opacity="0.08"/>
+  <rect x="1054" y="533" width="150" height="20" rx="4" fill="none" stroke="#fa6220" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+  <text x="1058" y="547" font-size="10" fill="#fa6220" opacity="0.7">Jun 16 → Aug 8</text>
+
+  <!-- Bottom: AI summary bar -->
+  <rect x="224" y="620" width="1056" height="100" fill="#161b22"/>
+  <rect x="224" y="620" width="1056" height="1" fill="#30363d"/>
+  <rect x="244" y="636" width="560" height="68" rx="8" fill="#1c2128" stroke="#fa6220" stroke-width="1" opacity="0.8"/>
+  <text x="264" y="656" font-size="12" font-weight="600" fill="#fa6220">✦  AI Schedule Analysis</text>
+  <text x="264" y="674" font-size="11" fill="#7d8590">Critical path delay detected — retaining wall pushback may impact steel erection by +9 days.</text>
+  <text x="264" y="690" font-size="11" fill="#7d8590">Recommended action: parallel pour schedule for B2 slab to recover 5 days. View revised plan →</text>
+
+  <rect x="826" y="636" width="150" height="32" rx="6" fill="#fa6220"/>
+  <text x="901" y="657" font-size="12" fill="#fff" text-anchor="middle" font-weight="500">Apply Suggestion</text>
+  <rect x="990" y="636" width="130" height="32" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="1055" y="657" font-size="12" fill="#7d8590" text-anchor="middle">Dismiss</text>
+  <rect x="1134" y="636" width="130" height="32" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="1199" y="657" font-size="12" fill="#7d8590" text-anchor="middle">View Details</text>
+
+  </g>
+</svg>

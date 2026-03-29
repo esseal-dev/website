@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="sc3"><rect width="1280" height="720"/></clipPath>
+  </defs>
+  <g clip-path="url(#sc3)">
+
+  <rect width="1280" height="720" fill="#0d1117"/>
+
+  <!-- Sidebar -->
+  <rect width="224" height="720" fill="#161b22"/>
+  <rect x="224" width="1" height="720" fill="#30363d"/>
+  <rect x="16" y="18" width="32" height="32" rx="6" fill="#fa6220"/>
+  <text x="32" y="39" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">B</text>
+  <text x="58" y="30" font-size="13" font-weight="600" fill="#e6edf3">BuildTrack</text>
+  <text x="58" y="44" font-size="10" fill="#7d8590">Pro</text>
+  <text x="40" y="90" font-size="13" fill="#7d8590">⊞  Dashboard</text>
+  <text x="40" y="122" font-size="13" fill="#7d8590">📋  Projects</text>
+  <text x="40" y="154" font-size="13" fill="#7d8590">📅  Schedule</text>
+  <rect x="8" y="164" width="208" height="34" rx="6" fill="#21262d"/>
+  <text x="40" y="187" font-size="13" fill="#e6edf3" font-weight="500">📄  Contracts</text>
+  <text x="40" y="219" font-size="13" fill="#7d8590">👷  Workforce</text>
+  <text x="40" y="251" font-size="13" fill="#7d8590">💷  Financials</text>
+  <text x="40" y="283" font-size="13" fill="#7d8590">⚠️  Issues</text>
+
+  <!-- Top bar -->
+  <rect x="224" y="0" width="1056" height="52" fill="#161b22"/>
+  <rect x="224" y="52" width="1056" height="1" fill="#30363d"/>
+  <text x="244" y="22" font-size="12" fill="#7d8590">Contracts  /  Birmingham HS2 Interchange  /  NEC4 ECC</text>
+  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Contract: NEC4 ECC — Civils Package A</text>
+  <rect x="1058" y="13" width="180" height="28" rx="6" fill="#fa6220"/>
+  <text x="1148" y="31" font-size="12" fill="#fff" text-anchor="middle" font-weight="500">✦ AI Review Active</text>
+
+  <!-- Left: Document viewer (55% width) -->
+  <rect x="224" y="53" width="660" height="667" fill="#161b22"/>
+  <rect x="884" y="53" width="1" height="667" fill="#30363d"/>
+
+  <!-- Doc toolbar -->
+  <rect x="224" y="53" width="660" height="40" fill="#1c2128"/>
+  <rect x="224" y="93" width="660" height="1" fill="#30363d"/>
+  <rect x="236" y="62" width="28" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="250" y="77" font-size="11" fill="#7d8590" text-anchor="middle">‹</text>
+  <rect x="268" y="62" width="28" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="282" y="77" font-size="11" fill="#7d8590" text-anchor="middle">›</text>
+  <text x="312" y="77" font-size="11" fill="#7d8590">Page 14 of 67</text>
+  <rect x="450" y="62" width="60" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="480" y="77" font-size="11" fill="#7d8590" text-anchor="middle">100%  ▾</text>
+  <rect x="524" y="62" width="28" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="538" y="77" font-size="11" fill="#7d8590" text-anchor="middle">⊕</text>
+  <rect x="556" y="62" width="28" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="570" y="77" font-size="11" fill="#7d8590" text-anchor="middle">⊖</text>
+  <rect x="720" y="62" width="80" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="760" y="77" font-size="11" fill="#7d8590" text-anchor="middle">⬇  Download</text>
+  <rect x="812" y="62" width="60" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="842" y="77" font-size="11" fill="#7d8590" text-anchor="middle">Print</text>
+
+  <!-- Document body -->
+  <rect x="244" y="106" width="620" height="594" rx="4" fill="#ffffff"/>
+
+  <!-- Doc page content -->
+  <text x="320" y="136" font-size="11" fill="#374151" font-weight="600" text-anchor="middle">NEC4 ENGINEERING AND CONSTRUCTION CONTRACT</text>
+  <text x="320" y="152" font-size="10" fill="#6b7280" text-anchor="middle">Birmingham HS2 Interchange Hub — Civils Package A</text>
+  <line x1="264" y1="162" x2="844" y2="162" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="264" y="182" font-size="11" fill="#374151" font-weight="700">Clause 60 — Compensation Events</text>
+  <text x="264" y="200" font-size="10" fill="#374151">60.1  The following are compensation events:</text>
+
+  <!-- Normal text lines -->
+  <text x="278" y="218" font-size="9.5" fill="#374151">(1)  The Project Manager gives an instruction changing the Scope.</text>
+  <text x="278" y="234" font-size="9.5" fill="#374151">(2)  The Employer does not allow access to and use of a part of the Site by the later of the access date</text>
+  <text x="286" y="248" font-size="9.5" fill="#374151">     and the date shown on the Accepted Programme.</text>
+  <text x="278" y="264" font-size="9.5" fill="#374151">(3)  The Employer does not provide something which it is to provide by the date for providing it</text>
+  <text x="286" y="278" font-size="9.5" fill="#374151">     shown on the Accepted Programme.</text>
+
+  <!-- Highlighted clause (AI flagged) -->
+  <rect x="264" y="290" width="580" height="52" rx="3" fill="#fef3c7" opacity="0.6"/>
+  <rect x="264" y="290" width="3" height="52" fill="#f59e0b"/>
+  <text x="278" y="306" font-size="9.5" fill="#374151" font-weight="500">(4)  The Project Manager gives an instruction to stop or not to start any work or to change a Key Date.</text>
+  <text x="278" y="320" font-size="9.5" fill="#374151">     The Contractor notifies the Project Manager within eight weeks of becoming aware of the event,</text>
+  <text x="278" y="334" font-size="9.5" fill="#374151">     otherwise the Contractor is not entitled to a compensation event.</text>
+
+  <text x="278" y="358" font-size="9.5" fill="#374151">(5)  The Employer or Others do not work within the times shown on the Accepted Programme.</text>
+  <text x="278" y="374" font-size="9.5" fill="#374151">(6)  The Employer or Others do not work within the conditions stated in the Scope.</text>
+
+  <!-- Highlighted clause (AI flagged — risk) -->
+  <rect x="264" y="386" width="580" height="52" rx="3" fill="#fee2e2" opacity="0.5"/>
+  <rect x="264" y="386" width="3" height="52" fill="#ef4444"/>
+  <text x="278" y="402" font-size="9.5" fill="#374151" font-weight="500">(7)  A weather measurement is recorded within a calendar month before the Completion Date which is</text>
+  <text x="278" y="416" font-size="9.5" fill="#374151">     more extreme than the weather which is shown in the Weather Data as occurring on average less</text>
+  <text x="278" y="430" font-size="9.5" fill="#374151">     than once in ten years.</text>
+
+  <text x="278" y="450" font-size="9.5" fill="#374151">(8)  The Project Manager corrects an assumption which it stated about a Compensation Event.</text>
+  <text x="278" y="466" font-size="9.5" fill="#374151">(9)  An event which stops the Contractor completing the whole of the works or stops the Contractor</text>
+  <text x="278" y="480" font-size="9.5" fill="#374151">     completing the whole of the works by the date shown on the Accepted Programme and which</text>
+  <text x="278" y="494" font-size="9.5" fill="#374151">     neither Party could prevent and an experienced contractor would have judged at the Contract</text>
+  <text x="278" y="508" font-size="9.5" fill="#374151">     Date to have such a small chance of occurring that it would have been unreasonable to allow</text>
+  <text x="278" y="522" font-size="9.5" fill="#374151">     for it.</text>
+
+  <text x="264" y="545" font-size="11" fill="#374151" font-weight="700">Clause 61 — Notifying Compensation Events</text>
+  <text x="264" y="563" font-size="10" fill="#374151">61.1  For compensation events which arise from the Project Manager or the Supervisor giving an</text>
+  <text x="272" y="577" font-size="10" fill="#374151">       instruction or changing an earlier decision, the Project Manager notifies the Contractor of</text>
+  <text x="272" y="591" font-size="10" fill="#374151">       the compensation event at the time of the instruction.</text>
+
+  <!-- Page number -->
+  <text x="554" y="684" font-size="9" fill="#9ca3af" text-anchor="middle">— 14 —</text>
+
+  <!-- Right: AI panel (395px) -->
+  <rect x="885" y="53" width="395" height="667" fill="#161b22"/>
+
+  <rect x="885" y="53" width="395" height="48" fill="#1c2128"/>
+  <rect x="885" y="101" width="395" height="1" fill="#30363d"/>
+  <text x="905" y="75" font-size="14" font-weight="600" fill="#e6edf3">✦ AI Contract Review</text>
+  <text x="905" y="93" font-size="11" fill="#7d8590">3 findings on this page  ·  12 total in document</text>
+
+  <!-- Tabs -->
+  <rect x="885" y="109" width="395" height="36" fill="#1c2128"/>
+  <rect x="885" y="145" width="395" height="1" fill="#30363d"/>
+  <rect x="897" y="118" width="80" height="20" rx="4" fill="#fa6220" opacity="0.15"/>
+  <rect x="897" y="118" width="80" height="20" rx="4" fill="none" stroke="#fa6220" stroke-width="1"/>
+  <text x="937" y="132" font-size="11" fill="#fa6220" text-anchor="middle">Findings</text>
+  <text x="1020" y="132" font-size="11" fill="#7d8590">Risks</text>
+  <text x="1095" y="132" font-size="11" fill="#7d8590">Summary</text>
+  <text x="1180" y="132" font-size="11" fill="#7d8590">Compare</text>
+
+  <!-- Finding 1: Warning -->
+  <rect x="897" y="157" width="371" height="132" rx="8" fill="#1c2128" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="897" y="157" width="4" height="132" rx="2" fill="#f59e0b"/>
+  <rect x="909" y="167" width="60" height="18" rx="9" fill="#312a1f"/>
+  <text x="939" y="180" font-size="10" fill="#d29922" text-anchor="middle">⚠ Warning</text>
+  <text x="972" y="176" font-size="10" fill="#7d8590">Clause 60.1(4)</text>
+  <rect x="1196" y="165" width="64" height="18" rx="4" fill="#21262d"/>
+  <text x="1228" y="178" font-size="10" fill="#7d8590" text-anchor="middle">Go to ↗</text>
+  <text x="909" y="200" font-size="12" font-weight="600" fill="#e6edf3">8-week notification window</text>
+  <text x="909" y="218" font-size="11" fill="#7d8590">Instruction issued 14 Jan. Deadline to notify</text>
+  <text x="909" y="232" font-size="11" fill="#7d8590">Project Manager: 11 Mar 2025 (43 days away).</text>
+  <text x="909" y="250" font-size="11" fill="#d29922">Action: Draft CE notification — assign to T. Okafor</text>
+  <rect x="909" y="264" width="120" height="20" rx="5" fill="#d29922" opacity="0.2"/>
+  <text x="969" y="278" font-size="11" fill="#d29922" text-anchor="middle">Create Notification</text>
+  <rect x="1038" y="264" width="80" height="20" rx="5" fill="#21262d"/>
+  <text x="1078" y="278" font-size="11" fill="#7d8590" text-anchor="middle">Dismiss</text>
+
+  <!-- Finding 2: Risk -->
+  <rect x="897" y="301" width="371" height="132" rx="8" fill="#1c2128" stroke="#f85149" stroke-width="1"/>
+  <rect x="897" y="301" width="4" height="132" rx="2" fill="#f85149"/>
+  <rect x="909" y="311" width="48" height="18" rx="9" fill="#3b1f1f"/>
+  <text x="933" y="324" font-size="10" fill="#f85149" text-anchor="middle">Risk</text>
+  <text x="964" y="320" font-size="10" fill="#7d8590">Clause 60.1(7)</text>
+  <rect x="1196" y="309" width="64" height="18" rx="4" fill="#21262d"/>
+  <text x="1228" y="322" font-size="10" fill="#7d8590" text-anchor="middle">Go to ↗</text>
+  <text x="909" y="344" font-size="12" font-weight="600" fill="#e6edf3">Exceptional weather clause unpriced</text>
+  <text x="909" y="362" font-size="11" fill="#7d8590">Met Office data shows Jan–Mar above 10yr</text>
+  <text x="909" y="376" font-size="11" fill="#7d8590">average for rainfall. No Z-clause inserted.</text>
+  <text x="909" y="394" font-size="11" fill="#f85149">Potential unrecovered cost: £120k–£340k</text>
+  <rect x="909" y="408" width="140" height="20" rx="5" fill="#f85149" opacity="0.2"/>
+  <text x="979" y="422" font-size="11" fill="#f85149" text-anchor="middle">Review X Weather Clauses</text>
+
+  <!-- Finding 3: Info -->
+  <rect x="897" y="445" width="371" height="116" rx="8" fill="#1c2128" stroke="#3fb950" stroke-width="1"/>
+  <rect x="897" y="445" width="4" height="116" rx="2" fill="#3fb950"/>
+  <rect x="909" y="455" width="44" height="18" rx="9" fill="#1f3b1f"/>
+  <text x="931" y="468" font-size="10" fill="#3fb950" text-anchor="middle">OK</text>
+  <text x="960" y="464" font-size="10" fill="#7d8590">Clause 61.1</text>
+  <text x="909" y="488" font-size="12" font-weight="600" fill="#e6edf3">PM notification obligations — compliant</text>
+  <text x="909" y="506" font-size="11" fill="#7d8590">All 4 instructions issued in last 30 days have</text>
+  <text x="909" y="520" font-size="11" fill="#7d8590">matching CE notifications on file. No gaps.</text>
+  <text x="909" y="544" font-size="11" fill="#3fb950">✓ No action required</text>
+
+  <!-- Bottom stats -->
+  <rect x="885" y="572" width="395" height="148" fill="#1c2128"/>
+  <rect x="885" y="572" width="395" height="1" fill="#30363d"/>
+  <text x="905" y="594" font-size="12" font-weight="600" fill="#e6edf3">Document Health</text>
+  <text x="905" y="612" font-size="11" fill="#7d8590">12 clauses reviewed  ·  Last scan: 2 min ago</text>
+
+  <rect x="905" y="624" width="355" height="6" rx="3" fill="#21262d"/>
+  <rect x="905" y="624" width="284" height="6" rx="3" fill="#3fb950"/>
+  <text x="905" y="646" font-size="10" fill="#3fb950">80% compliant</text>
+  <text x="1198" y="646" font-size="10" fill="#7d8590" text-anchor="end">8 OK  ·  3 warnings  ·  1 critical</text>
+
+  <rect x="905" y="656" width="108" height="48" rx="6" fill="#21262d"/>
+  <text x="959" y="676" font-size="18" font-weight="700" fill="#3fb950" text-anchor="middle">8</text>
+  <text x="959" y="694" font-size="10" fill="#7d8590" text-anchor="middle">Compliant</text>
+
+  <rect x="1023" y="656" width="108" height="48" rx="6" fill="#21262d"/>
+  <text x="1077" y="676" font-size="18" font-weight="700" fill="#d29922" text-anchor="middle">3</text>
+  <text x="1077" y="694" font-size="10" fill="#7d8590" text-anchor="middle">Warnings</text>
+
+  <rect x="1141" y="656" width="108" height="48" rx="6" fill="#21262d"/>
+  <text x="1195" y="676" font-size="18" font-weight="700" fill="#f85149" text-anchor="middle">1</text>
+  <text x="1195" y="694" font-size="10" fill="#7d8590" text-anchor="middle">Critical</text>
+
+  </g>
+</svg>

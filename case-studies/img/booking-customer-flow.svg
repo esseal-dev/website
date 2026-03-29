@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="bca"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="pinkBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb2cd"/>
+      <stop offset="100%" stop-color="#ff8fb4"/>
+    </linearGradient>
+    <linearGradient id="greenBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#97d679"/>
+      <stop offset="100%" stop-color="#a8f08e"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd8e6"/>
+      <stop offset="100%" stop-color="#fff3f8"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#bca)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#fff3f8"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="58" fill="url(#headerGrad)" stroke="#ffd8e6" stroke-width="1"/>
+  <circle cx="36" cy="29" r="16" fill="#ffb2cd"/>
+  <text x="36" y="34" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="800">✦</text>
+  <text x="62" y="24" font-size="14" font-weight="700" fill="#c94070" letter-spacing="0.5">glowbook</text>
+  <text x="62" y="40" font-size="9" fill="#ffb2cd" letter-spacing="2">NYC IN-HOME BEAUTY</text>
+  <!-- Nav -->
+  <text x="400" y="33" font-size="12" fill="#c94070">Services</text>
+  <text x="466" y="33" font-size="12" fill="#888">How It Works</text>
+  <text x="562" y="33" font-size="12" fill="#888">About</text>
+  <!-- Step indicator top -->
+  <text x="780" y="24" font-size="10" fill="#888">Step</text>
+  <circle cx="822" cy="20" r="10" fill="#ffb2cd"/>
+  <text x="822" y="24" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+  <rect x="836" y="19" width="24" height="2" rx="1" fill="#ffd8e6"/>
+  <circle cx="868" cy="20" r="10" fill="#ffd8e6"/>
+  <text x="868" y="24" font-size="9" fill="#ffb2cd" text-anchor="middle">2</text>
+  <rect x="882" y="19" width="24" height="2" rx="1" fill="#ffd8e6"/>
+  <circle cx="914" cy="20" r="10" fill="#ffd8e6"/>
+  <text x="914" y="24" font-size="9" fill="#ffb2cd" text-anchor="middle">3</text>
+  <rect x="928" y="19" width="24" height="2" rx="1" fill="#ffd8e6"/>
+  <circle cx="960" cy="20" r="10" fill="#ffd8e6"/>
+  <text x="960" y="24" font-size="9" fill="#ffb2cd" text-anchor="middle">4</text>
+  <text x="980" y="24" font-size="10" fill="#888">Service · Time · Address · Pay</text>
+  <!-- Account -->
+  <rect x="1148" y="14" width="110" height="30" rx="15" fill="#ffb2cd"/>
+  <text x="1203" y="33" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">Book Now</text>
+
+  <!-- Page title -->
+  <text x="640" y="96" font-size="22" font-weight="700" fill="#c94070" text-anchor="middle">Choose Your Service</text>
+  <text x="640" y="116" font-size="12" fill="#aaa" text-anchor="middle">All services performed at your location — Manhattan, Brooklyn, Queens, Northern NJ</text>
+
+  <!-- ── SERVICE GRID ── -->
+  <!-- Row 1 -->
+  <!-- Card 1: Classic Mani (selected) -->
+  <rect x="60" y="134" width="234" height="164" rx="14" fill="#ffffff" stroke="#ffb2cd" stroke-width="2.5"/>
+  <rect x="60" y="134" width="234" height="8" rx="14" fill="#ffb2cd"/>
+  <rect x="60" y="142" width="234" height="6" fill="#ffb2cd"/>
+  <!-- Selected check -->
+  <circle cx="278" cy="152" r="12" fill="#ffb2cd"/>
+  <text x="278" y="157" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="700">✓</text>
+  <text x="177" y="180" font-size="32" text-anchor="middle">💅</text>
+  <text x="177" y="214" font-size="13" font-weight="700" fill="#333" text-anchor="middle">Classic Manicure</text>
+  <text x="177" y="230" font-size="11" fill="#aaa" text-anchor="middle">Shape, cuticle, polish</text>
+  <text x="177" y="250" font-size="11" fill="#888" text-anchor="middle">45 min</text>
+  <text x="177" y="278" font-size="18" font-weight="700" fill="#c94070" text-anchor="middle">$45</text>
+
+  <!-- Card 2: Gel Mani -->
+  <rect x="310" y="134" width="234" height="164" rx="14" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="407" y="180" font-size="32" text-anchor="middle">✨</text>
+  <text x="427" y="214" font-size="13" font-weight="700" fill="#333" text-anchor="middle">Gel Manicure</text>
+  <text x="427" y="230" font-size="11" fill="#aaa" text-anchor="middle">Long-lasting gel polish</text>
+  <text x="427" y="250" font-size="11" fill="#888" text-anchor="middle">60 min</text>
+  <text x="427" y="278" font-size="18" font-weight="700" fill="#c94070" text-anchor="middle">$65</text>
+
+  <!-- Card 3: Classic Pedi -->
+  <rect x="560" y="134" width="234" height="164" rx="14" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="677" y="180" font-size="32" text-anchor="middle">🦶</text>
+  <text x="677" y="214" font-size="13" font-weight="700" fill="#333" text-anchor="middle">Classic Pedicure</text>
+  <text x="677" y="230" font-size="11" fill="#aaa" text-anchor="middle">Soak, scrub, polish</text>
+  <text x="677" y="250" font-size="11" fill="#888" text-anchor="middle">60 min</text>
+  <text x="677" y="278" font-size="18" font-weight="700" fill="#c94070" text-anchor="middle">$55</text>
+
+  <!-- Card 4: Gel Pedi -->
+  <rect x="810" y="134" width="234" height="164" rx="14" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="927" y="180" font-size="32" text-anchor="middle">💆</text>
+  <text x="927" y="214" font-size="13" font-weight="700" fill="#333" text-anchor="middle">Gel Pedicure</text>
+  <text x="927" y="230" font-size="11" fill="#aaa" text-anchor="middle">Gel polish pedicure</text>
+  <text x="927" y="250" font-size="11" fill="#888" text-anchor="middle">75 min</text>
+  <text x="927" y="278" font-size="18" font-weight="700" fill="#c94070" text-anchor="middle">$75</text>
+
+  <!-- Card 5: Mani + Pedi bundle (highlighted as value) -->
+  <rect x="1060" y="134" width="196" height="164" rx="14" fill="#fff3f8" stroke="#ffb2cd" stroke-width="1.5"/>
+  <rect x="1060" y="134" width="196" height="28" rx="14" fill="#ffb2cd" opacity="0.3"/>
+  <rect x="1060" y="150" width="196" height="12" fill="#ffb2cd" opacity="0.3"/>
+  <text x="1158" y="148" font-size="9" fill="#c94070" text-anchor="middle" font-weight="700" letter-spacing="1">BEST VALUE</text>
+  <text x="1158" y="190" font-size="28" text-anchor="middle">💅🦶</text>
+  <text x="1158" y="222" font-size="12" font-weight="700" fill="#333" text-anchor="middle">Mani + Pedi</text>
+  <text x="1158" y="238" font-size="10" fill="#aaa" text-anchor="middle">Full set, both hands + feet</text>
+  <text x="1158" y="256" font-size="10" fill="#888" text-anchor="middle">90 min</text>
+  <text x="1158" y="283" font-size="17" font-weight="700" fill="#c94070" text-anchor="middle">$95</text>
+
+  <!-- Row 2: Add-ons -->
+  <text x="640" y="326" font-size="12" font-weight="600" fill="#c94070" text-anchor="middle">Add-ons (Optional)</text>
+
+  <!-- Add-on chips -->
+  <rect x="192" y="340" width="148" height="36" rx="18" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="266" y="362" font-size="11" fill="#888" text-anchor="middle">Nail Art  +$15</text>
+
+  <rect x="352" y="340" width="156" height="36" rx="18" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="430" y="362" font-size="11" fill="#888" text-anchor="middle">Hand Massage  +$20</text>
+
+  <rect x="520" y="340" width="156" height="36" rx="18" fill="#ffb2cd" stroke="#ffb2cd" stroke-width="1"/>
+  <text x="598" y="362" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">Paraffin  +$18  ✓</text>
+
+  <rect x="688" y="340" width="148" height="36" rx="18" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="762" y="362" font-size="11" fill="#888" text-anchor="middle">Foot Mask  +$15</text>
+
+  <rect x="848" y="340" width="156" height="36" rx="18" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <text x="926" y="362" font-size="11" fill="#888" text-anchor="middle">Cuticle Repair  +$12</text>
+
+  <!-- ── BOOKING SUMMARY PANEL ── -->
+  <rect x="60" y="398" width="760" height="302" rx="14" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <rect x="60" y="398" width="760" height="46" rx="14" fill="#ffd8e6" opacity="0.4"/>
+  <rect x="60" y="422" width="760" height="22" fill="#ffd8e6" opacity="0.4"/>
+  <text x="84" y="428" font-size="12" font-weight="700" fill="#c94070">Date &amp; Time</text>
+  <line x1="60" y1="444" x2="820" y2="444" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Mini calendar -->
+  <text x="84" y="470" font-size="11" font-weight="600" fill="#555">April 2026</text>
+  <text x="690" y="470" font-size="12" fill="#c94070" text-anchor="end">‹  ›</text>
+  <!-- Day headers -->
+  <text x="102" y="490" font-size="10" fill="#aaa" text-anchor="middle">Su</text>
+  <text x="142" y="490" font-size="10" fill="#aaa" text-anchor="middle">Mo</text>
+  <text x="182" y="490" font-size="10" fill="#aaa" text-anchor="middle">Tu</text>
+  <text x="222" y="490" font-size="10" fill="#aaa" text-anchor="middle">We</text>
+  <text x="262" y="490" font-size="10" fill="#aaa" text-anchor="middle">Th</text>
+  <text x="302" y="490" font-size="10" fill="#aaa" text-anchor="middle">Fr</text>
+  <text x="342" y="490" font-size="10" fill="#aaa" text-anchor="middle">Sa</text>
+
+  <!-- Week row 1 (Apr 1-5) -->
+  <text x="262" y="514" font-size="12" fill="#ccc" text-anchor="middle">1</text>
+  <text x="302" y="514" font-size="12" fill="#ccc" text-anchor="middle">2</text>
+  <text x="342" y="514" font-size="12" fill="#ccc" text-anchor="middle">3</text>
+
+  <!-- Week row 2 -->
+  <text x="102" y="538" font-size="12" fill="#555" text-anchor="middle">6</text>
+  <text x="142" y="538" font-size="12" fill="#555" text-anchor="middle">7</text>
+  <text x="182" y="538" font-size="12" fill="#555" text-anchor="middle">8</text>
+  <text x="222" y="538" font-size="12" fill="#555" text-anchor="middle">9</text>
+  <text x="262" y="538" font-size="12" fill="#555" text-anchor="middle">10</text>
+  <text x="302" y="538" font-size="12" fill="#555" text-anchor="middle">11</text>
+  <text x="342" y="538" font-size="12" fill="#555" text-anchor="middle">12</text>
+
+  <!-- Week row 3 — 14th selected -->
+  <text x="102" y="562" font-size="12" fill="#555" text-anchor="middle">13</text>
+  <circle cx="142" cy="556" r="14" fill="#ffb2cd"/>
+  <text x="142" y="562" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">14</text>
+  <text x="182" y="562" font-size="12" fill="#555" text-anchor="middle">15</text>
+  <text x="222" y="562" font-size="12" fill="#555" text-anchor="middle">16</text>
+  <text x="262" y="562" font-size="12" fill="#555" text-anchor="middle">17</text>
+  <text x="302" y="562" font-size="12" fill="#555" text-anchor="middle">18</text>
+  <text x="342" y="562" font-size="12" fill="#555" text-anchor="middle">19</text>
+
+  <!-- Week row 4 -->
+  <text x="102" y="586" font-size="12" fill="#555" text-anchor="middle">20</text>
+  <text x="142" y="586" font-size="12" fill="#555" text-anchor="middle">21</text>
+  <text x="182" y="586" font-size="12" fill="#555" text-anchor="middle">22</text>
+  <text x="222" y="586" font-size="12" fill="#555" text-anchor="middle">23</text>
+  <text x="262" y="586" font-size="12" fill="#555" text-anchor="middle">24</text>
+  <text x="302" y="586" font-size="12" fill="#555" text-anchor="middle">25</text>
+  <text x="342" y="586" font-size="12" fill="#555" text-anchor="middle">26</text>
+
+  <!-- Week row 5 -->
+  <text x="102" y="610" font-size="12" fill="#555" text-anchor="middle">27</text>
+  <text x="142" y="610" font-size="12" fill="#555" text-anchor="middle">28</text>
+  <text x="182" y="610" font-size="12" fill="#555" text-anchor="middle">29</text>
+  <text x="222" y="610" font-size="12" fill="#555" text-anchor="middle">30</text>
+
+  <!-- Time slots -->
+  <text x="420" y="470" font-size="11" font-weight="600" fill="#555">Available Times — Tue Apr 14</text>
+  <!-- Time slot grid -->
+  <rect x="420" y="480" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="459" y="499" font-size="11" fill="#aaa" text-anchor="middle">9:00 AM</text>
+  <rect x="510" y="480" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="549" y="499" font-size="11" fill="#aaa" text-anchor="middle">10:00 AM</text>
+  <rect x="600" y="480" width="78" height="30" rx="8" fill="#ffb2cd"/>
+  <text x="639" y="499" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">11:00 AM</text>
+  <rect x="690" y="480" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="729" y="499" font-size="11" fill="#555" text-anchor="middle">12:00 PM</text>
+
+  <rect x="420" y="520" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="459" y="539" font-size="11" fill="#555" text-anchor="middle">1:00 PM</text>
+  <rect x="510" y="520" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="549" y="539" font-size="11" fill="#555" text-anchor="middle">2:00 PM</text>
+  <rect x="600" y="520" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="639" y="539" font-size="11" fill="#555" text-anchor="middle">3:00 PM</text>
+  <rect x="690" y="520" width="78" height="30" rx="8" fill="#f0fce8" stroke="#a8f08e" stroke-width="1"/>
+  <text x="729" y="539" font-size="11" fill="#5a9a40" text-anchor="middle">4:00 PM</text>
+
+  <rect x="420" y="560" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="459" y="579" font-size="11" fill="#555" text-anchor="middle">5:00 PM</text>
+  <rect x="510" y="560" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="549" y="579" font-size="11" fill="#555" text-anchor="middle">6:00 PM</text>
+  <rect x="600" y="560" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="639" y="579" font-size="11" fill="#555" text-anchor="middle">7:00 PM</text>
+  <rect x="690" y="560" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+  <text x="729" y="579" font-size="11" fill="#aaa" text-anchor="middle">8:00 PM</text>
+
+  <text x="420" y="616" font-size="10" fill="#aaa">Real-time availability — reflects actual provider capacity</text>
+  <text x="420" y="632" font-size="10" fill="#a8f08e">● Green = last spot remaining</text>
+
+  <!-- ── BOOKING SUMMARY ── -->
+  <rect x="850" y="398" width="394" height="302" rx="14" fill="#ffffff" stroke="#ffd8e6" stroke-width="1.5"/>
+  <rect x="850" y="398" width="394" height="46" rx="14" fill="#fff3f8"/>
+  <rect x="850" y="422" width="394" height="22" fill="#fff3f8"/>
+  <text x="874" y="428" font-size="12" font-weight="700" fill="#c94070">Booking Summary</text>
+  <line x1="850" y1="444" x2="1244" y2="444" stroke="#ffd8e6" stroke-width="1"/>
+
+  <text x="874" y="468" font-size="11" fill="#888">Service</text>
+  <text x="1224" y="468" font-size="12" fill="#333" text-anchor="end" font-weight="600">Classic Manicure</text>
+  <text x="874" y="488" font-size="11" fill="#888">Add-on</text>
+  <text x="1224" y="488" font-size="12" fill="#333" text-anchor="end">Paraffin Wax</text>
+  <text x="874" y="508" font-size="11" fill="#888">Date</text>
+  <text x="1224" y="508" font-size="12" fill="#333" text-anchor="end">Tue, Apr 14, 2026</text>
+  <text x="874" y="528" font-size="11" fill="#888">Time</text>
+  <text x="1224" y="528" font-size="12" fill="#333" text-anchor="end">11:00 AM</text>
+  <text x="874" y="548" font-size="11" fill="#888">Duration</text>
+  <text x="1224" y="548" font-size="12" fill="#333" text-anchor="end">45 min</text>
+  <text x="874" y="568" font-size="11" fill="#888">Location</text>
+  <text x="1224" y="568" font-size="12" fill="#333" text-anchor="end">340 W 57th St, New York</text>
+
+  <line x1="874" y1="582" x2="1224" y2="582" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="874" y="602" font-size="11" fill="#aaa">Service</text>
+  <text x="1224" y="602" font-size="11" fill="#888" text-anchor="end">$45.00</text>
+  <text x="874" y="620" font-size="11" fill="#aaa">Paraffin add-on</text>
+  <text x="1224" y="620" font-size="11" fill="#888" text-anchor="end">$18.00</text>
+  <text x="874" y="638" font-size="13" font-weight="700" fill="#333">Total</text>
+  <text x="1224" y="638" font-size="15" font-weight="800" fill="#c94070" text-anchor="end">$63.00</text>
+
+  <!-- Confirm CTA -->
+  <rect x="874" y="652" width="350" height="38" rx="19" fill="url(#greenBtn)"/>
+  <text x="1049" y="675" font-size="13" font-weight="700" fill="#2d6e14" text-anchor="middle">Continue to Address &amp; Pay →</text>
+
+  <!-- Automation note -->
+  <text x="640" y="712" font-size="10" fill="#bbb" text-anchor="middle">Confirmation, reminders &amp; post-service follow-up sent automatically — no staff involvement</text>
+
+  </g>
+</svg>

@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="sp1"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="chartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="neonFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8ff00" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c8ff00" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#sp1)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#0a0a0a"/>
+
+  <!-- ── Top Nav ── -->
+  <rect width="1280" height="54" fill="#000000"/>
+  <rect y="54" width="1280" height="1" fill="#1e1e1e"/>
+  <text x="24" y="34" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="-0.5">STAGEPASS</text>
+  <text x="24" y="48" font-size="8" fill="#444444" letter-spacing="2">TICKETING PLATFORM</text>
+  <text x="180" y="33" font-size="13" fill="#888888">Events</text>
+  <text x="240" y="33" font-size="13" fill="#888888">Venues</text>
+  <rect x="296" y="18" width="74" height="22" rx="3" fill="none"/>
+  <text x="296" y="33" font-size="13" fill="#ffffff" font-weight="500">Analytics</text>
+  <text x="388" y="33" font-size="13" fill="#888888">Check-in</text>
+  <text x="464" y="33" font-size="13" fill="#888888">Settings</text>
+  <rect x="1074" y="12" width="148" height="30" rx="4" fill="#c8ff00"/>
+  <text x="1148" y="31" font-size="12" fill="#000000" text-anchor="middle" font-weight="700">+ New Event</text>
+  <circle cx="1252" cy="27" r="16" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="1252" y="31" font-size="11" fill="#888888" text-anchor="middle">JC</text>
+
+  <!-- ── KPI Cards ── -->
+  <!-- Card 1: Revenue -->
+  <rect x="20" y="68" width="295" height="90" rx="6" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="40" y="94" font-size="11" fill="#555555" letter-spacing="1" font-weight="600">TOTAL REVENUE YTD</text>
+  <text x="40" y="132" font-size="30" font-weight="700" fill="#ffffff">$75,240</text>
+  <text x="246" y="132" font-size="12" fill="#c8ff00">↑ 34%</text>
+  <text x="40" y="150" font-size="11" fill="#444444">vs $56,100 last year</text>
+
+  <!-- Card 2: Tickets -->
+  <rect x="327" y="68" width="295" height="90" rx="6" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="347" y="94" font-size="11" fill="#555555" letter-spacing="1" font-weight="600">TICKETS SOLD YTD</text>
+  <text x="347" y="132" font-size="30" font-weight="700" fill="#ffffff">5,132</text>
+  <text x="347" y="150" font-size="11" fill="#444444">across 12 events  ·  8 venues</text>
+
+  <!-- Card 3: Avg Ticket -->
+  <rect x="634" y="68" width="295" height="90" rx="6" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="654" y="94" font-size="11" fill="#555555" letter-spacing="1" font-weight="600">AVG TICKET PRICE</text>
+  <text x="654" y="132" font-size="30" font-weight="700" fill="#ffffff">$36.20</text>
+  <text x="654" y="150" font-size="11" fill="#444444">up from $31.40</text>
+
+  <!-- Card 4: Next Event -->
+  <rect x="941" y="68" width="319" height="90" rx="6" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="941" y="68" width="4" height="90" rx="2" fill="#c8ff00"/>
+  <text x="961" y="94" font-size="11" fill="#555555" letter-spacing="1" font-weight="600">NEXT EVENT</text>
+  <text x="961" y="124" font-size="16" font-weight="700" fill="#ffffff">Midnight Jazz Night</text>
+  <text x="961" y="142" font-size="11" fill="#888888">Sat Mar 15, 2026  ·  The Blue Room, Chicago</text>
+  <rect x="1174" y="80" width="72" height="22" rx="11" fill="#001a00"/>
+  <rect x="1174" y="80" width="72" height="22" rx="11" fill="none" stroke="#c8ff00" stroke-width="1"/>
+  <circle cx="1188" cy="91" r="3" fill="#c8ff00"/>
+  <text x="1212" y="95" font-size="10" fill="#c8ff00" text-anchor="middle" font-weight="600">LIVE NOW</text>
+
+  <!-- ── Events Table (left) ── -->
+  <rect x="20" y="172" width="820" height="528" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Table header row -->
+  <rect x="20" y="172" width="820" height="46" rx="6" fill="#0d0d0d"/>
+  <rect x="20" y="208" width="820" height="10" fill="#0d0d0d"/>
+  <rect x="20" y="218" width="820" height="1" fill="#1e1e1e"/>
+  <text x="40" y="202" font-size="15" font-weight="700" fill="#ffffff">Your Events</text>
+  <text x="748" y="202" font-size="12" fill="#888888">12 total</text>
+  <rect x="770" y="185" width="54" height="22" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="797" y="200" font-size="11" fill="#888888" text-anchor="middle">Filter</text>
+
+  <!-- Column headers -->
+  <rect x="20" y="219" width="820" height="30" fill="#111111"/>
+  <rect x="20" y="249" width="820" height="1" fill="#1e1e1e"/>
+  <text x="40" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">EVENT</text>
+  <text x="356" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">DATE</text>
+  <text x="474" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">VENUE</text>
+  <text x="624" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">TICKETS</text>
+  <text x="714" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">REVENUE</text>
+  <text x="800" y="239" font-size="10" fill="#444444" font-weight="600" letter-spacing="0.8">STATUS</text>
+
+  <!-- Row 1: Midnight Jazz Night (LIVE) -->
+  <rect x="20" y="250" width="820" height="56" fill="#080808"/>
+  <rect x="20" y="306" width="820" height="1" fill="#1a1a1a"/>
+  <rect x="20" y="250" width="3" height="56" fill="#c8ff00"/>
+  <text x="40" y="271" font-size="13" font-weight="600" fill="#ffffff">Midnight Jazz Night</text>
+  <text x="40" y="289" font-size="11" fill="#444444">General Admission + Reserved</text>
+  <text x="356" y="271" font-size="12" fill="#cccccc">Sat Mar 15</text>
+  <text x="356" y="287" font-size="11" fill="#444444">2026</text>
+  <text x="474" y="271" font-size="12" fill="#cccccc">The Blue Room</text>
+  <text x="474" y="287" font-size="11" fill="#444444">Chicago, IL</text>
+  <!-- Ticket progress -->
+  <text x="624" y="267" font-size="12" fill="#ffffff">340 <tspan fill="#444444">/ 400</tspan></text>
+  <rect x="624" y="274" width="72" height="5" rx="2.5" fill="#1e1e1e"/>
+  <rect x="624" y="274" width="61" height="5" rx="2.5" fill="#c8ff00"/>
+  <text x="624" y="291" font-size="10" fill="#c8ff00">85%</text>
+  <text x="714" y="271" font-size="13" font-weight="600" fill="#ffffff">$12,240</text>
+  <rect x="795" y="258" width="36" height="20" rx="3" fill="#001a00" stroke="#c8ff00" stroke-width="1"/>
+  <circle cx="807" cy="268" r="3" fill="#c8ff00"/>
+  <text x="820" y="272" font-size="9" fill="#c8ff00" font-weight="700">LIVE</text>
+
+  <!-- Row 2: Spring Comedy Festival -->
+  <rect x="20" y="307" width="820" height="56" fill="#0d0d0d"/>
+  <rect x="20" y="363" width="820" height="1" fill="#1a1a1a"/>
+  <text x="40" y="328" font-size="13" font-weight="600" fill="#ffffff">Spring Comedy Festival</text>
+  <text x="40" y="346" font-size="11" fill="#444444">Reserved Seating</text>
+  <text x="356" y="328" font-size="12" fill="#cccccc">Sat Mar 29</text>
+  <text x="356" y="344" font-size="11" fill="#444444">2026</text>
+  <text x="474" y="328" font-size="12" fill="#cccccc">Laugh Factory</text>
+  <text x="474" y="344" font-size="11" fill="#444444">Los Angeles, CA</text>
+  <text x="624" y="324" font-size="12" fill="#ffffff">180 <tspan fill="#444444">/ 250</tspan></text>
+  <rect x="624" y="331" width="72" height="5" rx="2.5" fill="#1e1e1e"/>
+  <rect x="624" y="331" width="52" height="5" rx="2.5" fill="#888888"/>
+  <text x="624" y="348" font-size="10" fill="#888888">72%</text>
+  <text x="714" y="328" font-size="13" font-weight="600" fill="#ffffff">$6,300</text>
+  <rect x="795" y="315" width="54" height="20" rx="3" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <text x="822" y="329" font-size="9" fill="#888888" text-anchor="middle">On Sale</text>
+
+  <!-- Row 3: EDM Underground -->
+  <rect x="20" y="364" width="820" height="56" fill="#0d0d0d"/>
+  <rect x="20" y="420" width="820" height="1" fill="#1a1a1a"/>
+  <text x="40" y="385" font-size="13" font-weight="600" fill="#ffffff">EDM Underground Vol.3</text>
+  <text x="40" y="403" font-size="11" fill="#444444">General Admission</text>
+  <text x="356" y="385" font-size="12" fill="#cccccc">Sat Apr 5</text>
+  <text x="356" y="401" font-size="11" fill="#444444">2026</text>
+  <text x="474" y="385" font-size="12" fill="#cccccc">Subterranean</text>
+  <text x="474" y="401" font-size="11" fill="#444444">Chicago, IL</text>
+  <text x="624" y="381" font-size="12" fill="#ffffff">18 <tspan fill="#444444">/ 600</tspan></text>
+  <rect x="624" y="388" width="72" height="5" rx="2.5" fill="#1e1e1e"/>
+  <rect x="624" y="388" width="2" height="5" rx="2.5" fill="#555555"/>
+  <text x="624" y="405" font-size="10" fill="#444444">3%</text>
+  <text x="714" y="385" font-size="13" font-weight="600" fill="#cccccc">$630</text>
+  <rect x="795" y="372" width="54" height="20" rx="3" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+  <text x="822" y="386" font-size="9" fill="#888888" text-anchor="middle">On Sale</text>
+
+  <!-- Row 4: Blues & Soul Evening -->
+  <rect x="20" y="421" width="820" height="56" fill="#0d0d0d"/>
+  <rect x="20" y="477" width="820" height="1" fill="#1a1a1a"/>
+  <text x="40" y="442" font-size="13" font-weight="600" fill="#555555">Blues &amp; Soul Evening</text>
+  <text x="40" y="460" font-size="11" fill="#333333">Reserved Seating  ·  Draft</text>
+  <text x="356" y="442" font-size="12" fill="#555555">Fri Apr 18</text>
+  <text x="356" y="458" font-size="11" fill="#333333">2026</text>
+  <text x="474" y="442" font-size="12" fill="#555555">House of Blues</text>
+  <text x="474" y="458" font-size="11" fill="#333333">New York, NY</text>
+  <text x="624" y="442" font-size="12" fill="#444444">— / 350</text>
+  <text x="714" y="442" font-size="13" fill="#444444">—</text>
+  <rect x="795" y="429" width="40" height="20" rx="3" fill="#151515" stroke="#222222" stroke-width="1"/>
+  <text x="815" y="443" font-size="9" fill="#444444" text-anchor="middle">Draft</text>
+
+  <!-- Row 5: Indie Rock Showcase (Sold Out) -->
+  <rect x="20" y="478" width="820" height="56" fill="#0d0d0d"/>
+  <rect x="20" y="534" width="820" height="1" fill="#1a1a1a"/>
+  <text x="40" y="499" font-size="13" font-weight="600" fill="#888888">Indie Rock Showcase</text>
+  <text x="40" y="517" font-size="11" fill="#333333">Reserved Seating  ·  Feb 28</text>
+  <text x="356" y="499" font-size="12" fill="#888888">Fri Feb 28</text>
+  <text x="356" y="515" font-size="11" fill="#333333">2026  ·  Past</text>
+  <text x="474" y="499" font-size="12" fill="#888888">Empty Bottle</text>
+  <text x="474" y="515" font-size="11" fill="#333333">Chicago, IL</text>
+  <text x="624" y="495" font-size="12" fill="#888888">412 / 412</text>
+  <rect x="624" y="502" width="72" height="5" rx="2.5" fill="#00e5ff" opacity="0.6"/>
+  <text x="624" y="519" font-size="10" fill="#00e5ff">100%</text>
+  <text x="714" y="499" font-size="13" font-weight="600" fill="#cccccc">$11,536</text>
+  <rect x="789" y="486" width="66" height="20" rx="3" fill="#001820" stroke="#00e5ff" stroke-width="1"/>
+  <text x="822" y="500" font-size="9" fill="#00e5ff" text-anchor="middle">Sold Out</text>
+
+  <!-- Check-in stats row for row 5 (appears only on past events) -->
+  <rect x="20" y="534" width="820" height="26" fill="#080808"/>
+  <rect x="20" y="560" width="820" height="1" fill="#1a1a1a"/>
+  <text x="40" y="551" font-size="10" fill="#333333">Check-in: 389/412 attended  ·  QR scans: 412  ·  Revenue: $11,536 final  ·  </text>
+  <text x="628" y="551" font-size="10" fill="#00e5ff">View full report →</text>
+
+  <!-- Pagination -->
+  <text x="40" y="688" font-size="11" fill="#444444">Showing 5 of 12 events</text>
+  <rect x="660" y="672" width="30" height="24" rx="3" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="675" y="688" font-size="11" fill="#555555" text-anchor="middle">‹</text>
+  <rect x="694" y="672" width="30" height="24" rx="3" fill="#c8ff00"/>
+  <text x="709" y="688" font-size="11" fill="#000000" text-anchor="middle" font-weight="700">1</text>
+  <rect x="728" y="672" width="30" height="24" rx="3" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="743" y="688" font-size="11" fill="#555555" text-anchor="middle">2</text>
+  <rect x="762" y="672" width="30" height="24" rx="3" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="777" y="688" font-size="11" fill="#555555" text-anchor="middle">3</text>
+  <rect x="796" y="672" width="30" height="24" rx="3" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="811" y="688" font-size="11" fill="#555555" text-anchor="middle">›</text>
+
+  <!-- ── Revenue Chart (right column) ── -->
+  <rect x="856" y="172" width="404" height="310" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="876" y="200" font-size="13" font-weight="600" fill="#ffffff">Revenue</text>
+  <text x="876" y="216" font-size="10" fill="#444444">Nov 2025 — Mar 2026</text>
+  <text x="1220" y="200" font-size="22" font-weight="700" fill="#c8ff00" text-anchor="end">$75.2k</text>
+
+  <!-- Y gridlines + labels -->
+  <line x1="876" y1="250" x2="1240" y2="250" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="876" y1="290" x2="1240" y2="290" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="876" y1="330" x2="1240" y2="330" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="876" y1="370" x2="1240" y2="370" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="876" y1="410" x2="1240" y2="410" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="872" y="254" font-size="8" fill="#333333" text-anchor="end">$25k</text>
+  <text x="872" y="294" font-size="8" fill="#333333" text-anchor="end">$20k</text>
+  <text x="872" y="334" font-size="8" fill="#333333" text-anchor="end">$15k</text>
+  <text x="872" y="374" font-size="8" fill="#333333" text-anchor="end">$10k</text>
+  <text x="872" y="414" font-size="8" fill="#333333" text-anchor="end">$5k</text>
+
+  <!-- Area fill under line (white) -->
+  <polygon points="876,337 967,285 1058,313 1149,251 1240,225 1240,410 876,410" fill="url(#chartFill)"/>
+  <!-- Line (white) -->
+  <polyline points="876,337 967,285 1058,313 1149,251" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <!-- Current month segment (neon) -->
+  <polyline points="1149,251 1240,225" fill="none" stroke="#c8ff00" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="1234,219 1246,225 1234,231" fill="#c8ff00"/>
+  <!-- Data dots -->
+  <circle cx="876" cy="337" r="4" fill="#ffffff"/>
+  <circle cx="967" cy="285" r="4" fill="#ffffff"/>
+  <circle cx="1058" cy="313" r="4" fill="#ffffff"/>
+  <circle cx="1149" cy="251" r="4" fill="#ffffff"/>
+  <circle cx="1240" cy="225" r="5" fill="#c8ff00" stroke="#000000" stroke-width="1.5"/>
+  <!-- Current month tooltip -->
+  <rect x="1196" y="204" width="88" height="34" rx="4" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1240" y="218" font-size="9" fill="#888888" text-anchor="middle">Mar 2026*</text>
+  <text x="1240" y="232" font-size="12" fill="#c8ff00" text-anchor="middle" font-weight="700">$22,440</text>
+  <polygon points="1234,238 1246,238 1240,245" fill="#111111"/>
+  <!-- X labels -->
+  <text x="876" y="427" font-size="9" fill="#444444" text-anchor="middle">Nov</text>
+  <text x="967" y="427" font-size="9" fill="#444444" text-anchor="middle">Dec</text>
+  <text x="1058" y="427" font-size="9" fill="#444444" text-anchor="middle">Jan</text>
+  <text x="1149" y="427" font-size="9" fill="#444444" text-anchor="middle">Feb</text>
+  <text x="1240" y="427" font-size="9" fill="#c8ff00" text-anchor="middle">Mar*</text>
+
+  <!-- ── Quick Stats (right column, below chart) ── -->
+  <rect x="856" y="494" width="194" height="100" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="876" y="520" font-size="10" fill="#444444" letter-spacing="1">EVENTS THIS MONTH</text>
+  <text x="876" y="556" font-size="32" font-weight="700" fill="#ffffff">3</text>
+  <text x="910" y="548" font-size="13" fill="#555555">live + upcoming</text>
+  <text x="876" y="575" font-size="10" fill="#444444">Next in 3 days</text>
+
+  <rect x="1062" y="494" width="198" height="100" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="1082" y="520" font-size="10" fill="#444444" letter-spacing="1">COMMISSION SAVED</text>
+  <text x="1082" y="556" font-size="28" font-weight="700" fill="#c8ff00">$9,840</text>
+  <text x="1082" y="575" font-size="10" fill="#444444">vs Ticketmaster (13%)</text>
+
+  <rect x="856" y="606" width="404" height="82" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="876" y="630" font-size="11" font-weight="600" fill="#ffffff">Twilio Email  ·  Last sent</text>
+  <text x="1240" y="630" font-size="10" fill="#444444" text-anchor="end">2 hours ago</text>
+  <text x="876" y="648" font-size="11" fill="#888888">"Your tickets for Midnight Jazz Night — see you tonight!"</text>
+  <text x="876" y="668" font-size="10" fill="#444444">Sent to 340 attendees  ·  Open rate: 74%  ·  </text>
+  <text x="1068" y="668" font-size="10" fill="#c8ff00">View campaign →</text>
+
+  </g>
+</svg>

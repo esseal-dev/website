@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="screenClip"><rect width="1280" height="720"/></clipPath>
+  </defs>
+  <g clip-path="url(#screenClip)">
+
+  <!-- App background -->
+  <rect width="1280" height="720" fill="#0d1117"/>
+
+  <!-- ── Sidebar ── -->
+  <rect width="224" height="720" fill="#161b22"/>
+  <rect x="224" width="1" height="720" fill="#30363d"/>
+
+  <!-- Logo -->
+  <rect x="16" y="18" width="32" height="32" rx="6" fill="#fa6220"/>
+  <text x="32" y="39" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">B</text>
+  <text x="58" y="30" font-size="13" font-weight="600" fill="#e6edf3">BuildTrack</text>
+  <text x="58" y="44" font-size="10" fill="#7d8590">Pro</text>
+
+  <!-- Sidebar nav -->
+  <rect x="8" y="68" width="208" height="34" rx="6" fill="#21262d"/>
+  <text x="40" y="90" font-size="13" fill="#e6edf3" font-weight="500">⊞  Dashboard</text>
+
+  <text x="40" y="126" font-size="13" fill="#7d8590">📋  Projects</text>
+  <text x="40" y="158" font-size="13" fill="#7d8590">📅  Schedule</text>
+  <text x="40" y="190" font-size="13" fill="#7d8590">📄  Contracts</text>
+  <text x="40" y="222" font-size="13" fill="#7d8590">👷  Workforce</text>
+  <text x="40" y="254" font-size="13" fill="#7d8590">💷  Financials</text>
+  <text x="40" y="286" font-size="13" fill="#7d8590">⚠️  Issues</text>
+  <text x="40" y="318" font-size="13" fill="#7d8590">📊  Reports</text>
+
+  <rect x="8" y="660" width="208" height="1" fill="#30363d"/>
+  <circle cx="28" cy="690" r="14" fill="#21262d"/>
+  <text x="28" y="695" font-size="12" fill="#e6edf3" text-anchor="middle">JS</text>
+  <text x="50" y="686" font-size="12" font-weight="500" fill="#e6edf3">James Sullivan</text>
+  <text x="50" y="700" font-size="10" fill="#7d8590">Project Director</text>
+
+  <!-- ── Top bar ── -->
+  <rect x="224" y="0" width="1056" height="52" fill="#161b22"/>
+  <rect x="224" y="52" width="1056" height="1" fill="#30363d"/>
+
+  <text x="244" y="32" font-size="18" font-weight="600" fill="#e6edf3">Project Overview</text>
+
+  <!-- Search bar -->
+  <rect x="680" y="13" width="240" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="698" y="31" font-size="12" fill="#7d8590">🔍  Search projects...</text>
+
+  <!-- Top right buttons -->
+  <rect x="944" y="13" width="90" height="28" rx="6" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="989" y="31" font-size="12" fill="#e6edf3" text-anchor="middle">⬇  Export</text>
+
+  <rect x="1048" y="13" width="108" height="28" rx="6" fill="#fa6220"/>
+  <text x="1102" y="31" font-size="12" fill="#fff" text-anchor="middle" font-weight="500">+ New Project</text>
+
+  <circle cx="1216" cy="26" r="16" fill="#21262d"/>
+  <text x="1216" y="31" font-size="12" fill="#e6edf3" text-anchor="middle">JS</text>
+
+  <!-- ── KPI Cards ── -->
+  <!-- Card 1 -->
+  <rect x="244" y="70" width="228" height="96" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="262" y="96" font-size="11" fill="#7d8590">Active Projects</text>
+  <text x="262" y="128" font-size="30" font-weight="700" fill="#e6edf3">24</text>
+  <text x="262" y="152" font-size="11" fill="#3fb950">↑ 3 this quarter</text>
+
+  <!-- Card 2 -->
+  <rect x="484" y="70" width="228" height="96" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="502" y="96" font-size="11" fill="#7d8590">Total Portfolio Value</text>
+  <text x="502" y="128" font-size="28" font-weight="700" fill="#e6edf3">£48.2M</text>
+  <text x="502" y="152" font-size="11" fill="#fa6220">↑ £6.1M from last yr</text>
+
+  <!-- Card 3 -->
+  <rect x="724" y="70" width="228" height="96" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="742" y="96" font-size="11" fill="#7d8590">On Schedule</text>
+  <text x="742" y="128" font-size="30" font-weight="700" fill="#e6edf3">71%</text>
+  <text x="742" y="152" font-size="11" fill="#f85149">↓ 4% vs last month</text>
+
+  <!-- Card 4 -->
+  <rect x="964" y="70" width="296" height="96" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="982" y="96" font-size="11" fill="#7d8590">Open Issues</text>
+  <text x="982" y="128" font-size="30" font-weight="700" fill="#e6edf3">17</text>
+  <text x="982" y="152" font-size="11" fill="#3fb950">↓ 5 resolved this week</text>
+
+  <!-- ── Projects Table ── -->
+  <rect x="244" y="182" width="756" height="522" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Table title row -->
+  <rect x="244" y="182" width="756" height="44" rx="8" fill="#161b22"/>
+  <rect x="244" y="216" width="756" height="10" fill="#161b22"/>
+  <text x="262" y="210" font-size="14" font-weight="600" fill="#e6edf3">All Projects</text>
+  <rect x="826" y="192" width="68" height="24" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="860" y="208" font-size="11" fill="#7d8590" text-anchor="middle">Filter ▾</text>
+  <rect x="902" y="192" width="80" height="24" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="942" y="208" font-size="11" fill="#7d8590" text-anchor="middle">Sort by ▾</text>
+
+  <!-- Table header -->
+  <rect x="244" y="226" width="756" height="32" fill="#21262d"/>
+  <text x="262" y="246" font-size="11" fill="#7d8590" font-weight="500">PROJECT NAME</text>
+  <text x="492" y="246" font-size="11" fill="#7d8590" font-weight="500">CLIENT</text>
+  <text x="614" y="246" font-size="11" fill="#7d8590" font-weight="500">STATUS</text>
+  <text x="712" y="246" font-size="11" fill="#7d8590" font-weight="500">PROGRESS</text>
+  <text x="838" y="246" font-size="11" fill="#7d8590" font-weight="500">VALUE</text>
+  <text x="928" y="246" font-size="11" fill="#7d8590" font-weight="500">DUE DATE</text>
+
+  <!-- Row 1 -->
+  <rect x="244" y="258" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="306" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="270" width="3" height="24" rx="2" fill="#3fb950"/>
+  <text x="270" y="285" font-size="13" font-weight="500" fill="#e6edf3">Canary Wharf Tower E — Phase 2</text>
+  <text x="270" y="300" font-size="11" fill="#7d8590">Ref: BT-2024-047</text>
+  <text x="492" y="286" font-size="12" fill="#7d8590">Galliard Homes</text>
+  <rect x="612" y="268" width="72" height="20" rx="10" fill="#1f3b1f"/>
+  <text x="648" y="282" font-size="11" fill="#3fb950" text-anchor="middle">On Track</text>
+  <!-- Progress bar -->
+  <rect x="712" y="278" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="278" width="68" height="6" rx="3" fill="#3fb950"/>
+  <text x="820" y="284" font-size="11" fill="#7d8590">68%</text>
+  <text x="838" y="286" font-size="12" fill="#e6edf3">£12.4M</text>
+  <text x="928" y="286" font-size="12" fill="#7d8590">Mar 2026</text>
+
+  <!-- Row 2 -->
+  <rect x="244" y="306" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="354" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="318" width="3" height="24" rx="2" fill="#f85149"/>
+  <text x="270" y="333" font-size="13" font-weight="500" fill="#e6edf3">Salford Quays Mixed-Use Development</text>
+  <text x="270" y="348" font-size="11" fill="#7d8590">Ref: BT-2024-031</text>
+  <text x="492" y="334" font-size="12" fill="#7d8590">Peel L&amp;P Group</text>
+  <rect x="612" y="316" width="76" height="20" rx="10" fill="#3b1f1f"/>
+  <text x="650" y="330" font-size="11" fill="#f85149" text-anchor="middle">At Risk</text>
+  <rect x="712" y="326" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="326" width="42" height="6" rx="3" fill="#f85149"/>
+  <text x="820" y="332" font-size="11" fill="#7d8590">42%</text>
+  <text x="838" y="334" font-size="12" fill="#e6edf3">£8.7M</text>
+  <text x="928" y="334" font-size="12" fill="#f85149">Nov 2025</text>
+
+  <!-- Row 3 -->
+  <rect x="244" y="354" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="402" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="366" width="3" height="24" rx="2" fill="#d29922"/>
+  <text x="270" y="381" font-size="13" font-weight="500" fill="#e6edf3">Birmingham HS2 Interchange Hub</text>
+  <text x="270" y="396" font-size="11" fill="#7d8590">Ref: BT-2023-118</text>
+  <text x="492" y="382" font-size="12" fill="#7d8590">Network Rail</text>
+  <rect x="612" y="364" width="88" height="20" rx="10" fill="#312a1f"/>
+  <text x="656" y="378" font-size="11" fill="#d29922" text-anchor="middle">Monitoring</text>
+  <rect x="712" y="374" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="374" width="83" height="6" rx="3" fill="#d29922"/>
+  <text x="820" y="380" font-size="11" fill="#7d8590">83%</text>
+  <text x="838" y="382" font-size="12" fill="#e6edf3">£21.0M</text>
+  <text x="928" y="382" font-size="12" fill="#7d8590">Aug 2025</text>
+
+  <!-- Row 4 -->
+  <rect x="244" y="402" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="450" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="414" width="3" height="24" rx="2" fill="#3fb950"/>
+  <text x="270" y="429" font-size="13" font-weight="500" fill="#e6edf3">Leeds City Centre Apartments — Block C</text>
+  <text x="270" y="444" font-size="11" fill="#7d8590">Ref: BT-2024-055</text>
+  <text x="492" y="430" font-size="12" fill="#7d8590">Urban Splash</text>
+  <rect x="612" y="412" width="72" height="20" rx="10" fill="#1f3b1f"/>
+  <text x="648" y="426" font-size="11" fill="#3fb950" text-anchor="middle">On Track</text>
+  <rect x="712" y="422" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="422" width="24" height="6" rx="3" fill="#3fb950"/>
+  <text x="820" y="428" font-size="11" fill="#7d8590">24%</text>
+  <text x="838" y="430" font-size="12" fill="#e6edf3">£5.9M</text>
+  <text x="928" y="430" font-size="12" fill="#7d8590">Jul 2026</text>
+
+  <!-- Row 5 -->
+  <rect x="244" y="450" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="498" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="462" width="3" height="24" rx="2" fill="#58a6ff"/>
+  <text x="270" y="477" font-size="13" font-weight="500" fill="#e6edf3">Bristol Harbourside Office Complex</text>
+  <text x="270" y="492" font-size="11" fill="#7d8590">Ref: BT-2024-062</text>
+  <text x="492" y="478" font-size="12" fill="#7d8590">Cubex Land</text>
+  <rect x="612" y="460" width="84" height="20" rx="10" fill="#1f2a3b"/>
+  <text x="654" y="474" font-size="11" fill="#58a6ff" text-anchor="middle">Planning</text>
+  <rect x="712" y="470" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="470" width="8" height="6" rx="3" fill="#58a6ff"/>
+  <text x="820" y="476" font-size="11" fill="#7d8590">8%</text>
+  <text x="838" y="478" font-size="12" fill="#e6edf3">£6.2M</text>
+  <text x="928" y="478" font-size="12" fill="#7d8590">Dec 2026</text>
+
+  <!-- Row 6 -->
+  <rect x="244" y="498" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="546" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="510" width="3" height="24" rx="2" fill="#3fb950"/>
+  <text x="270" y="525" font-size="13" font-weight="500" fill="#e6edf3">Edinburgh New Town Hotel Refurb</text>
+  <text x="270" y="540" font-size="11" fill="#7d8590">Ref: BT-2023-099</text>
+  <text x="492" y="526" font-size="12" fill="#7d8590">Bespoke Hotels</text>
+  <rect x="612" y="508" width="72" height="20" rx="10" fill="#1f3b1f"/>
+  <text x="648" y="522" font-size="11" fill="#3fb950" text-anchor="middle">On Track</text>
+  <rect x="712" y="518" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="518" width="91" height="6" rx="3" fill="#3fb950"/>
+  <text x="820" y="524" font-size="11" fill="#7d8590">91%</text>
+  <text x="838" y="526" font-size="12" fill="#e6edf3">£3.8M</text>
+  <text x="928" y="526" font-size="12" fill="#7d8590">Apr 2025</text>
+
+  <!-- Row 7 -->
+  <rect x="244" y="546" width="756" height="48" fill="#161b22"/>
+  <rect x="244" y="594" width="756" height="1" fill="#21262d"/>
+  <rect x="258" y="558" width="3" height="24" rx="2" fill="#f85149"/>
+  <text x="270" y="573" font-size="13" font-weight="500" fill="#e6edf3">Manchester Northern Quarter Car Park</text>
+  <text x="270" y="588" font-size="11" fill="#7d8590">Ref: BT-2024-041</text>
+  <text x="492" y="574" font-size="12" fill="#7d8590">NCP Ltd</text>
+  <rect x="612" y="556" width="76" height="20" rx="10" fill="#3b1f1f"/>
+  <text x="650" y="570" font-size="11" fill="#f85149" text-anchor="middle">Delayed</text>
+  <rect x="712" y="566" width="100" height="6" rx="3" fill="#21262d"/>
+  <rect x="712" y="566" width="56" height="6" rx="3" fill="#f85149"/>
+  <text x="820" y="572" font-size="11" fill="#7d8590">56%</text>
+  <text x="838" y="574" font-size="12" fill="#e6edf3">£2.4M</text>
+  <text x="928" y="574" font-size="12" fill="#f85149">Jan 2025</text>
+
+  <!-- Pagination -->
+  <text x="262" y="696" font-size="11" fill="#7d8590">Showing 7 of 24 projects</text>
+  <rect x="836" y="680" width="28" height="24" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="850" y="696" font-size="12" fill="#7d8590" text-anchor="middle">‹</text>
+  <rect x="868" y="680" width="28" height="24" rx="4" fill="#fa6220"/>
+  <text x="882" y="696" font-size="12" fill="#fff" text-anchor="middle">1</text>
+  <rect x="900" y="680" width="28" height="24" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="914" y="696" font-size="12" fill="#7d8590" text-anchor="middle">2</text>
+  <rect x="932" y="680" width="28" height="24" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="946" y="696" font-size="12" fill="#7d8590" text-anchor="middle">3</text>
+  <rect x="964" y="680" width="28" height="24" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="978" y="696" font-size="12" fill="#7d8590" text-anchor="middle">›</text>
+
+  <!-- ── Right Panel: Activity Feed ── -->
+  <rect x="1016" y="182" width="244" height="522" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="1034" y="208" font-size="14" font-weight="600" fill="#e6edf3">Recent Activity</text>
+
+  <rect x="1016" y="218" width="244" height="1" fill="#30363d"/>
+
+  <!-- Activity items -->
+  <circle cx="1042" cy="244" r="8" fill="#1f3b1f"/>
+  <text x="1042" y="248" font-size="9" fill="#3fb950" text-anchor="middle">✓</text>
+  <text x="1058" y="241" font-size="12" font-weight="500" fill="#e6edf3">Milestone approved</text>
+  <text x="1058" y="255" font-size="11" fill="#7d8590">Canary Wharf — Foundation</text>
+  <text x="1058" y="268" font-size="10" fill="#4a5568">2 hours ago</text>
+
+  <rect x="1034" y="278" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="298" r="8" fill="#3b1f1f"/>
+  <text x="1042" y="302" font-size="9" fill="#f85149" text-anchor="middle">!</text>
+  <text x="1058" y="295" font-size="12" font-weight="500" fill="#e6edf3">Delay flagged</text>
+  <text x="1058" y="309" font-size="11" fill="#7d8590">Salford — Steel delivery</text>
+  <text x="1058" y="322" font-size="10" fill="#4a5568">4 hours ago</text>
+
+  <rect x="1034" y="332" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="352" r="8" fill="#21262d"/>
+  <text x="1042" y="356" font-size="9" fill="#7d8590" text-anchor="middle">📄</text>
+  <text x="1058" y="349" font-size="12" font-weight="500" fill="#e6edf3">NEC clause updated</text>
+  <text x="1058" y="363" font-size="11" fill="#7d8590">Birmingham HS2 — Cl. 60.1</text>
+  <text x="1058" y="376" font-size="10" fill="#4a5568">Yesterday</text>
+
+  <rect x="1034" y="386" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="406" r="8" fill="#1f2a3b"/>
+  <text x="1042" y="410" font-size="9" fill="#58a6ff" text-anchor="middle">+</text>
+  <text x="1058" y="403" font-size="12" font-weight="500" fill="#e6edf3">Project created</text>
+  <text x="1058" y="417" font-size="11" fill="#7d8590">Bristol Harbourside</text>
+  <text x="1058" y="430" font-size="10" fill="#4a5568">2 days ago</text>
+
+  <rect x="1034" y="440" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="460" r="8" fill="#1f3b1f"/>
+  <text x="1042" y="464" font-size="9" fill="#3fb950" text-anchor="middle">✓</text>
+  <text x="1058" y="457" font-size="12" font-weight="500" fill="#e6edf3">Snag list cleared</text>
+  <text x="1058" y="471" font-size="11" fill="#7d8590">Edinburgh — Level 3</text>
+  <text x="1058" y="484" font-size="10" fill="#4a5568">2 days ago</text>
+
+  <rect x="1034" y="494" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="514" r="8" fill="#312a1f"/>
+  <text x="1042" y="518" font-size="9" fill="#d29922" text-anchor="middle">⚠</text>
+  <text x="1058" y="511" font-size="12" font-weight="500" fill="#e6edf3">Budget variance</text>
+  <text x="1058" y="525" font-size="11" fill="#7d8590">Manchester — +£84k</text>
+  <text x="1058" y="538" font-size="10" fill="#4a5568">3 days ago</text>
+
+  <rect x="1034" y="548" width="208" height="1" fill="#21262d"/>
+
+  <circle cx="1042" cy="568" r="8" fill="#21262d"/>
+  <text x="1042" y="572" font-size="9" fill="#7d8590" text-anchor="middle">👤</text>
+  <text x="1058" y="565" font-size="12" font-weight="500" fill="#e6edf3">Subcontractor onboarded</text>
+  <text x="1058" y="579" font-size="11" fill="#7d8590">Leeds — Apex M&amp;E Ltd</text>
+  <text x="1058" y="592" font-size="10" fill="#4a5568">4 days ago</text>
+
+  </g>
+</svg>

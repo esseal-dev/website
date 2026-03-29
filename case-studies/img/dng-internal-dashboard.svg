@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="da"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="sidebarGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f2557"/>
+      <stop offset="100%" stop-color="#1a3a7a"/>
+    </linearGradient>
+    <linearGradient id="blueBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="mapGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f0fe"/>
+      <stop offset="100%" stop-color="#dce8fd"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#da)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#f0f4f8"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="220" height="720" fill="url(#sidebarGrad)"/>
+
+  <!-- Logo area -->
+  <rect x="0" y="0" width="220" height="64" fill="#0a1d4a"/>
+  <rect x="20" y="22" width="32" height="20" rx="3" fill="#2563eb"/>
+  <text x="30" y="36" font-size="11" font-weight="800" fill="#ffffff">D</text>
+  <text x="60" y="34" font-size="13" font-weight="700" fill="#ffffff">DNG Transport</text>
+  <text x="60" y="49" font-size="9" fill="#6b8cc4">Operations Hub</text>
+
+  <!-- Nav items -->
+  <rect x="0" y="76" width="220" height="40" fill="#1d4ed8" rx="0"/>
+  <rect x="12" y="88" width="4" height="16" rx="2" fill="#60a5fa"/>
+  <text x="26" y="86" font-size="13">📦</text>
+  <text x="50" y="101" font-size="12" font-weight="600" fill="#ffffff">Shipments</text>
+
+  <text x="26" y="134" font-size="13">🚛</text>
+  <text x="50" y="139" font-size="12" fill="#93b4d8">Fleet</text>
+
+  <text x="26" y="172" font-size="13">📍</text>
+  <text x="50" y="177" font-size="12" fill="#93b4d8">Live Map</text>
+
+  <text x="26" y="210" font-size="13">📊</text>
+  <text x="50" y="215" font-size="12" fill="#93b4d8">Reports</text>
+
+  <text x="26" y="248" font-size="13">⚙️</text>
+  <text x="50" y="253" font-size="12" fill="#93b4d8">Settings</text>
+
+  <!-- Sidebar divider -->
+  <line x1="20" y1="278" x2="200" y2="278" stroke="#2a4d8a" stroke-width="1"/>
+  <text x="20" y="298" font-size="10" fill="#5070a0" letter-spacing="1">LOCATIONS</text>
+  <text x="20" y="320" font-size="11" fill="#93b4d8">● Rahway, NJ</text>
+  <text x="20" y="340" font-size="11" fill="#93b4d8">● Dallas, TX</text>
+  <text x="20" y="360" font-size="11" fill="#93b4d8">● Memphis, TN</text>
+
+  <text x="20" y="400" font-size="10" fill="#5070a0" letter-spacing="1">TRUCK YARD</text>
+  <text x="20" y="420" font-size="11" fill="#60a5fa">12 En Route</text>
+  <text x="20" y="438" font-size="11" fill="#93b4d8">4 At Warehouse</text>
+  <text x="20" y="456" font-size="11" fill="#93b4d8">2 Maintenance</text>
+
+  <!-- User/bottom nav -->
+  <rect x="0" y="666" width="220" height="54" fill="#0a1d4a"/>
+  <circle cx="30" cy="693" r="14" fill="#2563eb"/>
+  <text x="30" y="698" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">JR</text>
+  <text x="52" y="688" font-size="11" font-weight="600" fill="#ffffff">James Rodriguez</text>
+  <text x="52" y="703" font-size="10" fill="#6b8cc4">Operations Manager</text>
+
+  <!-- Top header bar -->
+  <rect x="220" y="0" width="1060" height="58" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="240" y="24" font-size="16" font-weight="700" fill="#1e293b">Shipment Tracking Dashboard</text>
+  <text x="240" y="42" font-size="11" fill="#94a3b8">Live data · Last synced 2 min ago via Fleet Tracker API</text>
+  <!-- Add shipment button -->
+  <rect x="1080" y="14" width="176" height="34" rx="7" fill="url(#blueBtn)"/>
+  <text x="1168" y="35" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">+ New Shipment</text>
+  <!-- Sync badge -->
+  <rect x="960" y="18" width="108" height="26" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="1014" y="34" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">● API Live</text>
+
+  <!-- KPI cards row -->
+  <!-- Card 1 -->
+  <rect x="230" y="72" width="224" height="82" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="252" y="98" font-size="11" fill="#64748b">Active Shipments</text>
+  <text x="252" y="132" font-size="34" font-weight="800" fill="#1e293b">47</text>
+  <rect x="386" y="82" width="52" height="22" rx="6" fill="#eff6ff"/>
+  <text x="412" y="97" font-size="10" fill="#2563eb" text-anchor="middle">+3 today</text>
+
+  <!-- Card 2 -->
+  <rect x="466" y="72" width="224" height="82" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="488" y="98" font-size="11" fill="#64748b">Trucks En Route</text>
+  <text x="488" y="132" font-size="34" font-weight="800" fill="#1d4ed8">12</text>
+  <rect x="614" y="82" width="60" height="22" rx="6" fill="#eff6ff"/>
+  <text x="644" y="97" font-size="10" fill="#2563eb" text-anchor="middle">of 18 total</text>
+
+  <!-- Card 3 -->
+  <rect x="702" y="72" width="224" height="82" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="724" y="98" font-size="11" fill="#64748b">Delivered Today</text>
+  <text x="724" y="132" font-size="34" font-weight="800" fill="#16a34a">8</text>
+  <rect x="848" y="82" width="62" height="22" rx="6" fill="#f0fdf4"/>
+  <text x="879" y="97" font-size="10" fill="#16a34a" text-anchor="middle">on time: 7</text>
+
+  <!-- Card 4 -->
+  <rect x="938" y="72" width="224" height="82" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="960" y="98" font-size="11" fill="#64748b">Pending Assignment</text>
+  <text x="960" y="132" font-size="34" font-weight="800" fill="#f59e0b">3</text>
+  <rect x="1078" y="82" width="68" height="22" rx="6" fill="#fffbeb"/>
+  <text x="1112" y="97" font-size="10" fill="#d97706" text-anchor="middle">needs truck</text>
+
+  <!-- Main table area -->
+  <rect x="230" y="168" width="760" height="540" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Table header -->
+  <rect x="230" y="168" width="760" height="44" rx="10" fill="#f8fafc"/>
+  <rect x="230" y="190" width="760" height="22" fill="#f8fafc"/>
+  <text x="252" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">TRACKING ID</text>
+  <text x="372" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">CUSTOMER</text>
+  <text x="502" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">TRUCK</text>
+  <text x="566" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">ORIGIN → DEST</text>
+  <text x="718" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">STATUS</text>
+  <text x="820" y="196" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">LAST UPDATE</text>
+  <line x1="230" y1="212" x2="990" y2="212" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Row 1 - In Transit (highlighted) -->
+  <rect x="231" y="213" width="758" height="46" fill="#eff6ff"/>
+  <text x="252" y="241" font-size="12" font-weight="600" fill="#1d4ed8">DNG-2025-8841</text>
+  <text x="372" y="241" font-size="12" fill="#1e293b">Apex Manufacturing</text>
+  <text x="502" y="241" font-size="12" fill="#1e293b">TRK-047</text>
+  <text x="566" y="235" font-size="11" fill="#64748b">Rahway NJ</text>
+  <text x="566" y="250" font-size="11" fill="#64748b">→ Chicago IL</text>
+  <rect x="718" y="225" width="80" height="22" rx="6" fill="#dbeafe"/>
+  <text x="758" y="240" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">In Transit</text>
+  <text x="820" y="241" font-size="11" fill="#64748b">14 min ago</text>
+
+  <!-- Row 2 -->
+  <line x1="230" y1="259" x2="990" y2="259" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="287" font-size="12" fill="#475569">DNG-2025-8839</text>
+  <text x="372" y="287" font-size="12" fill="#1e293b">Redwood Logistics</text>
+  <text x="502" y="287" font-size="12" fill="#1e293b">TRK-031</text>
+  <text x="566" y="281" font-size="11" fill="#64748b">Dallas TX</text>
+  <text x="566" y="296" font-size="11" fill="#64748b">→ Houston TX</text>
+  <rect x="718" y="271" width="80" height="22" rx="6" fill="#dcfce7"/>
+  <text x="758" y="286" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">Delivered</text>
+  <text x="820" y="287" font-size="11" fill="#64748b">1 hr ago</text>
+
+  <!-- Row 3 -->
+  <line x1="230" y1="305" x2="990" y2="305" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="333" font-size="12" fill="#475569">DNG-2025-8837</text>
+  <text x="372" y="333" font-size="12" fill="#1e293b">Summit Freight</text>
+  <text x="502" y="333" font-size="12" fill="#1e293b">TRK-052</text>
+  <text x="566" y="327" font-size="11" fill="#64748b">Memphis TN</text>
+  <text x="566" y="342" font-size="11" fill="#64748b">→ Atlanta GA</text>
+  <rect x="718" y="317" width="80" height="22" rx="6" fill="#dbeafe"/>
+  <text x="758" y="332" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">In Transit</text>
+  <text x="820" y="333" font-size="11" fill="#64748b">32 min ago</text>
+
+  <!-- Row 4 -->
+  <line x1="230" y1="351" x2="990" y2="351" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="379" font-size="12" fill="#475569">DNG-2025-8835</text>
+  <text x="372" y="379" font-size="12" fill="#1e293b">Crestline Imports</text>
+  <text x="502" y="379" font-size="12" fill="#1e293b">TRK-018</text>
+  <text x="566" y="373" font-size="11" fill="#64748b">Rahway NJ</text>
+  <text x="566" y="388" font-size="11" fill="#64748b">→ Boston MA</text>
+  <rect x="718" y="363" width="80" height="22" rx="6" fill="#fef9c3"/>
+  <text x="758" y="378" font-size="10" fill="#ca8a04" text-anchor="middle" font-weight="600">Loading</text>
+  <text x="820" y="379" font-size="11" fill="#64748b">5 min ago</text>
+
+  <!-- Row 5 -->
+  <line x1="230" y1="397" x2="990" y2="397" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="425" font-size="12" fill="#475569">DNG-2025-8832</text>
+  <text x="372" y="425" font-size="12" fill="#1e293b">BlueStar Parts</text>
+  <text x="502" y="425" font-size="12" fill="#1e293b">TRK-041</text>
+  <text x="566" y="419" font-size="11" fill="#64748b">Dallas TX</text>
+  <text x="566" y="434" font-size="11" fill="#64748b">→ Kansas City MO</text>
+  <rect x="718" y="409" width="80" height="22" rx="6" fill="#dbeafe"/>
+  <text x="758" y="424" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">In Transit</text>
+  <text x="820" y="425" font-size="11" fill="#64748b">1 hr ago</text>
+
+  <!-- Row 6 -->
+  <line x1="230" y1="443" x2="990" y2="443" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="471" font-size="12" fill="#475569">DNG-2025-8830</text>
+  <text x="372" y="471" font-size="12" fill="#1e293b">Metro Warehouse Co</text>
+  <text x="502" y="471" font-size="12" fill="#1e293b">TRK-009</text>
+  <text x="566" y="465" font-size="11" fill="#64748b">Memphis TN</text>
+  <text x="566" y="480" font-size="11" fill="#64748b">→ Nashville TN</text>
+  <rect x="718" y="455" width="80" height="22" rx="6" fill="#dcfce7"/>
+  <text x="758" y="470" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">Delivered</text>
+  <text x="820" y="471" font-size="11" fill="#64748b">3 hrs ago</text>
+
+  <!-- Row 7 -->
+  <line x1="230" y1="489" x2="990" y2="489" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="517" font-size="12" fill="#475569">DNG-2025-8828</text>
+  <text x="372" y="517" font-size="12" fill="#1e293b">Irongate Steel</text>
+  <text x="502" y="517" font-size="12" fill="#94a3b8">— Unassigned</text>
+  <text x="566" y="511" font-size="11" fill="#64748b">Rahway NJ</text>
+  <text x="566" y="526" font-size="11" fill="#64748b">→ Philadelphia PA</text>
+  <rect x="718" y="501" width="80" height="22" rx="6" fill="#fef3c7"/>
+  <text x="758" y="516" font-size="10" fill="#d97706" text-anchor="middle" font-weight="600">Pending</text>
+  <text x="820" y="517" font-size="11" fill="#64748b">New entry</text>
+
+  <!-- Row 8 -->
+  <line x1="230" y1="535" x2="990" y2="535" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="252" y="563" font-size="12" fill="#475569">DNG-2025-8826</text>
+  <text x="372" y="563" font-size="12" fill="#1e293b">Cortland Cold Chain</text>
+  <text x="502" y="563" font-size="12" fill="#1e293b">TRK-036</text>
+  <text x="566" y="557" font-size="11" fill="#64748b">Dallas TX</text>
+  <text x="566" y="572" font-size="11" fill="#64748b">→ San Antonio TX</text>
+  <rect x="718" y="547" width="80" height="22" rx="6" fill="#dbeafe"/>
+  <text x="758" y="562" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">In Transit</text>
+  <text x="820" y="563" font-size="11" fill="#64748b">48 min ago</text>
+
+  <!-- Pagination -->
+  <text x="252" y="696" font-size="11" fill="#94a3b8">Showing 8 of 47 shipments</text>
+  <rect x="820" y="679" width="72" height="28" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="856" y="697" font-size="11" fill="#64748b" text-anchor="middle">← Prev</text>
+  <rect x="900" y="679" width="72" height="28" rx="6" fill="url(#blueBtn)"/>
+  <text x="936" y="697" font-size="11" fill="#ffffff" text-anchor="middle">Next →</text>
+
+  <!-- Right side: Fleet map panel -->
+  <rect x="1002" y="168" width="266" height="322" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="1002" y="168" width="266" height="44" rx="10" fill="#f8fafc"/>
+  <rect x="1002" y="190" width="266" height="22" fill="#f8fafc"/>
+  <text x="1022" y="196" font-size="12" font-weight="600" fill="#1e293b">Live Fleet Map</text>
+  <text x="1234" y="196" font-size="10" fill="#2563eb" text-anchor="end">● Real-time</text>
+  <line x1="1002" y1="212" x2="1268" y2="212" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Map area -->
+  <rect x="1010" y="220" width="250" height="200" rx="6" fill="url(#mapGrad)"/>
+  <!-- US road grid approximation -->
+  <line x1="1010" y1="280" x2="1260" y2="280" stroke="#c7d6f5" stroke-width="1.5"/>
+  <line x1="1010" y1="330" x2="1260" y2="330" stroke="#c7d6f5" stroke-width="1.5"/>
+  <line x1="1080" y1="220" x2="1080" y2="420" stroke="#c7d6f5" stroke-width="1.5"/>
+  <line x1="1160" y1="220" x2="1160" y2="420" stroke="#c7d6f5" stroke-width="1.5"/>
+  <!-- State labels faint -->
+  <text x="1040" y="260" font-size="9" fill="#b0c4e8">NJ</text>
+  <text x="1112" y="260" font-size="9" fill="#b0c4e8">OH</text>
+  <text x="1180" y="260" font-size="9" fill="#b0c4e8">IL</text>
+  <text x="1040" y="350" font-size="9" fill="#b0c4e8">TN</text>
+  <text x="1112" y="350" font-size="9" fill="#b0c4e8">MS</text>
+  <text x="1180" y="350" font-size="9" fill="#b0c4e8">TX</text>
+  <!-- Truck pins -->
+  <circle cx="1055" cy="272" r="8" fill="#1d4ed8" stroke="#ffffff" stroke-width="2"/>
+  <text x="1055" y="276" font-size="7" fill="#fff" text-anchor="middle">T</text>
+  <circle cx="1145" cy="265" r="8" fill="#1d4ed8" stroke="#ffffff" stroke-width="2"/>
+  <text x="1145" y="269" font-size="7" fill="#fff" text-anchor="middle">T</text>
+  <circle cx="1195" cy="355" r="8" fill="#1d4ed8" stroke="#ffffff" stroke-width="2"/>
+  <text x="1195" y="359" font-size="7" fill="#fff" text-anchor="middle">T</text>
+  <circle cx="1070" cy="340" r="8" fill="#1d4ed8" stroke="#ffffff" stroke-width="2"/>
+  <text x="1070" y="344" font-size="7" fill="#fff" text-anchor="middle">T</text>
+  <!-- Warehouse pins -->
+  <rect x="1046" y="248" width="18" height="14" rx="2" fill="#f59e0b" stroke="#fff" stroke-width="1"/>
+  <text x="1055" y="259" font-size="7" fill="#fff" text-anchor="middle">W</text>
+  <rect x="1185" y="378" width="18" height="14" rx="2" fill="#f59e0b" stroke="#fff" stroke-width="1"/>
+  <text x="1194" y="389" font-size="7" fill="#fff" text-anchor="middle">W</text>
+  <rect x="1060" y="368" width="18" height="14" rx="2" fill="#f59e0b" stroke="#fff" stroke-width="1"/>
+  <text x="1069" y="379" font-size="7" fill="#fff" text-anchor="middle">W</text>
+
+  <!-- Fleet legend -->
+  <circle cx="1022" cy="436" r="6" fill="#1d4ed8"/>
+  <text x="1034" y="440" font-size="10" fill="#64748b">Truck en route</text>
+  <rect x="1106" y="430" width="12" height="10" rx="2" fill="#f59e0b"/>
+  <text x="1124" y="440" font-size="10" fill="#64748b">Warehouse</text>
+
+  <!-- Right: Activity feed -->
+  <rect x="1002" y="502" width="266" height="206" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="1002" y="502" width="266" height="44" rx="10" fill="#f8fafc"/>
+  <rect x="1002" y="524" width="266" height="22" fill="#f8fafc"/>
+  <text x="1022" y="530" font-size="12" font-weight="600" fill="#1e293b">API Sync Log</text>
+  <line x1="1002" y1="546" x2="1268" y2="546" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="1022" y="566" font-size="10" fill="#94a3b8">12:04 PM</text>
+  <text x="1078" y="566" font-size="11" fill="#1e293b">TRK-047 location updated</text>
+  <text x="1022" y="584" font-size="10" fill="#94a3b8">11:52 PM</text>
+  <text x="1078" y="584" font-size="11" fill="#16a34a">DNG-8839 marked delivered</text>
+  <text x="1022" y="602" font-size="10" fill="#94a3b8">11:38 PM</text>
+  <text x="1078" y="602" font-size="11" fill="#1e293b">TRK-052 location updated</text>
+  <text x="1022" y="620" font-size="10" fill="#94a3b8">11:20 PM</text>
+  <text x="1078" y="620" font-size="11" fill="#d97706">DNG-8828 pending truck</text>
+  <text x="1022" y="638" font-size="10" fill="#94a3b8">11:05 PM</text>
+  <text x="1078" y="638" font-size="11" fill="#1e293b">TRK-036 location updated</text>
+  <text x="1022" y="656" font-size="10" fill="#94a3b8">10:49 PM</text>
+  <text x="1078" y="656" font-size="11" fill="#16a34a">DNG-8830 marked delivered</text>
+  <text x="1022" y="674" font-size="10" fill="#94a3b8">10:30 PM</text>
+  <text x="1078" y="674" font-size="11" fill="#1e293b">Scheduled sync complete (18)</text>
+  <text x="1022" y="692" font-size="10" fill="#94a3b8">10:00 PM</text>
+  <text x="1078" y="692" font-size="11" fill="#1e293b">Scheduled sync complete (18)</text>
+
+  </g>
+</svg>

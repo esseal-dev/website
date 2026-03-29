@@ -2408,11 +2408,25 @@ h4 {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   aspect-ratio: 16/9;
+  overflow: hidden;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
   font-size: 0.875rem;
+}
+
+/* Inline text links inside case study content */
+.section-padding p a,
+.section-padding li a {
+  color: var(--brand-orange);
+  text-decoration: none;
+}
+
+.section-padding p a:hover,
+.section-padding li a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

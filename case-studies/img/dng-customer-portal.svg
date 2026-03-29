@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="cp"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2557"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="mapBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f0fe"/>
+      <stop offset="100%" stop-color="#dce8fd"/>
+    </linearGradient>
+    <linearGradient id="trackBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#cp)">
+
+  <!-- Page background -->
+  <rect width="1280" height="720" fill="#f8fafc"/>
+
+  <!-- Browser chrome -->
+  <rect x="0" y="0" width="1280" height="40" fill="#1e1e1e"/>
+  <circle cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="38" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="56" cy="20" r="6" fill="#27c93f"/>
+  <rect x="200" y="10" width="880" height="22" rx="11" fill="#2e2e2e"/>
+  <text x="640" y="24" font-size="10" fill="#888" text-anchor="middle">https://www.dngtransport.com/tracking</text>
+
+  <!-- Website nav bar -->
+  <rect x="0" y="40" width="1280" height="58" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Logo -->
+  <rect x="40" y="52" width="36" height="24" rx="4" fill="#1d4ed8"/>
+  <text x="58" y="68" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="84" y="62" font-size="14" font-weight="800" fill="#0f2557">DNG Transport</text>
+  <text x="84" y="76" font-size="9" fill="#94a3b8" letter-spacing="1">FREIGHT &amp; LOGISTICS</text>
+  <!-- Nav links -->
+  <text x="480" y="72" font-size="12" fill="#475569">Services</text>
+  <text x="570" y="72" font-size="12" fill="#475569">About</text>
+  <text x="640" y="72" font-size="12" fill="#475569">Locations</text>
+  <text x="730" y="72" font-size="12" font-weight="600" fill="#1d4ed8">Track Shipment</text>
+  <text x="840" y="72" font-size="12" fill="#475569">Contact</text>
+  <!-- CTA -->
+  <rect x="1140" y="52" width="100" height="32" rx="6" fill="url(#trackBtn)"/>
+  <text x="1190" y="72" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">Get a Quote</text>
+
+  <!-- Hero tracking band -->
+  <rect x="0" y="98" width="1280" height="140" fill="url(#heroGrad)"/>
+  <text x="640" y="148" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle">Track Your Shipment</text>
+  <text x="640" y="172" font-size="13" fill="#93c5fd" text-anchor="middle">Enter your tracking number for live location and estimated delivery</text>
+
+  <!-- Search bar -->
+  <rect x="280" y="186" width="720" height="46" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="310" y="215" font-size="13" fill="#94a3b8">DNG-2025-8841</text>
+  <rect x="940" y="190" width="52" height="38" rx="8" fill="url(#trackBtn)"/>
+  <text x="966" y="213" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">Track</text>
+
+  <!-- Results card -->
+  <rect x="100" y="252" width="1080" height="58" rx="12" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+  <!-- Shipment found banner -->
+  <rect x="100" y="252" width="1080" height="58" rx="12" fill="#eff6ff"/>
+  <rect x="100" y="252" width="6" height="58" rx="3" fill="#1d4ed8"/>
+  <text x="124" y="276" font-size="13" font-weight="700" fill="#1d4ed8">Shipment Found — DNG-2025-8841</text>
+  <text x="124" y="296" font-size="11" fill="#475569">Apex Manufacturing  ·  FTL  ·  Est. delivery: Mon 31 Mar 2026</text>
+  <rect x="1030" y="264" width="136" height="26" rx="6" fill="#dbeafe"/>
+  <text x="1098" y="281" font-size="11" fill="#1d4ed8" text-anchor="middle" font-weight="600">● In Transit</text>
+
+  <!-- Main two-col result layout -->
+  <!-- Left: Status timeline -->
+  <rect x="100" y="324" width="460" height="382" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="126" y="354" font-size="14" font-weight="700" fill="#1e293b">Shipment Status</text>
+  <line x1="100" y1="368" x2="560" y2="368" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- Step 1: Picked Up - done -->
+  <circle cx="140" cy="406" r="14" fill="#1d4ed8"/>
+  <text x="140" y="411" font-size="12" fill="#ffffff" text-anchor="middle">✓</text>
+  <line x1="140" y1="420" x2="140" y2="468" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="168" y="400" font-size="12" font-weight="600" fill="#1e293b">Picked Up</text>
+  <text x="168" y="416" font-size="11" fill="#64748b">Rahway, NJ warehouse · 28 Mar 2026, 8:14 AM</text>
+
+  <!-- Step 2: Departed -->
+  <circle cx="140" cy="482" r="14" fill="#1d4ed8"/>
+  <text x="140" y="487" font-size="12" fill="#ffffff" text-anchor="middle">✓</text>
+  <line x1="140" y1="496" x2="140" y2="544" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="168" y="476" font-size="12" font-weight="600" fill="#1e293b">Departed Origin</text>
+  <text x="168" y="492" font-size="11" fill="#64748b">TRK-047 departed facility · 28 Mar 2026, 9:30 AM</text>
+
+  <!-- Step 3: In Transit - ACTIVE -->
+  <circle cx="140" cy="558" r="16" fill="#1d4ed8" stroke="#93c5fd" stroke-width="3"/>
+  <text x="140" y="563" font-size="11" fill="#ffffff" text-anchor="middle">●</text>
+  <line x1="140" y1="574" x2="140" y2="612" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="168" y="552" font-size="12" font-weight="700" fill="#1d4ed8">In Transit — Now</text>
+  <text x="168" y="568" font-size="11" fill="#64748b">Last ping: I-80 W near Gary, IN · 30 Mar 2026, 12:04 PM</text>
+  <rect x="168" y="576" width="136" height="20" rx="6" fill="#dbeafe"/>
+  <text x="236" y="590" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">Approx. 94 miles remaining</text>
+
+  <!-- Step 4: Out for Delivery - pending -->
+  <circle cx="140" cy="628" r="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="140" y="633" font-size="11" fill="#94a3b8" text-anchor="middle">4</text>
+  <text x="168" y="622" font-size="12" fill="#94a3b8">Out for Delivery</text>
+  <text x="168" y="638" font-size="11" fill="#cbd5e1">Chicago, IL · Est. 31 Mar 2026</text>
+
+  <!-- Step 5: Delivered - pending -->
+  <circle cx="140" cy="686" r="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="140" y="691" font-size="11" fill="#94a3b8" text-anchor="middle">5</text>
+  <text x="168" y="680" font-size="12" fill="#94a3b8">Delivered</text>
+  <text x="168" y="696" font-size="11" fill="#cbd5e1">Scheduled: Mon 31 Mar 2026</text>
+
+  <!-- Right: Map + details -->
+  <rect x="580" y="324" width="600" height="382" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="606" y="354" font-size="14" font-weight="700" fill="#1e293b">Live Truck Location</text>
+  <text x="1156" y="354" font-size="11" fill="#1d4ed8" text-anchor="end">● Updating automatically</text>
+  <line x1="580" y1="368" x2="1180" y2="368" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- Map -->
+  <rect x="592" y="376" width="576" height="220" rx="8" fill="url(#mapBg)"/>
+  <!-- Interstate highways approximation -->
+  <line x1="592" y1="460" x2="1168" y2="460" stroke="#b8ccf0" stroke-width="3"/>
+  <line x1="592" y1="430" x2="1168" y2="430" stroke="#ccd8f0" stroke-width="2"/>
+  <line x1="592" y1="510" x2="1168" y2="510" stroke="#ccd8f0" stroke-width="2"/>
+  <line x1="720" y1="376" x2="720" y2="596" stroke="#ccd8f0" stroke-width="2"/>
+  <line x1="880" y1="376" x2="880" y2="596" stroke="#ccd8f0" stroke-width="2"/>
+  <line x1="1040" y1="376" x2="1040" y2="596" stroke="#ccd8f0" stroke-width="2"/>
+  <!-- Route line: NJ to Chicago -->
+  <polyline points="1100,420 980,440 860,450 800,455 740,458 680,460 640,462" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-dasharray="8,4" opacity="0.7"/>
+  <!-- Origin pin (NJ) -->
+  <circle cx="1110" cy="418" r="8" fill="#16a34a" stroke="#ffffff" stroke-width="2"/>
+  <text x="1110" y="410" font-size="9" fill="#16a34a" text-anchor="middle">NJ</text>
+  <!-- Destination pin (Chicago) -->
+  <path d="M630,442 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L630,462 Z" fill="#1d4ed8"/>
+  <text x="630" y="437" font-size="8" fill="#fff" text-anchor="middle">CHI</text>
+  <!-- Truck current position -->
+  <circle cx="800" cy="454" r="14" fill="#1d4ed8" stroke="#ffffff" stroke-width="3"/>
+  <text x="800" y="458" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">🚛</text>
+  <!-- Pulse ring -->
+  <circle cx="800" cy="454" r="24" fill="none" stroke="#1d4ed8" stroke-width="1.5" opacity="0.35"/>
+  <!-- Labels -->
+  <text x="660" y="395" font-size="9" fill="#94a3b8">I-80 W</text>
+  <text x="1100" y="480" font-size="9" fill="#94a3b8">Rahway NJ</text>
+  <text x="617" y="548" font-size="9" fill="#94a3b8">Chicago IL</text>
+
+  <!-- Map legend -->
+  <rect x="592" y="566" width="576" height="28" rx="0" fill="#f8fafc"/>
+  <circle cx="614" cy="580" r="5" fill="#16a34a"/>
+  <text x="624" y="584" font-size="9" fill="#64748b">Origin (Rahway NJ)</text>
+  <circle cx="740" cy="580" r="5" fill="#1d4ed8" stroke="#fff" stroke-width="1"/>
+  <text x="750" y="584" font-size="9" fill="#64748b">Current (Gary IN)</text>
+  <path d="M862,574 m-5,0 a5,5 0 1 1 10,0 a5,5 0 0 1 -10,0 L862,584 Z" fill="#1d4ed8"/>
+  <text x="872" y="584" font-size="9" fill="#64748b">Destination (Chicago IL)</text>
+
+  <!-- Shipment detail tiles -->
+  <rect x="592" y="602" width="180" height="92" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="612" y="624" font-size="10" fill="#94a3b8" letter-spacing="1">TRUCK ID</text>
+  <text x="612" y="648" font-size="18" font-weight="700" fill="#1e293b">TRK-047</text>
+  <text x="612" y="666" font-size="10" fill="#64748b">Fleet Tracker API</text>
+  <text x="612" y="682" font-size="10" fill="#64748b">Current: Gary, IN</text>
+
+  <rect x="784" y="602" width="180" height="92" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="804" y="624" font-size="10" fill="#94a3b8" letter-spacing="1">SERVICE TYPE</text>
+  <text x="804" y="648" font-size="18" font-weight="700" fill="#1e293b">FTL</text>
+  <text x="804" y="666" font-size="10" fill="#64748b">Full Truckload</text>
+  <text x="804" y="682" font-size="10" fill="#64748b">Direct to destination</text>
+
+  <rect x="976" y="602" width="192" height="92" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="996" y="624" font-size="10" fill="#94a3b8" letter-spacing="1">EST. DELIVERY</text>
+  <text x="996" y="648" font-size="16" font-weight="700" fill="#1d4ed8">Mon 31 Mar</text>
+  <text x="996" y="666" font-size="10" fill="#64748b">Between 9:00 AM – 1:00 PM</text>
+  <text x="996" y="682" font-size="10" fill="#16a34a" font-weight="600">On schedule ✓</text>
+
+  </g>
+</svg>

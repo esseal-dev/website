@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="ma"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="redBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CF2027"/>
+      <stop offset="100%" stop-color="#e02830"/>
+    </linearGradient>
+    <linearGradient id="sideGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#ma)">
+
+  <!-- Full background -->
+  <rect width="1280" height="720" fill="#0d0d0d"/>
+
+  <!-- ── SIDEBAR ── -->
+  <rect x="0" y="0" width="216" height="720" fill="url(#sideGrad)"/>
+  <rect x="0" y="0" width="3" height="720" fill="#CF2027"/>
+
+  <!-- Logo / org name -->
+  <rect x="0" y="0" width="216" height="68" fill="#080808"/>
+  <rect x="16" y="18" width="32" height="32" rx="4" fill="#CF2027"/>
+  <text x="32" y="38" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">⚑</text>
+  <text x="58" y="30" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.5">MOTORSPORTS</text>
+  <text x="58" y="46" font-size="10" fill="#666" letter-spacing="1">PLATFORM ADMIN</text>
+
+  <!-- Nav items -->
+  <rect x="0" y="80" width="216" height="42" fill="#CF2027" opacity="0.12"/>
+  <rect x="0" y="80" width="3" height="42" fill="#CF2027"/>
+  <text x="18" y="94" font-size="13">📅</text>
+  <text x="40" y="105" font-size="12" font-weight="600" fill="#ffffff">Events</text>
+  <rect x="174" y="88" width="28" height="18" rx="9" fill="#CF2027"/>
+  <text x="188" y="100" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">8</text>
+
+  <text x="18" y="142" font-size="13">📋</text>
+  <text x="40" y="147" font-size="12" fill="#555">Registrations</text>
+
+  <text x="18" y="180" font-size="13">👤</text>
+  <text x="40" y="185" font-size="12" fill="#555">Participants</text>
+
+  <text x="18" y="218" font-size="13">⏱</text>
+  <text x="40" y="223" font-size="12" fill="#555">Timing</text>
+
+  <text x="18" y="256" font-size="13">🏁</text>
+  <text x="40" y="261" font-size="12" fill="#555">Officials</text>
+
+  <text x="18" y="294" font-size="13">📊</text>
+  <text x="40" y="299" font-size="12" fill="#555">Reports</text>
+
+  <text x="18" y="332" font-size="13">⚙️</text>
+  <text x="40" y="337" font-size="12" fill="#555">Settings</text>
+
+  <!-- Sidebar divider -->
+  <line x1="16" y1="360" x2="200" y2="360" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="16" y="380" font-size="9" fill="#444" letter-spacing="1">UPCOMING</text>
+  <text x="16" y="400" font-size="11" fill="#CF2027" font-weight="600">Summer Enduro</text>
+  <text x="16" y="415" font-size="10" fill="#444">Jun 14–15 · Watkins Glen</text>
+  <text x="16" y="438" font-size="11" fill="#666">Spring Time Trial</text>
+  <text x="16" y="453" font-size="10" fill="#444">May 3 · Road America</text>
+  <text x="16" y="476" font-size="11" fill="#666">HPDE #8</text>
+  <text x="16" y="491" font-size="10" fill="#444">Apr 19 · Thunderhill</text>
+
+  <!-- User bottom -->
+  <rect x="0" y="672" width="216" height="48" fill="#080808"/>
+  <circle cx="28" cy="696" r="14" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
+  <text x="28" y="700" font-size="10" fill="#CF2027" text-anchor="middle" font-weight="700">DM</text>
+  <text x="50" y="691" font-size="11" font-weight="600" fill="#ffffff">David Martinez</text>
+  <text x="50" y="706" font-size="10" fill="#555">Event Director</text>
+
+  <!-- ── HEADER ── -->
+  <rect x="216" y="0" width="1064" height="58" fill="#111111" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="238" y="24" font-size="17" font-weight="700" fill="#ffffff">Event Management</text>
+  <text x="238" y="42" font-size="11" fill="#555">8 upcoming events  ·  Season 2026</text>
+  <!-- New event button -->
+  <rect x="1098" y="14" width="166" height="32" rx="6" fill="url(#redBtn)"/>
+  <text x="1181" y="34" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">+ Create Event</text>
+  <!-- Search -->
+  <rect x="850" y="16" width="230" height="28" rx="6" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="866" y="34" font-size="11" fill="#444">🔍  Search events...</text>
+
+  <!-- ── KPI CARDS ── -->
+  <rect x="228" y="72" width="222" height="76" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="250" y="96" font-size="10" fill="#555" letter-spacing="1">UPCOMING EVENTS</text>
+  <text x="250" y="130" font-size="34" font-weight="800" fill="#ffffff">8</text>
+  <rect x="378" y="82" width="54" height="20" rx="5" fill="#CF2027" opacity="0.15" stroke="#CF2027" stroke-width="0.8"/>
+  <text x="405" y="95" font-size="9" fill="#CF2027" text-anchor="middle">this season</text>
+
+  <rect x="462" y="72" width="222" height="76" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="484" y="96" font-size="10" fill="#555" letter-spacing="1">TOTAL REGISTRATIONS</text>
+  <text x="484" y="130" font-size="34" font-weight="800" fill="#CF2027">1,863</text>
+
+  <rect x="696" y="72" width="222" height="76" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="718" y="96" font-size="10" fill="#555" letter-spacing="1">CIRCUITS</text>
+  <text x="718" y="130" font-size="34" font-weight="800" fill="#ffffff">12</text>
+  <text x="718" y="143" font-size="10" fill="#444">across 8 states</text>
+
+  <rect x="930" y="72" width="344" height="76" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="952" y="96" font-size="10" fill="#555" letter-spacing="1">SEASON REVENUE</text>
+  <text x="952" y="130" font-size="34" font-weight="800" fill="#ffffff">$142,840</text>
+  <!-- Bar -->
+  <rect x="952" y="138" width="300" height="4" rx="2" fill="#1e1e1e"/>
+  <rect x="952" y="138" width="218" height="4" rx="2" fill="#CF2027"/>
+  <text x="952" y="149" font-size="9" fill="#444">73% of target</text>
+
+  <!-- ── EVENTS TABLE ── -->
+  <rect x="228" y="162" width="1046" height="546" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Table header -->
+  <rect x="228" y="162" width="1046" height="44" rx="8" fill="#0d0d0d"/>
+  <rect x="228" y="184" width="1046" height="22" fill="#0d0d0d"/>
+  <text x="252" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">EVENT</text>
+  <text x="490" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">TYPE</text>
+  <text x="580" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">CIRCUIT</text>
+  <text x="730" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">DATE</text>
+  <text x="840" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">REGISTERED</text>
+  <text x="970" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">CAPACITY</text>
+  <text x="1080" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">STATUS</text>
+  <text x="1210" y="190" font-size="10" fill="#444" letter-spacing="1" font-weight="600">⋮</text>
+  <line x1="228" y1="206" x2="1274" y2="206" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Row 1 — highlighted (upcoming, high regs) -->
+  <rect x="229" y="207" width="1044" height="52" fill="#1a0505"/>
+  <rect x="229" y="207" width="3" height="52" fill="#CF2027"/>
+  <text x="252" y="228" font-size="13" font-weight="700" fill="#ffffff">Summer Enduro Classic</text>
+  <text x="252" y="245" font-size="10" fill="#555">Watkins Glen Int'l Raceway · Multi-class Endurance</text>
+  <rect x="490" y="216" width="76" height="22" rx="5" fill="#CF2027" opacity="0.2" stroke="#CF2027" stroke-width="0.8"/>
+  <text x="528" y="231" font-size="10" fill="#CF2027" text-anchor="middle" font-weight="600">Endurance</text>
+  <text x="580" y="232" font-size="11" fill="#888">Watkins Glen, NY</text>
+  <text x="730" y="228" font-size="11" fill="#ffffff">Jun 14–15</text>
+  <text x="730" y="244" font-size="10" fill="#555">2026</text>
+  <text x="840" y="232" font-size="13" font-weight="700" fill="#CF2027">847</text>
+  <text x="970" y="232" font-size="11" fill="#888">900</text>
+  <rect x="1080" y="218" width="72" height="24" rx="5" fill="#CF2027" opacity="0.15" stroke="#CF2027" stroke-width="1"/>
+  <text x="1116" y="234" font-size="10" fill="#CF2027" text-anchor="middle" font-weight="600">● Open</text>
+
+  <!-- Row 2 -->
+  <line x1="228" y1="259" x2="1274" y2="259" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="278" font-size="13" fill="#cccccc">Spring Time Trial — Road America</text>
+  <text x="252" y="294" font-size="10" fill="#444">Road America · Timed laps, 4 run groups</text>
+  <rect x="490" y="266" width="76" height="22" rx="5" fill="#333"/>
+  <text x="528" y="281" font-size="10" fill="#aaa" text-anchor="middle">Time Trial</text>
+  <text x="580" y="280" font-size="11" fill="#666">Elkhart Lake, WI</text>
+  <text x="730" y="276" font-size="11" fill="#aaa">May 3</text>
+  <text x="730" y="292" font-size="10" fill="#444">2026</text>
+  <text x="840" y="280" font-size="13" fill="#ffffff">312</text>
+  <text x="970" y="280" font-size="11" fill="#888">360</text>
+  <rect x="1080" y="266" width="72" height="24" rx="5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
+  <text x="1116" y="282" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="600">● Open</text>
+
+  <!-- Row 3 -->
+  <line x1="228" y1="311" x2="1274" y2="311" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="330" font-size="13" fill="#cccccc">HPDE Track Day #8 — Thunderhill</text>
+  <text x="252" y="346" font-size="10" fill="#444">Thunderhill Raceway · Novice, Int, Advanced, Instructor</text>
+  <rect x="490" y="318" width="50" height="22" rx="5" fill="#333"/>
+  <text x="515" y="333" font-size="10" fill="#aaa" text-anchor="middle">HPDE</text>
+  <text x="580" y="332" font-size="11" fill="#666">Willows, CA</text>
+  <text x="730" y="328" font-size="11" fill="#aaa">Apr 19</text>
+  <text x="730" y="344" font-size="10" fill="#444">2026</text>
+  <text x="840" y="332" font-size="13" fill="#ffffff">186</text>
+  <text x="970" y="332" font-size="11" fill="#888">240</text>
+  <rect x="1080" y="318" width="72" height="24" rx="5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
+  <text x="1116" y="334" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="600">● Open</text>
+
+  <!-- Row 4 — SOLD OUT -->
+  <line x1="228" y1="363" x2="1274" y2="363" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="382" font-size="13" fill="#888">Wheel-to-Wheel Sprint — NJMP</text>
+  <text x="252" y="398" font-size="10" fill="#333">New Jersey Motorsports Park · Full grid, W2W racing</text>
+  <rect x="490" y="370" width="42" height="22" rx="5" fill="#222"/>
+  <text x="511" y="385" font-size="10" fill="#666" text-anchor="middle">W2W</text>
+  <text x="580" y="384" font-size="11" fill="#444">Millville, NJ</text>
+  <text x="730" y="380" font-size="11" fill="#555">Apr 6</text>
+  <text x="730" y="396" font-size="10" fill="#333">2026</text>
+  <text x="840" y="384" font-size="13" fill="#888">94</text>
+  <text x="970" y="384" font-size="11" fill="#555">94</text>
+  <rect x="1080" y="370" width="72" height="24" rx="5" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="1116" y="386" font-size="10" fill="#555" text-anchor="middle">Sold Out</text>
+
+  <!-- Row 5 -->
+  <line x1="228" y1="415" x2="1274" y2="415" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="434" font-size="13" fill="#cccccc">Buttonwillow Enduro — 4H Race</text>
+  <text x="252" y="450" font-size="10" fill="#444">Buttonwillow Raceway · 4-hour team endurance</text>
+  <rect x="490" y="422" width="76" height="22" rx="5" fill="#222"/>
+  <text x="528" y="437" font-size="10" fill="#888" text-anchor="middle">Endurance</text>
+  <text x="580" y="436" font-size="11" fill="#666">Buttonwillow, CA</text>
+  <text x="730" y="432" font-size="11" fill="#aaa">Jul 11–12</text>
+  <text x="730" y="448" font-size="10" fill="#444">2026</text>
+  <text x="840" y="436" font-size="13" fill="#ffffff">204</text>
+  <text x="970" y="436" font-size="11" fill="#888">400</text>
+  <rect x="1080" y="422" width="72" height="24" rx="5" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
+  <text x="1116" y="438" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="600">● Open</text>
+
+  <!-- Row 6 — Draft -->
+  <line x1="228" y1="467" x2="1274" y2="467" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="486" font-size="13" fill="#555">VIR Sprint Weekend — August</text>
+  <text x="252" y="502" font-size="10" fill="#333">Virginia Int'l Raceway · Multi-class sprint races</text>
+  <rect x="490" y="474" width="48" height="22" rx="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="514" y="489" font-size="10" fill="#555" text-anchor="middle">Sprint</text>
+  <text x="580" y="488" font-size="11" fill="#333">Alton, VA</text>
+  <text x="730" y="484" font-size="11" fill="#444">Aug 22</text>
+  <text x="730" y="500" font-size="10" fill="#333">2026</text>
+  <text x="840" y="488" font-size="11" fill="#444">—</text>
+  <text x="970" y="488" font-size="11" fill="#333">350</text>
+  <rect x="1080" y="474" width="72" height="24" rx="5" fill="#111" stroke="#222" stroke-width="1"/>
+  <text x="1116" y="490" font-size="10" fill="#444" text-anchor="middle">Draft</text>
+
+  <!-- Row 7 -->
+  <line x1="228" y1="519" x2="1274" y2="519" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="252" y="538" font-size="13" fill="#cccccc">Season Kickoff — Barber Motorsports</text>
+  <text x="252" y="554" font-size="10" fill="#444">Barber Motorsports Park · HPDE + Time Trial combined</text>
+  <rect x="490" y="526" width="50" height="22" rx="5" fill="#222"/>
+  <text x="515" y="541" font-size="10" fill="#888" text-anchor="middle">HPDE</text>
+  <text x="580" y="540" font-size="11" fill="#666">Birmingham, AL</text>
+  <text x="730" y="536" font-size="11" fill="#aaa">Mar 7</text>
+  <text x="730" y="552" font-size="10" fill="#444">2026</text>
+  <text x="840" y="540" font-size="13" fill="#888">420</text>
+  <text x="970" y="540" font-size="11" fill="#888">420</text>
+  <rect x="1080" y="526" width="72" height="24" rx="5" fill="#111" stroke="#222" stroke-width="1"/>
+  <text x="1116" y="542" font-size="10" fill="#555" text-anchor="middle">Complete</text>
+
+  <!-- Pagination -->
+  <text x="252" y="696" font-size="11" fill="#444">Showing 7 of 24 events — 2026 Season</text>
+  <rect x="1100" y="678" width="80" height="28" rx="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="1140" y="696" font-size="11" fill="#666" text-anchor="middle">← Prev</text>
+  <rect x="1190" y="678" width="70" height="28" rx="5" fill="url(#redBtn)"/>
+  <text x="1225" y="696" font-size="11" fill="#ffffff" text-anchor="middle">Next →</text>
+
+  </g>
+</svg>

@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="dd1"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="aiGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#dd1)">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#f8fafc"/>
+
+  <!-- Sidebar -->
+  <rect width="232" height="720" fill="#ffffff"/>
+  <rect x="232" width="1" height="720" fill="#e2e8f0"/>
+
+  <!-- Logo -->
+  <rect x="20" y="20" width="192" height="40" rx="8" fill="url(#aiGrad)" opacity="0.08"/>
+  <rect x="28" y="28" width="28" height="28" rx="6" fill="url(#aiGrad)"/>
+  <text x="42" y="47" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="66" y="38" font-size="13" font-weight="700" fill="#0f172a">Dentistry</text>
+  <text x="66" y="52" font-size="13" font-weight="700" fill="#7c3aed">Dashboard</text>
+
+  <!-- Practice selector -->
+  <rect x="16" y="72" width="200" height="34" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="34" cy="89" r="10" fill="#7c3aed" opacity="0.15"/>
+  <text x="34" y="93" font-size="9" fill="#7c3aed" text-anchor="middle" font-weight="700">SM</text>
+  <text x="50" y="86" font-size="11" font-weight="600" fill="#0f172a">Smile Care London</text>
+  <text x="50" y="99" font-size="10" fill="#94a3b8">5 dentists · 3 chairs</text>
+  <text x="214" y="93" font-size="12" fill="#94a3b8" text-anchor="end">▾</text>
+
+  <!-- Nav items -->
+  <rect x="12" y="122" width="208" height="36" rx="8" fill="url(#aiGrad)" opacity="0.1"/>
+  <rect x="12" y="122" width="3" height="36" rx="2" fill="url(#aiGrad)"/>
+  <text x="42" y="145" font-size="13" font-weight="600" fill="#7c3aed">⊞  Dashboard</text>
+
+  <text x="42" y="184" font-size="13" fill="#475569">👤  Patients</text>
+  <text x="42" y="216" font-size="13" fill="#475569">📅  Appointments</text>
+  <text x="42" y="248" font-size="13" fill="#475569">📋  Clinical Notes</text>
+  <text x="42" y="280" font-size="13" fill="#475569">🦷  Treatments</text>
+  <text x="42" y="312" font-size="13" fill="#475569">💳  Billing</text>
+  <text x="42" y="344" font-size="13" fill="#475569">📊  Analytics</text>
+  <text x="42" y="376" font-size="13" fill="#475569">✉️  Recalls</text>
+  <text x="42" y="408" font-size="13" fill="#475569">⚙️  Settings</text>
+
+  <!-- AI badge in sidebar -->
+  <rect x="12" y="440" width="208" height="60" rx="10" fill="url(#aiGradV)" stroke-width="1"/>
+  <rect x="12" y="440" width="208" height="60" rx="10" fill="none" stroke="url(#aiGrad)" stroke-width="1" opacity="0.4"/>
+  <text x="28" y="462" font-size="11" font-weight="600" fill="#7c3aed">✦ AI Assistant Active</text>
+  <text x="28" y="477" font-size="10" fill="#475569">Auto-notes · Smart recalls</text>
+  <text x="28" y="491" font-size="10" fill="#475569">3 suggestions ready</text>
+
+  <!-- Compliance badges -->
+  <rect x="12" y="630" width="208" height="1" fill="#e2e8f0"/>
+  <text x="20" y="650" font-size="10" fill="#94a3b8">Certifications</text>
+  <rect x="12" y="658" width="60" height="20" rx="4" fill="#dcfce7"/>
+  <text x="42" y="672" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="600">MHRA ✓</text>
+  <rect x="78" y="658" width="64" height="20" rx="4" fill="#ede9fe"/>
+  <text x="110" y="672" font-size="9" fill="#7c3aed" text-anchor="middle" font-weight="600">GDPR ✓</text>
+  <rect x="148" y="658" width="68" height="20" rx="4" fill="#e0f2fe"/>
+  <text x="182" y="672" font-size="9" fill="#0369a1" text-anchor="middle" font-weight="600">Cyber Ess ✓</text>
+  <circle cx="228" cy="700" r="14" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="228" y="705" font-size="10" fill="#475569" text-anchor="middle">DR</text>
+  <text x="20" y="695" font-size="11" font-weight="500" fill="#0f172a">Dr. Rachel Owen</text>
+  <text x="20" y="709" font-size="10" fill="#94a3b8">Practice Owner</text>
+
+  <!-- ── Top bar ── -->
+  <rect x="233" y="0" width="1047" height="56" fill="#ffffff"/>
+  <rect x="233" y="56" width="1047" height="1" fill="#e2e8f0"/>
+  <text x="253" y="27" font-size="18" font-weight="700" fill="#0f172a">Good morning, Dr. Owen 👋</text>
+  <text x="253" y="45" font-size="12" fill="#94a3b8">Tuesday, 29 March 2026  ·  14 appointments today</text>
+
+  <!-- Search -->
+  <rect x="810" y="14" width="220" height="30" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="828" y="33" font-size="12" fill="#94a3b8">🔍  Search patients...</text>
+  <rect x="1046" y="14" width="30" height="30" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1061" y="33" font-size="13" fill="#475569" text-anchor="middle">🔔</text>
+  <circle cx="1071" cy="18" r="5" fill="#7c3aed"/>
+  <text x="1071" y="22" font-size="7" fill="#fff" text-anchor="middle">3</text>
+  <rect x="1090" y="14" width="30" height="30" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1105" y="33" font-size="13" fill="#475569" text-anchor="middle">⚙</text>
+  <rect x="1136" y="10" width="126" height="38" rx="8" fill="url(#aiGrad)"/>
+  <text x="1199" y="33" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">+ New Appointment</text>
+
+  <!-- ── KPI row ── -->
+  <!-- Card 1 -->
+  <rect x="253" y="72" width="192" height="88" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="271" y="97" font-size="11" fill="#94a3b8">Patients Today</text>
+  <text x="271" y="128" font-size="30" font-weight="700" fill="#0f172a">14</text>
+  <text x="271" y="150" font-size="11" fill="#16a34a">↑ 2 vs last Tuesday</text>
+
+  <!-- Card 2 -->
+  <rect x="457" y="72" width="192" height="88" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="475" y="97" font-size="11" fill="#94a3b8">Revenue (March)</text>
+  <text x="475" y="128" font-size="28" font-weight="700" fill="#0f172a">£18,420</text>
+  <text x="475" y="150" font-size="11" fill="#16a34a">↑ 12% vs Feb</text>
+
+  <!-- Card 3 -->
+  <rect x="661" y="72" width="192" height="88" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="679" y="97" font-size="11" fill="#94a3b8">Pending Notes</text>
+  <text x="679" y="128" font-size="30" font-weight="700" fill="#f59e0b">3</text>
+  <text x="679" y="150" font-size="11" fill="#94a3b8">AI can draft these for you</text>
+
+  <!-- Card 4 -->
+  <rect x="865" y="72" width="192" height="88" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="883" y="97" font-size="11" fill="#94a3b8">Recalls Due</text>
+  <text x="883" y="128" font-size="30" font-weight="700" fill="#0f172a">47</text>
+  <text x="883" y="150" font-size="11" fill="#7c3aed">Auto-send enabled</text>
+
+  <!-- Card 5 -->
+  <rect x="1069" y="72" width="192" height="88" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1087" y="97" font-size="11" fill="#94a3b8">Chair Utilisation</text>
+  <text x="1087" y="128" font-size="30" font-weight="700" fill="#0f172a">84%</text>
+  <text x="1087" y="150" font-size="11" fill="#16a34a">↑ target 80%</text>
+
+  <!-- ── Today's appointments ── -->
+  <rect x="253" y="176" width="660" height="528" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="273" y="204" font-size="14" font-weight="700" fill="#0f172a">Today's Appointments</text>
+  <text x="273" y="220" font-size="11" fill="#94a3b8">29 March 2026  ·  14 scheduled</text>
+  <rect x="832" y="186" width="68" height="26" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="866" y="203" font-size="11" fill="#475569" text-anchor="middle">Day ▾</text>
+
+  <!-- Column headers -->
+  <rect x="253" y="232" width="660" height="28" fill="#f8fafc"/>
+  <rect x="253" y="260" width="660" height="1" fill="#e2e8f0"/>
+  <text x="270" y="250" font-size="10" fill="#94a3b8" font-weight="600">TIME</text>
+  <text x="340" y="250" font-size="10" fill="#94a3b8" font-weight="600">PATIENT</text>
+  <text x="520" y="250" font-size="10" fill="#94a3b8" font-weight="600">TREATMENT</text>
+  <text x="680" y="250" font-size="10" fill="#94a3b8" font-weight="600">DENTIST</text>
+  <text x="770" y="250" font-size="10" fill="#94a3b8" font-weight="600">STATUS</text>
+  <text x="860" y="250" font-size="10" fill="#94a3b8" font-weight="600">NOTES</text>
+
+  <!-- Appointment rows -->
+  <!-- Row: completed -->
+  <rect x="253" y="261" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="305" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="279" font-size="12" font-weight="600" fill="#475569">08:30</text>
+  <text x="270" y="295" font-size="10" fill="#94a3b8">30 min</text>
+  <circle cx="352" cy="277" r="12" fill="#ede9fe"/>
+  <text x="352" y="281" font-size="9" fill="#7c3aed" text-anchor="middle" font-weight="700">JB</text>
+  <text x="372" y="276" font-size="12" font-weight="500" fill="#0f172a">James Barclay</text>
+  <text x="372" y="290" font-size="10" fill="#94a3b8">NHS · #P-10042</text>
+  <text x="520" y="282" font-size="12" fill="#475569">Check-up &amp; Scale</text>
+  <text x="680" y="282" font-size="12" fill="#475569">Dr. Owen</text>
+  <rect x="762" y="268" width="72" height="20" rx="10" fill="#dcfce7"/>
+  <text x="798" y="282" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="500">Completed</text>
+  <rect x="852" y="270" width="52" height="18" rx="4" fill="#ede9fe"/>
+  <text x="878" y="283" font-size="10" fill="#7c3aed" text-anchor="middle">AI Draft</text>
+
+  <!-- Row: completed -->
+  <rect x="253" y="306" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="350" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="324" font-size="12" font-weight="600" fill="#475569">09:00</text>
+  <text x="270" y="340" font-size="10" fill="#94a3b8">60 min</text>
+  <circle cx="352" cy="322" r="12" fill="#fce7f3"/>
+  <text x="352" y="326" font-size="9" fill="#db2777" text-anchor="middle" font-weight="700">SR</text>
+  <text x="372" y="321" font-size="12" font-weight="500" fill="#0f172a">Sophia Rahman</text>
+  <text x="372" y="335" font-size="10" fill="#94a3b8">Private · #P-10891</text>
+  <text x="520" y="327" font-size="12" fill="#475569">Composite bonding</text>
+  <text x="680" y="327" font-size="12" fill="#475569">Dr. Patel</text>
+  <rect x="762" y="313" width="72" height="20" rx="10" fill="#dcfce7"/>
+  <text x="798" y="327" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="500">Completed</text>
+
+  <!-- Row: in chair (highlighted) -->
+  <rect x="253" y="351" width="660" height="44" fill="#faf5ff"/>
+  <rect x="253" y="395" width="660" height="1" fill="#e2e8f0"/>
+  <rect x="253" y="351" width="3" height="44" fill="#7c3aed"/>
+  <text x="270" y="369" font-size="12" font-weight="600" fill="#0f172a">10:00</text>
+  <text x="270" y="385" font-size="10" fill="#7c3aed">NOW</text>
+  <circle cx="352" cy="367" r="12" fill="#e0f2fe"/>
+  <text x="352" y="371" font-size="9" fill="#0369a1" text-anchor="middle" font-weight="700">MT</text>
+  <text x="372" y="366" font-size="12" font-weight="600" fill="#0f172a">Marcus Thompson</text>
+  <text x="372" y="380" font-size="10" fill="#94a3b8">NHS · #P-10234</text>
+  <text x="520" y="372" font-size="12" fill="#0f172a">Root canal — UL6</text>
+  <text x="680" y="372" font-size="12" fill="#0f172a">Dr. Owen</text>
+  <rect x="762" y="358" width="68" height="20" rx="10" fill="#ede9fe"/>
+  <text x="796" y="372" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="500">In Chair</text>
+  <rect x="838" y="360" width="66" height="18" rx="4" fill="#7c3aed"/>
+  <text x="871" y="373" font-size="10" fill="#fff" text-anchor="middle" font-weight="500">View Notes</text>
+
+  <!-- Row: confirmed -->
+  <rect x="253" y="396" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="440" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="414" font-size="12" font-weight="600" fill="#475569">11:00</text>
+  <text x="270" y="430" font-size="10" fill="#94a3b8">45 min</text>
+  <circle cx="352" cy="412" r="12" fill="#fef9c3"/>
+  <text x="352" y="416" font-size="9" fill="#a16207" text-anchor="middle" font-weight="700">EW</text>
+  <text x="372" y="411" font-size="12" font-weight="500" fill="#0f172a">Eleanor Walsh</text>
+  <text x="372" y="425" font-size="10" fill="#94a3b8">Private · #P-10567</text>
+  <text x="520" y="417" font-size="12" fill="#475569">Whitening consult</text>
+  <text x="680" y="417" font-size="12" fill="#475569">Dr. Patel</text>
+  <rect x="762" y="403" width="72" height="20" rx="10" fill="#e0f2fe"/>
+  <text x="798" y="417" font-size="10" fill="#0369a1" text-anchor="middle" font-weight="500">Confirmed</text>
+
+  <!-- Row: confirmed -->
+  <rect x="253" y="441" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="485" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="459" font-size="12" font-weight="600" fill="#475569">12:00</text>
+  <text x="270" y="475" font-size="10" fill="#94a3b8">30 min</text>
+  <circle cx="352" cy="457" r="12" fill="#dcfce7"/>
+  <text x="352" y="461" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="700">AK</text>
+  <text x="372" y="456" font-size="12" font-weight="500" fill="#0f172a">Amara Kofi</text>
+  <text x="372" y="470" font-size="10" fill="#94a3b8">NHS · #P-11102</text>
+  <text x="520" y="462" font-size="12" fill="#475569">Extraction — LR8</text>
+  <text x="680" y="462" font-size="12" fill="#475569">Dr. Owen</text>
+  <rect x="762" y="448" width="72" height="20" rx="10" fill="#e0f2fe"/>
+  <text x="798" y="462" font-size="10" fill="#0369a1" text-anchor="middle" font-weight="500">Confirmed</text>
+
+  <!-- Row: lunch -->
+  <rect x="253" y="486" width="660" height="36" fill="#f8fafc"/>
+  <rect x="253" y="522" width="660" height="1" fill="#e2e8f0"/>
+  <text x="270" y="508" font-size="11" fill="#94a3b8">13:00  —  Lunch Break</text>
+
+  <!-- Row: confirmed -->
+  <rect x="253" y="523" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="567" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="541" font-size="12" font-weight="600" fill="#475569">14:00</text>
+  <text x="270" y="557" font-size="10" fill="#94a3b8">60 min</text>
+  <circle cx="352" cy="539" r="12" fill="#fce7f3"/>
+  <text x="352" y="543" font-size="9" fill="#db2777" text-anchor="middle" font-weight="700">OM</text>
+  <text x="372" y="538" font-size="12" font-weight="500" fill="#0f172a">Oliver Mitchell</text>
+  <text x="372" y="552" font-size="10" fill="#94a3b8">Private · #P-10728</text>
+  <text x="520" y="544" font-size="12" fill="#475569">Implant review</text>
+  <text x="680" y="544" font-size="12" fill="#475569">Dr. Owen</text>
+  <rect x="762" y="530" width="72" height="20" rx="10" fill="#e0f2fe"/>
+  <text x="798" y="544" font-size="10" fill="#0369a1" text-anchor="middle" font-weight="500">Confirmed</text>
+
+  <!-- Row -->
+  <rect x="253" y="568" width="660" height="44" fill="#ffffff"/>
+  <rect x="253" y="612" width="660" height="1" fill="#f1f5f9"/>
+  <text x="270" y="586" font-size="12" font-weight="600" fill="#475569">15:30</text>
+  <text x="270" y="602" font-size="10" fill="#94a3b8">30 min</text>
+  <circle cx="352" cy="584" r="12" fill="#fef3c7"/>
+  <text x="352" y="588" font-size="9" fill="#d97706" text-anchor="middle" font-weight="700">PL</text>
+  <text x="372" y="583" font-size="12" font-weight="500" fill="#0f172a">Priya Lawson</text>
+  <text x="372" y="597" font-size="10" fill="#94a3b8">NHS · #P-10455</text>
+  <text x="520" y="589" font-size="12" fill="#475569">Check-up</text>
+  <text x="680" y="589" font-size="12" fill="#475569">Dr. Patel</text>
+  <rect x="762" y="575" width="68" height="20" rx="10" fill="#fef3c7"/>
+  <text x="796" y="589" font-size="10" fill="#d97706" text-anchor="middle" font-weight="500">Pending</text>
+
+  <text x="430" y="656" font-size="11" fill="#94a3b8" text-anchor="middle">+ 6 more appointments ↓</text>
+
+  <!-- ── Right panel ── -->
+  <rect x="929" y="176" width="332" height="254" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="949" y="204" font-size="14" font-weight="700" fill="#0f172a">Patient in Chair</text>
+  <rect x="949" y="216" width="292" height="1" fill="#e2e8f0"/>
+
+  <circle cx="969" cy="253" r="22" fill="#ede9fe"/>
+  <text x="969" y="258" font-size="16" font-weight="700" fill="#7c3aed" text-anchor="middle">MT</text>
+  <text x="999" y="244" font-size="14" font-weight="600" fill="#0f172a">Marcus Thompson</text>
+  <text x="999" y="260" font-size="11" fill="#94a3b8">DOB: 14 Aug 1982 · NHS</text>
+  <text x="999" y="274" font-size="11" fill="#94a3b8">Last visit: 3 Sep 2025</text>
+
+  <rect x="949" y="292" width="292" height="1" fill="#f1f5f9"/>
+
+  <text x="949" y="314" font-size="11" font-weight="600" fill="#475569">TODAY'S TREATMENT</text>
+  <text x="949" y="332" font-size="13" font-weight="600" fill="#0f172a">Root Canal Treatment — UL6</text>
+  <text x="949" y="348" font-size="11" fill="#94a3b8">Session 2 of 2  ·  Endodontics</text>
+  <text x="949" y="366" font-size="11" fill="#475569">Anaesthetic: Lignospan 2%</text>
+  <text x="949" y="380" font-size="11" fill="#475569">Files used: 15, 20, 25, 30</text>
+
+  <rect x="949" y="396" width="140" height="30" rx="6" fill="url(#aiGrad)"/>
+  <text x="1019" y="415" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">✦ Open AI Notes</text>
+  <rect x="1099" y="396" width="142" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1170" y="415" font-size="11" fill="#475569" text-anchor="middle">Patient Record →</text>
+
+  <!-- AI Suggestions box -->
+  <rect x="929" y="446" width="332" height="258" rx="10" fill="#faf5ff" stroke="#c4b5fd" stroke-width="1"/>
+  <rect x="929" y="446" width="332" height="48" rx="10" fill="url(#aiGradV)"/>
+  <rect x="929" y="474" width="332" height="20" fill="url(#aiGradV)"/>
+  <text x="949" y="468" font-size="12" font-weight="700" fill="#7c3aed">✦ AI Suggestions</text>
+  <text x="949" y="484" font-size="10" fill="#94a3b8">Based on today's appointments</text>
+
+  <rect x="949" y="500" width="292" height="1" fill="#ddd6fe"/>
+
+  <rect x="949" y="510" width="10" height="10" rx="2" fill="#7c3aed"/>
+  <text x="967" y="520" font-size="11" font-weight="600" fill="#0f172a">Draft note for J. Barclay</text>
+  <text x="967" y="534" font-size="10" fill="#475569">Scale &amp; polish completed. BPE score documented.</text>
+  <rect x="1161" y="512" width="60" height="18" rx="4" fill="#ede9fe"/>
+  <text x="1191" y="524" font-size="10" fill="#7c3aed" text-anchor="middle">Draft →</text>
+
+  <rect x="949" y="550" width="292" height="1" fill="#f1f5f9"/>
+
+  <rect x="949" y="560" width="10" height="10" rx="2" fill="#06b6d4"/>
+  <text x="967" y="570" font-size="11" font-weight="600" fill="#0f172a">Send recall — 47 patients</text>
+  <text x="967" y="584" font-size="10" fill="#475569">6-month recalls overdue. Auto-SMS ready.</text>
+  <rect x="1161" y="562" width="60" height="18" rx="4" fill="#e0f9ff"/>
+  <text x="1191" y="574" font-size="10" fill="#0891b2" text-anchor="middle">Review →</text>
+
+  <rect x="949" y="598" width="292" height="1" fill="#f1f5f9"/>
+
+  <rect x="949" y="608" width="10" height="10" rx="2" fill="#10b981"/>
+  <text x="967" y="618" font-size="11" font-weight="600" fill="#0f172a">Gap at 16:30 — book walk-in</text>
+  <text x="967" y="632" font-size="10" fill="#475569">Cancellation freed slot. 3 waitlisted patients.</text>
+  <rect x="1161" y="610" width="60" height="18" rx="4" fill="#d1fae5"/>
+  <text x="1191" y="622" font-size="10" fill="#059669" text-anchor="middle">Notify →</text>
+
+  <rect x="929" y="648" width="332" height="56" rx="10" fill="none"/>
+  <rect x="949" y="668" width="292" height="1" fill="#ddd6fe"/>
+  <text x="949" y="688" font-size="10" fill="#94a3b8">✦ AI confidence: high  ·  Model: DD-Clinical v2.1</text>
+
+  </g>
+</svg>

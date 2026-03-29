@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="mra"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="regHero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="redBtnR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CF2027"/>
+      <stop offset="100%" stop-color="#e02830"/>
+    </linearGradient>
+    <linearGradient id="progressFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CF2027"/>
+      <stop offset="100%" stop-color="#e02830"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#mra)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#0d0d0d"/>
+
+  <!-- ── TOP SITE HEADER ── -->
+  <rect x="0" y="0" width="1280" height="52" fill="#080808" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="16" y="14" width="24" height="24" rx="4" fill="#CF2027"/>
+  <text x="28" y="30" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">⚑</text>
+  <text x="50" y="24" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1">MOTORSPORTS</text>
+  <text x="50" y="40" font-size="9" fill="#555" letter-spacing="2">MEMBER PORTAL</text>
+  <text x="500" y="30" font-size="12" fill="#888">Events</text>
+  <text x="562" y="30" font-size="12" fill="#888">Results</text>
+  <text x="630" y="30" font-size="12" fill="#888">My Registrations</text>
+  <text x="762" y="30" font-size="12" fill="#888">Timing</text>
+  <text x="824" y="30" font-size="12" fill="#888">Safety</text>
+  <text x="880" y="30" font-size="12" fill="#888">About</text>
+  <rect x="1100" y="12" width="136" height="28" rx="5" fill="url(#redBtnR)"/>
+  <text x="1168" y="30" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">My Account</text>
+  <text x="1252" y="30" font-size="16">🛒</text>
+
+  <!-- ── EVENT HERO BANNER ── -->
+  <rect x="0" y="52" width="1280" height="148" fill="url(#regHero)"/>
+  <!-- Track graphic suggestion -->
+  <path d="M800,52 Q900,80 980,120 Q1060,160 1150,148 L1280,148 L1280,52 Z" fill="#CF2027" opacity="0.08"/>
+  <path d="M860,52 Q960,90 1040,130 Q1120,165 1200,200 L1280,200 L1280,52 Z" fill="#CF2027" opacity="0.05"/>
+  <!-- Checkered flag strip -->
+  <rect x="0" y="52" width="1280" height="8" fill="#0d0d0d"/>
+  <rect x="0" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="40" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="80" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="120" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="160" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="200" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="240" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="280" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="320" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="360" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="400" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="440" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="480" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="520" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="560" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="600" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="640" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="680" y="52" width="20" height="8" fill="#ffffff"/>
+  <rect x="720" y="52" width="20" height="8" fill="#ffffff"/>
+  <!-- Breadcrumb -->
+  <text x="40" y="86" font-size="11" fill="#555">Events</text>
+  <text x="76" y="86" font-size="11" fill="#444"> / </text>
+  <text x="88" y="86" font-size="11" fill="#555">Time Trial</text>
+  <text x="136" y="86" font-size="11" fill="#444"> / </text>
+  <text x="148" y="86" font-size="11" fill="#CF2027">Spring Time Trial — Road America</text>
+  <!-- Event title -->
+  <text x="40" y="124" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Spring Time Trial — Road America</text>
+  <!-- Meta -->
+  <text x="40" y="152" font-size="12" fill="#888">📅  May 3, 2026</text>
+  <text x="148" y="152" font-size="12" fill="#888">📍  Elkhart Lake, WI</text>
+  <text x="276" y="152" font-size="12" fill="#888">🏎  Time Trial · 4 Run Groups</text>
+  <text x="450" y="152" font-size="12" fill="#888">👥  312 registered · 48 spots left</text>
+  <rect x="680" y="138" width="82" height="24" rx="5" fill="#CF2027" opacity="0.2" stroke="#CF2027" stroke-width="1"/>
+  <text x="721" y="154" font-size="10" fill="#CF2027" text-anchor="middle" font-weight="600">● Open</text>
+
+  <!-- ── MAIN LAYOUT: LEFT summary + RIGHT form ── -->
+
+  <!-- LEFT: Event summary card -->
+  <rect x="30" y="216" width="330" height="488" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="30" y="216" width="330" height="44" rx="8" fill="#0d0d0d"/>
+  <rect x="30" y="238" width="330" height="22" fill="#0d0d0d"/>
+  <text x="50" y="244" font-size="12" font-weight="600" fill="#ffffff">Event Summary</text>
+  <line x1="30" y1="260" x2="360" y2="260" stroke="#1a1a1a" stroke-width="1"/>
+
+  <text x="50" y="286" font-size="10" fill="#555" letter-spacing="1">CIRCUIT</text>
+  <text x="50" y="304" font-size="13" font-weight="600" fill="#ffffff">Road America</text>
+  <text x="50" y="320" font-size="11" fill="#666">4.048 mi · 14 turns · Elkhart Lake, WI</text>
+
+  <line x1="50" y1="336" x2="340" y2="336" stroke="#1a1a1a" stroke-width="1"/>
+
+  <text x="50" y="356" font-size="10" fill="#555" letter-spacing="1">EVENT DATE</text>
+  <text x="50" y="374" font-size="13" font-weight="600" fill="#ffffff">Saturday, May 3, 2026</text>
+  <text x="50" y="390" font-size="11" fill="#666">Gates open 6:30 AM · First session 8:00 AM</text>
+
+  <line x1="50" y1="406" x2="340" y2="406" stroke="#1a1a1a" stroke-width="1"/>
+
+  <text x="50" y="426" font-size="10" fill="#555" letter-spacing="1">RUN GROUPS</text>
+  <rect x="50" y="434" width="72" height="22" rx="5" fill="#111" stroke="#CF2027" stroke-width="1"/>
+  <text x="86" y="449" font-size="10" fill="#CF2027" text-anchor="middle">Novice</text>
+  <rect x="132" y="434" width="90" height="22" rx="5" fill="#111" stroke="#333" stroke-width="1"/>
+  <text x="177" y="449" font-size="10" fill="#888" text-anchor="middle">Intermediate</text>
+  <rect x="232" y="434" width="72" height="22" rx="5" fill="#111" stroke="#333" stroke-width="1"/>
+  <text x="268" y="449" font-size="10" fill="#888" text-anchor="middle">Advanced</text>
+  <rect x="50" y="462" width="86" height="22" rx="5" fill="#111" stroke="#333" stroke-width="1"/>
+  <text x="93" y="477" font-size="10" fill="#888" text-anchor="middle">Instructor</text>
+
+  <line x1="50" y1="494" x2="340" y2="494" stroke="#1a1a1a" stroke-width="1"/>
+
+  <text x="50" y="514" font-size="10" fill="#555" letter-spacing="1">PRICING</text>
+  <text x="50" y="534" font-size="12" fill="#aaa">Entry fee (solo)</text>
+  <text x="340" y="534" font-size="12" fill="#ffffff" text-anchor="end">$325.00</text>
+  <text x="50" y="554" font-size="12" fill="#aaa">Timing transponder rental</text>
+  <text x="340" y="554" font-size="12" fill="#888" text-anchor="end">+ $40.00</text>
+  <text x="50" y="574" font-size="12" fill="#aaa">Tech inspection slot</text>
+  <text x="340" y="574" font-size="12" fill="#888" text-anchor="end">Included</text>
+  <text x="50" y="596" font-size="12" fill="#aaa">Passenger (instructor)</text>
+  <text x="340" y="596" font-size="12" fill="#888" text-anchor="end">+ $25.00</text>
+  <line x1="50" y1="610" x2="340" y2="610" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="50" y="628" font-size="12" font-weight="600" fill="#ffffff">Total (with transponder)</text>
+  <text x="340" y="628" font-size="14" font-weight="700" fill="#CF2027" text-anchor="end">$365.00</text>
+
+  <!-- Capacity bar -->
+  <text x="50" y="656" font-size="10" fill="#555">Capacity: 312/360 registered</text>
+  <rect x="50" y="662" width="290" height="8" rx="4" fill="#1a1a1a"/>
+  <rect x="50" y="662" width="248" height="8" rx="4" fill="#CF2027"/>
+  <text x="50" y="685" font-size="10" fill="#CF2027" font-weight="600">48 spots remaining</text>
+
+  <!-- RIGHT: Registration form -->
+  <rect x="378" y="216" width="876" height="488" rx="8" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <!-- Form header -->
+  <rect x="378" y="216" width="876" height="44" rx="8" fill="#0d0d0d"/>
+  <rect x="378" y="238" width="876" height="22" fill="#0d0d0d"/>
+  <text x="400" y="244" font-size="12" font-weight="600" fill="#ffffff">Registration Form</text>
+  <!-- Progress steps -->
+  <text x="850" y="244" font-size="10" fill="#CF2027" font-weight="600">Step 2 of 3 — Vehicle &amp; Class</text>
+  <!-- Progress bar -->
+  <rect x="378" y="258" width="876" height="4" fill="#1a1a1a"/>
+  <rect x="378" y="258" width="584" height="4" fill="url(#progressFill)"/>
+  <!-- Step indicators -->
+  <circle cx="562" cy="260" r="8" fill="#CF2027"/>
+  <text x="562" y="264" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">✓</text>
+  <text x="562" y="280" font-size="9" fill="#CF2027" text-anchor="middle">Driver</text>
+  <circle cx="962" cy="260" r="8" fill="#CF2027" stroke="#CF2027" stroke-width="2"/>
+  <text x="962" y="264" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+  <text x="962" y="280" font-size="9" fill="#CF2027" text-anchor="middle">Vehicle</text>
+  <circle cx="1180" cy="260" r="8" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  <text x="1180" y="264" font-size="8" fill="#555" text-anchor="middle">3</text>
+  <text x="1180" y="280" font-size="9" fill="#444" text-anchor="middle">Add-ons</text>
+
+  <!-- Driver info summary (completed step) -->
+  <rect x="398" y="290" width="836" height="60" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="418" y="312" font-size="10" fill="#555" letter-spacing="1">DRIVER — STEP 1 COMPLETE</text>
+  <text x="418" y="332" font-size="12" fill="#888">Michael R. Castellano  ·  SCCA# 287441  ·  License: Club Racing — Full  ·  Member since 2018</text>
+  <text x="1210" y="322" font-size="11" fill="#CF2027" text-anchor="end">Edit ✎</text>
+
+  <!-- Vehicle form section -->
+  <text x="398" y="376" font-size="12" font-weight="600" fill="#ffffff">Vehicle Information</text>
+
+  <!-- Row 1: Year / Make / Model -->
+  <text x="398" y="404" font-size="11" fill="#888">Year</text>
+  <rect x="398" y="410" width="120" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="418" y="433" font-size="12" fill="#aaa">2019</text>
+
+  <text x="534" y="404" font-size="11" fill="#888">Make</text>
+  <rect x="534" y="410" width="160" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="554" y="433" font-size="12" fill="#aaa">Porsche</text>
+
+  <text x="710" y="404" font-size="11" fill="#888">Model</text>
+  <rect x="710" y="410" width="200" height="36" rx="5" fill="#0d0d0d" stroke="#CF2027" stroke-width="1.5"/>
+  <text x="730" y="433" font-size="12" fill="#ffffff">Cayman GT4</text>
+
+  <text x="926" y="404" font-size="11" fill="#888">Color</text>
+  <rect x="926" y="410" width="140" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="946" y="433" font-size="12" fill="#aaa">Guards Red</text>
+  <rect x="1082" y="422" width="16" height="16" rx="3" fill="#CF2027"/>
+
+  <!-- Row 2: Class / Run group -->
+  <text x="398" y="472" font-size="11" fill="#888">Car Class</text>
+  <rect x="398" y="478" width="320" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="418" y="501" font-size="12" fill="#aaa">GT4 — Class 5 (Street Prepared)</text>
+  <text x="704" y="501" font-size="11" fill="#333">▾</text>
+
+  <text x="740" y="472" font-size="11" fill="#888">Run Group</text>
+  <!-- Run group chips -->
+  <rect x="740" y="478" width="84" height="36" rx="5" fill="#1a0000" stroke="#CF2027" stroke-width="1.5"/>
+  <text x="782" y="500" font-size="12" fill="#CF2027" text-anchor="middle" font-weight="600">Advanced</text>
+  <rect x="836" y="478" width="110" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="891" y="500" font-size="12" fill="#555" text-anchor="middle">Intermediate</text>
+  <rect x="958" y="478" width="72" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="994" y="500" font-size="12" fill="#555" text-anchor="middle">Novice</text>
+
+  <!-- Row 3: Safety equipment -->
+  <text x="398" y="536" font-size="12" font-weight="600" fill="#ffffff">Safety Equipment</text>
+
+  <rect x="398" y="548" width="20" height="20" rx="4" fill="#CF2027"/>
+  <text x="408" y="562" font-size="10" fill="#fff" text-anchor="middle">✓</text>
+  <text x="426" y="562" font-size="12" fill="#aaa">Helmet — Snell SA2020 certified</text>
+
+  <rect x="398" y="576" width="20" height="20" rx="4" fill="#CF2027"/>
+  <text x="408" y="590" font-size="10" fill="#fff" text-anchor="middle">✓</text>
+  <text x="426" y="590" font-size="12" fill="#aaa">Hans Device / Dhans</text>
+
+  <rect x="398" y="604" width="20" height="20" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="426" y="618" font-size="12" fill="#555">Fire extinguisher (required for Advanced)</text>
+  <rect x="730" y="604" width="130" height="20" rx="4" fill="#CF2027" opacity="0.15" stroke="#CF2027" stroke-width="0.8"/>
+  <text x="795" y="618" font-size="10" fill="#CF2027" text-anchor="middle">Required ⚠</text>
+
+  <!-- Tech inspection note -->
+  <rect x="398" y="632" width="836" height="32" rx="5" fill="#1a0a00" stroke="#CF2027" stroke-width="0.8" opacity="0.8"/>
+  <text x="418" y="652" font-size="11" fill="#CF2027">⚑  Tech inspection slot auto-booked: Sat 7:00–7:45 AM. Bring car and logbook.</text>
+
+  <!-- Bottom action bar -->
+  <rect x="378" y="666" width="876" height="38" rx="8" fill="#0d0d0d"/>
+  <rect x="378" y="666" width="876" height="10" fill="#0d0d0d"/>
+  <text x="400" y="690" font-size="11" fill="#555">← Back to Driver Info</text>
+  <rect x="1090" y="671" width="148" height="28" rx="5" fill="url(#redBtnR)"/>
+  <text x="1164" y="689" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">Continue →</text>
+  <text x="800" y="690" font-size="11" fill="#444" text-anchor="middle">Progress saved automatically</text>
+
+  </g>
+</svg>

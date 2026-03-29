@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="dd3"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="chartBar" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="chartBar2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#dd3)">
+
+  <rect width="1280" height="720" fill="#f8fafc"/>
+
+  <!-- Sidebar -->
+  <rect width="232" height="720" fill="#ffffff"/>
+  <rect x="232" width="1" height="720" fill="#e2e8f0"/>
+  <rect x="20" y="20" width="28" height="28" rx="6" fill="url(#pg)"/>
+  <text x="34" y="39" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">D</text>
+  <text x="58" y="32" font-size="13" font-weight="700" fill="#0f172a">Dentistry</text>
+  <text x="58" y="46" font-size="13" font-weight="700" fill="#7c3aed">Dashboard</text>
+
+  <text x="20" y="78" font-size="10" fill="#94a3b8" font-weight="600">OVERVIEW</text>
+  <text x="38" y="98" font-size="13" fill="#475569">⊞  Dashboard</text>
+  <text x="38" y="126" font-size="13" fill="#475569">👤  Patients</text>
+  <text x="38" y="154" font-size="13" fill="#475569">📅  Appointments</text>
+  <text x="38" y="182" font-size="13" fill="#475569">📋  Clinical Notes</text>
+  <text x="20" y="208" font-size="10" fill="#94a3b8" font-weight="600">PRACTICE</text>
+  <rect x="12" y="218" width="208" height="36" rx="8" fill="url(#pg)" opacity="0.1"/>
+  <rect x="12" y="218" width="3" height="36" rx="2" fill="url(#pg)"/>
+  <text x="38" y="241" font-size="13" font-weight="600" fill="#7c3aed">📊  Analytics</text>
+  <text x="38" y="278" font-size="13" fill="#475569">💳  Billing</text>
+  <text x="38" y="306" font-size="13" fill="#475569">🏥  Practices</text>
+  <text x="38" y="334" font-size="13" fill="#475569">✉️  Recalls</text>
+  <text x="38" y="362" font-size="13" fill="#475569">⚙️  Settings</text>
+
+  <!-- Practice switcher -->
+  <rect x="12" y="390" width="208" height="1" fill="#e2e8f0"/>
+  <text x="20" y="410" font-size="10" fill="#94a3b8" font-weight="600">YOUR PRACTICES</text>
+
+  <rect x="12" y="420" width="208" height="44" rx="8" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1"/>
+  <circle cx="32" cy="442" r="10" fill="#7c3aed" opacity="0.2"/>
+  <text x="32" y="446" font-size="9" fill="#7c3aed" text-anchor="middle" font-weight="700">SC</text>
+  <text x="50" y="438" font-size="11" font-weight="600" fill="#0f172a">Smile Care London</text>
+  <text x="50" y="453" font-size="10" fill="#94a3b8">Active · 5 dentists</text>
+  <circle cx="212" cy="442" r="5" fill="#10b981"/>
+
+  <rect x="12" y="470" width="208" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="32" cy="492" r="10" fill="#06b6d4" opacity="0.2"/>
+  <text x="32" y="496" font-size="9" fill="#0891b2" text-anchor="middle" font-weight="700">BC</text>
+  <text x="50" y="488" font-size="11" font-weight="600" fill="#0f172a">Brite Clinic Manchester</text>
+  <text x="50" y="503" font-size="10" fill="#94a3b8">Active · 3 dentists</text>
+  <circle cx="212" cy="492" r="5" fill="#10b981"/>
+
+  <rect x="12" y="520" width="208" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="32" cy="542" r="10" fill="#10b981" opacity="0.2"/>
+  <text x="32" y="546" font-size="9" fill="#059669" text-anchor="middle" font-weight="700">PD</text>
+  <text x="50" y="538" font-size="11" font-weight="600" fill="#0f172a">Pearl Dental Bristol</text>
+  <text x="50" y="553" font-size="10" fill="#94a3b8">Active · 2 dentists</text>
+  <circle cx="212" cy="542" r="5" fill="#10b981"/>
+
+  <rect x="32" y="574" width="168" height="28" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="116" y="593" font-size="11" fill="#475569" text-anchor="middle">+ Add Practice</text>
+
+  <!-- Plan info -->
+  <rect x="12" y="630" width="208" height="1" fill="#e2e8f0"/>
+  <rect x="12" y="642" width="208" height="56" rx="8" fill="url(#pg)" opacity="0.06"/>
+  <rect x="12" y="642" width="208" height="56" rx="8" fill="none" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="28" y="660" font-size="11" font-weight="600" fill="#7c3aed">Pro Plan  ·  Annual</text>
+  <text x="28" y="675" font-size="10" fill="#475569">Next billing: 1 Apr 2026</text>
+  <text x="28" y="689" font-size="10" fill="#475569">£149/mo  ·  Unlimited dentists</text>
+
+  <!-- Top bar -->
+  <rect x="233" y="0" width="1047" height="52" fill="#ffffff"/>
+  <rect x="233" y="52" width="1047" height="1" fill="#e2e8f0"/>
+  <text x="253" y="25" font-size="18" font-weight="700" fill="#0f172a">Practice Analytics</text>
+  <text x="253" y="42" font-size="12" fill="#94a3b8">All practices  ·  Last 12 months  ·  Updated 5 min ago</text>
+
+  <rect x="940" y="12" width="100" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="990" y="31" font-size="11" fill="#475569" text-anchor="middle">Last 12 mo ▾</text>
+  <rect x="1048" y="12" width="88" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1092" y="31" font-size="11" fill="#475569" text-anchor="middle">All sites ▾</text>
+  <rect x="1148" y="12" width="110" height="30" rx="6" fill="url(#pg)"/>
+  <text x="1203" y="31" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">⬇  Export PDF</text>
+
+  <!-- ── KPI strip ── -->
+  <rect x="253" y="68" width="226" height="100" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="271" y="94" font-size="11" fill="#94a3b8">Total Revenue (YTD)</text>
+  <text x="271" y="130" font-size="28" font-weight="700" fill="#0f172a">£214,880</text>
+  <text x="271" y="154" font-size="11" fill="#16a34a">↑ 31% vs prior year</text>
+
+  <rect x="491" y="68" width="226" height="100" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="509" y="94" font-size="11" fill="#94a3b8">Active Patients</text>
+  <text x="509" y="130" font-size="28" font-weight="700" fill="#0f172a">1,847</text>
+  <text x="509" y="154" font-size="11" fill="#16a34a">↑ 284 new (YTD)</text>
+
+  <rect x="729" y="68" width="226" height="100" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="747" y="94" font-size="11" fill="#94a3b8">Avg Chair Utilisation</text>
+  <text x="747" y="130" font-size="28" font-weight="700" fill="#0f172a">81%</text>
+  <text x="747" y="154" font-size="11" fill="#16a34a">↑ target 80%  ✓</text>
+
+  <rect x="967" y="68" width="313" height="100" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="985" y="94" font-size="11" fill="#94a3b8">User Rating</text>
+  <text x="985" y="126" font-size="28" font-weight="700" fill="#0f172a">4.9</text>
+  <text x="1070" y="122" font-size="18" fill="#f59e0b">★★★★★</text>
+  <text x="985" y="154" font-size="11" fill="#94a3b8">Based on 127 dentist reviews</text>
+
+  <!-- ── Revenue chart ── -->
+  <rect x="253" y="184" width="580" height="280" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="273" y="210" font-size="14" font-weight="700" fill="#0f172a">Monthly Revenue</text>
+  <text x="273" y="226" font-size="11" fill="#94a3b8">All practices combined  ·  Mar 2025 – Mar 2026</text>
+
+  <!-- Y-axis labels -->
+  <text x="274" y="274" font-size="9" fill="#94a3b8">£25k</text>
+  <text x="274" y="314" font-size="9" fill="#94a3b8">£20k</text>
+  <text x="274" y="354" font-size="9" fill="#94a3b8">£15k</text>
+  <text x="274" y="394" font-size="9" fill="#94a3b8">£10k</text>
+  <text x="274" y="434" font-size="9" fill="#94a3b8">£5k</text>
+
+  <!-- Grid lines -->
+  <line x1="300" y1="268" x2="810" y2="268" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="300" y1="308" x2="810" y2="308" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="300" y1="348" x2="810" y2="348" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="300" y1="388" x2="810" y2="388" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="300" y1="428" x2="810" y2="428" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="300" y1="448" x2="810" y2="448" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Bars (monthly revenue) -->
+  <!-- Mar25: 11k -->
+  <rect x="305" y="360" width="28" height="88" rx="4" fill="url(#chartBar)" opacity="0.4"/>
+  <text x="319" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Mar</text>
+  <!-- Apr25: 13k -->
+  <rect x="347" y="344" width="28" height="104" rx="4" fill="url(#chartBar)" opacity="0.5"/>
+  <text x="361" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Apr</text>
+  <!-- May25: 14k -->
+  <rect x="389" y="336" width="28" height="112" rx="4" fill="url(#chartBar)" opacity="0.6"/>
+  <text x="403" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">May</text>
+  <!-- Jun25: 15k -->
+  <rect x="431" y="328" width="28" height="120" rx="4" fill="url(#chartBar)" opacity="0.65"/>
+  <text x="445" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Jun</text>
+  <!-- Jul25: 12k (summer dip) -->
+  <rect x="473" y="352" width="28" height="96" rx="4" fill="url(#chartBar)" opacity="0.55"/>
+  <text x="487" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Jul</text>
+  <!-- Aug25: 11k -->
+  <rect x="515" y="360" width="28" height="88" rx="4" fill="url(#chartBar)" opacity="0.45"/>
+  <text x="529" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Aug</text>
+  <!-- Sep25: 17k -->
+  <rect x="557" y="312" width="28" height="136" rx="4" fill="url(#chartBar)" opacity="0.75"/>
+  <text x="571" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Sep</text>
+  <!-- Oct25: 19k -->
+  <rect x="599" y="296" width="28" height="152" rx="4" fill="url(#chartBar)" opacity="0.85"/>
+  <text x="613" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Oct</text>
+  <!-- Nov25: 20k -->
+  <rect x="641" y="288" width="28" height="160" rx="4" fill="url(#chartBar)" opacity="0.9"/>
+  <text x="655" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Nov</text>
+  <!-- Dec25: 21k -->
+  <rect x="683" y="280" width="28" height="168" rx="4" fill="url(#chartBar)" opacity="0.95"/>
+  <text x="697" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Dec</text>
+  <!-- Jan26: 22k -->
+  <rect x="725" y="272" width="28" height="176" rx="4" fill="url(#chartBar)"/>
+  <text x="739" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Jan</text>
+  <!-- Feb26: 20k -->
+  <rect x="767" y="288" width="28" height="160" rx="4" fill="url(#chartBar)" opacity="0.9"/>
+  <text x="781" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Feb</text>
+
+  <!-- Mar26 current (partial) — highlight -->
+  <rect x="801" y="308" width="28" height="140" rx="4" fill="#7c3aed" opacity="0.25"/>
+  <rect x="801" y="308" width="28" height="140" rx="4" fill="none" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="815" y="460" font-size="8" fill="#7c3aed" text-anchor="middle" font-weight="600">Mar*</text>
+  <!-- Tooltip -->
+  <rect x="776" y="282" width="108" height="36" rx="6" fill="#0f172a"/>
+  <text x="830" y="297" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">Mar 2026</text>
+  <text x="830" y="312" font-size="10" fill="#a5b4fc" text-anchor="middle">£18,420 so far</text>
+  <polygon points="824,318 836,318 830,326" fill="#0f172a"/>
+
+  <!-- ── Patient acquisition chart ── -->
+  <rect x="253" y="480" width="580" height="224" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="273" y="506" font-size="14" font-weight="700" fill="#0f172a">Patient Acquisition</text>
+  <text x="273" y="522" font-size="11" fill="#94a3b8">New registrations per month  ·  by source</text>
+  <rect x="600" y="490" width="80" height="22" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="640" y="505" font-size="11" fill="#475569" text-anchor="middle">Source ▾</text>
+  <rect x="688" y="490" width="120" height="22" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="748" y="505" font-size="11" fill="#475569" text-anchor="middle">All practices ▾</text>
+
+  <!-- Simple line chart -->
+  <text x="272" y="546" font-size="9" fill="#94a3b8">40</text>
+  <text x="272" y="578" font-size="9" fill="#94a3b8">30</text>
+  <text x="272" y="610" font-size="9" fill="#94a3b8">20</text>
+  <text x="272" y="642" font-size="9" fill="#94a3b8">10</text>
+  <line x1="292" y1="540" x2="808" y2="540" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="292" y1="572" x2="808" y2="572" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="292" y1="604" x2="808" y2="604" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="292" y1="636" x2="808" y2="636" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="292" y1="654" x2="808" y2="654" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Organic line (purple) -->
+  <polyline points="300,630 343,618 386,610 429,598 472,614 515,620 558,594 601,578 644,562 687,550 730,544 773,548" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <!-- Meta line (cyan) -->
+  <polyline points="300,648 343,640 386,632 429,618 472,622 515,628 558,612 601,600 644,588 687,572 730,562 773,558" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,3"/>
+  <!-- Referral dots (green) -->
+  <polyline points="300,644 343,636 386,628 429,636 472,642 515,636 558,628 601,616 644,608 687,600 730,596 773,590" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="2,4"/>
+
+  <!-- X labels -->
+  <text x="300" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Mar</text>
+  <text x="343" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Apr</text>
+  <text x="386" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">May</text>
+  <text x="429" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Jun</text>
+  <text x="472" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Jul</text>
+  <text x="515" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Aug</text>
+  <text x="558" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Sep</text>
+  <text x="601" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Oct</text>
+  <text x="644" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Nov</text>
+  <text x="687" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Dec</text>
+  <text x="730" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Jan</text>
+  <text x="773" y="668" font-size="8" fill="#94a3b8" text-anchor="middle">Feb</text>
+
+  <!-- Legend -->
+  <line x1="273" y1="688" x2="293" y2="688" stroke="#7c3aed" stroke-width="2"/>
+  <text x="298" y="692" font-size="10" fill="#475569">Organic / SEO</text>
+  <line x1="380" y1="688" x2="400" y2="688" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="406" y="692" font-size="10" fill="#475569">Meta Ads</text>
+  <line x1="472" y1="688" x2="492" y2="688" stroke="#10b981" stroke-width="2" stroke-dasharray="2,4"/>
+  <text x="498" y="692" font-size="10" fill="#475569">Referrals</text>
+
+  <!-- Right column: Practice breakdown + compliance -->
+  <rect x="849" y="184" width="411" height="260" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="869" y="210" font-size="14" font-weight="700" fill="#0f172a">Practice Breakdown</text>
+  <rect x="849" y="220" width="411" height="1" fill="#e2e8f0"/>
+
+  <!-- Table header -->
+  <rect x="849" y="221" width="411" height="28" fill="#f8fafc"/>
+  <rect x="849" y="249" width="411" height="1" fill="#e2e8f0"/>
+  <text x="869" y="239" font-size="10" fill="#94a3b8" font-weight="600">PRACTICE</text>
+  <text x="1040" y="239" font-size="10" fill="#94a3b8" font-weight="600">PATIENTS</text>
+  <text x="1120" y="239" font-size="10" fill="#94a3b8" font-weight="600">REVENUE</text>
+  <text x="1200" y="239" font-size="10" fill="#94a3b8" font-weight="600">UTIL.</text>
+
+  <!-- Row 1 -->
+  <rect x="849" y="250" width="411" height="46" fill="#faf5ff"/>
+  <rect x="849" y="296" width="411" height="1" fill="#f1f5f9"/>
+  <circle cx="873" cy="273" r="10" fill="#7c3aed" opacity="0.15"/>
+  <text x="873" y="277" font-size="9" fill="#7c3aed" text-anchor="middle" font-weight="700">SC</text>
+  <text x="892" y="268" font-size="12" font-weight="600" fill="#0f172a">Smile Care London</text>
+  <text x="892" y="284" font-size="10" fill="#94a3b8">5 dentists  ·  3 chairs</text>
+  <text x="1040" y="275" font-size="12" fill="#0f172a">842</text>
+  <text x="1120" y="275" font-size="12" fill="#0f172a">£98,400</text>
+  <rect x="1196" y="263" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="1218" y="276" font-size="11" fill="#16a34a" text-anchor="middle" font-weight="600">84%</text>
+
+  <!-- Row 2 -->
+  <rect x="849" y="297" width="411" height="46" fill="#ffffff"/>
+  <rect x="849" y="343" width="411" height="1" fill="#f1f5f9"/>
+  <circle cx="873" cy="320" r="10" fill="#06b6d4" opacity="0.15"/>
+  <text x="873" y="324" font-size="9" fill="#0891b2" text-anchor="middle" font-weight="700">BC</text>
+  <text x="892" y="315" font-size="12" font-weight="600" fill="#0f172a">Brite Clinic Manchester</text>
+  <text x="892" y="331" font-size="10" fill="#94a3b8">3 dentists  ·  2 chairs</text>
+  <text x="1040" y="322" font-size="12" fill="#0f172a">621</text>
+  <text x="1120" y="322" font-size="12" fill="#0f172a">£72,640</text>
+  <rect x="1196" y="310" width="44" height="18" rx="9" fill="#dcfce7"/>
+  <text x="1218" y="323" font-size="11" fill="#16a34a" text-anchor="middle" font-weight="600">79%</text>
+
+  <!-- Row 3 -->
+  <rect x="849" y="344" width="411" height="46" fill="#ffffff"/>
+  <circle cx="873" cy="367" r="10" fill="#10b981" opacity="0.15"/>
+  <text x="873" y="371" font-size="9" fill="#059669" text-anchor="middle" font-weight="700">PD</text>
+  <text x="892" y="362" font-size="12" font-weight="600" fill="#0f172a">Pearl Dental Bristol</text>
+  <text x="892" y="378" font-size="10" fill="#94a3b8">2 dentists  ·  2 chairs</text>
+  <text x="1040" y="369" font-size="12" fill="#0f172a">384</text>
+  <text x="1120" y="369" font-size="12" fill="#0f172a">£43,840</text>
+  <rect x="1196" y="357" width="44" height="18" rx="9" fill="#fef3c7"/>
+  <text x="1218" y="370" font-size="11" fill="#d97706" text-anchor="middle" font-weight="600">76%</text>
+
+  <!-- AI Insight row -->
+  <rect x="849" y="398" width="411" height="46" rx="8" fill="url(#pg)" opacity="0.06"/>
+  <rect x="849" y="390" width="411" height="54" rx="8" fill="none" stroke="#ddd6fe" stroke-width="1"/>
+  <text x="868" y="413" font-size="11" font-weight="600" fill="#7c3aed">✦ AI Insight</text>
+  <text x="868" y="430" font-size="11" fill="#475569">Bristol utilisation below target. AI suggests 1 additional chair</text>
+  <text x="868" y="445" font-size="11" fill="#475569">day on Wednesdays could recover ~£6,200/mo.</text>
+
+  <!-- Compliance status card -->
+  <rect x="849" y="460" width="411" height="244" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="869" y="486" font-size="14" font-weight="700" fill="#0f172a">Compliance Status</text>
+  <rect x="849" y="496" width="411" height="1" fill="#e2e8f0"/>
+
+  <rect x="869" y="508" width="371" height="36" rx="8" fill="#f0fdf4"/>
+  <text x="897" y="522" font-size="13" fill="#16a34a">✓</text>
+  <text x="915" y="522" font-size="12" font-weight="600" fill="#0f172a">MHRA Class I Medical Device</text>
+  <text x="915" y="537" font-size="10" fill="#16a34a">Registration DN/2025/0142  ·  Valid until Dec 2027</text>
+
+  <rect x="869" y="552" width="371" height="36" rx="8" fill="#f0fdf4"/>
+  <text x="897" y="566" font-size="13" fill="#16a34a">✓</text>
+  <text x="915" y="566" font-size="12" font-weight="600" fill="#0f172a">UK GDPR &amp; Data Protection</text>
+  <text x="915" y="581" font-size="10" fill="#16a34a">ICO registration Z3947821  ·  DPA policy reviewed Jan 2026</text>
+
+  <rect x="869" y="596" width="371" height="36" rx="8" fill="#f0fdf4"/>
+  <text x="897" y="610" font-size="13" fill="#16a34a">✓</text>
+  <text x="915" y="610" font-size="12" font-weight="600" fill="#0f172a">Cyber Essentials Certified</text>
+  <text x="915" y="625" font-size="10" fill="#16a34a">Certificate CE-2025-4489  ·  Renewal due Sep 2026</text>
+
+  <rect x="869" y="640" width="371" height="36" rx="8" fill="#eff6ff"/>
+  <text x="897" y="654" font-size="13" fill="#3b82f6">i</text>
+  <text x="915" y="654" font-size="12" font-weight="600" fill="#0f172a">HIPAA Alignment</text>
+  <text x="915" y="669" font-size="10" fill="#3b82f6">Technical controls aligned  ·  Not a covered entity (UK-based)</text>
+
+  </g>
+</svg>

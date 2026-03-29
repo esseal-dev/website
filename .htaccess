@@ -61,11 +61,12 @@ Options -Indexes
     ExpiresByType text/javascript        "access plus 1 year"
     ExpiresByType font/woff2             "access plus 1 year"
     ExpiresByType image/webp             "access plus 1 year"
+    ExpiresByType image/svg+xml          "access plus 1 year"
     ExpiresByType text/css               "access plus 1 year"
 </IfModule>
 
 <IfModule mod_headers.c>
-    <FilesMatch "\.(js|css|woff2|webp)$">
+    <FilesMatch "\.(js|css|woff2|webp|svg)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 </IfModule>

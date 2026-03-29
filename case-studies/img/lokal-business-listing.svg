@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="ll"><rect width="1280" height="720"/></clipPath>
+    <clipPath id="lpsc"><rect x="392" y="72" width="266" height="576" rx="28"/></clipPath>
+    <radialGradient id="bg3" cx="70%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a0600"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#ll)">
+
+  <rect width="1280" height="720" fill="url(#bg3)"/>
+  <!-- Subtle diagonal lines decoration -->
+  <line x1="0" y1="0" x2="1280" y2="720" stroke="#f5450a" stroke-width="0.5" opacity="0.06"/>
+  <line x1="0" y1="100" x2="1180" y2="720" stroke="#f5450a" stroke-width="0.5" opacity="0.04"/>
+  <line x1="100" y1="0" x2="1280" y2="620" stroke="#f5450a" stroke-width="0.5" opacity="0.04"/>
+
+  <!-- Left: Context panel -->
+  <text x="60" y="88" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-1">lokal</text>
+  <text x="60" y="116" font-size="13" fill="#f5450a" letter-spacing="1.5">VENDOR LISTINGS  ·  DISTANCE VIEW</text>
+  <line x1="60" y1="128" x2="340" y2="128" stroke="#f5450a" stroke-width="1" opacity="0.3"/>
+  <text x="60" y="154" font-size="12" fill="#505050">Discover businesses that don't</text>
+  <text x="60" y="172" font-size="12" fill="#505050">exist anywhere else online.</text>
+
+  <!-- Stats on left -->
+  <rect x="60" y="196" width="140" height="70" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="80" y="222" font-size="11" fill="#606060">Avg distance</text>
+  <text x="80" y="250" font-size="26" font-weight="800" fill="#f5450a">340m</text>
+
+  <rect x="212" y="196" width="140" height="70" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="232" y="222" font-size="11" fill="#606060">Businesses</text>
+  <text x="232" y="250" font-size="26" font-weight="800" fill="#f5450a">200+</text>
+
+  <rect x="60" y="278" width="292" height="70" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="80" y="304" font-size="11" fill="#606060">Categories in beta</text>
+  <text x="80" y="332" font-size="12" fill="#ffffff">🍛 Food  🛞 Repairs  📱 Tech  🛒 Grocers  ☕ Chai</text>
+
+  <!-- Vendor detail card (expanded view preview) -->
+  <rect x="60" y="362" width="292" height="220" rx="14" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="60" y="362" width="292" height="220" rx="14" fill="none" stroke="#f5450a" stroke-width="1" opacity="0.5"/>
+  <!-- Vendor image placeholder (orange gradient block) -->
+  <rect x="60" y="362" width="292" height="80" rx="14" fill="#2a0e04"/>
+  <rect x="60" y="402" width="292" height="40" fill="#2a0e04"/>
+  <text x="206" y="406" font-size="32" text-anchor="middle">🍛</text>
+  <text x="206" y="426" font-size="11" fill="#f5450a" text-anchor="middle" opacity="0.7">Street Food</text>
+
+  <text x="80" y="466" font-size="14" font-weight="700" fill="#ffffff">Khan's Food Corner</text>
+  <rect x="80" y="474" width="50" height="18" rx="9" fill="#14301a"/>
+  <text x="105" y="487" font-size="10" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+  <text x="140" y="487" font-size="10" fill="#606060">· Since 2008</text>
+  <text x="80" y="510" font-size="11" fill="#707070">📍  Gulberg III, near LUMS Gate</text>
+  <text x="80" y="528" font-size="11" fill="#707070">📞  Accepts walk-ins only</text>
+  <text x="80" y="546" font-size="11" fill="#f5450a">📍  180m from you</text>
+  <rect x="80" y="558" width="120" height="14" rx="7" fill="#2a1500"/>
+  <rect x="80" y="558" width="86" height="14" rx="7" fill="#f5450a"/>
+  <text x="206" y="570" font-size="10" fill="#606060">Foot traffic score</text>
+
+  <rect x="240" y="554" width="100" height="30" rx="8" fill="#f5450a"/>
+  <text x="290" y="573" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Navigate ↗</text>
+
+  <!-- Phone shadow + frame -->
+  <rect x="388" y="66" width="274" height="604" rx="44" fill="#f5450a" opacity="0.10"/>
+  <rect x="380" y="58" width="290" height="624" rx="42" fill="#1c1c1e"/>
+  <rect x="380" y="58" width="290" height="624" rx="42" fill="none" stroke="#2e2e30" stroke-width="1.5"/>
+  <!-- Side buttons -->
+  <rect x="376" y="190" width="4" height="60" rx="2" fill="#2a2a2c"/>
+  <rect x="376" y="264" width="4" height="40" rx="2" fill="#2a2a2c"/>
+  <rect x="670" y="210" width="4" height="72" rx="2" fill="#2a2a2c"/>
+  <!-- Screen -->
+  <rect x="390" y="68" width="270" height="602" rx="30" fill="#0d0d0d"/>
+
+  <g clip-path="url(#lpsc)">
+
+    <!-- Status bar -->
+    <rect x="392" y="72" width="266" height="48" fill="#0d0d0d"/>
+    <text x="408" y="98" font-size="12" font-weight="600" fill="#ffffff">9:41</text>
+    <rect x="472" y="80" width="84" height="24" rx="12" fill="#000000"/>
+    <rect x="626" y="86" width="14" height="12" rx="2" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+    <rect x="640" y="89" width="2" height="6" rx="1" fill="#ffffff"/>
+    <rect x="628" y="88" width="10" height="8" rx="1" fill="#ffffff"/>
+    <rect x="610" y="88" width="3" height="10" rx="1" fill="#ffffff"/>
+    <rect x="606" y="90" width="2" height="8" rx="1" fill="#f5450a"/>
+    <rect x="602" y="92" width="2" height="6" rx="1" fill="#f5450a"/>
+
+    <!-- App header -->
+    <rect x="392" y="120" width="266" height="52" fill="#0d0d0d"/>
+    <text x="408" y="140" font-size="15" font-weight="800" fill="#ffffff">lokal</text>
+    <text x="408" y="158" font-size="10" fill="#f5450a">Gulberg III, Lahore</text>
+    <rect x="604" y="128" width="42" height="28" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="625" y="146" font-size="11" fill="#707070" text-anchor="middle">≡</text>
+    <rect x="554" y="128" width="42" height="28" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="575" y="146" font-size="11" fill="#707070" text-anchor="middle">🔍</text>
+
+    <!-- Category filter chips (horizontal scroll) -->
+    <rect x="392" y="172" width="266" height="40" fill="#0d0d0d"/>
+    <rect x="404" y="178" width="60" height="24" rx="12" fill="#f5450a"/>
+    <text x="434" y="194" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">All</text>
+    <rect x="470" y="178" width="68" height="24" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="504" y="194" font-size="10" fill="#a0a0a0" text-anchor="middle">🍛 Food</text>
+    <rect x="544" y="178" width="74" height="24" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="581" y="194" font-size="10" fill="#a0a0a0" text-anchor="middle">🛞 Repairs</text>
+    <rect x="624" y="178" width="50" height="24" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="649" y="194" font-size="10" fill="#a0a0a0" text-anchor="middle">📱</text>
+
+    <!-- Sort/filter bar -->
+    <rect x="392" y="212" width="266" height="28" fill="#131313"/>
+    <text x="408" y="230" font-size="10" fill="#707070">8 nearby  ·  sorted by distance</text>
+    <text x="632" y="230" font-size="10" fill="#f5450a" text-anchor="end">Sort ▾</text>
+
+    <!-- ── Business list items ── -->
+
+    <!-- Item 1: Khan's Food Corner -->
+    <rect x="392" y="240" width="266" height="70" fill="#0d0d0d"/>
+    <rect x="392" y="309" width="266" height="1" fill="#1a1a1a"/>
+    <rect x="404" y="248" width="50" height="50" rx="10" fill="#2a0e04"/>
+    <text x="429" y="280" font-size="28" text-anchor="middle">🍛</text>
+    <text x="464" y="262" font-size="12" font-weight="700" fill="#ffffff">Khan's Food Corner</text>
+    <text x="464" y="278" font-size="10" fill="#707070">Street food  ·  Gulberg III</text>
+    <rect x="464" y="286" width="42" height="16" rx="8" fill="#14301a"/>
+    <text x="485" y="298" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+    <text x="622" y="262" font-size="11" font-weight="700" fill="#f5450a" text-anchor="end">180m</text>
+    <text x="622" y="278" font-size="9" fill="#505050" text-anchor="end">~2 min walk</text>
+    <rect x="596" y="284" width="30" height="22" rx="6" fill="#f5450a"/>
+    <text x="611" y="299" font-size="11" fill="#fff" text-anchor="middle">↗</text>
+
+    <!-- Item 2: Raza Puncture Shop -->
+    <rect x="392" y="310" width="266" height="70" fill="#0d0d0d"/>
+    <rect x="392" y="379" width="266" height="1" fill="#1a1a1a"/>
+    <rect x="404" y="318" width="50" height="50" rx="10" fill="#1a1a10"/>
+    <text x="429" y="350" font-size="28" text-anchor="middle">🛞</text>
+    <text x="464" y="332" font-size="12" font-weight="700" fill="#ffffff">Raza Puncture Shop</text>
+    <text x="464" y="348" font-size="10" fill="#707070">Tyres &amp; repairs  ·  Main Blvd</text>
+    <rect x="464" y="356" width="42" height="16" rx="8" fill="#14301a"/>
+    <text x="485" y="368" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+    <text x="622" y="332" font-size="11" font-weight="700" fill="#f5450a" text-anchor="end">340m</text>
+    <text x="622" y="348" font-size="9" fill="#505050" text-anchor="end">~4 min walk</text>
+    <rect x="596" y="354" width="30" height="22" rx="6" fill="#f5450a"/>
+    <text x="611" y="369" font-size="11" fill="#fff" text-anchor="middle">↗</text>
+
+    <!-- Item 3: Juice Palace -->
+    <rect x="392" y="380" width="266" height="70" fill="#0d0d0d"/>
+    <rect x="392" y="449" width="266" height="1" fill="#1a1a1a"/>
+    <rect x="404" y="388" width="50" height="50" rx="10" fill="#101a10"/>
+    <text x="429" y="420" font-size="28" text-anchor="middle">🥤</text>
+    <text x="464" y="402" font-size="12" font-weight="700" fill="#ffffff">Juice Palace</text>
+    <text x="464" y="418" font-size="10" fill="#707070">Fresh juice  ·  Liberty Market</text>
+    <rect x="464" y="426" width="42" height="16" rx="8" fill="#14301a"/>
+    <text x="485" y="438" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+    <text x="622" y="402" font-size="11" font-weight="700" fill="#f5450a" text-anchor="end">420m</text>
+    <text x="622" y="418" font-size="9" fill="#505050" text-anchor="end">~5 min walk</text>
+    <rect x="596" y="424" width="30" height="22" rx="6" fill="#f5450a"/>
+    <text x="611" y="439" font-size="11" fill="#fff" text-anchor="middle">↗</text>
+
+    <!-- Item 4: Malik Cobbler -->
+    <rect x="392" y="450" width="266" height="70" fill="#0d0d0d"/>
+    <rect x="392" y="519" width="266" height="1" fill="#1a1a1a"/>
+    <rect x="404" y="458" width="50" height="50" rx="10" fill="#1a1010"/>
+    <text x="429" y="490" font-size="28" text-anchor="middle">👟</text>
+    <text x="464" y="472" font-size="12" font-weight="700" fill="#ffffff">Malik Cobbler</text>
+    <text x="464" y="488" font-size="10" fill="#707070">Shoe repair  ·  Gulberg II</text>
+    <rect x="464" y="496" width="42" height="16" rx="8" fill="#14301a"/>
+    <text x="485" y="508" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+    <text x="622" y="472" font-size="11" font-weight="700" fill="#f5450a" text-anchor="end">510m</text>
+    <text x="622" y="488" font-size="9" fill="#505050" text-anchor="end">~6 min walk</text>
+    <rect x="596" y="494" width="30" height="22" rx="6" fill="#f5450a"/>
+    <text x="611" y="509" font-size="11" fill="#fff" text-anchor="middle">↗</text>
+
+    <!-- Item 5: Ali Mobile Repair (closed) -->
+    <rect x="392" y="520" width="266" height="70" fill="#0d0d0d"/>
+    <rect x="404" y="528" width="50" height="50" rx="10" fill="#0f0f0f"/>
+    <text x="429" y="560" font-size="28" text-anchor="middle" opacity="0.5">📱</text>
+    <text x="464" y="542" font-size="12" font-weight="700" fill="#444444">Ali Mobile Repair</text>
+    <text x="464" y="558" font-size="10" fill="#383838">Electronics  ·  Liberty Mkt</text>
+    <rect x="464" y="566" width="46" height="16" rx="8" fill="#2a1414"/>
+    <text x="487" y="578" font-size="9" fill="#ef4444" text-anchor="middle" font-weight="600">Closed</text>
+    <text x="622" y="542" font-size="11" font-weight="700" fill="#444444" text-anchor="end">520m</text>
+    <text x="622" y="558" font-size="9" fill="#353535" text-anchor="end">Opens 10am</text>
+    <rect x="596" y="564" width="30" height="22" rx="6" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+    <text x="611" y="579" font-size="11" fill="#444444" text-anchor="middle">↗</text>
+
+    <!-- Bottom nav -->
+    <rect x="392" y="600" width="266" height="48" fill="#0d0d0d"/>
+    <rect x="392" y="600" width="266" height="1" fill="#1a1a1a"/>
+    <text x="430" y="622" font-size="18" text-anchor="middle">🗺</text>
+    <text x="430" y="638" font-size="8" fill="#f5450a" text-anchor="middle">Map</text>
+    <text x="480" y="622" font-size="18" text-anchor="middle">🔍</text>
+    <text x="480" y="638" font-size="8" fill="#505050" text-anchor="middle">Discover</text>
+    <text x="530" y="622" font-size="18" text-anchor="middle">🔖</text>
+    <text x="530" y="638" font-size="8" fill="#505050" text-anchor="middle">Saved</text>
+    <text x="580" y="622" font-size="18" text-anchor="middle">👤</text>
+    <text x="580" y="638" font-size="8" fill="#505050" text-anchor="middle">Me</text>
+
+  </g>
+
+  <!-- Home bar -->
+  <rect x="490" y="672" width="70" height="4" rx="2" fill="#2a1500"/>
+
+  <!-- Right panel: vendor portal context -->
+  <text x="730" y="88" font-size="13" fill="#f5450a" letter-spacing="1.5">VENDOR PORTAL</text>
+  <line x1="730" y1="100" x2="1220" y2="100" stroke="#f5450a" stroke-width="1" opacity="0.25"/>
+
+  <rect x="730" y="118" width="490" height="110" rx="14" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="730" y="118" width="4" height="110" rx="2" fill="#f5450a"/>
+  <rect x="750" y="130" width="54" height="54" rx="12" fill="#2a0e04"/>
+  <text x="777" y="162" font-size="30" text-anchor="middle">🍛</text>
+  <text x="818" y="148" font-size="14" font-weight="700" fill="#ffffff">Khan's Food Corner</text>
+  <text x="818" y="166" font-size="11" fill="#707070">Gulberg III, Lahore  ·  Street food</text>
+  <text x="818" y="184" font-size="11" fill="#f5450a">● Live on lokal since Jan 2026</text>
+  <rect x="818" y="195" width="100" height="22" rx="6" fill="#14301a"/>
+  <text x="868" y="210" font-size="10" fill="#22c55e" text-anchor="middle" font-weight="600">Status: Open ✓</text>
+  <rect x="928" y="195" width="90" height="22" rx="6" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="973" y="210" font-size="10" fill="#707070" text-anchor="middle">Edit listing</text>
+  <text x="1180" y="155" font-size="32" font-weight="800" fill="#f5450a" text-anchor="end">47</text>
+  <text x="1180" y="175" font-size="11" fill="#707070" text-anchor="end">customers</text>
+  <text x="1180" y="191" font-size="11" fill="#707070" text-anchor="end">this month</text>
+
+  <!-- Proximity alerts log -->
+  <text x="730" y="256" font-size="12" fill="#606060" font-weight="600">Recent proximity alerts</text>
+  <rect x="730" y="268" width="490" height="44" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="730" y="268" width="4" height="44" rx="2" fill="#f5450a"/>
+  <text x="750" y="286" font-size="11" font-weight="600" fill="#ffffff">Customer incoming  ·  89m</text>
+  <text x="750" y="302" font-size="10" fill="#707070">Today 09:41  ·  Via lokal discover</text>
+  <text x="1176" y="291" font-size="10" fill="#22c55e" text-anchor="end">● Active</text>
+
+  <rect x="730" y="318" width="490" height="44" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="730" y="318" width="4" height="44" rx="2" fill="#606060"/>
+  <text x="750" y="336" font-size="11" fill="#888888">Customer arrived  ·  Walk-in</text>
+  <text x="750" y="352" font-size="10" fill="#505050">Today 09:18  ·  Via lokal navigate</text>
+  <text x="1176" y="341" font-size="10" fill="#505050" text-anchor="end">Completed</text>
+
+  <rect x="730" y="368" width="490" height="44" rx="10" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="730" y="368" width="4" height="44" rx="2" fill="#606060"/>
+  <text x="750" y="386" font-size="11" fill="#888888">Customer arrived  ·  Walk-in</text>
+  <text x="750" y="402" font-size="10" fill="#505050">Yesterday 13:45  ·  Via lokal discover</text>
+  <text x="1176" y="391" font-size="10" fill="#505050" text-anchor="end">Completed</text>
+
+  <!-- Vendor stats -->
+  <rect x="730" y="430" width="156" height="80" rx="12" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="750" y="456" font-size="11" fill="#606060">App-driven visits</text>
+  <text x="750" y="494" font-size="28" font-weight="800" fill="#f5450a">47</text>
+  <text x="838" y="494" font-size="13" fill="#404040">/ month</text>
+
+  <rect x="898" y="430" width="156" height="80" rx="12" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="918" y="456" font-size="11" fill="#606060">Avg. customer dist.</text>
+  <text x="918" y="494" font-size="28" font-weight="800" fill="#f5450a">620m</text>
+
+  <rect x="1066" y="430" width="154" height="80" rx="12" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1086" y="456" font-size="11" fill="#606060">Repeat customers</text>
+  <text x="1086" y="494" font-size="28" font-weight="800" fill="#f5450a">34%</text>
+
+  <!-- Quote / tagline -->
+  <rect x="730" y="528" width="490" height="80" rx="12" fill="#0d0000" stroke="#2a1500" stroke-width="1"/>
+  <text x="750" y="554" font-size="13" fill="#707070" font-style="italic">"Before lokal, I had no idea how many</text>
+  <text x="750" y="572" font-size="13" fill="#707070" font-style="italic"> customers walked past before finding me.</text>
+  <text x="750" y="590" font-size="13" fill="#707070" font-style="italic"> Now I get a ping every time one is coming."</text>
+  <text x="750" y="612" font-size="11" fill="#f5450a">— Vendor, Gulberg III, Lahore  ·  Beta participant</text>
+
+  </g>
+</svg>

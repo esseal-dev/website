@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="ldm"><rect width="1280" height="720"/></clipPath>
+    <clipPath id="psc1"><rect x="112" y="72" width="266" height="576" rx="28"/></clipPath>
+    <radialGradient id="bg1" cx="30%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a0e04"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </radialGradient>
+    <radialGradient id="userDot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5450a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f5450a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#ldm)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg1)"/>
+  <!-- Subtle grid overlay -->
+  <line x1="0" y1="240" x2="1280" y2="240" stroke="#f5450a" stroke-width="0.3" opacity="0.15"/>
+  <line x1="0" y1="480" x2="1280" y2="480" stroke="#f5450a" stroke-width="0.3" opacity="0.15"/>
+  <line x1="426" y1="0" x2="426" y2="720" stroke="#f5450a" stroke-width="0.3" opacity="0.15"/>
+  <line x1="853" y1="0" x2="853" y2="720" stroke="#f5450a" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- Phone shadow/glow -->
+  <rect x="106" y="66" width="282" height="596" rx="42" fill="#f5450a" opacity="0.12"/>
+
+  <!-- Phone outer shell -->
+  <rect x="98" y="58" width="294" height="614" rx="42" fill="#1c1c1e"/>
+  <!-- Phone highlight edge -->
+  <rect x="98" y="58" width="294" height="614" rx="42" fill="none" stroke="#2e2e30" stroke-width="1.5"/>
+  <!-- Side buttons -->
+  <rect x="94" y="190" width="4" height="60" rx="2" fill="#2a2a2c"/>
+  <rect x="94" y="264" width="4" height="40" rx="2" fill="#2a2a2c"/>
+  <rect x="392" y="210" width="4" height="72" rx="2" fill="#2a2a2c"/>
+
+  <!-- Screen -->
+  <rect x="110" y="70" width="270" height="590" rx="30" fill="#111111"/>
+
+  <!-- Clipped screen content -->
+  <g clip-path="url(#psc1)">
+
+    <!-- ── MAP AREA ── -->
+    <rect x="110" y="70" width="270" height="590" fill="#1b1d29"/>
+
+    <!-- Map: water/park patches -->
+    <rect x="110" y="310" width="70" height="50" fill="#16202c" opacity="0.8"/>
+    <rect x="296" y="400" width="84" height="60" fill="#1a2218" opacity="0.7"/>
+
+    <!-- Map: minor horizontal streets -->
+    <line x1="110" y1="148" x2="380" y2="148" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="218" x2="380" y2="218" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="248" x2="380" y2="248" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="328" x2="380" y2="328" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="358" x2="380" y2="358" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="430" x2="380" y2="430" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="476" x2="380" y2="476" stroke="#252838" stroke-width="1.5"/>
+    <line x1="110" y1="512" x2="380" y2="512" stroke="#252838" stroke-width="1.5"/>
+
+    <!-- Map: major horizontal roads -->
+    <rect x="110" y="175" width="270" height="8" fill="#2d3045"/>
+    <text x="125" y="182" font-size="7" fill="#6668a0" letter-spacing="0.5">MALL ROAD</text>
+    <rect x="110" y="284" width="270" height="8" fill="#2d3045"/>
+    <text x="125" y="291" font-size="7" fill="#6668a0" letter-spacing="0.5">GULBERG MAIN BLVD</text>
+    <rect x="110" y="392" width="270" height="8" fill="#2d3045"/>
+    <text x="125" y="399" font-size="7" fill="#6668a0" letter-spacing="0.5">LIBERTY MARKET ROAD</text>
+    <rect x="110" y="468" width="270" height="6" fill="#2d3045"/>
+    <text x="200" y="474" font-size="6" fill="#6668a0" letter-spacing="0.5">JAIL ROAD</text>
+
+    <!-- Map: minor vertical streets -->
+    <line x1="150" y1="70" x2="150" y2="590" stroke="#252838" stroke-width="1.5"/>
+    <line x1="210" y1="70" x2="210" y2="590" stroke="#252838" stroke-width="1.5"/>
+    <line x1="250" y1="70" x2="250" y2="590" stroke="#252838" stroke-width="1.5"/>
+    <line x1="310" y1="70" x2="310" y2="590" stroke="#252838" stroke-width="1.5"/>
+    <line x1="355" y1="70" x2="355" y2="590" stroke="#252838" stroke-width="1.5"/>
+
+    <!-- Map: major vertical roads -->
+    <rect x="184" y="70" width="7" height="520" fill="#2d3045"/>
+    <text x="183" y="105" font-size="6.5" fill="#6668a0" letter-spacing="0.3" transform="rotate(-90 183 105)">MAIN BOULEVARD</text>
+    <rect x="326" y="70" width="7" height="520" fill="#2d3045"/>
+    <text x="325" y="135" font-size="6.5" fill="#6668a0" letter-spacing="0.3" transform="rotate(-90 325 135)">FEROZEPUR RD</text>
+
+    <!-- Map: block fills (buildings areas) -->
+    <rect x="152" y="150" width="30" height="24" fill="#21222e" rx="2"/>
+    <rect x="186" y="152" width="24" height="22" fill="#21222e" rx="2"/>
+    <rect x="218" y="149" width="28" height="26" fill="#21222e" rx="2"/>
+    <rect x="255" y="152" width="20" height="22" fill="#21222e" rx="2"/>
+    <rect x="280" y="150" width="40" height="24" fill="#21222e" rx="2"/>
+    <rect x="152" y="250" width="55" height="30" fill="#21222e" rx="2"/>
+    <rect x="215" y="252" width="30" height="28" fill="#21222e" rx="2"/>
+    <rect x="256" y="252" width="65" height="28" fill="#21222e" rx="2"/>
+    <rect x="152" y="362" width="45" height="26" fill="#1e2828" rx="2"/>
+    <rect x="205" y="364" width="35" height="24" fill="#1e2828" rx="2"/>
+    <rect x="248" y="360" width="70" height="30" fill="#21222e" rx="2"/>
+
+    <!-- Business pin: Khan's Food Corner (selected/active - larger) -->
+    <circle cx="165" cy="160" r="26" fill="url(#pinGlow)"/>
+    <path d="M165,130 m-13,0 a13,13 0 1 1 26,0 a13,13 0 0 1 -26,0 L165,154 Z" fill="#f5450a"/>
+    <circle cx="165" cy="143" r="9" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <text x="165" y="147" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">K</text>
+    <!-- Popup for selected pin -->
+    <rect x="136" y="100" width="112" height="42" rx="8" fill="#111111" stroke="#f5450a" stroke-width="1"/>
+    <rect x="136" y="100" width="112" height="42" rx="8" fill="none" stroke="#f5450a" stroke-width="1"/>
+    <text x="148" y="117" font-size="9" font-weight="700" fill="#ffffff">Khan's Food Corner</text>
+    <text x="148" y="131" font-size="8" fill="#f5450a">● Open  </text>
+    <text x="176" y="131" font-size="8" fill="#a0a0a0">· 180m away</text>
+    <polygon points="190,142 196,142 193,148" fill="#f5450a"/>
+
+    <!-- Business pin: Raza Puncture Shop -->
+    <path d="M218,217 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L218,235 Z" fill="#f5450a"/>
+    <text x="218" y="221" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">R</text>
+
+    <!-- Business pin: Juice Palace -->
+    <path d="M300,205 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L300,222 Z" fill="#f5450a"/>
+    <text x="300" y="209" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">J</text>
+
+    <!-- Business pin: Ali Mobile Repair (closed - muted orange) -->
+    <path d="M178,310 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L178,327 Z" fill="#7a2205"/>
+    <text x="178" y="314" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">A</text>
+
+    <!-- Business pin: Daily Grocers -->
+    <path d="M345,278 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L345,295 Z" fill="#f5450a"/>
+    <text x="345" y="282" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">D</text>
+
+    <!-- Business pin: Malik Cobbler -->
+    <path d="M255,348 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L255,365 Z" fill="#f5450a"/>
+    <text x="255" y="352" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">M</text>
+
+    <!-- Business pin: Food Stall -->
+    <path d="M200,425 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L200,442 Z" fill="#f5450a"/>
+    <text x="200" y="429" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">F</text>
+
+    <!-- Business pin: Shah Chai -->
+    <path d="M338,408 m-10,0 a10,10 0 1 1 20,0 a10,10 0 0 1 -20,0 L338,425 Z" fill="#f5450a"/>
+    <text x="338" y="412" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">S</text>
+
+    <!-- User location dot -->
+    <circle cx="240" cy="315" r="32" fill="url(#userDot)"/>
+    <circle cx="240" cy="315" r="18" fill="#3b82f6" opacity="0.2"/>
+    <circle cx="240" cy="315" r="9" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+    <circle cx="240" cy="315" r="3" fill="#3b82f6"/>
+
+    <!-- ── Status Bar ── -->
+    <rect x="110" y="70" width="270" height="48" fill="#111111"/>
+    <text x="128" y="92" font-size="12" font-weight="600" fill="#ffffff">9:41</text>
+    <!-- Dynamic island -->
+    <rect x="200" y="78" width="90" height="26" rx="13" fill="#000000"/>
+    <!-- Signal bars -->
+    <rect x="338" y="87" width="3" height="6" rx="1" fill="#ffffff"/>
+    <rect x="343" y="84" width="3" height="9" rx="1" fill="#ffffff"/>
+    <rect x="348" y="81" width="3" height="12" rx="1" fill="#ffffff"/>
+    <rect x="353" y="78" width="3" height="15" rx="1" fill="#ffffff"/>
+    <!-- Battery -->
+    <rect x="360" y="83" width="18" height="11" rx="2" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+    <rect x="378" y="86" width="2" height="5" rx="1" fill="#ffffff"/>
+    <rect x="362" y="85" width="12" height="7" rx="1" fill="#ffffff"/>
+
+    <!-- ── Search Bar ── -->
+    <rect x="118" y="124" width="254" height="36" rx="18" fill="#1e2030" stroke="#32344a" stroke-width="1"/>
+    <text x="145" y="146" font-size="11" fill="#6668a0">🔍  Search in Lahore...</text>
+    <rect x="348" y="128" width="18" height="28" rx="9" fill="#f5450a"/>
+    <text x="357" y="146" font-size="11" fill="#ffffff" text-anchor="middle">≡</text>
+
+    <!-- ── Bottom Sheet ── -->
+    <rect x="110" y="510" width="270" height="150" rx="0" fill="#111111"/>
+    <rect x="110" y="508" width="270" height="20" rx="14" fill="#111111"/>
+    <!-- Handle -->
+    <rect x="225" y="516" width="40" height="4" rx="2" fill="#333336"/>
+    <text x="128" y="538" font-size="11" font-weight="600" fill="#ffffff">Nearby · 8 businesses</text>
+    <text x="310" y="538" font-size="10" fill="#f5450a">See all →</text>
+
+    <!-- Card 1 -->
+    <rect x="118" y="546" width="234" height="52" rx="10" fill="#1a1a1e" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="118" y="546" width="4" height="52" rx="2" fill="#f5450a"/>
+    <rect x="132" y="553" width="32" height="32" rx="8" fill="#2a1a14"/>
+    <text x="148" y="574" font-size="16" text-anchor="middle">🍛</text>
+    <text x="174" y="563" font-size="11" font-weight="600" fill="#ffffff">Khan's Food Corner</text>
+    <text x="174" y="577" font-size="10" fill="#a0a0a0">Street food  ·  180m</text>
+    <rect x="296" y="551" width="40" height="18" rx="9" fill="#14301a"/>
+    <text x="316" y="564" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+    <rect x="296" y="572" width="40" height="18" rx="8" fill="#f5450a"/>
+    <text x="316" y="585" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">Go ↗</text>
+
+    <!-- Card 2 (partially visible) -->
+    <rect x="118" y="606" width="234" height="40" rx="10" fill="#1a1a1e" stroke="#2e2e32" stroke-width="1"/>
+    <rect x="118" y="606" width="4" height="40" rx="2" fill="#f5450a"/>
+    <rect x="132" y="613" width="32" height="26" rx="8" fill="#1a2010"/>
+    <text x="148" y="630" font-size="14" text-anchor="middle">🛞</text>
+    <text x="174" y="623" font-size="11" font-weight="600" fill="#ffffff">Raza Puncture Shop</text>
+    <text x="174" y="636" font-size="10" fill="#a0a0a0">Tyres &amp; repairs  ·  340m</text>
+    <rect x="296" y="611" width="40" height="18" rx="9" fill="#14301a"/>
+    <text x="316" y="624" font-size="9" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+
+  </g>
+
+  <!-- Home bar -->
+  <rect x="215" y="648" width="60" height="4" rx="2" fill="#333336"/>
+
+  <!-- ── Right side context panel ── -->
+  <!-- App branding -->
+  <text x="480" y="80" font-size="42" font-weight="800" fill="#ffffff" letter-spacing="-1">lokal</text>
+  <text x="480" y="108" font-size="16" fill="#f5450a" letter-spacing="1">DISCOVER  ·  NAVIGATE  ·  SUPPORT LOCAL</text>
+  <line x1="480" y1="120" x2="860" y2="120" stroke="#f5450a" stroke-width="1" opacity="0.3"/>
+
+  <text x="480" y="158" font-size="13" fill="#707070">Flutter  ·  iOS &amp; Android  ·  Ruby on Rails backend</text>
+
+  <!-- Floating stat cards -->
+  <rect x="480" y="178" width="180" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="480" y="178" width="180" height="80" rx="12" fill="none" stroke="#f5450a" stroke-width="1" opacity="0.4"/>
+  <text x="500" y="204" font-size="12" fill="#707070">Businesses mapped</text>
+  <text x="500" y="238" font-size="32" font-weight="800" fill="#f5450a">200+</text>
+  <text x="620" y="238" font-size="14" fill="#707070">in Lahore</text>
+
+  <rect x="676" y="178" width="180" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="696" y="204" font-size="12" fill="#707070">Pre-seed raised</text>
+  <text x="696" y="238" font-size="32" font-weight="800" fill="#f5450a">$80k</text>
+
+  <rect x="872" y="178" width="180" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="892" y="204" font-size="12" fill="#707070">MVP delivered in</text>
+  <text x="892" y="238" font-size="32" font-weight="800" fill="#f5450a">5 wks</text>
+
+  <!-- Category chips -->
+  <text x="480" y="298" font-size="12" fill="#707070">Business categories</text>
+  <rect x="480" y="310" width="88" height="28" rx="14" fill="#f5450a"/>
+  <text x="524" y="328" font-size="11" fill="#fff" text-anchor="middle" font-weight="600">🍛 Food</text>
+  <rect x="576" y="310" width="96" height="28" rx="14" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+  <text x="624" y="328" font-size="11" fill="#a0a0a0" text-anchor="middle">🛞 Repairs</text>
+  <rect x="680" y="310" width="88" height="28" rx="14" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+  <text x="724" y="328" font-size="11" fill="#a0a0a0" text-anchor="middle">📱 Tech</text>
+  <rect x="776" y="310" width="100" height="28" rx="14" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+  <text x="826" y="328" font-size="11" fill="#a0a0a0" text-anchor="middle">🛒 Grocers</text>
+  <rect x="884" y="310" width="88" height="28" rx="14" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+  <text x="928" y="328" font-size="11" fill="#a0a0a0" text-anchor="middle">☕ Chai</text>
+
+  <!-- Nearby business cards (full width) -->
+  <rect x="480" y="356" width="760" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="480" y="356" width="4" height="80" rx="2" fill="#f5450a"/>
+  <rect x="496" y="366" width="48" height="48" rx="10" fill="#2a1a14"/>
+  <text x="520" y="396" font-size="28" text-anchor="middle">🍛</text>
+  <text x="556" y="382" font-size="14" font-weight="700" fill="#ffffff">Khan's Food Corner</text>
+  <text x="556" y="400" font-size="12" fill="#707070">Street food  ·  Gulberg III, Lahore</text>
+  <text x="556" y="418" font-size="12" fill="#f5450a">180m away  ·  Est. 2008</text>
+  <rect x="1068" y="370" width="60" height="24" rx="12" fill="#14301a"/>
+  <text x="1098" y="386" font-size="11" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+  <rect x="1140" y="368" width="82" height="28" rx="8" fill="#f5450a"/>
+  <text x="1181" y="386" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Navigate ↗</text>
+
+  <rect x="480" y="448" width="760" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="480" y="448" width="4" height="80" rx="2" fill="#f5450a"/>
+  <rect x="496" y="458" width="48" height="48" rx="10" fill="#1a1f10"/>
+  <text x="520" y="488" font-size="28" text-anchor="middle">🛞</text>
+  <text x="556" y="474" font-size="14" font-weight="700" fill="#ffffff">Raza Puncture &amp; Tyre Shop</text>
+  <text x="556" y="492" font-size="12" fill="#707070">Vehicle repairs  ·  Main Boulevard, Lahore</text>
+  <text x="556" y="510" font-size="12" fill="#f5450a">340m away  ·  No listing anywhere else</text>
+  <rect x="1068" y="462" width="60" height="24" rx="12" fill="#14301a"/>
+  <text x="1098" y="478" font-size="11" fill="#22c55e" text-anchor="middle" font-weight="600">Open</text>
+  <rect x="1140" y="460" width="82" height="28" rx="8" fill="#f5450a"/>
+  <text x="1181" y="478" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">Navigate ↗</text>
+
+  <rect x="480" y="540" width="760" height="80" rx="12" fill="#111111" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="480" y="540" width="4" height="80" rx="2" fill="#3d3d3d"/>
+  <rect x="496" y="550" width="48" height="48" rx="10" fill="#1a1a1a"/>
+  <text x="520" y="580" font-size="28" text-anchor="middle">📱</text>
+  <text x="556" y="566" font-size="14" font-weight="700" fill="#888888">Ali Mobile Repair</text>
+  <text x="556" y="584" font-size="12" fill="#555555">Electronics  ·  Liberty Market, Lahore</text>
+  <text x="556" y="602" font-size="12" fill="#555555">520m away</text>
+  <rect x="1068" y="554" width="60" height="24" rx="12" fill="#2a1414"/>
+  <text x="1098" y="570" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="600">Closed</text>
+  <rect x="1140" y="552" width="82" height="28" rx="8" fill="#222222" stroke="#333333" stroke-width="1"/>
+  <text x="1181" y="570" font-size="12" fill="#555555" text-anchor="middle" font-weight="600">Navigate ↗</text>
+
+  <text x="480" y="652" font-size="12" fill="#444444">Not on Google Maps · Not registered · Just known.  </text>
+  <text x="480" y="670" font-size="12" fill="#444444">lokal puts them on the map.</text>
+
+  </g>
+</svg>

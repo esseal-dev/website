@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="ia"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="sideGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c4005e"/>
+      <stop offset="100%" stop-color="#d4006e"/>
+    </linearGradient>
+    <linearGradient id="pinkBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c4005e"/>
+      <stop offset="100%" stop-color="#e0007a"/>
+    </linearGradient>
+    <linearGradient id="progressBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c4005e"/>
+      <stop offset="100%" stop-color="#ffc9e3"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#ia)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#fdf6f9"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="210" height="720" fill="url(#sideGrad)"/>
+  <!-- Logo -->
+  <rect x="0" y="0" width="210" height="66" fill="#a0004e"/>
+  <circle cx="30" cy="33" r="16" fill="#ffc9e3" opacity="0.3"/>
+  <text x="30" y="38" font-size="16" fill="#ffffff" text-anchor="middle">✦</text>
+  <text x="54" y="30" font-size="13" font-weight="800" fill="#ffffff">influxr</text>
+  <text x="54" y="46" font-size="9" fill="#ffb0d0" letter-spacing="1">BRAND PORTAL</text>
+
+  <!-- Nav items -->
+  <rect x="0" y="78" width="210" height="40" fill="#ffffff" fill-opacity="0.15" rx="0"/>
+  <rect x="0" y="78" width="4" height="40" fill="#ffc9e3"/>
+  <text x="22" y="89" font-size="13">📢</text>
+  <text x="46" y="103" font-size="12" font-weight="600" fill="#ffffff">Campaigns</text>
+
+  <text x="22" y="132" font-size="13">🌟</text>
+  <text x="46" y="141" font-size="12" fill="#ffb0d0">Influencers</text>
+
+  <text x="22" y="170" font-size="13">💬</text>
+  <text x="46" y="179" font-size="12" fill="#ffb0d0">Messages</text>
+
+  <text x="22" y="208" font-size="13">📄</text>
+  <text x="46" y="217" font-size="12" fill="#ffb0d0">Contracts</text>
+
+  <text x="22" y="246" font-size="13">💳</text>
+  <text x="46" y="255" font-size="12" fill="#ffb0d0">Payments</text>
+
+  <text x="22" y="284" font-size="13">📊</text>
+  <text x="46" y="293" font-size="12" fill="#ffb0d0">Analytics</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="316" x2="190" y2="316" stroke="#e0007a" stroke-width="1" opacity="0.4"/>
+  <text x="20" y="336" font-size="10" fill="#ffb0d0" letter-spacing="1">ACTIVE CAMPAIGNS</text>
+  <rect x="10" y="346" width="190" height="36" rx="6" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="20" y="360" font-size="11" fill="#ffffff" font-weight="600">Spring Collection 2026</text>
+  <text x="20" y="374" font-size="10" fill="#ffb0d0">47 applicants</text>
+  <text x="10" y="404" font-size="11" fill="#ffb0d0">Summer Glow Edit</text>
+  <text x="10" y="416" font-size="10" fill="#e090b8" opacity="0.7">23 applicants</text>
+  <text x="10" y="440" font-size="11" fill="#ffb0d0">Brand Awareness Q2</text>
+  <text x="10" y="452" font-size="10" fill="#e090b8" opacity="0.7">Draft</text>
+
+  <!-- Brand info bottom -->
+  <rect x="0" y="668" width="210" height="52" fill="#a0004e"/>
+  <circle cx="28" cy="694" r="14" fill="#ffc9e3" opacity="0.4"/>
+  <text x="28" y="699" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">B</text>
+  <text x="50" y="689" font-size="11" font-weight="600" fill="#ffffff">Bloom &amp; Co.</text>
+  <text x="50" y="703" font-size="10" fill="#ffb0d0">Premium Brand · Pro Plan</text>
+
+  <!-- Top header -->
+  <rect x="210" y="0" width="1070" height="58" fill="#ffffff" stroke="#fce8f0" stroke-width="1"/>
+  <text x="232" y="24" font-size="16" font-weight="700" fill="#1e0a14">Spring Collection 2026</text>
+  <text x="232" y="42" font-size="11" fill="#94a3b8">Campaign dashboard  ·  Active since 1 Mar 2026</text>
+  <rect x="960" y="14" width="100" height="30" rx="8" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1.5"/>
+  <text x="1010" y="33" font-size="11" fill="#c4005e" text-anchor="middle" font-weight="600">● Active</text>
+  <rect x="1072" y="14" width="192" height="30" rx="8" fill="url(#pinkBtn)"/>
+  <text x="1168" y="33" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">+ New Campaign</text>
+
+  <!-- KPI cards -->
+  <rect x="222" y="72" width="192" height="78" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <text x="244" y="96" font-size="10" fill="#94a3b8" letter-spacing="0.5">APPLICANTS</text>
+  <text x="244" y="128" font-size="32" font-weight="800" fill="#1e0a14">47</text>
+  <rect x="358" y="82" width="40" height="20" rx="6" fill="#fff0f7"/>
+  <text x="378" y="96" font-size="9" fill="#c4005e" text-anchor="middle">+12 new</text>
+
+  <rect x="426" y="72" width="192" height="78" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <text x="448" y="96" font-size="10" fill="#94a3b8" letter-spacing="0.5">CAMPAIGN BUDGET</text>
+  <text x="448" y="128" font-size="28" font-weight="800" fill="#c4005e">£8,500</text>
+
+  <rect x="630" y="72" width="192" height="78" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <text x="652" y="96" font-size="10" fill="#94a3b8" letter-spacing="0.5">CONTRACTED</text>
+  <text x="652" y="128" font-size="28" font-weight="800" fill="#1e0a14">£3,200</text>
+  <text x="652" y="143" font-size="10" fill="#94a3b8">4 influencers live</text>
+
+  <rect x="834" y="72" width="192" height="78" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <text x="856" y="96" font-size="10" fill="#94a3b8" letter-spacing="0.5">EST. TOTAL REACH</text>
+  <text x="856" y="128" font-size="28" font-weight="800" fill="#1e0a14">1.4M</text>
+  <text x="856" y="143" font-size="10" fill="#94a3b8">across contracted posts</text>
+
+  <rect x="1038" y="72" width="230" height="78" rx="10" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1.5"/>
+  <text x="1060" y="96" font-size="10" fill="#94a3b8" letter-spacing="0.5">BUDGET REMAINING</text>
+  <!-- Budget progress -->
+  <text x="1060" y="120" font-size="22" font-weight="800" fill="#c4005e">£5,300</text>
+  <rect x="1060" y="130" width="186" height="8" rx="4" fill="#fce8f0"/>
+  <rect x="1060" y="130" width="72" height="8" rx="4" fill="url(#progressBar)"/>
+  <text x="1060" y="148" font-size="9" fill="#94a3b8">38% spent</text>
+
+  <!-- Campaign brief panel -->
+  <rect x="222" y="164" width="390" height="270" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <rect x="222" y="164" width="390" height="46" rx="10" fill="#fff8fb"/>
+  <rect x="222" y="188" width="390" height="22" fill="#fff8fb"/>
+  <text x="244" y="193" font-size="12" font-weight="700" fill="#1e0a14">Campaign Brief</text>
+  <line x1="222" y1="210" x2="612" y2="210" stroke="#fce8f0" stroke-width="1"/>
+
+  <text x="244" y="234" font-size="10" fill="#94a3b8" letter-spacing="0.5">OBJECTIVE</text>
+  <text x="244" y="252" font-size="12" fill="#1e0a14">Product launch — Spring Collection SS26</text>
+
+  <text x="244" y="276" font-size="10" fill="#94a3b8" letter-spacing="0.5">TARGET AUDIENCE</text>
+  <text x="244" y="294" font-size="12" fill="#1e0a14">Women · Ages 18–35 · UK &amp; Ireland</text>
+
+  <text x="244" y="318" font-size="10" fill="#94a3b8" letter-spacing="0.5">CONTENT FORMAT</text>
+  <!-- Format chips -->
+  <rect x="244" y="326" width="108" height="22" rx="11" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="298" y="341" font-size="10" fill="#c4005e" text-anchor="middle">Instagram Reels</text>
+  <rect x="360" y="326" width="88" height="22" rx="11" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="404" y="341" font-size="10" fill="#c4005e" text-anchor="middle">IG Stories</text>
+  <rect x="456" y="326" width="78" height="22" rx="11" fill="#f5f5f5" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="495" y="341" font-size="10" fill="#64748b" text-anchor="middle">TikTok</text>
+
+  <text x="244" y="374" font-size="10" fill="#94a3b8" letter-spacing="0.5">NICHE FIT</text>
+  <rect x="244" y="382" width="72" height="22" rx="11" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="280" y="397" font-size="10" fill="#c4005e" text-anchor="middle">Fashion</text>
+  <rect x="324" y="382" width="72" height="22" rx="11" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="360" y="397" font-size="10" fill="#c4005e" text-anchor="middle">Lifestyle</text>
+  <rect x="404" y="382" width="72" height="22" rx="11" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="440" y="397" font-size="10" fill="#c4005e" text-anchor="middle">Beauty</text>
+
+  <text x="244" y="422" font-size="10" fill="#94a3b8" letter-spacing="0.5">MIN. FOLLOWERS</text>
+  <text x="244" y="440" font-size="12" fill="#1e0a14">10,000 — Micro to Macro</text>
+
+  <!-- Applicants panel -->
+  <rect x="624" y="164" width="644" height="270" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <rect x="624" y="164" width="644" height="46" rx="10" fill="#fff8fb"/>
+  <rect x="624" y="188" width="644" height="22" fill="#fff8fb"/>
+  <text x="646" y="193" font-size="12" font-weight="700" fill="#1e0a14">New Applicants</text>
+  <rect x="1168" y="172" width="84" height="28" rx="8" fill="url(#pinkBtn)"/>
+  <text x="1210" y="190" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">View all 47</text>
+  <line x1="624" y1="210" x2="1268" y2="210" stroke="#fce8f0" stroke-width="1"/>
+
+  <!-- Table headers -->
+  <text x="646" y="232" font-size="10" fill="#94a3b8" letter-spacing="0.5" font-weight="600">INFLUENCER</text>
+  <text x="820" y="232" font-size="10" fill="#94a3b8" letter-spacing="0.5" font-weight="600">FOLLOWERS</text>
+  <text x="920" y="232" font-size="10" fill="#94a3b8" letter-spacing="0.5" font-weight="600">ENG. RATE</text>
+  <text x="1020" y="232" font-size="10" fill="#94a3b8" letter-spacing="0.5" font-weight="600">NICHE</text>
+  <text x="1150" y="232" font-size="10" fill="#94a3b8" letter-spacing="0.5" font-weight="600">ACTION</text>
+  <line x1="624" y1="240" x2="1268" y2="240" stroke="#fce8f0" stroke-width="1"/>
+
+  <!-- Row 1 - highlighted -->
+  <rect x="625" y="241" width="642" height="42" fill="#fff0f7"/>
+  <circle cx="662" cy="262" r="14" fill="#ffc9e3"/>
+  <text x="662" y="267" font-size="11" font-weight="700" fill="#c4005e" text-anchor="middle">S</text>
+  <text x="682" y="258" font-size="12" font-weight="600" fill="#1e0a14">@sophiastyle.uk</text>
+  <text x="682" y="274" font-size="10" fill="#94a3b8">Sophia Hartley  ·  London</text>
+  <text x="820" y="264" font-size="12" fill="#1e0a14" font-weight="600">84.2K</text>
+  <text x="920" y="264" font-size="12" fill="#c4005e" font-weight="700">6.8%</text>
+  <rect x="1020" y="252" width="60" height="20" rx="10" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="1050" y="266" font-size="9" fill="#c4005e" text-anchor="middle">Fashion</text>
+  <rect x="1142" y="249" width="60" height="26" rx="7" fill="url(#pinkBtn)"/>
+  <text x="1172" y="266" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">Review</text>
+  <rect x="1208" y="249" width="50" height="26" rx="7" fill="#f5f5f5" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1233" y="266" font-size="10" fill="#64748b" text-anchor="middle">Pass</text>
+
+  <!-- Row 2 -->
+  <line x1="624" y1="283" x2="1268" y2="283" stroke="#fce8f0" stroke-width="1"/>
+  <circle cx="662" cy="304" r="14" fill="#e8d4ff"/>
+  <text x="662" y="309" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">A</text>
+  <text x="682" y="300" font-size="12" fill="#1e0a14">@amberlifestyle</text>
+  <text x="682" y="316" font-size="10" fill="#94a3b8">Amber Chen  ·  Manchester</text>
+  <text x="820" y="306" font-size="12" fill="#1e0a14">41.0K</text>
+  <text x="920" y="306" font-size="12" fill="#c4005e" font-weight="600">5.2%</text>
+  <rect x="1020" y="294" width="66" height="20" rx="10" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="1053" y="308" font-size="9" fill="#c4005e" text-anchor="middle">Lifestyle</text>
+  <rect x="1142" y="291" width="60" height="26" rx="7" fill="url(#pinkBtn)"/>
+  <text x="1172" y="308" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">Review</text>
+  <rect x="1208" y="291" width="50" height="26" rx="7" fill="#f5f5f5" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1233" y="308" font-size="10" fill="#64748b" text-anchor="middle">Pass</text>
+
+  <!-- Row 3 -->
+  <line x1="624" y1="325" x2="1268" y2="325" stroke="#fce8f0" stroke-width="1"/>
+  <circle cx="662" cy="346" r="14" fill="#ffd6e0"/>
+  <text x="662" y="351" font-size="11" font-weight="700" fill="#be123c" text-anchor="middle">R</text>
+  <text x="682" y="342" font-size="12" fill="#1e0a14">@rosie.beautyedits</text>
+  <text x="682" y="358" font-size="10" fill="#94a3b8">Rosie Walsh  ·  Dublin</text>
+  <text x="820" y="348" font-size="12" fill="#1e0a14">22.7K</text>
+  <text x="920" y="348" font-size="12" fill="#c4005e" font-weight="600">8.1%</text>
+  <rect x="1020" y="336" width="56" height="20" rx="10" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="1048" y="350" font-size="9" fill="#c4005e" text-anchor="middle">Beauty</text>
+  <rect x="1142" y="333" width="60" height="26" rx="7" fill="url(#pinkBtn)"/>
+  <text x="1172" y="350" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">Review</text>
+  <rect x="1208" y="333" width="50" height="26" rx="7" fill="#f5f5f5" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1233" y="350" font-size="10" fill="#64748b" text-anchor="middle">Pass</text>
+
+  <!-- Row 4 -->
+  <line x1="624" y1="367" x2="1268" y2="367" stroke="#fce8f0" stroke-width="1"/>
+  <circle cx="662" cy="388" r="14" fill="#d4f5e0"/>
+  <text x="662" y="393" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">M</text>
+  <text x="682" y="384" font-size="12" fill="#1e0a14">@maya.outfitdiaries</text>
+  <text x="682" y="400" font-size="10" fill="#94a3b8">Maya Brooks  ·  Birmingham</text>
+  <text x="820" y="390" font-size="12" fill="#1e0a14">118K</text>
+  <text x="920" y="390" font-size="12" fill="#64748b">3.4%</text>
+  <rect x="1020" y="378" width="60" height="20" rx="10" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="1050" y="392" font-size="9" fill="#c4005e" text-anchor="middle">Fashion</text>
+  <rect x="1142" y="375" width="60" height="26" rx="7" fill="url(#pinkBtn)"/>
+  <text x="1172" y="392" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">Review</text>
+  <rect x="1208" y="375" width="50" height="26" rx="7" fill="#f5f5f5" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1233" y="392" font-size="10" fill="#64748b" text-anchor="middle">Pass</text>
+
+  <!-- Contracted influencers section -->
+  <rect x="222" y="448" width="1046" height="260" rx="10" fill="#ffffff" stroke="#fce8f0" stroke-width="1.5"/>
+  <rect x="222" y="448" width="1046" height="46" rx="10" fill="#fff8fb"/>
+  <rect x="222" y="472" width="1046" height="22" fill="#fff8fb"/>
+  <text x="244" y="477" font-size="12" font-weight="700" fill="#1e0a14">Contracted — Live Campaigns</text>
+  <text x="1102" y="477" font-size="11" fill="#c4005e" text-anchor="end">4 influencers active  ·  £3,200 contracted</text>
+  <line x1="222" y1="494" x2="1268" y2="494" stroke="#fce8f0" stroke-width="1"/>
+
+  <!-- Contracted influencer cards (4 cards) -->
+  <!-- Card 1 -->
+  <rect x="242" y="506" width="232" height="180" rx="10" fill="#fff8fb" stroke="#ffc9e3" stroke-width="1.5"/>
+  <circle cx="310" cy="546" r="28" fill="#ffc9e3"/>
+  <text x="310" y="552" font-size="20" fill="#c4005e" text-anchor="middle" font-weight="800">J</text>
+  <text x="310" y="586" font-size="12" font-weight="700" fill="#1e0a14" text-anchor="middle">@jessicapalmer_</text>
+  <text x="310" y="602" font-size="10" fill="#94a3b8" text-anchor="middle">210K followers · Fashion</text>
+  <rect x="262" y="614" width="192" height="22" rx="6" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="358" y="629" font-size="10" fill="#c4005e" text-anchor="middle" font-weight="600">2 Reels · 3 Stories · £900</text>
+  <rect x="262" y="644" width="192" height="26" rx="7" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="358" y="661" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">✓ Content submitted</text>
+
+  <!-- Card 2 -->
+  <rect x="490" y="506" width="232" height="180" rx="10" fill="#fff8fb" stroke="#ffc9e3" stroke-width="1.5"/>
+  <circle cx="558" cy="546" r="28" fill="#ffdce8"/>
+  <text x="558" y="552" font-size="20" fill="#c4005e" text-anchor="middle" font-weight="800">L</text>
+  <text x="558" y="586" font-size="12" font-weight="700" fill="#1e0a14" text-anchor="middle">@lara.luxelooks</text>
+  <text x="558" y="602" font-size="10" fill="#94a3b8" text-anchor="middle">67K followers · Lifestyle</text>
+  <rect x="510" y="614" width="192" height="22" rx="6" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="606" y="629" font-size="10" fill="#c4005e" text-anchor="middle" font-weight="600">1 Reel · 2 Stories · £600</text>
+  <rect x="510" y="644" width="192" height="26" rx="7" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>
+  <text x="606" y="661" font-size="10" fill="#ca8a04" text-anchor="middle" font-weight="600">⏳ Awaiting content</text>
+
+  <!-- Card 3 -->
+  <rect x="738" y="506" width="232" height="180" rx="10" fill="#fff8fb" stroke="#ffc9e3" stroke-width="1.5"/>
+  <circle cx="806" cy="546" r="28" fill="#e8d4ff"/>
+  <text x="806" y="552" font-size="20" fill="#7c3aed" text-anchor="middle" font-weight="800">P</text>
+  <text x="806" y="586" font-size="12" font-weight="700" fill="#1e0a14" text-anchor="middle">@priyafits</text>
+  <text x="806" y="602" font-size="10" fill="#94a3b8" text-anchor="middle">34K followers · Beauty</text>
+  <rect x="758" y="614" width="192" height="22" rx="6" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="854" y="629" font-size="10" fill="#c4005e" text-anchor="middle" font-weight="600">2 Reels · 1 Story · £800</text>
+  <rect x="758" y="644" width="192" height="26" rx="7" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="854" y="661" font-size="10" fill="#16a34a" text-anchor="middle" font-weight="600">✓ Content submitted</text>
+
+  <!-- Card 4 -->
+  <rect x="986" y="506" width="232" height="180" rx="10" fill="#fff8fb" stroke="#ffc9e3" stroke-width="1.5"/>
+  <circle cx="1054" cy="546" r="28" fill="#ffd6e0"/>
+  <text x="1054" y="552" font-size="20" fill="#be123c" text-anchor="middle" font-weight="800">H</text>
+  <text x="1054" y="586" font-size="12" font-weight="700" fill="#1e0a14" text-anchor="middle">@hannahedits.co</text>
+  <text x="1054" y="602" font-size="10" fill="#94a3b8" text-anchor="middle">51K followers · Fashion</text>
+  <rect x="1006" y="614" width="192" height="22" rx="6" fill="#fff0f7" stroke="#ffc9e3" stroke-width="1"/>
+  <text x="1102" y="629" font-size="10" fill="#c4005e" text-anchor="middle" font-weight="600">1 Reel · 2 Stories · £900</text>
+  <rect x="1006" y="644" width="192" height="26" rx="7" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1102" y="661" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="600">Contract being signed</text>
+
+  </g>
+</svg>

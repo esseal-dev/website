@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="lsa"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2b3a2b" stop-opacity="0.72"/>
+      <stop offset="60%" stop-color="#2b3a2b" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#2b3a2b" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a5a3a"/>
+      <stop offset="100%" stop-color="#6a8a4a"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#lsa)">
+
+  <!-- Page white background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- ── ANNOUNCEMENT BAR ── -->
+  <rect x="0" y="0" width="1280" height="34" fill="#2b3a2b"/>
+  <text x="640" y="21" font-size="11" fill="#f5f5d6" text-anchor="middle" letter-spacing="0.3">Aloha E Komo Mai — Women's Day Sale 15% off, use code: MEDICINEWOMAN</text>
+
+  <!-- ── HEADER ── -->
+  <rect x="0" y="34" width="1280" height="70" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <!-- Logo -->
+  <text x="60" y="63" font-size="18" font-weight="700" fill="#2b3a2b" text-anchor="middle" letter-spacing="2">L</text>
+  <rect x="40" y="38" width="40" height="40" rx="20" fill="none" stroke="#2b3a2b" stroke-width="1.5"/>
+  <text x="280" y="68" font-size="15" font-weight="700" fill="#2b3a2b" letter-spacing="2">LOKELANI ESSENTIALS</text>
+  <!-- Nav (right-aligned) -->
+  <text x="720" y="73" font-size="13" fill="#2b3a2b">Home</text>
+  <text x="784" y="73" font-size="13" fill="#2b3a2b">About Us</text>
+  <text x="867" y="73" font-size="13" fill="#2b3a2b">Products</text>
+  <rect x="908" y="58" width="28" height="14" rx="4" fill="#c2c874"/>
+  <text x="922" y="68" font-size="8" fill="#2b3a2b" text-anchor="middle" font-weight="700">HOT</text>
+  <text x="966" y="73" font-size="13" fill="#2b3a2b">Contact</text>
+  <text x="1028" y="73" font-size="13" fill="#2b3a2b">More ▾</text>
+  <!-- Header icons -->
+  <text x="1114" y="74" font-size="11" fill="#2b3a2b">Log in</text>
+  <text x="1148" y="74" font-size="11" fill="#888"> | </text>
+  <text x="1160" y="74" font-size="11" fill="#2b3a2b">Create account</text>
+  <text x="1228" y="74" font-size="16">🛒</text>
+  <text x="1254" y="74" font-size="16">♡</text>
+
+  <!-- ── HERO SECTION ── -->
+  <!-- Background photo suggestion: tropical botanical -->
+  <rect x="0" y="104" width="1280" height="400" fill="url(#heroBg)"/>
+  <!-- Leaf texture suggestion -->
+  <ellipse cx="900" cy="250" rx="300" ry="120" fill="#4a7a4a" opacity="0.5" transform="rotate(-20 900 250)"/>
+  <ellipse cx="1050" cy="340" rx="260" ry="100" fill="#5a8a5a" opacity="0.35" transform="rotate(15 1050 340)"/>
+  <ellipse cx="1150" cy="180" rx="200" ry="80" fill="#3a6a3a" opacity="0.4" transform="rotate(-35 1150 180)"/>
+  <ellipse cx="780" cy="400" rx="320" ry="110" fill="#2b4a2b" opacity="0.5" transform="rotate(8 780 400)"/>
+  <!-- Overlay for text readability -->
+  <rect x="0" y="104" width="1280" height="400" fill="url(#heroOverlay)"/>
+
+  <!-- Hero text -->
+  <text x="80" y="198" font-size="13" fill="#dce6bc" letter-spacing="3">NATURAL SKINCARE</text>
+  <text x="80" y="268" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="-1">Elevate Your Skin,</text>
+  <text x="80" y="332" font-size="54" font-weight="700" fill="#f5f5d6" letter-spacing="-1">Nurture Your Soul</text>
+  <text x="80" y="374" font-size="16" fill="#dce6bc" opacity="0.9">Experience the Transformative Power of Nature's Purest Elements</text>
+  <!-- Shop Now button -->
+  <rect x="80" y="394" width="148" height="46" rx="4" fill="#dce6bc"/>
+  <text x="154" y="422" font-size="14" font-weight="600" fill="#2b3a2b" text-anchor="middle">Shop Now</text>
+
+  <!-- ── PROMO STRIP ── -->
+  <rect x="0" y="504" width="1280" height="36" fill="#f5f5d6"/>
+  <text x="640" y="526" font-size="11" fill="#2b3a2b" text-anchor="middle">15% off over $250 — Use code <tspan font-weight="700">'15off'</tspan> at checkout</text>
+
+  <!-- ── PRODUCTS SECTION ── -->
+  <rect x="0" y="540" width="1280" height="180" fill="#ffffff"/>
+  <text x="640" y="572" font-size="17" font-weight="700" fill="#2b3a2b" text-anchor="middle" letter-spacing="1">PRODUCTS</text>
+
+  <!-- Product Card 1 -->
+  <rect x="60" y="588" width="240" height="120" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="60" y="588" width="240" height="66" rx="4" fill="#dce6bc" opacity="0.5"/>
+  <text x="180" y="630" font-size="28" text-anchor="middle">🌺</text>
+  <text x="180" y="672" font-size="11" fill="#888" text-anchor="middle">Lokelani Skincare</text>
+  <text x="180" y="688" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Aloha Blend Face Oil</text>
+  <text x="180" y="702" font-size="12" fill="#2b3a2b" text-anchor="middle">$28.00</text>
+
+  <!-- Product Card 2 -->
+  <rect x="320" y="588" width="240" height="120" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="320" y="588" width="240" height="66" rx="4" fill="#f5f5d6" opacity="0.8"/>
+  <text x="440" y="630" font-size="28" text-anchor="middle">🌸</text>
+  <text x="440" y="672" font-size="11" fill="#888" text-anchor="middle">Lokelani Skincare</text>
+  <text x="440" y="688" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Gardenia Hydrosol</text>
+  <text x="440" y="702" font-size="12" fill="#2b3a2b" text-anchor="middle">$15.00 – $38.00</text>
+
+  <!-- Product Card 3 -->
+  <rect x="580" y="588" width="240" height="120" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="580" y="588" width="240" height="66" rx="4" fill="#dce6bc" opacity="0.35"/>
+  <text x="700" y="630" font-size="28" text-anchor="middle">🍃</text>
+  <text x="700" y="672" font-size="11" fill="#888" text-anchor="middle">Lokelani Essentials</text>
+  <text x="700" y="688" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Clear Skin Blend</text>
+  <text x="700" y="702" font-size="12" fill="#2b3a2b" text-anchor="middle">$28.00</text>
+
+  <!-- Product Card 4 -->
+  <rect x="840" y="588" width="240" height="120" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="840" y="588" width="240" height="66" rx="4" fill="#f5f5d6" opacity="0.6"/>
+  <text x="960" y="630" font-size="28" text-anchor="middle">🌿</text>
+  <text x="960" y="672" font-size="11" fill="#888" text-anchor="middle">Lokelani Essentials</text>
+  <text x="960" y="688" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Ayurveda Body Oil</text>
+  <text x="960" y="702" font-size="12" fill="#2b3a2b" text-anchor="middle">$62.00</text>
+
+  <!-- Product Card 5 partial -->
+  <rect x="1100" y="588" width="148" height="120" rx="4" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="1100" y="588" width="148" height="66" rx="4" fill="#dce6bc" opacity="0.4"/>
+  <text x="1174" y="630" font-size="28" text-anchor="middle">🌾</text>
+  <text x="1174" y="672" font-size="11" fill="#888" text-anchor="middle">Lokelani</text>
+  <text x="1174" y="688" font-size="11" font-weight="600" fill="#2b3a2b" text-anchor="middle">Noni Face Serum</text>
+  <text x="1174" y="702" font-size="12" fill="#2b3a2b" text-anchor="middle">$48.00</text>
+
+  </g>
+</svg>

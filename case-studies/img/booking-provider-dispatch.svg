@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="bpa"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="sidebarPink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd8e6"/>
+      <stop offset="100%" stop-color="#fff3f8"/>
+    </linearGradient>
+    <linearGradient id="pinkBtnD" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb2cd"/>
+      <stop offset="100%" stop-color="#ff8fb4"/>
+    </linearGradient>
+    <linearGradient id="greenBtnD" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#97d679"/>
+      <stop offset="100%" stop-color="#a8f08e"/>
+    </linearGradient>
+    <linearGradient id="mapBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdf5f8"/>
+      <stop offset="100%" stop-color="#f8f0f4"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#bpa)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#fff3f8"/>
+
+  <!-- ── SIDEBAR ── -->
+  <rect x="0" y="0" width="200" height="720" fill="url(#sidebarPink)" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Logo -->
+  <rect x="0" y="0" width="200" height="62" fill="#ffd8e6" opacity="0.6"/>
+  <circle cx="28" cy="31" r="16" fill="#ffb2cd"/>
+  <text x="28" y="36" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="800">✦</text>
+  <text x="52" y="26" font-size="12" font-weight="700" fill="#c94070">glowbook</text>
+  <text x="52" y="41" font-size="8" fill="#ffb2cd" letter-spacing="2">ADMIN</text>
+
+  <!-- Nav -->
+  <rect x="0" y="74" width="200" height="40" fill="#ffb2cd" opacity="0.25"/>
+  <rect x="0" y="74" width="3" height="40" fill="#ffb2cd"/>
+  <text x="18" y="88" font-size="13">📊</text>
+  <text x="38" y="99" font-size="12" font-weight="600" fill="#c94070">Dispatch</text>
+
+  <text x="18" y="130" font-size="13">📅</text>
+  <text x="38" y="135" font-size="12" fill="#999">Bookings</text>
+
+  <text x="18" y="168" font-size="13">👤</text>
+  <text x="38" y="173" font-size="12" fill="#999">Providers</text>
+
+  <text x="18" y="206" font-size="13">🗺</text>
+  <text x="38" y="211" font-size="12" fill="#999">Coverage</text>
+
+  <text x="18" y="244" font-size="13">💳</text>
+  <text x="38" y="249" font-size="12" fill="#999">Revenue</text>
+
+  <text x="18" y="282" font-size="13">⭐</text>
+  <text x="38" y="287" font-size="12" fill="#999">Reviews</text>
+
+  <text x="18" y="320" font-size="13">⚙️</text>
+  <text x="38" y="325" font-size="12" fill="#999">Settings</text>
+
+  <!-- Divider -->
+  <line x1="16" y1="346" x2="184" y2="346" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="16" y="365" font-size="9" fill="#ccb" letter-spacing="1">TODAY'S STATS</text>
+  <text x="16" y="385" font-size="22" font-weight="800" fill="#c94070">24</text>
+  <text x="16" y="399" font-size="10" fill="#aaa">bookings today</text>
+  <text x="16" y="424" font-size="22" font-weight="800" fill="#97d679">11</text>
+  <text x="16" y="438" font-size="10" fill="#aaa">providers active</text>
+  <text x="16" y="463" font-size="22" font-weight="800" fill="#c94070">$1,840</text>
+  <text x="16" y="477" font-size="10" fill="#aaa">revenue today</text>
+
+  <!-- Staff -->
+  <rect x="0" y="672" width="200" height="48" fill="#ffd8e6" opacity="0.5"/>
+  <circle cx="24" cy="696" r="13" fill="#ffb2cd"/>
+  <text x="24" y="700" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SR</text>
+  <text x="44" y="691" font-size="11" font-weight="600" fill="#c94070">Sofia Rodriguez</text>
+  <text x="44" y="705" font-size="10" fill="#aaa">Operations Manager</text>
+
+  <!-- ── HEADER ── -->
+  <rect x="200" y="0" width="1080" height="56" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="222" y="24" font-size="16" font-weight="700" fill="#c94070">Live Dispatch</text>
+  <text x="222" y="42" font-size="11" fill="#aaa">Today — Tuesday, Apr 14, 2026  ·  Auto-refreshing every 30s</text>
+  <!-- Filter tabs -->
+  <rect x="600" y="14" width="74" height="28" rx="14" fill="#ffb2cd"/>
+  <text x="637" y="32" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">All (24)</text>
+  <rect x="684" y="14" width="84" height="28" rx="14" fill="#fff3f8" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="726" y="32" font-size="11" fill="#888" text-anchor="middle">Active (8)</text>
+  <rect x="778" y="14" width="94" height="28" rx="14" fill="#fff3f8" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="825" y="32" font-size="11" fill="#888" text-anchor="middle">Upcoming (11)</text>
+  <rect x="882" y="14" width="94" height="28" rx="14" fill="#fff3f8" stroke="#ffd8e6" stroke-width="1"/>
+  <text x="929" y="32" font-size="11" fill="#888" text-anchor="middle">Complete (5)</text>
+  <!-- New booking btn -->
+  <rect x="1148" y="14" width="116" height="28" rx="14" fill="url(#pinkBtnD)"/>
+  <text x="1206" y="32" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">+ New Booking</text>
+
+  <!-- ── LEFT: Bookings list ── -->
+  <rect x="210" y="70" width="460" height="638" rx="10" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <rect x="210" y="70" width="460" height="38" rx="10" fill="#fff3f8"/>
+  <rect x="210" y="92" width="460" height="16" fill="#fff3f8"/>
+  <text x="230" y="94" font-size="10" fill="#aaa" font-weight="600" letter-spacing="0.5">BOOKING</text>
+  <text x="396" y="94" font-size="10" fill="#aaa" font-weight="600" letter-spacing="0.5">PROVIDER</text>
+  <text x="546" y="94" font-size="10" fill="#aaa" font-weight="600" letter-spacing="0.5">STATUS</text>
+  <line x1="210" y1="108" x2="670" y2="108" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Booking rows -->
+  <!-- Row 1 — In Progress -->
+  <rect x="211" y="109" width="458" height="52" fill="#f8fff4"/>
+  <rect x="211" y="109" width="3" height="52" fill="#97d679"/>
+  <text x="230" y="126" font-size="12" font-weight="600" fill="#333">Sarah M.</text>
+  <text x="230" y="142" font-size="10" fill="#aaa">Gel Mani + Paraffin · 11:00 AM</text>
+  <text x="230" y="155" font-size="10" fill="#aaa">340 W 57th St, Manhattan</text>
+  <text x="396" y="134" font-size="11" fill="#555">Jasmine T.</text>
+  <text x="396" y="148" font-size="10" fill="#aaa">⭐ 4.9</text>
+  <rect x="548" y="120" width="84" height="22" rx="11" fill="#d4f5c0" stroke="#97d679" stroke-width="1"/>
+  <text x="590" y="135" font-size="10" fill="#3a8a20" text-anchor="middle" font-weight="600">In Progress</text>
+
+  <!-- Row 2 — En Route -->
+  <line x1="210" y1="161" x2="670" y2="161" stroke="#ffeef4" stroke-width="1"/>
+  <rect x="211" y="162" width="458" height="52" fill="#fff8fb"/>
+  <rect x="211" y="162" width="3" height="52" fill="#ffb2cd"/>
+  <text x="230" y="179" font-size="12" font-weight="600" fill="#333">Lauren K.</text>
+  <text x="230" y="195" font-size="10" fill="#aaa">Classic Mani + Pedi · 12:30 PM</text>
+  <text x="230" y="208" font-size="10" fill="#aaa">88 Fulton St, Brooklyn</text>
+  <text x="396" y="184" font-size="11" fill="#555">Priya S.</text>
+  <text x="396" y="198" font-size="10" fill="#aaa">⭐ 4.8</text>
+  <rect x="548" y="172" width="78" height="22" rx="11" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1"/>
+  <text x="587" y="187" font-size="10" fill="#c94070" text-anchor="middle" font-weight="600">En Route</text>
+
+  <!-- Row 3 — Upcoming -->
+  <line x1="210" y1="214" x2="670" y2="214" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="232" font-size="12" fill="#555">Mariana D.</text>
+  <text x="230" y="248" font-size="10" fill="#aaa">Gel Pedi · 2:00 PM</text>
+  <text x="230" y="261" font-size="10" fill="#aaa">210 Joralemon St, Brooklyn</text>
+  <text x="396" y="242" font-size="11" fill="#888">Aaliya R.</text>
+  <text x="396" y="256" font-size="10" fill="#aaa">⭐ 5.0</text>
+  <rect x="548" y="224" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="588" y="239" font-size="10" fill="#999" text-anchor="middle">Upcoming</text>
+
+  <!-- Row 4 — Upcoming -->
+  <line x1="210" y1="266" x2="670" y2="266" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="284" font-size="12" fill="#555">Jennifer W.</text>
+  <text x="230" y="300" font-size="10" fill="#aaa">Classic Mani · 2:30 PM</text>
+  <text x="230" y="313" font-size="10" fill="#aaa">45-20 Court Sq, Queens</text>
+  <text x="396" y="294" font-size="11" fill="#888">Carmen L.</text>
+  <text x="396" y="308" font-size="10" fill="#aaa">⭐ 4.7</text>
+  <rect x="548" y="276" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="588" y="291" font-size="10" fill="#999" text-anchor="middle">Upcoming</text>
+
+  <!-- Row 5 -->
+  <line x1="210" y1="318" x2="670" y2="318" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="336" font-size="12" fill="#555">Tanya B.</text>
+  <text x="230" y="352" font-size="10" fill="#aaa">Mani + Pedi Bundle · 3:00 PM</text>
+  <text x="230" y="365" font-size="10" fill="#aaa">180 Maplewood Ave, NJ</text>
+  <text x="396" y="346" font-size="11" fill="#888">Nadia K.</text>
+  <text x="396" y="360" font-size="10" fill="#aaa">⭐ 4.9</text>
+  <rect x="548" y="328" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="588" y="343" font-size="10" fill="#999" text-anchor="middle">Upcoming</text>
+
+  <!-- Row 6 — Complete -->
+  <line x1="210" y1="370" x2="670" y2="370" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="388" font-size="12" fill="#aaa">Rachel F.</text>
+  <text x="230" y="404" font-size="10" fill="#ccc">Gel Mani · 9:00 AM</text>
+  <text x="230" y="417" font-size="10" fill="#ccc">522 Park Ave, Manhattan</text>
+  <text x="396" y="398" font-size="11" fill="#bbb">Jasmine T.</text>
+  <text x="396" y="412" font-size="10" fill="#ccc">⭐ 5.0</text>
+  <rect x="548" y="380" width="76" height="22" rx="11" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="586" y="395" font-size="10" fill="#bbb" text-anchor="middle">Complete</text>
+
+  <!-- Row 7 — Complete -->
+  <line x1="210" y1="422" x2="670" y2="422" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="440" font-size="12" fill="#aaa">Olivia T.</text>
+  <text x="230" y="456" font-size="10" fill="#ccc">Classic Pedi · 9:30 AM</text>
+  <text x="230" y="469" font-size="10" fill="#ccc">88 Court St, Brooklyn</text>
+  <text x="396" y="450" font-size="11" fill="#bbb">Carmen L.</text>
+  <text x="396" y="464" font-size="10" fill="#ccc">⭐ 4.8</text>
+  <rect x="548" y="432" width="76" height="22" rx="11" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="586" y="447" font-size="10" fill="#bbb" text-anchor="middle">Complete</text>
+
+  <!-- More rows... -->
+  <line x1="210" y1="474" x2="670" y2="474" stroke="#ffeef4" stroke-width="1"/>
+  <text x="230" y="492" font-size="12" fill="#555">Michelle C. (Corporate)</text>
+  <text x="230" y="508" font-size="10" fill="#aaa">Gel Mani x3 · 4:00 PM</text>
+  <text x="230" y="521" font-size="10" fill="#aaa">1 World Trade Ctr, Manhattan</text>
+  <text x="396" y="502" font-size="11" fill="#888">Multi-assign</text>
+  <rect x="548" y="484" width="80" height="22" rx="11" fill="#fff3e8" stroke="#ffd8a0" stroke-width="1"/>
+  <text x="588" y="499" font-size="10" fill="#c87000" text-anchor="middle">Corporate</text>
+
+  <text x="230" y="564" font-size="11" fill="#ccc" text-anchor="left">+ 16 more bookings today...</text>
+
+  <!-- ── RIGHT: Map + Providers ── -->
+  <!-- Map panel -->
+  <rect x="688" y="70" width="572" height="370" rx="10" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
+  <rect x="688" y="70" width="572" height="38" rx="10" fill="#fff3f8"/>
+  <rect x="688" y="92" width="572" height="16" fill="#fff3f8"/>
+  <text x="708" y="96" font-size="12" font-weight="600" fill="#c94070">Coverage Map — NYC + NJ</text>
+  <text x="1236" y="96" font-size="10" fill="#97d679" text-anchor="end">● 11 providers live</text>
+  <line x1="688" y1="108" x2="1260" y2="108" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Map area -->
+  <rect x="696" y="114" width="556" height="314" rx="6" fill="url(#mapBg)"/>
+  <!-- NYC road grid suggestion -->
+  <line x1="696" y1="200" x2="1252" y2="200" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="696" y1="260" x2="1252" y2="260" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="696" y1="320" x2="1252" y2="320" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="800" y1="114" x2="800" y2="428" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="900" y1="114" x2="900" y2="428" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="1000" y1="114" x2="1000" y2="428" stroke="#ffd8e6" stroke-width="1.5"/>
+  <line x1="1100" y1="114" x2="1100" y2="428" stroke="#ffd8e6" stroke-width="1.5"/>
+  <!-- Borough labels faint -->
+  <text x="752" y="170" font-size="11" fill="#ffb2cd" opacity="0.8">Manhattan</text>
+  <text x="880" y="300" font-size="11" fill="#ffb2cd" opacity="0.8">Brooklyn</text>
+  <text x="1020" y="180" font-size="11" fill="#ffb2cd" opacity="0.8">Queens</text>
+  <text x="730" y="380" font-size="11" fill="#ffb2cd" opacity="0.7">NJ</text>
+
+  <!-- Provider pins — In Progress (green) -->
+  <circle cx="780" cy="192" r="12" fill="#a8f08e" stroke="#ffffff" stroke-width="2"/>
+  <text x="780" y="197" font-size="8" fill="#2d6e14" text-anchor="middle" font-weight="700">J</text>
+  <text x="780" y="212" font-size="8" fill="#3a8a20" text-anchor="middle">In Prog</text>
+
+  <!-- Provider pins — En Route (pink) -->
+  <circle cx="900" cy="310" r="12" fill="#ffb2cd" stroke="#ffffff" stroke-width="2"/>
+  <text x="900" y="315" font-size="8" fill="#c94070" text-anchor="middle" font-weight="700">P</text>
+  <text x="900" y="328" font-size="8" fill="#c94070" text-anchor="middle">En Route</text>
+
+  <!-- Provider pins — Upcoming/idle (light pink) -->
+  <circle cx="1040" cy="195" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
+  <text x="1040" y="199" font-size="8" fill="#c94070" text-anchor="middle">A</text>
+  <circle cx="760" cy="355" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
+  <text x="760" y="359" font-size="8" fill="#c94070" text-anchor="middle">N</text>
+  <circle cx="1120" cy="280" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
+  <text x="1120" y="284" font-size="8" fill="#c94070" text-anchor="middle">C</text>
+  <circle cx="840" cy="340" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
+  <text x="840" y="344" font-size="8" fill="#c94070" text-anchor="middle">R</text>
+  <circle cx="970" cy="250" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
+  <text x="970" y="254" font-size="8" fill="#c94070" text-anchor="middle">M</text>
+
+  <!-- Customer pins -->
+  <rect x="774" y="178" width="12" height="14" rx="6" fill="#c94070"/>
+  <circle cx="780" cy="165" r="4" fill="#c94070"/>
+  <rect x="894" y="296" width="12" height="14" rx="6" fill="#c94070"/>
+  <circle cx="900" cy="283" r="4" fill="#c94070"/>
+
+  <!-- Map legend -->
+  <circle cx="710" cy="414" r="6" fill="#a8f08e" stroke="#fff" stroke-width="1"/>
+  <text x="722" y="418" font-size="9" fill="#555">In Progress</text>
+  <circle cx="790" cy="414" r="6" fill="#ffb2cd" stroke="#fff" stroke-width="1"/>
+  <text x="802" y="418" font-size="9" fill="#555">En Route</text>
+  <circle cx="862" cy="414" r="6" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1"/>
+  <text x="874" y="418" font-size="9" fill="#555">Available</text>
+  <rect x="934" y="409" width="8" height="10" rx="4" fill="#c94070"/>
+  <text x="948" y="418" font-size="9" fill="#555">Customer</text>
+
+  <!-- ── Provider list panel ── -->
+  <rect x="688" y="456" width="572" height="252" rx="10" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
+  <rect x="688" y="456" width="572" height="38" rx="10" fill="#fff3f8"/>
+  <rect x="688" y="478" width="572" height="16" fill="#fff3f8"/>
+  <text x="708" y="482" font-size="12" font-weight="600" fill="#c94070">Providers — Today</text>
+  <line x1="688" y1="494" x2="1260" y2="494" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Provider table headers -->
+  <text x="708" y="514" font-size="10" fill="#aaa" letter-spacing="0.5" font-weight="600">TECHNICIAN</text>
+  <text x="876" y="514" font-size="10" fill="#aaa" letter-spacing="0.5" font-weight="600">ZONE</text>
+  <text x="970" y="514" font-size="10" fill="#aaa" letter-spacing="0.5" font-weight="600">JOBS TODAY</text>
+  <text x="1080" y="514" font-size="10" fill="#aaa" letter-spacing="0.5" font-weight="600">NEXT BOOKING</text>
+  <text x="1196" y="514" font-size="10" fill="#aaa" letter-spacing="0.5" font-weight="600">STATUS</text>
+  <line x1="688" y1="522" x2="1260" y2="522" stroke="#ffd8e6" stroke-width="1"/>
+
+  <!-- Provider rows -->
+  <circle cx="722" cy="538" r="11" fill="#a8f08e"/>
+  <text x="722" y="542" font-size="8" fill="#2d6e14" text-anchor="middle" font-weight="700">JT</text>
+  <text x="740" y="536" font-size="11" font-weight="600" fill="#333">Jasmine Torres</text>
+  <text x="740" y="549" font-size="10" fill="#aaa">⭐ 4.9 · 234 jobs</text>
+  <text x="876" y="542" font-size="11" fill="#888">Manhattan</text>
+  <text x="970" y="542" font-size="12" font-weight="600" fill="#333">3</text>
+  <text x="1080" y="542" font-size="11" fill="#555">4:00 PM</text>
+  <rect x="1196" y="528" width="84" height="22" rx="11" fill="#d4f5c0" stroke="#97d679" stroke-width="1"/>
+  <text x="1238" y="543" font-size="10" fill="#3a8a20" text-anchor="middle" font-weight="600">In Progress</text>
+
+  <line x1="688" y1="558" x2="1260" y2="558" stroke="#ffeef4" stroke-width="1"/>
+  <circle cx="722" cy="574" r="11" fill="#ffb2cd"/>
+  <text x="722" y="578" font-size="8" fill="#c94070" text-anchor="middle" font-weight="700">PS</text>
+  <text x="740" y="572" font-size="11" fill="#555">Priya Singh</text>
+  <text x="740" y="585" font-size="10" fill="#aaa">⭐ 4.8 · 189 jobs</text>
+  <text x="876" y="578" font-size="11" fill="#888">Brooklyn</text>
+  <text x="970" y="578" font-size="12" fill="#555">2</text>
+  <text x="1080" y="578" font-size="11" fill="#555">12:30 PM</text>
+  <rect x="1196" y="564" width="78" height="22" rx="11" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1"/>
+  <text x="1235" y="579" font-size="10" fill="#c94070" text-anchor="middle" font-weight="600">En Route</text>
+
+  <line x1="688" y1="594" x2="1260" y2="594" stroke="#ffeef4" stroke-width="1"/>
+  <circle cx="722" cy="610" r="11" fill="#ffd8e6"/>
+  <text x="722" y="614" font-size="8" fill="#c94070" text-anchor="middle" font-weight="700">AR</text>
+  <text x="740" y="608" font-size="11" fill="#555">Aaliya Rahman</text>
+  <text x="740" y="621" font-size="10" fill="#aaa">⭐ 5.0 · 98 jobs</text>
+  <text x="876" y="614" font-size="11" fill="#888">Brooklyn</text>
+  <text x="970" y="614" font-size="12" fill="#555">2</text>
+  <text x="1080" y="614" font-size="11" fill="#555">2:00 PM</text>
+  <rect x="1196" y="600" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="1236" y="615" font-size="10" fill="#aaa" text-anchor="middle">Available</text>
+
+  <line x1="688" y1="630" x2="1260" y2="630" stroke="#ffeef4" stroke-width="1"/>
+  <circle cx="722" cy="646" r="11" fill="#ffd8e6"/>
+  <text x="722" y="650" font-size="8" fill="#c94070" text-anchor="middle" font-weight="700">CL</text>
+  <text x="740" y="644" font-size="11" fill="#555">Carmen Lopez</text>
+  <text x="740" y="657" font-size="10" fill="#aaa">⭐ 4.7 · 312 jobs</text>
+  <text x="876" y="650" font-size="11" fill="#888">Queens</text>
+  <text x="970" y="650" font-size="12" fill="#555">3</text>
+  <text x="1080" y="650" font-size="11" fill="#555">2:30 PM</text>
+  <rect x="1196" y="636" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+  <text x="1236" y="651" font-size="10" fill="#aaa" text-anchor="middle">Available</text>
+
+  <text x="708" y="692" font-size="11" fill="#ccc">+ 7 more providers on today's roster</text>
+
+  </g>
+</svg>

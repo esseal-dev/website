@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="lca"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="cardImg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dce6bc"/>
+      <stop offset="100%" stop-color="#c8d8a0"/>
+    </linearGradient>
+    <linearGradient id="cardImg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5d6"/>
+      <stop offset="100%" stop-color="#ebebc0"/>
+    </linearGradient>
+    <linearGradient id="wsPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b3a2b"/>
+      <stop offset="100%" stop-color="#1a261a"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#lca)">
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Announcement bar -->
+  <rect x="0" y="0" width="1280" height="30" fill="#2b3a2b"/>
+  <text x="640" y="19" font-size="10" fill="#f5f5d6" text-anchor="middle">15% off over $250 — Use code <tspan font-weight="700">'15off'</tspan> at checkout</text>
+
+  <!-- Header -->
+  <rect x="0" y="30" width="1280" height="52" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="36" y="38" width="32" height="32" rx="16" fill="none" stroke="#2b3a2b" stroke-width="1.5"/>
+  <text x="52" y="58" font-size="13" font-weight="700" fill="#2b3a2b" text-anchor="middle">L</text>
+  <text x="184" y="60" font-size="13" font-weight="700" fill="#2b3a2b" letter-spacing="2">LOKELANI ESSENTIALS</text>
+  <text x="720" y="61" font-size="12" fill="#2b3a2b">Home</text>
+  <text x="776" y="61" font-size="12" fill="#2b3a2b">About Us</text>
+  <text x="848" y="61" font-size="12" fill="#c2c874" font-weight="600">Products</text>
+  <text x="930" y="61" font-size="12" fill="#2b3a2b">Contact</text>
+  <text x="988" y="61" font-size="12" fill="#2b3a2b">More ▾</text>
+  <text x="1148" y="61" font-size="11" fill="#2b3a2b">Log in | Create account</text>
+  <text x="1250" y="61" font-size="15">🛒</text>
+
+  <!-- Filter / sort bar -->
+  <rect x="0" y="82" width="1280" height="40" fill="#f9f9f2" stroke="#e8ead8" stroke-width="1"/>
+  <!-- Filter controls -->
+  <rect x="20" y="92" width="90" height="22" rx="4" fill="#2b3a2b"/>
+  <text x="65" y="107" font-size="11" fill="#ffffff" text-anchor="middle">All Products</text>
+  <rect x="120" y="92" width="74" height="22" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <text x="157" y="107" font-size="11" fill="#888" text-anchor="middle">Face Oils</text>
+  <rect x="204" y="92" width="80" height="22" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <text x="244" y="107" font-size="11" fill="#888" text-anchor="middle">Hydrosols</text>
+  <rect x="294" y="92" width="70" height="22" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <text x="329" y="107" font-size="11" fill="#888" text-anchor="middle">Serums</text>
+  <rect x="374" y="92" width="70" height="22" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <text x="409" y="107" font-size="11" fill="#888" text-anchor="middle">Bundles</text>
+  <!-- Sort -->
+  <rect x="500" y="92" width="148" height="22" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <text x="574" y="107" font-size="11" fill="#888" text-anchor="middle">Sort: Best Selling ▾</text>
+  <!-- Filter: Availability -->
+  <text x="660" y="107" font-size="11" fill="#888">In stock only</text>
+  <rect x="740" y="93" width="20" height="20" rx="3" fill="#dce6bc" stroke="#c2c874" stroke-width="1"/>
+  <text x="750" y="107" font-size="10" fill="#2b3a2b" text-anchor="middle">✓</text>
+
+  <!-- ── PRODUCT GRID (3-column, left portion of page) ── -->
+
+  <!-- Card 1: Aloha Blend Face Oil -->
+  <rect x="20" y="136" width="200" height="262" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="20" y="136" width="200" height="148" rx="4" fill="url(#cardImg1)"/>
+  <text x="120" y="220" font-size="40" text-anchor="middle">🌺</text>
+  <!-- Wishlist icon -->
+  <text x="206" y="158" font-size="13" fill="#888">♡</text>
+  <text x="120" y="302" font-size="10" fill="#888" text-anchor="middle">Lokelani Skincare</text>
+  <text x="120" y="320" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Aloha Blend Face Oil</text>
+  <!-- Size options list -->
+  <text x="120" y="336" font-size="10" fill="#888" text-anchor="middle">· 15ml  · 30ml</text>
+  <text x="120" y="350" font-size="12" fill="#2b3a2b" text-anchor="middle">$28.00</text>
+  <rect x="40" y="360" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="120" y="378" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Choose Options</text>
+
+  <!-- Card 2: Gardenia Hydrosol -->
+  <rect x="232" y="136" width="200" height="262" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="232" y="136" width="200" height="148" rx="4" fill="url(#cardImg2)"/>
+  <text x="332" y="220" font-size="40" text-anchor="middle">🌸</text>
+  <text x="418" y="158" font-size="13" fill="#888">♡</text>
+  <text x="332" y="302" font-size="10" fill="#888" text-anchor="middle">Lokelani Skincare</text>
+  <text x="332" y="320" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Gardenia Hydrosol</text>
+  <text x="332" y="336" font-size="10" fill="#888" text-anchor="middle">· 15ml  · 100ml</text>
+  <text x="332" y="350" font-size="12" fill="#2b3a2b" text-anchor="middle">$15.00 – $38.00</text>
+  <rect x="252" y="360" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="332" y="378" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Choose Options</text>
+
+  <!-- Card 3: Clear Skin Blend -->
+  <rect x="444" y="136" width="200" height="262" rx="4" fill="#ffffff" stroke="#c2c874" stroke-width="1.5"/>
+  <rect x="444" y="136" width="200" height="148" rx="4" fill="#e8f0d0"/>
+  <rect x="452" y="144" width="44" height="20" rx="3" fill="#2b3a2b"/>
+  <text x="474" y="157" font-size="8" fill="#c2c874" text-anchor="middle" font-weight="700" letter-spacing="1">POPULAR</text>
+  <text x="544" y="220" font-size="40" text-anchor="middle">🍃</text>
+  <text x="630" y="158" font-size="13" fill="#888">♡</text>
+  <text x="544" y="302" font-size="10" fill="#888" text-anchor="middle">Lokelani Essentials</text>
+  <text x="544" y="320" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Clear Skin Blend</text>
+  <text x="544" y="336" font-size="10" fill="#888" text-anchor="middle">· 30ml  · 60ml</text>
+  <text x="544" y="350" font-size="12" fill="#2b3a2b" text-anchor="middle">$28.00</text>
+  <rect x="464" y="360" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="544" y="378" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Choose Options</text>
+
+  <!-- Row 2 cards -->
+  <!-- Card 4 -->
+  <rect x="20" y="418" width="200" height="262" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="20" y="418" width="200" height="148" rx="4" fill="url(#cardImg2)"/>
+  <text x="120" y="502" font-size="40" text-anchor="middle">🌿</text>
+  <text x="206" y="440" font-size="13" fill="#888">♡</text>
+  <text x="120" y="584" font-size="10" fill="#888" text-anchor="middle">Lokelani Essentials</text>
+  <text x="120" y="602" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Ayurveda Body Oil</text>
+  <text x="120" y="618" font-size="10" fill="#888" text-anchor="middle">· 50ml  · 100ml</text>
+  <text x="120" y="632" font-size="12" fill="#2b3a2b" text-anchor="middle">$62.00</text>
+  <rect x="40" y="642" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="120" y="660" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Choose Options</text>
+
+  <!-- Card 5 -->
+  <rect x="232" y="418" width="200" height="262" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="232" y="418" width="200" height="148" rx="4" fill="url(#cardImg1)"/>
+  <text x="332" y="502" font-size="40" text-anchor="middle">🌾</text>
+  <text x="418" y="440" font-size="13" fill="#888">♡</text>
+  <text x="332" y="584" font-size="10" fill="#888" text-anchor="middle">Lokelani Skincare</text>
+  <text x="332" y="602" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Noni Brightening Serum</text>
+  <text x="332" y="618" font-size="10" fill="#888" text-anchor="middle">· 30ml  · 50ml</text>
+  <text x="332" y="632" font-size="12" fill="#2b3a2b" text-anchor="middle">$48.00</text>
+  <rect x="252" y="642" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="332" y="660" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Choose Options</text>
+
+  <!-- Card 6 -->
+  <rect x="444" y="418" width="200" height="262" rx="4" fill="#ffffff" stroke="#e8ead8" stroke-width="1"/>
+  <rect x="444" y="418" width="200" height="148" rx="4" fill="#f5f5d6"/>
+  <text x="544" y="502" font-size="40" text-anchor="middle">🫧</text>
+  <text x="630" y="440" font-size="13" fill="#888">♡</text>
+  <text x="544" y="584" font-size="10" fill="#888" text-anchor="middle">Lokelani Essentials</text>
+  <text x="544" y="602" font-size="12" font-weight="600" fill="#2b3a2b" text-anchor="middle">Starter Gift Bundle</text>
+  <text x="544" y="618" font-size="10" fill="#888" text-anchor="middle">· 3-piece set</text>
+  <text x="544" y="632" font-size="12" fill="#2b3a2b" text-anchor="middle">$95.00</text>
+  <rect x="464" y="642" width="160" height="28" rx="3" fill="#dce6bc"/>
+  <text x="544" y="660" font-size="11" fill="#2b3a2b" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <!-- ── RIGHT: Wholesale panel ── -->
+  <rect x="666" y="122" width="594" height="582" rx="4" fill="url(#wsPanel)"/>
+
+  <!-- Wholesale header -->
+  <text x="686" y="158" font-size="12" fill="#c2c874" letter-spacing="2" font-weight="600">WHOLESALE PROGRAMME</text>
+  <text x="686" y="188" font-size="20" font-weight="700" fill="#ffffff">Stockist &amp; Retailer Access</text>
+  <text x="686" y="210" font-size="12" fill="#aab890">Approved wholesale partners receive preferential pricing,</text>
+  <text x="686" y="226" font-size="12" fill="#aab890">marketing assets, and dedicated account support.</text>
+  <line x1="686" y1="244" x2="1240" y2="244" stroke="#3d5a3d" stroke-width="1"/>
+
+  <!-- Tier table -->
+  <text x="686" y="268" font-size="10" fill="#c2c874" letter-spacing="1" font-weight="600">PRICING TIERS</text>
+
+  <text x="686" y="292" font-size="10" fill="#666">TIER</text>
+  <text x="840" y="292" font-size="10" fill="#666">MIN. ORDER</text>
+  <text x="970" y="292" font-size="10" fill="#666">DISCOUNT</text>
+  <text x="1110" y="292" font-size="10" fill="#666">LEAD TIME</text>
+  <line x1="686" y1="300" x2="1240" y2="300" stroke="#3d5a3d" stroke-width="1"/>
+
+  <rect x="686" y="304" width="554" height="42" rx="3" fill="#3d5a3d" opacity="0.25"/>
+  <text x="700" y="321" font-size="12" fill="#dce6bc" font-weight="600">Boutique</text>
+  <text x="700" y="337" font-size="10" fill="#888">Spas &amp; independents</text>
+  <text x="840" y="328" font-size="12" fill="#fff">$500+</text>
+  <text x="970" y="328" font-size="12" fill="#c2c874" font-weight="600">20% off</text>
+  <text x="1110" y="328" font-size="11" fill="#aab890">5–7 days</text>
+
+  <rect x="686" y="350" width="554" height="42" rx="3" fill="#c2c874" opacity="0.12" stroke="#c2c874" stroke-width="0.8"/>
+  <text x="700" y="367" font-size="12" fill="#ffffff" font-weight="600">Retailer</text>
+  <text x="700" y="383" font-size="10" fill="#888">Health stores &amp; salons</text>
+  <text x="840" y="374" font-size="12" fill="#fff">$1,500+</text>
+  <text x="970" y="374" font-size="12" fill="#c2c874" font-weight="700">30% off</text>
+  <text x="1110" y="374" font-size="11" fill="#aab890">3–5 days</text>
+
+  <rect x="686" y="396" width="554" height="42" rx="3" fill="#3d5a3d" opacity="0.25"/>
+  <text x="700" y="413" font-size="12" fill="#dce6bc" font-weight="600">Distributor</text>
+  <text x="700" y="429" font-size="10" fill="#888">Regional distributors</text>
+  <text x="840" y="420" font-size="12" fill="#fff">$5,000+</text>
+  <text x="970" y="420" font-size="12" fill="#c2c874" font-weight="600">40% off</text>
+  <text x="1110" y="420" font-size="11" fill="#aab890">2–3 days</text>
+
+  <line x1="686" y1="448" x2="1240" y2="448" stroke="#3d5a3d" stroke-width="1"/>
+
+  <!-- Programme features -->
+  <text x="686" y="472" font-size="10" fill="#c2c874" letter-spacing="1" font-weight="600">PROGRAMME INCLUDES</text>
+
+  <text x="690" y="496" font-size="11" fill="#c2c874">✓</text>
+  <text x="706" y="496" font-size="12" fill="#dce6bc">Branded wholesale order form with net-30 invoicing</text>
+  <text x="690" y="518" font-size="11" fill="#c2c874">✓</text>
+  <text x="706" y="518" font-size="12" fill="#dce6bc">B2B pricing hidden from retail — same Shopify instance</text>
+  <text x="690" y="540" font-size="11" fill="#c2c874">✓</text>
+  <text x="706" y="540" font-size="12" fill="#dce6bc">POS display materials &amp; product education assets</text>
+  <text x="690" y="562" font-size="11" fill="#c2c874">✓</text>
+  <text x="706" y="562" font-size="12" fill="#dce6bc">Listed on the Lokelani Retailers directory on approval</text>
+  <text x="690" y="584" font-size="11" fill="#c2c874">✓</text>
+  <text x="706" y="584" font-size="12" fill="#dce6bc">Loyalty program &amp; gift card support for stockists</text>
+
+  <line x1="686" y1="602" x2="1240" y2="602" stroke="#3d5a3d" stroke-width="1"/>
+
+  <!-- Stats + CTA row -->
+  <rect x="686" y="616" width="248" height="70" rx="6" fill="#3d5a3d" opacity="0.4"/>
+  <text x="706" y="638" font-size="10" fill="#888">AVG. MONTHLY STORE SALES</text>
+  <text x="706" y="668" font-size="26" font-weight="800" fill="#c2c874">$35–40K</text>
+
+  <rect x="952" y="616" width="268" height="70" rx="6" fill="#c2c874"/>
+  <text x="1086" y="644" font-size="13" font-weight="700" fill="#2b3a2b" text-anchor="middle">Apply for Wholesale</text>
+  <text x="1086" y="662" font-size="11" fill="#3d5a3d" text-anchor="middle">wholesale-form ↗</text>
+  <text x="1086" y="678" font-size="10" fill="#4a6a4a" text-anchor="middle">Response within 3–5 business days</text>
+
+  </g>
+</svg>

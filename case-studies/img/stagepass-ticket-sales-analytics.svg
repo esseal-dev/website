@@ -1,0 +1,425 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Inter, -apple-system, sans-serif">
+  <defs>
+    <clipPath id="ta"><rect width="1280" height="720"/></clipPath>
+    <linearGradient id="posterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="neonBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8ff00"/>
+      <stop offset="100%" stop-color="#a8e000"/>
+    </linearGradient>
+    <linearGradient id="cyanBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00b8cc"/>
+    </linearGradient>
+    <linearGradient id="heatHot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8ff00" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c8ff00" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="spotGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#c8ff00" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#c8ff00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#ta)">
+
+  <!-- Full background -->
+  <rect width="1280" height="720" fill="#080808"/>
+
+  <!-- Divider line -->
+  <line x1="620" y1="0" x2="620" y2="720" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       LEFT PANEL — Public ticket sales page
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- Browser chrome -->
+  <rect x="20" y="20" width="580" height="680" rx="10" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <rect x="20" y="20" width="580" height="40" rx="10" fill="#161616"/>
+  <rect x="20" y="48" width="580" height="12" fill="#161616"/>
+  <circle cx="44" cy="40" r="6" fill="#3a3a3a"/>
+  <circle cx="62" cy="40" r="6" fill="#3a3a3a"/>
+  <circle cx="80" cy="40" r="6" fill="#3a3a3a"/>
+  <rect x="100" y="32" width="340" height="16" rx="8" fill="#1e1e1e"/>
+  <text x="270" y="44" font-size="10" fill="#555" text-anchor="middle">stagepass.io/events/midnight-jazz-night</text>
+
+  <!-- Event poster hero -->
+  <rect x="20" y="60" width="580" height="200" fill="url(#posterGrad)"/>
+  <rect x="20" y="60" width="580" height="200" fill="url(#spotGlow)"/>
+  <!-- Abstract concert visual -->
+  <circle cx="310" cy="130" r="80" fill="none" stroke="#c8ff00" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="310" cy="130" r="55" fill="none" stroke="#c8ff00" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="310" cy="130" r="30" fill="#c8ff00" opacity="0.06"/>
+  <!-- Spotlight beams -->
+  <polygon points="210,260 240,130 280,130" fill="#ffffff" opacity="0.03"/>
+  <polygon points="410,260 370,130 340,130" fill="#ffffff" opacity="0.03"/>
+  <!-- Event title -->
+  <text x="310" y="115" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">MIDNIGHT JAZZ NIGHT</text>
+  <text x="310" y="138" font-size="12" fill="#c8ff00" text-anchor="middle" letter-spacing="3" font-weight="600">PRESENTED BY STAGEPASS</text>
+  <text x="310" y="162" font-size="11" fill="#888" text-anchor="middle">The Blue Room, Chicago  ·  Fri 18 Apr 2026  ·  Doors 7:00 PM</text>
+  <!-- Live badge -->
+  <rect x="264" y="172" width="92" height="22" rx="11" fill="#c8ff00"/>
+  <text x="310" y="187" font-size="10" fill="#000" text-anchor="middle" font-weight="800" letter-spacing="1">● ON SALE NOW</text>
+
+  <!-- Ticket type selector -->
+  <rect x="30" y="268" width="560" height="16" rx="0" fill="none"/>
+  <text x="40" y="280" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="1">SELECT TICKETS</text>
+
+  <!-- GA Floor -->
+  <rect x="30" y="288" width="560" height="62" rx="8" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="50" y="314" font-size="13" font-weight="600" fill="#fff">General Admission — Floor</text>
+  <text x="50" y="330" font-size="11" fill="#555">Standing · Unreserved</text>
+  <text x="440" y="314" font-size="15" font-weight="700" fill="#c8ff00" text-anchor="end">$28.00</text>
+  <text x="440" y="330" font-size="10" fill="#444" text-anchor="end">+ $3.20 fee</text>
+  <!-- Qty control -->
+  <rect x="454" y="302" width="124" height="36" rx="8" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="474" y="325" font-size="16" fill="#888" text-anchor="middle">−</text>
+  <text x="516" y="325" font-size="14" fill="#fff" text-anchor="middle" font-weight="600">2</text>
+  <text x="558" y="325" font-size="16" fill="#c8ff00" text-anchor="middle">+</text>
+
+  <!-- Reserved Orchestra -->
+  <rect x="30" y="358" width="560" height="62" rx="8" fill="#111" stroke="#c8ff00" stroke-width="1.5"/>
+  <rect x="30" y="358" width="4" height="62" rx="2" fill="#c8ff00"/>
+  <text x="50" y="384" font-size="13" font-weight="600" fill="#fff">Orchestra — Reserved Seating</text>
+  <text x="50" y="400" font-size="11" fill="#555">Rows A–J · Assigned seats · Best views</text>
+  <text x="440" y="384" font-size="15" font-weight="700" fill="#c8ff00" text-anchor="end">$55.00</text>
+  <text x="440" y="400" font-size="10" fill="#444" text-anchor="end">+ $5.80 fee</text>
+  <rect x="454" y="372" width="124" height="36" rx="8" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="474" y="395" font-size="16" fill="#888" text-anchor="middle">−</text>
+  <text x="516" y="395" font-size="14" fill="#fff" text-anchor="middle" font-weight="600">0</text>
+  <text x="558" y="395" font-size="16" fill="#555" text-anchor="middle">+</text>
+
+  <!-- Mezzanine -->
+  <rect x="30" y="428" width="560" height="62" rx="8" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="50" y="454" font-size="13" font-weight="600" fill="#fff">Mezzanine — Reserved</text>
+  <text x="50" y="470" font-size="11" fill="#555">Rows K–O · Elevated view</text>
+  <text x="440" y="454" font-size="15" font-weight="700" fill="#ffffff" text-anchor="end">$42.00</text>
+  <text x="440" y="470" font-size="10" fill="#444" text-anchor="end">+ $4.50 fee</text>
+  <rect x="454" y="442" width="124" height="36" rx="8" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="474" y="465" font-size="16" fill="#888" text-anchor="middle">−</text>
+  <text x="516" y="465" font-size="14" fill="#fff" text-anchor="middle" font-weight="600">0</text>
+  <text x="558" y="465" font-size="16" fill="#555" text-anchor="middle">+</text>
+
+  <!-- Balcony -->
+  <rect x="30" y="498" width="560" height="62" rx="8" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="50" y="524" font-size="13" font-weight="600" fill="#666">Balcony — Reserved</text>
+  <text x="50" y="540" font-size="11" fill="#444">Rows P–S · Limited availability</text>
+  <text x="440" y="524" font-size="15" font-weight="700" fill="#666" text-anchor="end">$32.00</text>
+  <text x="440" y="540" font-size="10" fill="#333" text-anchor="end">+ $3.80 fee</text>
+  <rect x="454" y="512" width="124" height="36" rx="8" fill="#141414" stroke="#222" stroke-width="1"/>
+  <text x="474" y="535" font-size="16" fill="#444" text-anchor="middle">−</text>
+  <text x="516" y="535" font-size="14" fill="#666" text-anchor="middle" font-weight="600">0</text>
+  <text x="558" y="535" font-size="16" fill="#333" text-anchor="middle">+</text>
+
+  <!-- Order summary + CTA -->
+  <rect x="30" y="572" width="560" height="1" fill="#1e1e1e"/>
+  <text x="40" y="596" font-size="12" fill="#888">2 × GA Floor</text>
+  <text x="590" y="596" font-size="12" fill="#fff" text-anchor="end">$56.00</text>
+  <text x="40" y="614" font-size="11" fill="#555">Service fees</text>
+  <text x="590" y="614" font-size="11" fill="#555" text-anchor="end">$6.40</text>
+  <rect x="30" y="622" width="560" height="1" fill="#1e1e1e"/>
+  <text x="40" y="643" font-size="13" font-weight="700" fill="#fff">Total</text>
+  <text x="590" y="643" font-size="13" font-weight="700" fill="#c8ff00" text-anchor="end">$62.40</text>
+  <!-- Buy CTA -->
+  <rect x="30" y="654" width="560" height="46" rx="10" fill="#c8ff00"/>
+  <text x="310" y="682" font-size="14" font-weight="800" fill="#000" text-anchor="middle" letter-spacing="0.5">CHECKOUT →</text>
+
+  <!-- ══════════════════════════════════════════════════════
+       RIGHT PANEL — Organiser analytics
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- Panel header -->
+  <rect x="630" y="20" width="630" height="50" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1" rx="0"/>
+  <text x="650" y="40" font-size="11" font-weight="700" fill="#c8ff00" letter-spacing="2">STAGEPASS  ANALYTICS</text>
+  <text x="650" y="56" font-size="10" fill="#444">Midnight Jazz Night  ·  18 Apr 2026</text>
+  <rect x="1130" y="30" width="110" height="26" rx="6" fill="#1a1a00" stroke="#c8ff00" stroke-width="1"/>
+  <text x="1185" y="47" font-size="10" fill="#c8ff00" text-anchor="middle" font-weight="600">Live ●  Updating</text>
+
+  <!-- KPI row -->
+  <!-- Sold -->
+  <rect x="630" y="76" width="148" height="72" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="650" y="100" font-size="10" fill="#555" letter-spacing="1">TICKETS SOLD</text>
+  <text x="650" y="126" font-size="28" font-weight="800" fill="#ffffff">342</text>
+  <text x="712" y="126" font-size="11" fill="#555">/ 400</text>
+
+  <!-- Revenue -->
+  <rect x="780" y="76" width="148" height="72" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="800" y="100" font-size="10" fill="#555" letter-spacing="1">REVENUE</text>
+  <text x="800" y="126" font-size="24" font-weight="800" fill="#c8ff00">$13,840</text>
+
+  <!-- Avg price -->
+  <rect x="930" y="76" width="148" height="72" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="950" y="100" font-size="10" fill="#555" letter-spacing="1">AVG TICKET</text>
+  <text x="950" y="126" font-size="24" font-weight="800" fill="#ffffff">$40.47</text>
+
+  <!-- Capacity -->
+  <rect x="1080" y="76" width="180" height="72" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1100" y="100" font-size="10" fill="#555" letter-spacing="1">CAPACITY</text>
+  <text x="1100" y="126" font-size="24" font-weight="800" fill="#c8ff00">85.5%</text>
+  <!-- Capacity bar -->
+  <rect x="1100" y="134" width="140" height="6" rx="3" fill="#1e1e1e"/>
+  <rect x="1100" y="134" width="120" height="6" rx="3" fill="url(#neonBar)"/>
+
+  <!-- Sales velocity chart -->
+  <rect x="630" y="152" width="420" height="190" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="650" y="176" font-size="11" font-weight="600" fill="#fff">Sales Velocity</text>
+  <text x="650" y="192" font-size="10" fill="#444">Tickets sold per day since on-sale</text>
+
+  <!-- Chart area -->
+  <!-- Day labels -->
+  <text x="660" y="328" font-size="9" fill="#333">Mar 1</text>
+  <text x="700" y="328" font-size="9" fill="#333">5</text>
+  <text x="730" y="328" font-size="9" fill="#333">8</text>
+  <text x="762" y="328" font-size="9" fill="#333">11</text>
+  <text x="794" y="328" font-size="9" fill="#333">14</text>
+  <text x="826" y="328" font-size="9" fill="#333">17</text>
+  <text x="858" y="328" font-size="9" fill="#333">20</text>
+  <text x="890" y="328" font-size="9" fill="#333">23</text>
+  <text x="922" y="328" font-size="9" fill="#333">26</text>
+  <text x="954" y="328" font-size="9" fill="#333">29</text>
+  <text x="986" y="328" font-size="9" fill="#333">Apr 1</text>
+  <text x="1018" y="328" font-size="9" fill="#555">3</text>
+
+  <!-- Grid lines -->
+  <line x1="650" y1="210" x2="1040" y2="210" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="650" y1="240" x2="1040" y2="240" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="650" y1="270" x2="1040" y2="270" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="650" y1="300" x2="1040" y2="300" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="644" y="213" font-size="8" fill="#333" text-anchor="end">40</text>
+  <text x="644" y="243" font-size="8" fill="#333" text-anchor="end">30</text>
+  <text x="644" y="273" font-size="8" fill="#333" text-anchor="end">20</text>
+  <text x="644" y="303" font-size="8" fill="#333" text-anchor="end">10</text>
+
+  <!-- Bars: daily sales (each bar = 1 day, ~30 bars) -->
+  <!-- On-sale day surge, then trickle, then recent uptick -->
+  <rect x="656" y="248" width="8" height="62" fill="#c8ff00" opacity="0.9" rx="1"/><!-- day 1: 62 = ~25 tickets (launch surge) -->
+  <rect x="668" y="268" width="8" height="42" fill="#c8ff00" opacity="0.75" rx="1"/>
+  <rect x="680" y="274" width="8" height="36" fill="#c8ff00" opacity="0.65" rx="1"/>
+  <rect x="692" y="280" width="8" height="30" fill="#c8ff00" opacity="0.55" rx="1"/>
+  <rect x="704" y="284" width="8" height="26" fill="#c8ff00" opacity="0.5" rx="1"/>
+  <rect x="716" y="288" width="8" height="22" fill="#c8ff00" opacity="0.45" rx="1"/>
+  <rect x="728" y="292" width="8" height="18" fill="#c8ff00" opacity="0.4" rx="1"/>
+  <rect x="740" y="294" width="8" height="16" fill="#c8ff00" opacity="0.35" rx="1"/>
+  <rect x="752" y="294" width="8" height="16" fill="#c8ff00" opacity="0.35" rx="1"/>
+  <rect x="764" y="296" width="8" height="14" fill="#c8ff00" opacity="0.3" rx="1"/>
+  <rect x="776" y="297" width="8" height="13" fill="#c8ff00" opacity="0.28" rx="1"/>
+  <rect x="788" y="296" width="8" height="14" fill="#c8ff00" opacity="0.3" rx="1"/>
+  <rect x="800" y="295" width="8" height="15" fill="#c8ff00" opacity="0.32" rx="1"/>
+  <rect x="812" y="293" width="8" height="17" fill="#c8ff00" opacity="0.36" rx="1"/>
+  <rect x="824" y="290" width="8" height="20" fill="#c8ff00" opacity="0.42" rx="1"/>
+  <rect x="836" y="287" width="8" height="23" fill="#c8ff00" opacity="0.47" rx="1"/>
+  <!-- Uptick start -->
+  <rect x="848" y="284" width="8" height="26" fill="#c8ff00" opacity="0.52" rx="1"/>
+  <rect x="860" y="280" width="8" height="30" fill="#c8ff00" opacity="0.6" rx="1"/>
+  <rect x="872" y="276" width="8" height="34" fill="#c8ff00" opacity="0.68" rx="1"/>
+  <rect x="884" y="271" width="8" height="39" fill="#c8ff00" opacity="0.75" rx="1"/>
+  <rect x="896" y="265" width="8" height="45" fill="#c8ff00" opacity="0.82" rx="1"/>
+  <rect x="908" y="259" width="8" height="51" fill="#c8ff00" opacity="0.88" rx="1"/>
+  <rect x="920" y="252" width="8" height="58" fill="#c8ff00" opacity="0.94" rx="1"/>
+  <!-- Today marker -->
+  <rect x="932" y="246" width="8" height="64" fill="#c8ff00" rx="1"/>
+  <line x1="936" y1="205" x2="936" y2="245" stroke="#c8ff00" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <text x="936" y="203" font-size="8" fill="#c8ff00" text-anchor="middle">TODAY</text>
+
+  <!-- Ticket type breakdown -->
+  <rect x="1054" y="152" width="206" height="190" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1074" y="176" font-size="11" font-weight="600" fill="#fff">By Ticket Type</text>
+
+  <!-- GA Floor -->
+  <text x="1074" y="206" font-size="10" fill="#888">GA Floor</text>
+  <rect x="1074" y="212" width="166" height="8" rx="4" fill="#1e1e1e"/>
+  <rect x="1074" y="212" width="124" height="8" rx="4" fill="url(#neonBar)"/>
+  <text x="1244" y="221" font-size="9" fill="#c8ff00" text-anchor="end">148 sold</text>
+
+  <!-- Orchestra -->
+  <text x="1074" y="240" font-size="10" fill="#888">Orchestra</text>
+  <rect x="1074" y="246" width="166" height="8" rx="4" fill="#1e1e1e"/>
+  <rect x="1074" y="246" width="100" height="8" rx="4" fill="url(#cyanBar)"/>
+  <text x="1244" y="255" font-size="9" fill="#00e5ff" text-anchor="end">100 sold</text>
+
+  <!-- Mezzanine -->
+  <text x="1074" y="274" font-size="10" fill="#888">Mezzanine</text>
+  <rect x="1074" y="280" width="166" height="8" rx="4" fill="#1e1e1e"/>
+  <rect x="1074" y="280" width="66" height="8" rx="4" fill="#888888"/>
+  <text x="1244" y="289" font-size="9" fill="#888" text-anchor="end">66 sold</text>
+
+  <!-- Balcony -->
+  <text x="1074" y="308" font-size="10" fill="#888">Balcony</text>
+  <rect x="1074" y="314" width="166" height="8" rx="4" fill="#1e1e1e"/>
+  <rect x="1074" y="314" width="28" height="8" rx="4" fill="#555555"/>
+  <text x="1244" y="323" font-size="9" fill="#555" text-anchor="end">28 sold</text>
+
+  <!-- Remaining -->
+  <rect x="1074" y="332" width="166" height="1" fill="#1e1e1e"/>
+  <text x="1074" y="350" font-size="10" fill="#555">Remaining</text>
+  <text x="1244" y="350" font-size="10" fill="#555" text-anchor="end">58 left</text>
+
+  <!-- Seat heatmap section -->
+  <rect x="630" y="346" width="630" height="194" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="650" y="370" font-size="11" font-weight="600" fill="#fff">Seat Purchase Heatmap</text>
+  <text x="650" y="386" font-size="10" fill="#444">Sold seats coloured by purchase order — neon = sold first</text>
+
+  <!-- STAGE label -->
+  <rect x="790" y="396" width="120" height="18" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="850" y="408" font-size="9" fill="#555" text-anchor="middle" letter-spacing="2">STAGE</text>
+
+  <!-- Seat rows heatmap (simplified circles showing sold pattern) -->
+  <!-- Row A – VIP/sold first = brightest lime -->
+  <text x="640" y="430" font-size="8" fill="#333">A</text>
+  <!-- 14 seats row A -->
+  <circle cx="660" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="672" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="684" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="696" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="708" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="720" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="732" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="744" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="756" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="768" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
+  <circle cx="780" cy="426" r="5" fill="#c8ff00" opacity="0.9"/>
+  <circle cx="792" cy="426" r="5" fill="#c8ff00" opacity="0.85"/>
+  <circle cx="900" cy="426" r="5" fill="#c8ff00" opacity="0.85"/>
+  <circle cx="912" cy="426" r="5" fill="#c8ff00" opacity="0.8"/>
+  <circle cx="924" cy="426" r="5" fill="#c8ff00" opacity="0.75"/>
+  <circle cx="936" cy="426" r="5" fill="#c8ff00" opacity="0.7"/>
+  <circle cx="948" cy="426" r="5" fill="#c8ff00" opacity="0.65"/>
+
+  <!-- Row B -->
+  <text x="640" y="444" font-size="8" fill="#333">B</text>
+  <circle cx="660" cy="440" r="5" fill="#c8ff00" opacity="0.85"/>
+  <circle cx="672" cy="440" r="5" fill="#c8ff00" opacity="0.85"/>
+  <circle cx="684" cy="440" r="5" fill="#c8ff00" opacity="0.8"/>
+  <circle cx="696" cy="440" r="5" fill="#c8ff00" opacity="0.78"/>
+  <circle cx="708" cy="440" r="5" fill="#c8ff00" opacity="0.75"/>
+  <circle cx="720" cy="440" r="5" fill="#c8ff00" opacity="0.72"/>
+  <circle cx="732" cy="440" r="5" fill="#c8ff00" opacity="0.68"/>
+  <circle cx="744" cy="440" r="5" fill="#c8ff00" opacity="0.65"/>
+  <circle cx="756" cy="440" r="5" fill="#c8ff00" opacity="0.6"/>
+  <circle cx="768" cy="440" r="5" fill="#c8ff00" opacity="0.55"/>
+  <circle cx="780" cy="440" r="5" fill="#c8ff00" opacity="0.5"/>
+  <circle cx="900" cy="440" r="5" fill="#c8ff00" opacity="0.5"/>
+  <circle cx="912" cy="440" r="5" fill="#c8ff00" opacity="0.45"/>
+  <circle cx="924" cy="440" r="5" fill="#555" opacity="0.4"/>
+  <circle cx="936" cy="440" r="5" fill="#333" opacity="0.5" stroke="#333" stroke-width="1"/>
+
+  <!-- Row C -->
+  <text x="640" y="458" font-size="8" fill="#333">C</text>
+  <circle cx="660" cy="454" r="5" fill="#c8ff00" opacity="0.7"/>
+  <circle cx="672" cy="454" r="5" fill="#c8ff00" opacity="0.68"/>
+  <circle cx="684" cy="454" r="5" fill="#c8ff00" opacity="0.65"/>
+  <circle cx="696" cy="454" r="5" fill="#c8ff00" opacity="0.6"/>
+  <circle cx="708" cy="454" r="5" fill="#c8ff00" opacity="0.55"/>
+  <circle cx="720" cy="454" r="5" fill="#c8ff00" opacity="0.5"/>
+  <circle cx="732" cy="454" r="5" fill="#555" opacity="0.5"/>
+  <circle cx="744" cy="454" r="5" fill="#555" opacity="0.4"/>
+  <circle cx="756" cy="454" r="5" fill="#333" stroke="#333" stroke-width="1" opacity="0.5"/>
+  <circle cx="768" cy="454" r="5" fill="#c8ff00" opacity="0.45"/>
+  <circle cx="780" cy="454" r="5" fill="#c8ff00" opacity="0.4"/>
+  <circle cx="900" cy="454" r="5" fill="#555" opacity="0.35"/>
+  <circle cx="912" cy="454" r="5" fill="#333" stroke="#333" stroke-width="1" opacity="0.5"/>
+
+  <!-- Row D–E (medium fill) -->
+  <text x="640" y="472" font-size="8" fill="#333">D</text>
+  <circle cx="660" cy="468" r="5" fill="#c8ff00" opacity="0.5"/>
+  <circle cx="672" cy="468" r="5" fill="#c8ff00" opacity="0.45"/>
+  <circle cx="684" cy="468" r="5" fill="#c8ff00" opacity="0.4"/>
+  <circle cx="696" cy="468" r="5" fill="#555" opacity="0.4"/>
+  <circle cx="708" cy="468" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="720" cy="468" r="5" fill="#c8ff00" opacity="0.35"/>
+  <circle cx="732" cy="468" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="744" cy="468" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="756" cy="468" r="5" fill="#c8ff00" opacity="0.3"/>
+  <circle cx="768" cy="468" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="900" cy="468" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+
+  <text x="640" y="486" font-size="8" fill="#333">E</text>
+  <circle cx="660" cy="482" r="5" fill="#c8ff00" opacity="0.35"/>
+  <circle cx="672" cy="482" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="684" cy="482" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="696" cy="482" r="5" fill="#c8ff00" opacity="0.28"/>
+  <circle cx="708" cy="482" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="720" cy="482" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="732" cy="482" r="5" fill="#c8ff00" opacity="0.22"/>
+  <circle cx="744" cy="482" r="5" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Mezzanine rows K-M (dim yellow-green) -->
+  <text x="640" y="502" font-size="8" fill="#333">K</text>
+  <circle cx="660" cy="498" r="4" fill="#00e5ff" opacity="0.55"/>
+  <circle cx="671" cy="498" r="4" fill="#00e5ff" opacity="0.5"/>
+  <circle cx="682" cy="498" r="4" fill="#00e5ff" opacity="0.45"/>
+  <circle cx="693" cy="498" r="4" fill="#00e5ff" opacity="0.4"/>
+  <circle cx="704" cy="498" r="4" fill="#00e5ff" opacity="0.35"/>
+  <circle cx="715" cy="498" r="4" fill="#00e5ff" opacity="0.3"/>
+  <circle cx="726" cy="498" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="737" cy="498" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="748" cy="498" r="4" fill="#00e5ff" opacity="0.25"/>
+  <circle cx="759" cy="498" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+
+  <text x="640" y="516" font-size="8" fill="#333">L</text>
+  <circle cx="660" cy="512" r="4" fill="#00e5ff" opacity="0.4"/>
+  <circle cx="671" cy="512" r="4" fill="#00e5ff" opacity="0.35"/>
+  <circle cx="682" cy="512" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="693" cy="512" r="4" fill="#00e5ff" opacity="0.28"/>
+  <circle cx="704" cy="512" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="715" cy="512" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Balcony rows P-Q (mostly available) -->
+  <text x="640" y="532" font-size="8" fill="#333">P</text>
+  <circle cx="660" cy="528" r="4" fill="#555" opacity="0.4"/>
+  <circle cx="671" cy="528" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="682" cy="528" r="4" fill="#555" opacity="0.3"/>
+  <circle cx="693" cy="528" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+  <circle cx="704" cy="528" r="4" fill="#333" stroke="#2a2a2a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Legend -->
+  <rect x="1054" y="356" width="206" height="174" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1074" y="380" font-size="11" font-weight="600" fill="#fff">Heatmap Legend</text>
+
+  <circle cx="1086" cy="402" r="6" fill="#c8ff00" opacity="0.95"/>
+  <text x="1098" y="406" font-size="10" fill="#888">Sold first (high demand)</text>
+
+  <circle cx="1086" cy="422" r="6" fill="#c8ff00" opacity="0.45"/>
+  <text x="1098" y="426" font-size="10" fill="#888">Mid-sale purchase</text>
+
+  <circle cx="1086" cy="442" r="6" fill="#00e5ff" opacity="0.45"/>
+  <text x="1098" y="446" font-size="10" fill="#888">Mezzanine sold</text>
+
+  <circle cx="1086" cy="462" r="6" fill="#555" opacity="0.5"/>
+  <text x="1098" y="466" font-size="10" fill="#888">Recently sold</text>
+
+  <circle cx="1086" cy="482" r="6" fill="#0f0f0f" stroke="#333" stroke-width="1"/>
+  <text x="1098" y="486" font-size="10" fill="#555">Available</text>
+
+  <!-- Bottom strip: source breakdown -->
+  <rect x="630" y="544" width="630" height="56" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="650" y="566" font-size="10" font-weight="600" fill="#888" letter-spacing="1">SALES SOURCE</text>
+  <!-- Source pills -->
+  <rect x="650" y="574" width="82" height="18" rx="9" fill="#1a1a00" stroke="#c8ff00" stroke-width="1"/>
+  <text x="691" y="587" font-size="9" fill="#c8ff00" text-anchor="middle">Direct link  68%</text>
+
+  <rect x="742" y="574" width="80" height="18" rx="9" fill="#001a1a" stroke="#00e5ff" stroke-width="1"/>
+  <text x="782" y="587" font-size="9" fill="#00e5ff" text-anchor="middle">Social  18%</text>
+
+  <rect x="832" y="574" width="80" height="18" rx="9" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <text x="872" y="587" font-size="9" fill="#888" text-anchor="middle">Search  9%</text>
+
+  <rect x="922" y="574" width="80" height="18" rx="9" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
+  <text x="962" y="587" font-size="9" fill="#555" text-anchor="middle">Email  5%</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="630" y="604" width="630" height="116" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="650" y="628" font-size="11" font-weight="700" fill="#c8ff00">⚡  Real-time Insight</text>
+  <text x="650" y="648" font-size="11" fill="#888">At current pace, this event will</text>
+  <text x="650" y="664" font-size="14" font-weight="700" fill="#ffffff">sell out in approximately</text>
+  <text x="650" y="692" font-size="32" font-weight="800" fill="#c8ff00">4 days</text>
+  <text x="750" y="692" font-size="14" fill="#555">  (based on last 72h velocity)</text>
+  <!-- Mini stat -->
+  <rect x="1050" y="618" width="190" height="90" rx="8" fill="#111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="1145" y="642" font-size="10" fill="#555" text-anchor="middle">Commission saved vs Ticketmaster</text>
+  <text x="1145" y="672" font-size="28" font-weight="800" fill="#c8ff00" text-anchor="middle">$1,728</text>
+  <text x="1145" y="692" font-size="10" fill="#444" text-anchor="middle">on this event alone</text>
+
+  </g>
+</svg>
