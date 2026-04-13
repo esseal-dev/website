@@ -19,6 +19,7 @@
       content="React data table, React grid, virtualized data grid, pure CSS React table, Esseal, React data grid, performance data table, tailwind-free React components, enterprise react grid"
     />
     <meta name="author" content="Esseal" />
+    <link rel="icon" href="/favicon.webp" sizes="192x192" />
     <link
       rel="canonical"
       href="https://www.esseal.co.uk/products/esseal-data-table"
@@ -43,10 +44,10 @@
       content="https://www.esseal.co.uk/social-card-data-table.webp"
     />
 
-        <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-<!-- GEO & SEO Structured Data (JSON-LD) -->
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -110,6 +111,7 @@
       }
     </script>
 
+    <link rel="stylesheet" href="/styles.css" />
     <style>
       /* Pure Vanilla CSS - Zero Tailwind - Esseal Brand Colors */
       :root {
@@ -144,52 +146,12 @@
         padding: 0 24px;
       }
 
-      /* Navigation */
-      header {
-        border-bottom: 1px solid var(--surface-border);
-        background: rgba(0, 6, 33, 0.9); /* matches --bg-color with opacity */
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 72px;
-      }
-
-      .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--text-main);
-        text-decoration: none;
-        letter-spacing: -0.02em;
-      }
-
-      .logo img {
-        height: 28px;
-        width: auto;
-      }
-
-      .nav-links a {
-        color: var(--text-muted);
-        text-decoration: none;
-        margin-left: 24px;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-
-      .nav-links a:hover {
-        color: var(--primary);
-      }
-
       /* Hero Section */
       .hero {
         padding: 100px 0 80px;
         text-align: center;
+        display: block;
+        height: auto;
       }
 
       .hero h1 {
@@ -236,6 +198,17 @@
 
       .btn-primary:hover {
         background-color: var(--primary-hover);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--text-main);
+        border: 1px solid var(--surface-border);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--primary);
+        color: var(--primary);
       }
 
       .install-box {
@@ -759,41 +732,73 @@
       }
     </style>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Esseal DataTable | The Ultimate Vanilla CSS React Grid" />
-    <meta name="twitter:description" content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise applications." />
-    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-data-table.webp" />
+    <meta
+      name="twitter:title"
+      content="Esseal DataTable | The Ultimate Vanilla CSS React Grid"
+    />
+    <meta
+      name="twitter:description"
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.esseal.co.uk/social-card-data-table.webp"
+    />
 
     <script type="application/ld+json">
-{
+      {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-                {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://www.esseal.co.uk/"
-                },
-                {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Products",
-                        "item": "https://www.esseal.co.uk/products/"
-                },
-                {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "Esseal DataTable",
-                        "item": "https://www.esseal.co.uk/products/esseal-data-table"
-                }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.esseal.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.esseal.co.uk/products/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Esseal DataTable",
+            "item": "https://www.esseal.co.uk/products/esseal-data-table"
+          }
         ]
-}
+      }
     </script>
-<link rel="stylesheet" href="/styles.css" />
-    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body>
     <header class="navbar">
@@ -830,6 +835,26 @@
 
         <div class="cta-group">
           <a href="#docs" class="btn btn-primary">Read the Docs</a>
+          <!-- <a href="https://www.npmjs.com/package/esseal-data-table" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on npm</a> -->
+          <a
+            href="https://www.npmjs.com/package/esseal-data-table"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="margin-bottom: -4px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"
+              />
+            </svg>
+          </a>
           <div class="install-box">
             <code id="install-cmd">npm i esseal-data-table</code>
             <button onclick="copyInstall()">Copy</button>

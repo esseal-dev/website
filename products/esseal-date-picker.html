@@ -44,10 +44,10 @@
       content="https://www.esseal.co.uk/social-card-date-picker.webp"
     />
 
-        <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-<!-- GEO & SEO Structured Data (JSON-LD) -->
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -71,9 +71,15 @@
             },
             "featureList": [
               "Zero external dependencies",
-              "Under 5kb gzipped size",
+              "~8KB minified (v1.1.0)",
+              "Single date and date range modes",
+              "Optional confirm/cancel action buttons (showActions)",
+              "Built-in locale detection via Intl API",
+              "ARIA accessibility support",
+              "minDate and maxDate constraints",
+              "Customisable primaryColor and textColor",
               "Framework-agnostic (React, Vue, Angular, Vanilla JS)",
-              "Pure Vanilla CSS architecture without Tailwind"
+              "Lifecycle methods: open(), close(), destroy()"
             ]
           },
           {
@@ -100,7 +106,7 @@
                 "name": "How large is the EssealDatePicker package?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "EssealDatePicker is highly optimized, weighing in at under 5kb when gzipped. This lightweight footprint prevents layout shifts and guarantees instant load times for enterprise dashboards."
+                  "text": "EssealDatePicker v1.1.0 weighs approximately 8KB minified. The additional size compared to v1.0 comes from the new ARIA accessibility layer, built-in locale detection via the Intl API, and the expanded configuration API — all shipped with zero external dependencies."
                 }
               }
             ]
@@ -111,7 +117,8 @@
     <!-- SEO & GEO Tags END -->
 
     <link rel="icon" href="/favicon.webp" sizes="192x192" />
-<style>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
       :root {
         /* Updated Brand Palette */
         --brand-dark: #000621; /* Deepest Navy (Background) */
@@ -179,52 +186,6 @@
         }
       }
 
-      /* --- Navbar --- */
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 6, 33, 0.85); /* Matches --brand-dark */
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        z-index: 1000;
-        padding: 1.25rem 0;
-      }
-
-      .nav-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-weight: 800;
-        font-size: 1.4rem;
-        color: white;
-        letter-spacing: -0.03em;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo span {
-        color: var(--brand-primary);
-      }
-
-      .nav-links a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-weight: 500;
-        margin-left: 2.5rem;
-        font-size: 0.95rem;
-        transition: color 0.2s;
-      }
-      .nav-links a:hover {
-        color: var(--brand-primary);
-      }
-
       /* --- Hero Section --- */
       .hero {
         padding: 180px 0 120px;
@@ -235,6 +196,8 @@
           #000621 50%
         );
         position: relative;
+        display: block;
+        height: auto;
       }
 
       /* Subtle grid background pattern */
@@ -637,16 +600,123 @@
         color: #64748b;
       } /* gray comment */
 
-      /* --- Footer --- */
-      footer {
-        background: var(--brand-dark);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 60px 0;
+      /* --- Interactive Demo Controls --- */
+      .demo-controls {
+        margin: 18px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding-top: 16px;
       }
-      .footer-container {
-        text-align: center;
-        color: var(--text-muted);
-        font-size: 0.95rem;
+
+      .control-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .control-label {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      .mode-buttons {
+        display: flex;
+        gap: 3px;
+        background: rgba(0, 6, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        padding: 3px;
+      }
+
+      .mode-btn {
+        padding: 4px 14px;
+        border-radius: 4px;
+        border: none;
+        background: transparent;
+        color: #94a3b8;
+        font-size: 0.78rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .mode-btn.active {
+        background: var(--brand-primary);
+        color: white;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 38px;
+        height: 21px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-track {
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 99px;
+        transition: background 0.2s;
+      }
+
+      .toggle-track::after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+        transition: transform 0.2s;
+      }
+
+      .toggle-switch input:checked + .toggle-track {
+        background: var(--brand-primary);
+      }
+
+      .toggle-switch input:checked + .toggle-track::after {
+        transform: translateX(17px);
+      }
+
+      .color-swatches {
+        display: flex;
+        gap: 7px;
+      }
+
+      .swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 0;
+        outline: none;
+      }
+
+      .swatch.active {
+        border-color: white;
+        transform: scale(1.25);
+      }
+
+      .demo-divider {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin: 4px 0;
       }
 
       /* Responsive */
@@ -685,35 +755,44 @@
       }
     </style>
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EssealDatePicker | Enterprise-Grade Vanilla JS Date Picker" />
-    <meta name="twitter:description" content="The zero-dependency solution engineered for reliability. Built for complex enterprise dashboards and web applications." />
-    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-date-picker.webp" />
+    <meta
+      name="twitter:title"
+      content="EssealDatePicker | Enterprise-Grade Vanilla JS Date Picker"
+    />
+    <meta
+      name="twitter:description"
+      content="The zero-dependency solution engineered for reliability. Built for complex enterprise dashboards and web applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.esseal.co.uk/social-card-date-picker.webp"
+    />
 
     <script type="application/ld+json">
-{
+      {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-                {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://www.esseal.co.uk/"
-                },
-                {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Products",
-                        "item": "https://www.esseal.co.uk/products/"
-                },
-                {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "EssealDatePicker",
-                        "item": "https://www.esseal.co.uk/products/esseal-date-picker"
-                }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.esseal.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.esseal.co.uk/products/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "EssealDatePicker",
+            "item": "https://www.esseal.co.uk/products/esseal-date-picker"
+          }
         ]
-}
+      }
     </script>
   </head>
   <body>
@@ -742,7 +821,7 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <span class="badge">Production Ready v1.0</span>
+          <span class="badge">Production Ready v1.1.0</span>
           <h1>
             Scalable Date Picker for <br /><span
               >Modern Javascript Applications</span
@@ -756,67 +835,85 @@
           <div class="cta-group">
             <a href="#usage" class="btn btn-primary">Start Integration</a>
             <a
-              href="https://github.com/esseal-dev/esseal-date-picker"
+              href="https://www.npmjs.com/package/esseal-date-picker"
               class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                fill="currentColor"
                 style="margin-right: 8px"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
+                  d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"
+                />
               </svg>
-              View Source
+              View on npm
             </a>
           </div>
         </div>
 
         <div class="demo-wrapper">
           <div class="demo-card">
-            <h3 style="margin-bottom: 24px; font-weight: 700; color: white">
-              Live Demo
+            <h3 style="margin-bottom: 6px; font-weight: 700; color: white">
+              Interactive Playground
             </h3>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 18px">Toggle options to explore the API</p>
 
             <div class="input-group">
-              <label>Single Selection</label>
+              <label id="demo-input-label">Select date</label>
               <input
                 type="text"
-                id="hero-single"
+                id="demo-input"
                 class="custom-input"
-                placeholder="Select date..."
-                aria-label="Select a single date"
+                placeholder="Click to open picker..."
+                aria-label="Date picker demo"
+                readonly
               />
             </div>
 
-            <div class="input-group">
-              <label>Range Selection</label>
-              <input
-                type="text"
-                id="hero-range"
-                class="custom-input"
-                placeholder="Start - End"
-                aria-label="Select a date range"
-              />
+            <div class="demo-controls">
+              <div class="control-row">
+                <span class="control-label">MODE</span>
+                <div class="mode-buttons" role="group" aria-label="Picker mode">
+                  <button class="mode-btn active" data-mode="single">Single</button>
+                  <button class="mode-btn" data-mode="range">Range</button>
+                </div>
+              </div>
+              <hr class="demo-divider" />
+              <div class="control-row">
+                <span class="control-label">Confirm / Cancel buttons</span>
+                <label class="toggle-switch" aria-label="Toggle confirm buttons">
+                  <input type="checkbox" id="toggle-actions" />
+                  <span class="toggle-track"></span>
+                </label>
+              </div>
+              <div class="control-row">
+                <span class="control-label">Future dates only</span>
+                <label class="toggle-switch" aria-label="Toggle future dates only">
+                  <input type="checkbox" id="toggle-future" />
+                  <span class="toggle-track"></span>
+                </label>
+              </div>
+              <hr class="demo-divider" />
+              <div class="control-row">
+                <span class="control-label">ACCENT COLOR</span>
+                <div class="color-swatches" role="group" aria-label="Accent color">
+                  <button class="swatch active" data-color="#fa6220" style="background:#fa6220" aria-label="Orange"></button>
+                  <button class="swatch" data-color="#7c3aed" style="background:#7c3aed" aria-label="Purple"></button>
+                  <button class="swatch" data-color="#3b82f6" style="background:#3b82f6" aria-label="Blue"></button>
+                  <button class="swatch" data-color="#10b981" style="background:#10b981" aria-label="Green"></button>
+                </div>
+              </div>
             </div>
 
             <div class="demo-status">
-              <strong>Console Output:</strong>
-              <span
-                id="hero-log"
-                style="
-                  font-family: &quot;Fira Code&quot;, monospace;
-                  color: var(--brand-primary);
-                "
-                >Awaiting user interaction...</span
-              >
+              <strong>Output:</strong>
+              <span id="hero-log" style="font-family:'Fira Code',monospace;color:var(--brand-primary)">Awaiting interaction...</span>
             </div>
           </div>
         </div>
@@ -848,8 +945,8 @@
           </div>
           <h3>High Performance Architecture</h3>
           <p>
-            EssealDatePicker guarantees zero bloat. Clocking in at under 5kb
-            gzipped, it ensures your enterprise dashboards load instantly
+            EssealDatePicker guarantees zero bloat. Clocking in at ~8KB
+            minified, it ensures your enterprise dashboards load instantly
             without layout shifts, jank, or main-thread blocking.
           </p>
         </div>
@@ -897,6 +994,43 @@
             applications without virtual DOM conflicts.
           </p>
         </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Built-in Locale Detection</h3>
+          <p>
+            Automatically resolves the user's locale via the native Intl API. Date formatting adapts to regional conventions out of the box, with a <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">locale</code> option for explicit override.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3>Accessibility First (ARIA)</h3>
+          <p>
+            Full ARIA role and attribute support baked in from the ground up. Keyboard navigation, screen reader announcements, and focus management meet enterprise accessibility standards without any additional configuration.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+            </svg>
+          </div>
+          <h3>Full Configuration API</h3>
+          <p>
+            Single and range modes, optional confirm/cancel action buttons, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">minDate</code>/<code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">maxDate</code> constraints, custom <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">primaryColor</code>, and lifecycle methods <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">open()</code>, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">close()</code>, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">destroy()</code>.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -932,10 +1066,11 @@
           <summary>How large is the EssealDatePicker package?</summary>
           <div class="faq-content">
             <p>
-              EssealDatePicker is highly optimized, weighing in at under 5kb
-              when gzipped. This lightweight footprint prevents layout shifts
-              and guarantees instant load times for complex enterprise
-              dashboards.
+              EssealDatePicker v1.1.0 weighs approximately 8KB minified. The
+              additional size compared to v1.0 comes from the new ARIA
+              accessibility layer, locale detection via the Intl API, and the
+              expanded configuration API — all zero external dependencies, all
+              shipped in a single file.
             </p>
           </div>
         </details>
@@ -998,7 +1133,7 @@
                 word-break: break-all;
               "
             >
-              https://cdn.jsdelivr.net/npm/esseal-date-picker
+              https://cdn.jsdelivr.net/npm/esseal-date-picker@1.1.0
             </div>
           </div>
         </div>
@@ -1016,31 +1151,41 @@
             </div>
             <br />
             <div class="line">
-              <span class="c">// Enterprise-ready initialization</span>
+              <span class="c">// v1.1.0 — full configuration API</span>
             </div>
             <div class="line">
               <span class="k">const</span> picker = <span class="k">new</span>
-              <span class="f">EssealDatePicker</span>(<span class="s"
-                >'#date-input'</span
-              >, {
+              <span class="f">EssealDatePicker</span>(<span class="s">'#date-input'</span>, {
             </div>
             <div class="line">
               &nbsp;&nbsp;mode: <span class="s">'range'</span>,
             </div>
             <div class="line">
+              &nbsp;&nbsp;showActions: <span class="k">true</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;locale: <span class="s">'en-GB'</span>,
+            </div>
+            <div class="line">
               &nbsp;&nbsp;primaryColor: <span class="s">'#FA6220'</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;minDate: <span class="k">new</span> <span class="f">Date</span>(),
             </div>
             <div class="line">
               &nbsp;&nbsp;onChange: (<span class="f">result</span>) => {
             </div>
             <div class="line">
-              &nbsp;&nbsp;&nbsp;&nbsp;console.<span class="f">log</span>(<span
-                class="s"
-                >'Payload:'</span
-              >, result);
+              &nbsp;&nbsp;&nbsp;&nbsp;console.<span class="f">log</span>(<span class="s">'Payload:'</span>, result);
             </div>
             <div class="line">&nbsp;&nbsp;}</div>
             <div class="line">});</div>
+            <br />
+            <div class="line">
+              <span class="c">// Lifecycle methods</span>
+            </div>
+            <div class="line">picker.<span class="f">open</span>();&nbsp;&nbsp;<span class="c">// open programmatically</span></div>
+            <div class="line">picker.<span class="f">destroy</span>();&nbsp;<span class="c">// clean up</span></div>
           </div>
         </div>
       </div>
@@ -1116,27 +1261,88 @@
 
     <!-- DEMO INIT -->
     <script type="module">
+      import EssealDatePicker from "https://cdn.jsdelivr.net/npm/esseal-date-picker@1.1.0";
+
       const log = document.getElementById("hero-log");
-      import EssealDatePicker from "https://cdn.jsdelivr.net/npm/esseal-date-picker";
-      // Main Hero Picker
-      const heroPicker = new EssealDatePicker("#hero-single", {
+      const inputLabel = document.getElementById("demo-input-label");
+
+      let currentPicker = null;
+      const config = {
         mode: "single",
-        primaryColor: "#FA6220",
-        onChange: (date) => {
-          log.innerHTML = `<span style="color:#FA6220">Single:</span> ${date.toLocaleDateString()}`;
-          log.parentElement.style.borderColor = "#FA6220";
-        },
+        primaryColor: "#fa6220",
+        showActions: false,
+        minDate: null,
+      };
+
+      function rebuildPicker() {
+        if (currentPicker) {
+          currentPicker.destroy();
+          currentPicker = null;
+        }
+        document.getElementById("demo-input").value = "";
+        log.innerHTML = "Awaiting interaction...";
+        log.style.color = config.primaryColor;
+
+        inputLabel.textContent =
+          config.mode === "range" ? "Select date range" : "Select date";
+
+        currentPicker = new EssealDatePicker("#demo-input", {
+          mode: config.mode,
+          primaryColor: config.primaryColor,
+          showActions: config.showActions,
+          minDate: config.minDate,
+          onChange: (result) => {
+            if (config.mode === "range") {
+              const start = result.start
+                ? result.start.toLocaleDateString()
+                : "...";
+              const end = result.end ? result.end.toLocaleDateString() : "...";
+              log.innerHTML = `${start} &rarr; ${end}`;
+            } else {
+              log.innerHTML = result.toLocaleDateString();
+            }
+            log.style.color = config.primaryColor;
+          },
+        });
+      }
+
+      // Mode toggle
+      document.querySelectorAll(".mode-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".mode-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          config.mode = btn.dataset.mode;
+          rebuildPicker();
+        });
       });
 
-      // Range Picker
-      new EssealDatePicker("#hero-range", {
-        mode: "range",
-        primaryColor: "#FA6220" /* Unified brand color for second picker too */,
-        onChange: (range) => {
-          log.innerHTML = `<span style="color:#FA6220">Range:</span> ${range.start.toLocaleDateString()} -> ${range.end.toLocaleDateString()}`;
-          log.parentElement.style.borderColor = "#FA6220";
-        },
+      // showActions toggle
+      document.getElementById("toggle-actions").addEventListener("change", (e) => {
+        config.showActions = e.target.checked;
+        rebuildPicker();
       });
+
+      // Future dates only toggle
+      document.getElementById("toggle-future").addEventListener("change", (e) => {
+        config.minDate = e.target.checked ? new Date() : null;
+        rebuildPicker();
+      });
+
+      // Color swatches
+      document.querySelectorAll(".swatch").forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+          document
+            .querySelectorAll(".swatch")
+            .forEach((s) => s.classList.remove("active"));
+          swatch.classList.add("active");
+          config.primaryColor = swatch.dataset.color;
+          rebuildPicker();
+        });
+      });
+
+      rebuildPicker();
     </script>
   </body>
 </html>
