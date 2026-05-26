@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 3. Email Configuration
     $to = "talha_qureshi@esseal.net";
-    $from = "contact-form@esseal.net";
+    $from = "contact-form@esseal.co.uk";
     $subject = "New Inquiry: $interest from $company";
 
     $message = "You have received a new project inquiry.\n\n";

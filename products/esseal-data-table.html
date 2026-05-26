@@ -71,11 +71,16 @@
               "sameAs": ["https://www.linkedin.com/company/esseal"]
             },
             "featureList": [
-              "DOM Virtualization for large datasets",
-              "Column Pinning (Left/Right)",
-              "Multi-level Row Grouping",
+              "Row expansion panels with custom React content",
+              "Server-side pagination and lazy group loading",
+              "DOM Virtualization for 100,000+ row datasets",
+              "Column Pinning (Left/Right) with runtime pin icon",
+              "Multi-level Row Grouping (client and server-side)",
               "Pure Vanilla CSS architecture without Tailwind",
-              "Built-in state persistence"
+              "Built-in state persistence including expanded rows",
+              "Full ARIA accessibility support",
+              "valueGetter for nested and computed fields",
+              "Custom cell rendering with renderCell"
             ]
           },
           {
@@ -708,6 +713,72 @@
         font-size: 0.9em;
       }
 
+      /* On Leave status */
+      .status-on-leave {
+        background: rgba(251, 191, 36, 0.15);
+        color: #fbbf24;
+      }
+
+      /* Expand button */
+      .dg-expand-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dg-expand-btn:hover { color: var(--primary); }
+      .dg-expand-btn.expanded { color: var(--primary); }
+
+      /* Expanded panel */
+      .dg-expanded-panel {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 14px 16px 14px 56px;
+        background: rgba(250, 98, 32, 0.04);
+        border-bottom: 1px solid var(--surface-border);
+      }
+      .ep-avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(250, 98, 32, 0.12);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .ep-fields { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+      .ep-field { min-width: 80px; }
+      .ep-label {
+        font-size: 10px;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 2px;
+      }
+      .ep-value { font-size: 13px; color: var(--text-main); font-weight: 500; }
+
+      /* Performance bar */
+      .perf-bar-wrap { display: flex; align-items: center; gap: 6px; width: 100%; }
+      .perf-bar-track {
+        flex: 1;
+        background: rgba(255,255,255,0.08);
+        border-radius: 3px;
+        height: 5px;
+        overflow: hidden;
+      }
+      .perf-bar-fill { height: 100%; border-radius: 3px; }
+      .perf-bar-label { font-size: 11px; color: var(--text-muted); min-width: 28px; text-align: right; }
+
       footer {
         text-align: center;
         padding: 40px 0;
@@ -828,9 +899,9 @@
       <section class="hero container">
         <h1>The High-Performance,<br />Vanilla CSS React Grid</h1>
         <p>
-          A feature-rich, deeply optimized React data table built for complex
-          enterprise applications. Zero Tailwind dependencies, true DOM
-          virtualization, and seamless state persistence.
+          A fully-featured React data grid for complex enterprise applications.
+          Row expansion panels, server-side pagination, true DOM virtualization,
+          zero Tailwind. <strong style="color:var(--text-main);">v2.5.2</strong> — zero runtime dependencies.
         </p>
 
         <div class="cta-group">
@@ -886,52 +957,70 @@
         <h2 class="section-title">Core Architecture & Capabilities</h2>
         <div class="grid">
           <article class="card">
+            <h3>Row Expansion</h3>
+            <p>
+              Expand any row to reveal a custom full-width detail panel. Pass a
+              <code>render</code> function to the <code>expandable</code> prop and return any
+              React content — charts, forms, nested tables, anything. Expanded row IDs
+              are tracked in <code>TableState</code> and restored via <code>initialState</code>.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Server-Side Data</h3>
+            <p>
+              Switch to <code>paginationMode="server"</code> to delegate filtering, sorting,
+              and paging to your API. A single <code>onServerRequest</code> callback fires on
+              every state change with full context — including a <code>direction</code> field
+              for cursor-based backends.
+            </p>
+          </article>
+          <article class="card">
             <h3>Pure Vanilla CSS</h3>
             <p>
-              Esseal DataTable is built entirely with pure vanilla CSS and
-              standard variables. We eliminate Tailwind and massive CSS-in-JS
-              runtimes to keep the library effortlessly themeable and incredibly
-              lightweight.
+              Built entirely with pure vanilla CSS and standard CSS variables. Zero Tailwind,
+              zero CSS-in-JS runtimes. Fully themeable via the <code>.dg-</code> class prefix
+              and a clean set of CSS custom properties.
             </p>
           </article>
           <article class="card">
             <h3>DOM Virtualization</h3>
             <p>
-              It utilizes strict true DOM virtualization to render hundreds of
-              thousands of rows without dropping a frame. Only the nodes
-              actively visible within the viewport are mounted to the DOM.
+              True DOM virtualization — only the rows visible in the viewport are mounted.
+              Handles 100,000+ rows without frame drops. Automatically disabled while any
+              row is expanded so expansion panels render at their natural height.
             </p>
           </article>
           <article class="card">
             <h3>Advanced Column Control</h3>
             <p>
-              The grid provides out-of-the-box support for native left/right
-              sticky pinning, drag-to-resize column dimensions, and dynamic
-              visibility toggling via the built-in toolbar logic.
+              Native sticky left/right column pinning, configurable at runtime via the pin
+              icon in each header. Drag-to-resize handles. Column visibility toggle via the
+              built-in Columns menu. Extra container space is distributed evenly across columns.
             </p>
           </article>
           <article class="card">
             <h3>Multi-Level Grouping</h3>
             <p>
-              Developers can easily cluster relational data. By passing an array
-              of keys, the grid automatically processes and builds an
-              expandable, nested tree structure for complex datasets.
+              Client-side grouping by any combination of fields with automatic title-case
+              normalisation of snake_case and kebab-case values. Server-side grouping via
+              <code>serverGroups</code> lazy-loads rows on expand with load-more pagination within each group.
             </p>
           </article>
           <article class="card">
             <h3>State Persistence</h3>
             <p>
-              The grid automatically extracts and broadcasts its full internal
-              state—including active filters, sorting parameters, pins, and
-              expanded rows—for seamless database or local storage syncing.
+              The full table state — sort, filters, page, pins, visibility, group expand,
+              and expanded rows — is broadcast via <code>onStateChange</code> as a plain JSON-safe
+              object. Seed it back via <code>initialState</code> to restore exactly where the user left off.
             </p>
           </article>
           <article class="card">
             <h3>Smart Row Actions</h3>
             <p>
-              Define custom inline actions per row. When a maximum visible count
-              is set, the grid intelligently tucks overflow actions into a
-              clean, accessible dropdown menu automatically.
+              Define inline action buttons per row with optional icons, tooltips, and a
+              <code>disabled</code> state based on row data. Overflow actions collapse into a
+              portal-positioned <code>⋮</code> menu that auto-positions above the trigger when
+              space is tight.
             </p>
           </article>
         </div>
@@ -942,25 +1031,37 @@
         <div class="container">
           <h2 class="section-title">Developer-First API</h2>
           <div class="code-container">
-            <pre><code>import { EssealDataTable } from '@esseal/datatable';
-import '@esseal/datatable/dist/style.css';
+            <pre><code>import { EssealDataTable } from 'esseal-data-table';
+import 'esseal-data-table/style.css';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90, pinned: 'left' },
-  { field: 'name', headerName: 'Full Name', width: 250 },
-  { field: 'status', headerName: 'Status', width: 150, filterable: true }
+  { field: 'id',          headerName: 'ID',          width: 70,  pinned: 'left' },
+  { field: 'name',        headerName: 'Name',        width: 200, pinned: 'left' },
+  { field: 'department',  headerName: 'Department',  width: 150,
+    valueGetter: (row) =&gt; row.department.name },
+  { field: 'status',      headerName: 'Status',      width: 120,
+    renderCell: ({ value }) =&gt; &lt;StatusBadge status={value} /&gt; },
+  { field: 'performance', headerName: 'Performance', width: 160,
+    renderCell: ({ value }) =&gt; &lt;ProgressBar value={value} /&gt; },
 ];
 
 export default function App() {
   return (
-    &lt;EssealDataTable 
-      rows={data} 
-      columns={columns} 
-      pagination={true}
-      pageSize={50}
-      checkboxSelection={true}
-      rowHeight={48}
-      onStateChange={(state) =&gt; saveStateToDB(state)}
+    &lt;EssealDataTable
+      rows={data}
+      columns={columns}
+      checkboxSelection
+      pagination
+      pageSize={[10, 25, 50]}
+      groupBy={['department']}
+      expandable={{
+        render: (row) =&gt; &lt;EmployeeDetail employee={row} /&gt;,
+      }}
+      rowActions={(row) =&gt; [
+        { label: 'Edit',   icon: &lt;EditIcon /&gt;,  onClick: (r) =&gt; handleEdit(r.id) },
+        { label: 'Delete', icon: &lt;TrashIcon /&gt;, onClick: (r) =&gt; handleDelete(r.id) },
+      ]}
+      onStateChange={(state) =&gt; saveState(state)}
     /&gt;
   );
 }
@@ -972,210 +1073,19 @@ export default function App() {
       <!-- Interactive Demo Section -->
       <section id="demo" class="demo-section container">
         <h2 class="section-title">Interactive Preview</h2>
-        <p
-          style="
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-          "
-        >
-          Experience the feel of the Esseal DataTable. This fully functional
-          simulator demonstrates native sticky pinning, fast sorting/filtering,
-          multi-level grouping, and state management entirely in the browser.
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:8px;max-width:800px;margin-left:auto;margin-right:auto;">
+          The actual <code>EssealDataTable</code> React component running live. Toggle every prop, expand rows, group, sort, filter — this is not a simulation.
         </p>
-
-        <div class="dg-container">
-          <!-- Top Toolbar -->
-          <div class="dg-toolbar">
-            <div
-              style="
-                display: flex;
-                gap: 8px;
-                align-items: center;
-                position: relative;
-              "
-            >
-              <button class="dg-toolbar-btn" id="col-picker-btn">
-                Columns <span style="font-size: 10px">▼</span>
-              </button>
-              <div class="dg-menu" id="col-menu" style="top: 35px; left: 0">
-                <!-- Generated via JS -->
-              </div>
-
-              <div
-                style="
-                  width: 1px;
-                  height: 20px;
-                  background: var(--surface-border);
-                  margin: 0 8px;
-                "
-              ></div>
-
-              <span style="font-size: 13px; color: var(--text-muted)"
-                >Group By:</span
-              >
-              <button class="dg-toolbar-btn group-btn" data-group="role">
-                Role
-              </button>
-              <button class="dg-toolbar-btn group-btn" data-group="status">
-                Status
-              </button>
-              <button class="dg-toolbar-btn group-btn-clear active">
-                None
-              </button>
-            </div>
-          </div>
-
-          <!-- Grid Viewport -->
-          <div class="dg-viewport" id="dg-viewport">
-            <!-- Header -->
-            <div class="dg-header-row" id="demo-header">
-              <div
-                class="dg-header-cell pinned-left"
-                style="width: 50px; justify-content: center; padding: 12px 16px"
-              >
-                <input type="checkbox" id="selectAll" />
-              </div>
-              <div
-                class="dg-header-cell pinned-left sortable"
-                data-field="id"
-                data-col="id"
-                style="width: 80px; left: 50px"
-              >
-                <div class="dg-header-main">
-                  <span>ID</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="id"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell sortable"
-                data-field="name"
-                data-col="name"
-                style="width: 200px"
-              >
-                <div class="dg-header-main">
-                  <span>User Name</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="name"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell sortable"
-                data-field="email"
-                data-col="email"
-                style="width: 250px"
-              >
-                <div class="dg-header-main">
-                  <span>Email Address</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="email"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell sortable"
-                data-field="role"
-                data-col="role"
-                style="width: 150px"
-              >
-                <div class="dg-header-main">
-                  <span>System Role</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="role"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell sortable"
-                data-field="status"
-                data-col="status"
-                style="width: 120px"
-              >
-                <div class="dg-header-main">
-                  <span>Status</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="status"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell sortable"
-                data-field="date"
-                data-col="date"
-                style="width: 150px"
-              >
-                <div class="dg-header-main">
-                  <span>Last Login</span> <span class="sort-icon"></span>
-                </div>
-                <input
-                  type="text"
-                  class="dg-column-filter"
-                  placeholder="Filter..."
-                  data-filter="date"
-                />
-                <div class="dg-resizer"></div>
-              </div>
-              <div
-                class="dg-header-cell pinned-right"
-                style="width: 80px; justify-content: center; padding: 12px 16px"
-              >
-                <span style="font-size: 12px; text-transform: uppercase"
-                  >Actions</span
-                >
-              </div>
-            </div>
-            <!-- Body -->
-            <div id="demo-body">
-              <!-- Rows injected via Vanilla JS below -->
-            </div>
-          </div>
-
-          <!-- Footer Pagination -->
-          <div
-            class="dg-toolbar"
-            style="
-              border-top: 1px solid var(--surface-border);
-              border-bottom: none;
-              font-size: 13px;
-              color: var(--text-muted);
-            "
-          >
-            <div id="pagination-info">Showing 1-50 of 50 rows</div>
-            <div style="display: flex; gap: 8px">
-              <button class="dg-toolbar-btn" disabled style="opacity: 0.5">
-                Prev
-              </button>
-              <button class="dg-toolbar-btn" disabled style="opacity: 0.5">
-                Next
-              </button>
-            </div>
-          </div>
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;font-size:0.875rem;">
+          Enable <strong style="color:var(--text-main);">Row Expansion</strong> in the sidebar → click any ▶ chevron · Group by Department or Role · Resize columns by dragging header edges
+        </p>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--surface-border);box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+          <iframe
+            src="/products/data-table-demo/"
+            style="width:100%;height:680px;border:none;display:block;"
+            title="Esseal DataTable Live Demo"
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
 
@@ -1197,19 +1107,17 @@ export default function App() {
           engineered with:
         </p>
         <ul>
-          <li>Written in strict TypeScript for complete type safety.</li>
-          <li>Zero dependency on utility frameworks (No Tailwind CSS).</li>
+          <li>Written in strict TypeScript — end-to-end generic type safety.</li>
+          <li>Zero runtime dependencies. No lodash, no date libraries, React only.</li>
+          <li>Zero utility framework dependencies (no Tailwind CSS).</li>
           <li>O(1) lookup speeds for active filter and sort models.</li>
-          <li>
-            Native sticky positioning for column pinning (no JS position
-            calculations).
-          </li>
-          <li>Event delegation used for optimized click-outside handlers.</li>
-          <li>Extensible GridColDef and GridRenderCellParams interfaces.</li>
+          <li>Native sticky positioning for column pinning (no JS position calculations).</li>
+          <li>DOM virtualization disabled automatically while any row is expanded.</li>
+          <li>Server-side mode: delegates filter, sort, and paging to your API via one callback.</li>
+          <li>Server-side grouping: lazy-loads rows per group with cursor or offset pagination.</li>
+          <li>Full ARIA roles: aria-sort, aria-rowcount, aria-selected, aria-expanded.</li>
           <li>Controlled and Uncontrolled state paradigms supported.</li>
-          <li>
-            Client-side data pipeline (Filter -> Sort -> Group -> Flatten).
-          </li>
+          <li>Client-side data pipeline (Filter → Sort → Group → Flatten).</li>
         </ul>
       </section>
 
@@ -1246,10 +1154,38 @@ export default function App() {
               <summary>Can I save the user's grid state?</summary>
               <div class="faq-content">
                 <p>
-                  Yes. The grid automatically extracts and broadcasts its full
-                  state (filters, sorting, pins, expanded rows) via the
-                  <code>onStateChange</code> callback, allowing you to easily
-                  persist views to a database or local storage.
+                  Yes. The grid broadcasts its full state — sort, filters, pagination, column
+                  pins, column visibility, expanded groups, and expanded rows — via the
+                  <code>onStateChange</code> callback as a plain JSON-serialisable object.
+                  Pass it back via <code>initialState</code> on the next mount to restore
+                  exactly where the user left off.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How does row expansion work?</summary>
+              <div class="faq-content">
+                <p>
+                  Pass an <code>expandable</code> prop with a <code>render</code> function:
+                  <code>expandable={{ render: (row) => &lt;YourComponent row={row} /&gt; }}</code>.
+                  A chevron column is automatically injected on the left. Clicking it expands
+                  a full-width panel below the row that renders whatever your function returns —
+                  detail cards, charts, nested tables, forms, anything. Virtualization is
+                  automatically disabled while any row is expanded so the panel can take its
+                  natural height.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Does it support server-side pagination and filtering?</summary>
+              <div class="faq-content">
+                <p>
+                  Yes. Set <code>paginationMode="server"</code> and provide <code>rowCount</code>
+                  and an <code>onServerRequest</code> callback. The callback fires on mount and on
+                  every page, sort, filter, or page-size change with the full current state —
+                  including a <code>direction</code> field (<code>'first' | 'next' | 'prev'</code>)
+                  that lets cursor-based APIs know which cursor to use. Filter changes are
+                  debounced (default 300 ms) so you don't fire a request on every keystroke.
                 </p>
               </div>
             </details>
@@ -1267,162 +1203,118 @@ export default function App() {
           styles into your application entry point.
         </p>
         <div class="code-container" style="margin-bottom: 40px">
-          <pre><code>npm i esseal-data-table</code></pre>
+          <pre><code>npm i esseal-data-table
+
+// In your app entry point:
+import 'esseal-data-table/style.css';</code></pre>
         </div>
 
         <h3>Component Props</h3>
-        <p>
-          The <code>&lt;EssealDataTable /&gt;</code> component accepts the
-          following properties to control its behavior and appearance.
-        </p>
+        <p>Props are grouped by feature area. TypeScript enforces discriminated unions — invalid combinations (e.g. both <code>groupBy</code> and <code>serverGroups</code>) are caught at compile time.</p>
 
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Core</p>
         <div class="props-table-wrapper">
           <table class="props-table">
-            <thead>
-              <tr>
-                <th>Prop</th>
-                <th>Type</th>
-                <th>Default</th>
-                <th>Description</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr>
-                <td><code>rows</code></td>
-                <td><code>T[]</code></td>
-                <td>Required</td>
-                <td>
-                  Array of data objects to render. Each object must have a
-                  unique <code>id</code>.
-                </td>
-              </tr>
-              <tr>
-                <td><code>columns</code></td>
-                <td><code>GridColDef[]</code></td>
-                <td>Required</td>
-                <td>
-                  Configuration array for table columns. Defines fields, widths,
-                  pinning, and renderers.
-                </td>
-              </tr>
-              <tr>
-                <td><code>pagination</code></td>
-                <td><code>boolean</code></td>
-                <td><code>false</code></td>
-                <td>Enables client-side pagination.</td>
-              </tr>
-              <tr>
-                <td><code>pageSize</code></td>
-                <td><code>number</code></td>
-                <td><code>10</code></td>
-                <td>Number of rows per page when pagination is enabled.</td>
-              </tr>
-              <tr>
-                <td><code>rowHeight</code></td>
-                <td><code>number</code></td>
-                <td><code>40</code></td>
-                <td>
-                  Fixed height of each row in pixels (required for DOM
-                  virtualization calculations).
-                </td>
-              </tr>
-              <tr>
-                <td><code>height</code></td>
-                <td><code>number</code></td>
-                <td><code>600</code></td>
-                <td>Overall height of the datatable container in pixels.</td>
-              </tr>
-              <tr>
-                <td><code>loading</code></td>
-                <td><code>boolean</code></td>
-                <td><code>false</code></td>
-                <td>
-                  Displays a semi-transparent loading overlay over the data
-                  grid.
-                </td>
-              </tr>
-              <tr>
-                <td><code>groupBy</code></td>
-                <td><code>(keyof T)[]</code></td>
-                <td><code>[]</code></td>
-                <td>
-                  Array of column keys to group rows by, automatically creating
-                  an expandable nested tree structure.
-                </td>
-              </tr>
-              <tr>
-                <td><code>checkboxSelection</code></td>
-                <td><code>boolean</code></td>
-                <td><code>false</code></td>
-                <td>
-                  Adds a leftmost pinned column with checkboxes for bulk row
-                  selection.
-                </td>
-              </tr>
-              <tr>
-                <td><code>onSelectionChange</code></td>
-                <td><code>(ids: string[]) =&gt; void</code></td>
-                <td><code>undefined</code></td>
-                <td>
-                  Callback fired when row selection changes. Returns array of
-                  selected IDs.
-                </td>
-              </tr>
-              <tr>
-                <td><code>initialState</code></td>
-                <td><code>Partial&lt;TableState&gt;</code></td>
-                <td><code>undefined</code></td>
-                <td>
-                  Injects the initial state (page, sorting, filters, expanded
-                  groups, visibility, pins) on mount. Perfect for restoring
-                  persisted user views.
-                </td>
-              </tr>
-              <tr>
-                <td><code>onStateChange</code></td>
-                <td><code>(state: TableState) =&gt; void</code></td>
-                <td><code>undefined</code></td>
-                <td>
-                  Callback fired when internal state (sort, filter, pin,
-                  pagination) updates. Used for persistence.
-                </td>
-              </tr>
-              <tr>
-                <td><code>rowActions</code></td>
-                <td><code>(row: T) =&gt; GridAction[]</code></td>
-                <td><code>undefined</code></td>
-                <td>
-                  Function returning an array of action buttons for a specific
-                  row.
-                </td>
-              </tr>
-              <tr>
-                <td><code>maxVisibleActions</code></td>
-                <td><code>number</code></td>
-                <td><code>1</code></td>
-                <td>
-                  The maximum number of action buttons to display inline before
-                  collapsing the remainder into a "⋮" overflow dropdown menu.
-                </td>
-              </tr>
-              <tr>
-                <td><code>disableColumnMenu</code></td>
-                <td><code>boolean</code></td>
-                <td><code>false</code></td>
-                <td>
-                  Hides the built-in "Columns" visibility toggle menu from the
-                  default toolbar.
-                </td>
-              </tr>
-              <tr>
-                <td><code>toolbar</code></td>
-                <td><code>ReactNode</code></td>
-                <td><code>undefined</code></td>
-                <td>
-                  A slot to inject a custom React node (like a global search
-                  input or export buttons) directly into the grid's top toolbar.
-                </td>
-              </tr>
+              <tr><td><code>rows</code></td><td><code>T[]</code></td><td>Required</td><td>Array of row data objects.</td></tr>
+              <tr><td><code>columns</code></td><td><code>GridColDef&lt;T&gt;[]</code></td><td>Required</td><td>Column definitions.</td></tr>
+              <tr><td><code>getRowId</code></td><td><code>(row: T) =&gt; string | number</code></td><td>—</td><td>Derives a unique ID from each row. Required when <code>T</code> does not have an <code>id</code> field.</td></tr>
+              <tr><td><code>height</code></td><td><code>number | string</code></td><td><code>'100%'</code></td><td>Table height. Accepts a pixel number or any CSS string (<code>'50vh'</code>, <code>'calc(100% - 64px)'</code>).</td></tr>
+              <tr><td><code>rowHeight</code></td><td><code>number</code></td><td><code>40</code></td><td>Row height in pixels. Must be accurate for virtualization to work correctly.</td></tr>
+              <tr><td><code>loading</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Renders a full-table loading overlay.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination — Client (default)</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>pagination</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Enables built-in page navigation controls in the footer.</td></tr>
+              <tr><td><code>pageSize</code></td><td><code>number | number[]</code></td><td><code>10</code></td><td>Rows per page. Pass an array (e.g. <code>[10, 25, 50]</code>) to show a page-size selector in the footer.</td></tr>
+              <tr><td><code>paginationMode</code></td><td><code>'client'</code></td><td><code>'client'</code></td><td>Explicitly sets client mode. Omitting this prop is equivalent.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination — Server</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>paginationMode</code></td><td><code>'server'</code></td><td>—</td><td>Delegates filtering, sorting, and paging to your API.</td></tr>
+              <tr><td><code>rowCount</code></td><td><code>number</code></td><td>—</td><td>Total dataset size — drives footer display and page count.</td></tr>
+              <tr><td><code>onServerRequest</code></td><td><code>(params: ServerRequestParams) =&gt; void</code></td><td>—</td><td>Fires on mount and on every page, sort, filter, or page-size change.</td></tr>
+              <tr><td><code>filterDebounceMs</code></td><td><code>number</code></td><td><code>300</code></td><td>Milliseconds to debounce filter input changes before calling <code>onServerRequest</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Grouping</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>groupBy</code></td><td><code>(keyof T)[]</code></td><td><code>[]</code></td><td>Client-side grouping. Multiple fields create nested groups in array order.</td></tr>
+              <tr><td><code>serverGroups</code></td><td><code>ServerGroupDef&lt;T&gt;[]</code></td><td>—</td><td>Server-side grouping. Mutually exclusive with <code>groupBy</code>. Provides field, group values, and server-computed counts.</td></tr>
+              <tr><td><code>onLoadGroupData</code></td><td><code>(params) =&gt; Promise&lt;LoadGroupDataResult&lt;T&gt;&gt;</code></td><td>—</td><td>Required with <code>serverGroups</code>. Called when a group is expanded or "Load more" is clicked.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Selection</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>checkboxSelection</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Adds a checkbox column for multi-row selection with select-all.</td></tr>
+              <tr><td><code>onSelectionChange</code></td><td><code>(ids: (string | number)[]) =&gt; void</code></td><td>—</td><td>Fires whenever the set of selected row IDs changes. Receives the full current selection. Persists across page changes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Row Expansion</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>expandable</code></td><td><code>ExpandableConfig&lt;T&gt;</code></td><td>—</td><td>Enables row expansion. A chevron column is injected on the left. Clicking it reveals a full-width panel below the row. Pass <code>{ render: (row) =&gt; ReactNode }</code>. Virtualization is disabled while any row is expanded.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Row Actions</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>rowActions</code></td><td><code>(row: T) =&gt; GridAction&lt;T&gt;[]</code></td><td>—</td><td>Returns the action list for a given row. Called per visible row on every render.</td></tr>
+              <tr><td><code>maxVisibleActions</code></td><td><code>number</code></td><td><code>1</code></td><td>Inline action buttons shown before collapsing the rest into an overflow <code>⋮</code> menu.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Toolbar &amp; Styling</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>toolbar</code></td><td><code>ReactNode</code></td><td>—</td><td>Custom content rendered in the toolbar, to the right of the built-in Columns button.</td></tr>
+              <tr><td><code>disableColumnMenu</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Hides the built-in Columns visibility button.</td></tr>
+              <tr><td><code>getRowClassName</code></td><td><code>(row: T) =&gt; string</code></td><td>—</td><td>Returns a CSS class applied to the row's container <code>div</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">State Persistence</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>initialState</code></td><td><code>Partial&lt;TableState&gt;</code></td><td>—</td><td>Seeds internal state on first render. Fields omitted use their defaults. Has no effect after mount.</td></tr>
+              <tr><td><code>onStateChange</code></td><td><code>(state: TableState) =&gt; void</code></td><td>—</td><td>Called after every state change. Not called on the initial render. Wrap in <code>useCallback</code> to keep the reference stable.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1434,14 +1326,16 @@ export default function App() {
         </p>
         <div class="code-container">
           <pre><code>interface GridColDef&lt;T = any&gt; {
-  field: string;               // Key in your data object
-  headerName: string;          // Display name in the column header
-  width: number;               // Fixed width in pixels
-  pinned?: 'left' | 'right';   // Stick column to the side of the viewport
-  hide?: boolean;              // Initially hide the column
-  sortable?: boolean;          // Enable/disable sorting logic (default: true)
-  filterable?: boolean;        // Enable/disable text filtering (default: true)
-  renderCell?: (params) =&gt; ReactNode; // Custom React node to render in the cell
+  field: keyof T | string;           // Key in your data object
+  headerName: string;                // Display name in the column header
+  width: number;                     // Initial width in pixels (min 50px on drag)
+  pinned?: 'left' | 'right' | false; // Stick column to the side of the viewport
+  hide?: boolean;                    // Initially hide the column
+  sortable?: boolean;                // Enable/disable sorting (default: true)
+  filterable?: boolean;              // Enable/disable text filtering (default: true)
+  valueGetter?: (row: T) =&gt; string | number; // Extract from nested/computed fields
+  renderCell?: (params: GridRenderCellParams&lt;T&gt;) =&gt; ReactNode; // Custom cell render
+  cellClassName?: (row: T) =&gt; string; // CSS class applied per cell based on row data
 }</code></pre>
         </div>
       </section>
@@ -1540,421 +1434,6 @@ export default function App() {
         }
       }
 
-      // --- Advanced Interactive Demo Engine (Vanilla JS) ---
-      document.addEventListener("DOMContentLoaded", () => {
-        // 1. Generate Fake Data
-        const firstNames = [
-          "James",
-          "Emma",
-          "Liam",
-          "Olivia",
-          "Noah",
-          "Ava",
-          "William",
-          "Sophia",
-          "Lucas",
-          "Isabella",
-        ];
-        const lastNames = [
-          "Smith",
-          "Johnson",
-          "Williams",
-          "Brown",
-          "Jones",
-          "Garcia",
-          "Miller",
-          "Davis",
-          "Rodriguez",
-          "Martinez",
-        ];
-        const roles = [
-          "Admin",
-          "Editor",
-          "Viewer",
-          "Contributor",
-          "Superadmin",
-        ];
-        const statuses = ["Active", "Inactive", "Pending"];
-
-        const rawData = Array.from({ length: 50 }, (_, i) => {
-          const name = `${firstNames[Math.floor(Math.random() * firstNames.length)]} ${lastNames[Math.floor(Math.random() * lastNames.length)]}`;
-          return {
-            id: 1001 + i,
-            name: name,
-            email: `${name.replace(" ", ".").toLowerCase()}@esseal.net`,
-            role: roles[Math.floor(Math.random() * roles.length)],
-            status: statuses[Math.floor(Math.random() * statuses.length)],
-            date: `Feb ${Math.floor(Math.random() * 28) + 1}, 2026`,
-          };
-        });
-
-        // 2. Table State
-        let state = {
-          data: [...rawData],
-          sortField: null,
-          sortDir: "asc",
-          filters: {},
-          groupBy: [],
-          expandedGroups: {},
-          hiddenCols: new Set(),
-          selection: new Set(),
-          colWidths: {
-            id: 80,
-            name: 200,
-            email: 250,
-            role: 150,
-            status: 120,
-            date: 150,
-          },
-        };
-
-        const columnsConfig = [
-          { field: "id", width: "80px", pinned: "left", offset: "50px" },
-          { field: "name", width: "200px" },
-          { field: "email", width: "250px" },
-          { field: "role", width: "150px" },
-          { field: "status", width: "120px" },
-          { field: "date", width: "150px" },
-        ];
-
-        const demoBody = document.getElementById("demo-body");
-        const selectAll = document.getElementById("selectAll");
-        const colMenu = document.getElementById("col-menu");
-
-        // 3. Setup Column Visibility Menu
-        colMenu.innerHTML = columnsConfig
-          .map(
-            (col) => `
-        <label class="dg-menu-item" onclick="event.stopPropagation()">
-          <input type="checkbox" class="col-toggle" data-col="${col.field}" checked />
-          <span style="text-transform: capitalize;">${col.field}</span>
-        </label>
-      `,
-          )
-          .join("");
-
-        // 4. Core Render Engine
-        function renderTable() {
-          let processedData = [...rawData];
-
-          // Apply Filters
-          Object.entries(state.filters).forEach(([field, val]) => {
-            if (val) {
-              processedData = processedData.filter((row) =>
-                String(row[field]).toLowerCase().includes(val.toLowerCase()),
-              );
-            }
-          });
-
-          // Apply Sorting
-          if (state.sortField) {
-            processedData.sort((a, b) => {
-              const vA = String(a[state.sortField]).toLowerCase();
-              const vB = String(b[state.sortField]).toLowerCase();
-              if (vA < vB) return state.sortDir === "asc" ? -1 : 1;
-              if (vA > vB) return state.sortDir === "asc" ? 1 : -1;
-              return 0;
-            });
-          }
-
-          let html = "";
-
-          // Row Renderer helper
-          const renderRow = (row) => {
-            const isSel = state.selection.has(String(row.id));
-            const statClass =
-              row.status === "Active"
-                ? "status-active"
-                : row.status === "Inactive"
-                  ? "status-inactive"
-                  : "";
-
-            let rowHtml = `<div class="dg-row ${isSel ? "selected" : ""}" data-id="${row.id}">
-            <div class="dg-cell pinned-left" style="width: 50px; justify-content: center;">
-              <input type="checkbox" class="row-checkbox" ${isSel ? "checked" : ""} />
-            </div>
-            <div class="dg-cell pinned-left col-id ${state.hiddenCols.has("id") ? "hide-col" : ""}" style="width: ${state.colWidths.id}px; left: 50px; font-family: monospace; color: var(--primary);">#${row.id}</div>
-            <div class="dg-cell col-name ${state.hiddenCols.has("name") ? "hide-col" : ""}" style="width: ${state.colWidths.name}px; font-weight: 500;">${row.name}</div>
-            <div class="dg-cell col-email ${state.hiddenCols.has("email") ? "hide-col" : ""}" style="width: ${state.colWidths.email}px; color: var(--text-muted);">${row.email}</div>
-            <div class="dg-cell col-role ${state.hiddenCols.has("role") ? "hide-col" : ""}" style="width: ${state.colWidths.role}px;">${row.role}</div>
-            <div class="dg-cell col-status ${state.hiddenCols.has("status") ? "hide-col" : ""}" style="width: ${state.colWidths.status}px;">
-              <span class="status-badge ${statClass}">${row.status}</span>
-            </div>
-            <div class="dg-cell col-date ${state.hiddenCols.has("date") ? "hide-col" : ""}" style="width: ${state.colWidths.date}px; color: var(--text-muted);">${row.date}</div>
-            <div class="dg-cell pinned-right" style="width: 80px; overflow: visible;">
-              <div style="position: relative;">
-                <button class="action-btn" onclick="toggleActionMenu(event, ${row.id})">⋮</button>
-                <div class="dg-menu action-menu" id="menu-${row.id}" style="right: 0; top: 100%;">
-                  <div class="dg-menu-item">✏️ Edit User</div>
-                  <div class="dg-menu-item" style="color: #ef4444;">🗑️ Delete</div>
-                </div>
-              </div>
-            </div>
-          </div>`;
-            return rowHtml;
-          };
-
-          // Multi-level Grouping Engine
-          function buildTree(data, keys, depth = 0, parentId = "root") {
-            if (!keys || keys.length === 0)
-              return data.map((d) => ({ type: "row", data: d }));
-            const key = keys[0];
-            const groups = {};
-            data.forEach((row) => {
-              const val = row[key] || "Unknown";
-              if (!groups[val]) groups[val] = [];
-              groups[val].push(row);
-            });
-            return Object.keys(groups)
-              .sort()
-              .map((val) => ({
-                type: "group",
-                id: `${parentId}-${key}-${val.replace(/\s+/g, "-")}`,
-                field: key,
-                value: val,
-                depth: depth,
-                count: groups[val].length,
-                children: buildTree(
-                  groups[val],
-                  keys.slice(1),
-                  depth + 1,
-                  `${parentId}-${key}-${val.replace(/\s+/g, "-")}`,
-                ),
-              }));
-          }
-
-          function flattenTree(nodes) {
-            let flat = [];
-            nodes.forEach((node) => {
-              if (node.type === "group") {
-                flat.push(node);
-                if (state.expandedGroups[node.id] !== false) {
-                  flat = flat.concat(flattenTree(node.children));
-                }
-              } else {
-                flat.push(node);
-              }
-            });
-            return flat;
-          }
-
-          const tree = buildTree(processedData, state.groupBy);
-          const flatNodes = flattenTree(tree);
-
-          flatNodes.forEach((node) => {
-            if (node.type === "group") {
-              const isExpanded = state.expandedGroups[node.id] !== false;
-              const padLeft = node.depth * 20 + 16;
-              html += `<div class="dg-group-row" style="padding-left: ${padLeft}px; z-index: 1;" onclick="toggleGroup('${node.id}')">
-              <span style="margin-right: 8px; width: 14px; display: inline-block;">${isExpanded ? "▼" : "▶"}</span>
-              <span style="text-transform: capitalize;">${node.field}: <strong>${node.value}</strong> (${node.count})</span>
-            </div>`;
-            } else {
-              html += renderRow(node.data);
-            }
-          });
-
-          if (processedData.length === 0) {
-            html = `<div style="padding: 32px; text-align: center; color: var(--text-muted); grid-column: 1/-1;">No rows match filters.</div>`;
-          }
-
-          demoBody.innerHTML = html;
-          document.getElementById("pagination-info").innerText =
-            `Showing ${processedData.length} records`;
-
-          // Re-attach checkbox events
-          document.querySelectorAll(".row-checkbox").forEach((cb) => {
-            cb.addEventListener("change", (e) => {
-              const id = e.target.closest(".dg-row").dataset.id;
-              if (e.target.checked) state.selection.add(id);
-              else state.selection.delete(id);
-              renderTable(); // Re-render updates row classes
-              updateSelectAllState();
-            });
-          });
-        }
-
-        // 5. Event Listeners
-
-        // Grouping
-        document.querySelectorAll(".group-btn").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const group = e.target.dataset.group;
-            if (state.groupBy.includes(group)) {
-              state.groupBy = state.groupBy.filter((g) => g !== group);
-              e.target.classList.remove("active");
-            } else {
-              state.groupBy.push(group);
-              e.target.classList.add("active");
-            }
-            document
-              .querySelector(".group-btn-clear")
-              .classList.toggle("active", state.groupBy.length === 0);
-            renderTable();
-          });
-        });
-
-        document
-          .querySelector(".group-btn-clear")
-          .addEventListener("click", (e) => {
-            state.groupBy = [];
-            document
-              .querySelectorAll(".group-btn")
-              .forEach((b) => b.classList.remove("active"));
-            e.target.classList.add("active");
-            renderTable();
-          });
-
-        // Global Group Toggle helper
-        window.toggleGroup = (id) => {
-          state.expandedGroups[id] =
-            state.expandedGroups[id] === false ? true : false;
-          renderTable();
-        };
-
-        // Actions Menu helper
-        window.toggleActionMenu = (e, id) => {
-          e.stopPropagation();
-          document
-            .querySelectorAll(".action-menu")
-            .forEach((m) => m.classList.remove("show"));
-          const menu = document.getElementById(`menu-${id}`);
-          menu.classList.add("show");
-        };
-
-        // Close menus on outside click
-        document.addEventListener("click", () => {
-          document
-            .querySelectorAll(".action-menu")
-            .forEach((m) => m.classList.remove("show"));
-          colMenu.classList.remove("show");
-        });
-
-        // Column Visibility Picker
-        document
-          .getElementById("col-picker-btn")
-          .addEventListener("click", (e) => {
-            e.stopPropagation();
-            colMenu.classList.toggle("show");
-          });
-
-        document.querySelectorAll(".col-toggle").forEach((cb) => {
-          cb.addEventListener("change", (e) => {
-            const col = e.target.dataset.col;
-            if (e.target.checked) state.hiddenCols.delete(col);
-            else state.hiddenCols.add(col);
-
-            // Toggle headers
-            document
-              .querySelector(`[data-col="${col}"]`)
-              .classList.toggle("hide-col", !e.target.checked);
-            renderTable(); // Re-render hides the cells
-          });
-        });
-
-        // Filtering
-        document.querySelectorAll(".dg-column-filter").forEach((input) => {
-          input.addEventListener("click", (e) => e.stopPropagation()); // Prevent sorting
-          input.addEventListener("input", (e) => {
-            state.filters[e.target.dataset.filter] = e.target.value;
-            renderTable();
-          });
-        });
-
-        // Sorting
-        document.querySelectorAll(".sortable").forEach((header) => {
-          header.addEventListener("click", (e) => {
-            if (
-              e.target.tagName === "INPUT" ||
-              e.target.classList.contains("dg-resizer")
-            )
-              return;
-            const field = header.dataset.field;
-            if (state.sortField === field) {
-              state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
-            } else {
-              state.sortField = field;
-              state.sortDir = "asc";
-            }
-
-            // Update visual arrows
-            document
-              .querySelectorAll(".sort-icon")
-              .forEach((icon) => (icon.innerText = ""));
-            header.querySelector(".sort-icon").innerText =
-              state.sortDir === "asc" ? " ↑" : " ↓";
-
-            renderTable();
-          });
-        });
-
-        // Select All
-        if (selectAll) {
-          selectAll.addEventListener("change", (e) => {
-            const isChecked = e.target.checked;
-            if (isChecked) {
-              state.data.forEach((r) => state.selection.add(String(r.id)));
-            } else {
-              state.selection.clear();
-            }
-            renderTable();
-          });
-        }
-
-        function updateSelectAllState() {
-          if (!selectAll) return;
-          const allSelected = state.data.every((r) =>
-            state.selection.has(String(r.id)),
-          );
-          const someSelected = state.selection.size > 0;
-          selectAll.checked = allSelected;
-          selectAll.indeterminate = someSelected && !allSelected;
-        }
-
-        // Column Resizing Logic
-        let resizingCol = null;
-        let startX = 0;
-        let startWidth = 0;
-        let activeHeaderCell = null;
-
-        document.querySelectorAll(".dg-resizer").forEach((resizer) => {
-          resizer.addEventListener("mousedown", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            activeHeaderCell = e.target.closest(".dg-header-cell");
-            resizingCol = activeHeaderCell.dataset.col;
-            startX = e.clientX;
-            startWidth = state.colWidths[resizingCol];
-
-            document.addEventListener("mousemove", onMouseMove);
-            document.addEventListener("mouseup", onMouseUp);
-            document.body.style.cursor = "col-resize";
-          });
-        });
-
-        function onMouseMove(e) {
-          if (!resizingCol) return;
-          const newWidth = Math.max(60, startWidth + (e.clientX - startX));
-          state.colWidths[resizingCol] = newWidth;
-
-          // Live update DOM for smooth resizing performance without needing full React-style re-renders
-          activeHeaderCell.style.width = `${newWidth}px`;
-          document.querySelectorAll(`.col-${resizingCol}`).forEach((cell) => {
-            cell.style.width = `${newWidth}px`;
-          });
-        }
-
-        function onMouseUp() {
-          document.removeEventListener("mousemove", onMouseMove);
-          document.removeEventListener("mouseup", onMouseUp);
-          resizingCol = null;
-          activeHeaderCell = null;
-          document.body.style.cursor = "";
-        }
-
-        // Initial Render
-        renderTable();
-      });
     </script>
   </body>
 </html>
