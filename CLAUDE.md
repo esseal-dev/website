@@ -1,10 +1,12 @@
-# Esseal Website — Project Context
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What this is
 Static marketing website for **Esseal** — a senior-led custom software engineering firm registered in England & Wales (No. 17026190), with offices in London (128 City Road, EC1V 2NX) and Lahore, Pakistan (114-A Gul E Daman Society). The firm does full-stack development, MVP creation, and legacy codebase modernisation for SMEs and enterprise clients.
 
 ## Tech stack
-Pure static HTML + CSS + vanilla JS. No frameworks, no build tools, no npm. Deployed via Apache (`.htaccess` handles routing). The Inter font is self-hosted in `/fonts/` — no Google Fonts CDN. Three.js + Vanta.net are self-hosted for the hero animation on the homepage. No analytics, no tracking, no cookies — this is a deliberate privacy stance.
+Pure static HTML + CSS + vanilla JS. No frameworks, no build tools, no npm, no test suite — there is nothing to build, lint, or run; edit HTML/CSS/JS directly and open the file (or serve the directory) to check it. Deployed via Apache (`.htaccess` handles routing). The Inter font is self-hosted in `/fonts/` — no Google Fonts CDN. Three.js + Vanta.net are self-hosted for the hero animation on the homepage. No analytics, no tracking, no cookies — this is a deliberate privacy stance.
 
 ## File structure
 ```
@@ -13,8 +15,9 @@ Pure static HTML + CSS + vanilla JS. No frameworks, no build tools, no npm. Depl
 ├── about.html
 ├── contact.html
 ├── expertise.html
-├── privacy.html
-├── terms-of-service.html
+├── schedule-a-call.html        # Standalone booking landing page (see note below)
+├── privacy.html                # noindex
+├── terms-of-service.html       # noindex
 ├── 404.html
 ├── styles.css                  # Single global stylesheet (all pages)
 ├── booking-modal.js            # Shared booking calendar modal + Slack webhook
@@ -26,32 +29,41 @@ Pure static HTML + CSS + vanilla JS. No frameworks, no build tools, no npm. Depl
 ├── services/
 │   ├── index.html
 │   ├── mvp-development.html
-│   ├── legacy-codebase-upgrade-modernization.html
+│   ├── Legacy-Codebase-Upgrade-Modernization.html   # note capitalized filename
 │   ├── fullstack-development.html
 │   ├── backend-development.html
 │   ├── frontend-development.html
 │   ├── internal-tools-dashboards.html
-│   └── product-development.html
+│   ├── product-development.html
+│   └── vibe-code-to-production.html   # AI-app audit & hardening service
 ├── products/
 │   ├── index.html
 │   ├── esseal-data-table.html
-│   └── esseal-date-picker.html
+│   ├── esseal-date-picker.html
+│   └── data-table-demo/        # Standalone live playground (own inline <style>, not styles.css)
+│       ├── index.html
+│       └── assets/
 ├── blogs/
 │   ├── index.html
-│   └── [13 blog post HTML files]
+│   └── [15 blog post HTML files]
+├── case-studies/
+│   ├── index.html               # CollectionPage JSON-LD, lists all case studies
+│   ├── img/
+│   └── [9 case study HTML files, each Article + SoftwareApplication + FAQPage JSON-LD]
 └── social-card-*.webp          # OG images (1200×630): default, mvp, legacy, data-table, date-picker
 ```
 
 ## URL structure (.htaccess)
 - `.html` extension is stripped on all pages (`/about` serves `about.html`)
 - Directory indexes work without trailing-slash issues (`/services/` serves `services/index.html`)
-- All absolute paths in nav/links use clean URLs — `/services/`, `/products/`, `/about`, etc.
+- All absolute paths in nav/links use clean URLs — `/services/`, `/products/`, `/case-studies/`, `/about`, etc.
 - `privacy.html` and `terms-of-service.html` are `noindex` and excluded from `sitemap.xml`
+- `schedule-a-call.html` declares canonical `/booking/` but no `.htaccess` rule maps that path to the file, and no page currently links to it — treat it as a work-in-progress/orphan page, not a dead end to "fix" without checking with the user first.
 
-## Navbar & footer (canonical, identical on all 33 pages)
+## Navbar & footer (canonical, identical across pages)
 ```
-Nav:  Services | Products | About | Let's Talk (→ /contact)
-Footer cols: Brand+registration | Company (About/Services/Products/Blogs) | Legal | Most Requested Services
+Nav:  Services | Products | Blogs | Case Studies | About | Let's Talk (→ /contact)
+Footer cols: Brand+registration | Company (About/Services/Products/Blogs/Case Studies) | Legal | Most Requested Services
 ```
 No active states in the nav — every page uses the exact same HTML block. The footer includes company registration number on every page.
 
@@ -60,14 +72,16 @@ No active states in the nav — every page uses the exact same HTML block. The f
 - CSS custom properties (`--brand-orange: #fa6220`, `--bg-navy: #000621`, etc.)
 - Global reset + base
 - Navbar, buttons, hero, services grid, expertise, CTA section, footer
-- Blog-specific styles
-- Service page styles
-- Product page styles
+- About / Contact / Services / Products / Expertise / Legal page specifics
+- Service page layout components (appended block, see in-file comment)
 - **Project modal styles** (`.modal-overlay`, `.modal`, `.form-group`, etc.)
 - **Booking modal styles** (`.booking-overlay`, `.booking-modal`, `.booking-layout`, `.booking-cal-col`, `.booking-slots-col`, `.booking-footer`, etc.)
+- **Case study styles** — `.cs-card-*` / `.cs-homepage-grid` (index cards) and `.cs-stats-bar` etc. (individual case study pages)
+
+Exception to "styles.css is the only stylesheet": `schedule-a-call.html` and `products/data-table-demo/index.html` both carry their own inline `<style>` blocks rather than using `styles.css`. Don't treat this as the pattern to follow for new pages.
 
 ## booking-modal.js
-Shared self-contained script included on every page that has a scheduling button (13 pages). Auto-wires to any element with `data-open-booking` attribute on `DOMContentLoaded`.
+Shared self-contained script included on every page that has a scheduling button. Auto-wires to any element with `data-open-booking` attribute on `DOMContentLoaded`.
 
 **Features:**
 - Calendly-style UI: month calendar on left, time slots on right
@@ -99,8 +113,10 @@ All "Schedule a..." CTAs across the site are `<button type="button" data-open-bo
   - Service pages: `Service` schema
   - Product pages: `SoftwareApplication` + `FAQPage`
   - Blog posts: `BlogPosting`
+  - Case studies index: `CollectionPage` with `ItemList` of all case studies
+  - Individual case study pages: `Article` + nested `SoftwareApplication` + `FAQPage`
   - All pages: `BreadcrumbList`
-- Social card images: `social-card-default.webp` (most pages), `social-card-mvp.webp` (MVP service), `social-card-legacy.webp` (legacy service), `social-card-data-table.webp`, `social-card-date-picker.webp`
+- Social card images: `social-card-default.webp` (most pages, including case studies), `social-card-mvp.webp` (MVP service), `social-card-legacy.webp` (legacy service), `social-card-data-table.webp`, `social-card-date-picker.webp`
 
 ## Privacy stance
 - No Google Analytics, no tracking pixels, no cookies
@@ -110,13 +126,13 @@ All "Schedule a..." CTAs across the site are `<button type="button" data-open-bo
 - The Slack webhook URL is in client-side JS (visible in source) — acceptable risk for a webhook
 
 ## Open source products
-- **Esseal DataTable** — virtualized React data grid, pure Vanilla CSS, zero deps, MIT licensed. Page: `/products/esseal-data-table`
+- **Esseal DataTable** — virtualized React data grid, pure Vanilla CSS, zero deps, MIT licensed. Page: `/products/esseal-data-table`, live playground at `/products/data-table-demo/`
 - **EssealDatePicker** — zero-dep JS date picker, under 5kb gzipped, date range support, framework-agnostic, MIT licensed. Page: `/products/esseal-date-picker`
 
 ## Key conventions to maintain
-- All paths are absolute (`/about`, `/services/`, `/products/`) — never relative
+- All paths are absolute (`/about`, `/services/`, `/products/`, `/case-studies/`) — never relative
 - No `active` class on nav links — the canonical nav block is identical on every page
 - All new pages need: geo tags, OG tags, twitter card, canonical link, JSON-LD BreadcrumbList, and a `<link rel="stylesheet" href="/styles.css">` — check existing pages for the exact pattern
 - Any new scheduling CTA should be `<button type="button" class="btn-primary" data-open-booking>` with `booking-modal.js` included on that page
-- `styles.css` is the single source of truth for all styling — no inline styles or page-specific stylesheets
+- `styles.css` is the single source of truth for styling on standard site pages — no inline styles or page-specific stylesheets (the `data-table-demo` playground and `schedule-a-call.html` are pre-existing exceptions, not precedent for new pages)
 - `sitemap.xml` should not include `noindex` pages (privacy, terms)
