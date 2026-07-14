@@ -245,6 +245,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.esseal.co.uk/blogs/what-is-sre-fractional-sre-for-startups</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>

@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="AI tools get you to a demo fast. Production is a different problem. What an audit checks in a vibe-coded app — and how to close the gaps without downtime."
+    />
+    <meta
+      name="keywords"
+      content="vibe coded app audit, AI generated code production readiness, codebase audit, vibe coding technical debt, production readiness audit, stabilise AI built app"
+    />
+    <meta name="author" content="Esseal" />
+    <meta name="robots" content="index, follow" />
+
+    <title>Will Your Vibe-Coded App Pass an Audit? | Esseal</title>
+
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta
+      property="og:title"
+      content="Your Vibe-Coded App Passed the Demo. Will It Pass an Audit?"
+    />
+    <meta
+      property="og:description"
+      content="AI tools get you to a demo fast. Production is a different problem. What an audit checks in a vibe-coded app — and how to close the gaps without downtime."
+    />
+    <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2026-07-14T09:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-07-14T09:00:00+00:00" />
+    <meta property="article:author" content="Muhammad Talha Qureshi" />
+<meta
+      property="og:url"
+      content="https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit"
+    />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/social-card-default.webp"
+    />
+
+        <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+<link rel="icon" href="../favicon.webp" />
+<link rel="stylesheet" href="../styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit"
+            },
+            "headline": "Your Vibe-Coded App Passed the Demo. Will It Pass an Audit?",
+            "description": "AI tools get you to a demo fast. Production is a different problem. What an audit checks in a vibe-coded app — and how to close the gaps without downtime.",
+            "image": "https://www.esseal.co.uk/social-card-default.webp",
+            "author": {
+              "@type": "Person",
+              "name": "Muhammad Talha Qureshi",
+              "sameAs": "https://www.linkedin.com/in/talhanb/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.esseal.co.uk/esseal-logo.webp"
+              }
+            },
+            "datePublished": "2026-07-14",
+            "dateModified": "2026-07-14"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a production readiness audit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A structured review of an existing codebase against four areas — structural stability, deployment safety, compliance and data handling, and dependency hygiene — producing findings you can act on with any team. It answers one question: what stands between this app and production, and in what order should it be fixed?"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a rewrite or an audit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If your app already has real users and mostly works, start with the audit. Most agencies default to quoting a rewrite because it's simpler for them to price — an audit tells you whether one is actually necessary."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can a vibe-coded app become GDPR or HIPAA compliant?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Compliance is a property of the whole system — access controls, audit trails, encryption, data handling — not of who or what wrote the first draft of the code. A vibe-coded dental platform we stabilised reached GDPR and HIPAA compliance on its original codebase, without a rewrite."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Typography & Layout optimized for Long-Form Reading in Dark Theme */
+      .article-header {
+        padding: 80px 0 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .article-tag {
+        color: var(--brand-orange);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+        background: rgba(250, 98, 32, 0.1);
+        padding: 4px 12px;
+        border-radius: 4px;
+      }
+      .article-title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      .article-title span {
+        color: var(--brand-orange);
+      }
+      .article-meta {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .article-container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+      }
+
+      .article-content {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #d1d5db;
+      }
+      .article-content h2 {
+        font-size: 2rem;
+        margin: 3rem 0 1.25rem;
+        color: var(--text-main);
+      }
+      .article-content h3 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        color: var(--text-main);
+      }
+      .article-content p {
+        margin-bottom: 1.5rem;
+      }
+      .article-content strong {
+        color: var(--text-main);
+      }
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+      }
+      .article-content li {
+        margin-bottom: 0.75rem;
+      }
+      .article-content a {
+        color: var(--brand-orange);
+        text-decoration: underline;
+        text-decoration-color: rgba(250, 98, 32, 0.4);
+        text-underline-offset: 4px;
+        transition: text-decoration-color 0.2s;
+      }
+      .article-content a:hover {
+        text-decoration-color: var(--brand-orange);
+      }
+
+      /* Custom Callout Boxes for TLDR & Hooks */
+      .content-callout {
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 4px solid var(--brand-orange);
+        padding: 2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 2.5rem 0;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .content-callout h3 {
+        margin-top: 0;
+        color: var(--brand-orange);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .content-callout.alt {
+        background: rgba(0, 10, 51, 0.4);
+        border-left: none;
+        border-top: 4px solid var(--brand-orange);
+        border-radius: 8px;
+        text-align: center;
+      }
+      .content-callout.alt h3 {
+        justify-content: center;
+        color: var(--text-main);
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1.5rem;
+      }
+
+      /* Info/Blue tint for Case Studies or Logic Lessons */
+      .content-callout.info {
+        border-top-color: #3b82f6;
+        background: rgba(59, 130, 246, 0.05);
+      }
+      .content-callout.info h3 {
+        color: #60a5fa;
+      }
+
+      .cta-bottom {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        margin-top: 4rem;
+        border: 1px solid var(--border-color);
+      }
+      .cta-bottom h3 {
+        margin-top: 1rem;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        color: var(--brand-orange);
+      }
+    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Vibe-Coded App Passed the Demo. Will It Pass an Audit?" />
+    <meta name="twitter:description" content="AI tools get you to a demo fast. Production is a different problem. What an audit checks in a vibe-coded app — and how to close the gaps without downtime." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-default.webp" />
+
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.esseal.co.uk/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.esseal.co.uk/blogs/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Your Vibe-Coded App Passed the Demo. Will It Pass an Audit?",
+                        "item": "https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit"
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Header Section -->
+        <header class="article-header">
+          <span class="article-tag">AI Development</span>
+          <h1 class="article-title">
+            Your Vibe-Coded App Passed the Demo. <br />
+            <span>Will It Pass an Audit?</span>
+          </h1>
+          <div class="article-meta">
+            <span>By <strong>Talha Qureshi</strong></span>
+            <span>&bull;</span>
+            <span>Jul 14, 2026</span>
+            <span>&bull;</span>
+            <span>5 min read</span>
+          </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="article-container">
+          <div class="article-content">
+            <!-- EXECUTIVE SUMMARY (TLDR) -->
+            <div class="content-callout">
+              <h3>⚡ Executive Summary</h3>
+              <p style="margin-bottom: 0">
+                Most vibe-coded apps that pass a demo fail a production audit —
+                not on features, but on four foundations: structural stability,
+                deployment safety, compliance and data handling, and dependency
+                hygiene. All four are usually fixable without a rewrite, and
+                without taking the product offline.
+              </p>
+            </div>
+
+            <!-- Intro -->
+            <p>
+              AI coding tools have made it trivial to get from idea to working
+              demo. They have not made it trivial to get from demo to
+              production. Those are different problems, and the industry is
+              currently pretending they're the same one.
+            </p>
+            <p>
+              A demo needs to work once, in front of a friendly audience, on a
+              good day. Production needs to work every day, under load, for
+              strangers, while holding real data it's legally responsible for.
+              Nothing about a fast demo tells you whether the app can do the
+              second thing — and increasingly, founders are finding out the gap
+              exists only after they've onboarded real users onto something
+              that was never built to hold them.
+            </p>
+
+            <h2>Why do vibe-coded apps fail in production?</h2>
+
+            <p>
+              This isn't hypothetical. One of our own engagements is a direct
+              example: a UK dental practice built a vibe-coded practice
+              management SaaS, got it to 5–10 live users, and then hit a wall.
+              Not a feature wall — a foundations wall. No CI/CD. No compliance
+              layer. No path from "this works on my machine" to "this can
+              legally hold patient data." The founder didn't need more
+              features. They needed someone to make the thing they'd already
+              built safe to keep running.
+            </p>
+
+            <p>
+              That's an audit problem, not a rebuild problem — and that
+              distinction matters, because most agencies will quote you a
+              rewrite when a stabilisation is what you actually need. A rewrite
+              resets your product to zero and bills you for the privilege. A
+              stabilisation keeps what works and fixes what doesn't. Any agency
+              that jumps to "rewrite" before mapping your system is telling you
+              what's easiest for them, not what's right for you.
+            </p>
+
+            <h2>What does a production readiness audit actually check?</h2>
+
+            <p>
+              These are the four areas where vibe-coded applications most often
+              fail — and the four questions any serious audit has to answer.
+            </p>
+
+            <ul>
+              <li>
+                <strong>Structural stability.</strong> Are there undocumented
+                interdependencies that break when touched? Vibe-coded systems
+                are frequently held together by implicit assumptions no one
+                wrote down, because no one had to — the AI that generated the
+                code doesn't leave a design doc.
+              </li>
+              <li>
+                <strong>CI/CD and deployment safety.</strong> Is there a
+                repeatable, tested path to production, or is shipping a manual,
+                held-breath process that depends on one person remembering the
+                steps?
+              </li>
+              <li>
+                <strong>Compliance and data handling.</strong> For anything
+                touching personal, financial, or health data: access controls,
+                audit trails, encryption, and the specific regulatory regime
+                your sector answers to — GDPR, HIPAA, PCI DSS, or whichever
+                framework applies. AI tools generate code that runs; they do
+                not generate code that complies.
+              </li>
+              <li>
+                <strong>Dependency and build hygiene.</strong> Outdated or
+                unpinned dependencies, unresolved build errors, and the general
+                drift that accumulates when code is generated faster than it's
+                reviewed.
+              </li>
+            </ul>
+
+            <h2>Can the gaps be fixed without taking the product offline?</h2>
+
+            <p>
+              Yes. The hard part isn't identifying the gaps — it's closing them
+              while the product stays up, because by the time a founder asks
+              for this audit, real users are usually already on the platform.
+              In the dental practice case, active practices were using the
+              system throughout the entire stabilisation.
+            </p>
+
+            <p>
+              That constraint dictates the method. Map the system fully before
+              touching anything. Prioritise structural stability over speed.
+              Make every change in an order that keeps the live product
+              running. This is also where a lot of well-meaning developers get
+              it wrong — the enthusiasm to "just rewrite it properly" is
+              exactly the instinct to resist first. Enthusiasm doesn't keep a
+              live system up. Sequencing does.
+            </p>
+
+            <h2>What the outcome looks like when it's done right</h2>
+
+            <p>
+              The dental practice platform went from 5–10 early users to 15
+              onboarded practices by the end of the initial engagement —
+              commercially ready, compliant, stable. It has since grown to 500+
+              UK dentists on the platform with a 4.9-star rating, on a GDPR and
+              HIPAA compliance footing that would have been unreachable on the
+              original codebase. The full story is in the
+              <a href="/case-studies/dentistry-dashboard"
+                >Dentistry Dashboard case study</a
+              >.
+            </p>
+
+            <p>
+              None of that required a rewrite. It required someone to treat "AI
+              got us to a demo" and "we're production-ready" as the two
+              separate questions they actually are.
+            </p>
+
+            <h2>Frequently asked questions</h2>
+
+            <h3>What is a production readiness audit?</h3>
+
+            <p>
+              A structured review of an existing codebase against the four
+              areas above — structural stability, deployment safety, compliance
+              and data handling, and dependency hygiene — producing findings
+              you can act on with any team. It answers one question: what
+              stands between this app and production, and in what order should
+              it be fixed?
+            </p>
+
+            <h3>Do I need a rewrite or an audit?</h3>
+
+            <p>
+              If your app already has real users and mostly works, start with
+              the audit. Most agencies default to quoting a rewrite because
+              it's simpler for them to price — an audit tells you whether one
+              is actually necessary. In the dental practice case above, it
+              wasn't.
+            </p>
+
+            <h3>Can a vibe-coded app become GDPR or HIPAA compliant?</h3>
+
+            <p>
+              Yes. Compliance is a property of the whole system — access
+              controls, audit trails, encryption, data handling — not of who or
+              what wrote the first draft of the code. The dental platform above
+              reached GDPR and HIPAA compliance on its original codebase,
+              without a rewrite.
+            </p>
+
+            <div class="content-callout">
+              <h3>📚 Related Reading</h3>
+              <ul>
+                <li><a href="/case-studies/dentistry-dashboard">Dentistry Dashboard: Stabilising a Vibe-Coded SaaS</a></li>
+                <li><a href="/services/vibe-code-to-production">Vibe Code to Production: AI-App Audit &amp; Hardening</a></li>
+                <li><a href="/blogs/hidden-risks-outdated-software-security-compliance">The Hidden Risks of Outdated Software: Security &amp; Compliance</a></li>
+              </ul>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cta-bottom">
+              <span
+                style="font-size: 3rem; display: block; margin-bottom: 0.5rem"
+                >🔍</span
+              >
+              <h3 style="margin-top: 0">
+                Find out where your app actually stands
+              </h3>
+              <p>
+                Esseal offers a
+                <a href="/services/vibe-code-to-production"
+                  ><strong>Production Readiness Audit</strong></a
+                >
+                as a standalone engagement: we map your codebase, tell you
+                exactly what would survive contact with real users and real
+                regulators, and hand you the findings. No obligation to proceed
+                with us afterwards — the audit is the product. If the answer is
+                "you're in better shape than you feared," you'll hear that too.
+              </p>
+              <p style="margin-bottom: 2rem">
+                If your app passed the demo and you're not sure it'll pass much
+                else, write to
+                <a href="mailto:inquiry@esseal.co.uk">inquiry@esseal.co.uk</a>.
+              </p>
+              <button type="button" class="btn-primary" data-open-booking>Schedule an Audit Call</button>
+            </div>
+          </div>
+
+          <!-- Back to Blog Link -->
+          <div
+            style="
+              margin-top: 4rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--border-color);
+              text-align: center;
+            "
+          >
+            <a
+              href="./index"
+              style="
+                color: var(--text-main);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <span aria-hidden="true">&larr;</span> Back to All Articles
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+  <script src="/booking-modal.js" defer></script>
+  </body>
+</html>
