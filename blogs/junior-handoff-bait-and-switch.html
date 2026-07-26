@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="The people who close your agency deal are rarely the people who write your code. How the junior hand-off works, five signs it's happening to you, and what to demand instead."
+    />
+    <meta
+      name="keywords"
+      content="agency junior developers senior rates, who is writing my code agency, software agency bait and switch, senior developer oversight meaning, junior hand-off"
+    />
+    <meta name="author" content="Esseal" />
+    <meta name="robots" content="index, follow" />
+
+    <title>You Hired Senior Engineers. Who's Actually Writing Your Code? | Esseal</title>
+
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/blogs/junior-handoff-bait-and-switch"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta
+      property="og:title"
+      content="You Hired Senior Engineers. Who's Actually Writing Your Code?"
+    />
+    <meta
+      property="og:description"
+      content="The people who close your agency deal are rarely the people who write your code. How the junior hand-off works, five signs it's happening to you, and what to demand instead."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-07-26T09:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-07-26T09:00:00+00:00" />
+    <meta property="article:author" content="Muhammad Talha Qureshi" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/blogs/junior-handoff-bait-and-switch"
+    />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/esseal-junior-handoff-blog-social-card.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Esseal blog card — 'You hired senior engineers. Who's actually writing your code?' with the three demands: named engineers in the contract, direct task-board and PR access, answers from the person who wrote the code."
+    />
+
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <link rel="icon" href="../favicon.webp" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.esseal.co.uk/blogs/junior-handoff-bait-and-switch"
+            },
+            "headline": "You Hired Senior Engineers. Who's Actually Writing Your Code?",
+            "description": "The people who close your agency deal are rarely the people who write your code. How the junior hand-off works, five signs it's happening to you, and what to demand instead.",
+            "image": "https://www.esseal.co.uk/esseal-junior-handoff-blog-social-card.webp",
+            "author": {
+              "@type": "Person",
+              "name": "Muhammad Talha Qureshi",
+              "jobTitle": "Co-Founder & Solutions Architect",
+              "sameAs": "https://www.linkedin.com/in/talhanb/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.esseal.co.uk/esseal-logo.webp"
+              }
+            },
+            "datePublished": "2026-07-26",
+            "dateModified": "2026-07-26"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does \"senior oversight\" mean in an agency contract?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "In practice: junior engineers write the code and a senior reviews some of it, sometimes. It's the contractual language that makes the junior hand-off legal without making it visible. If seniors were doing the writing, the contract would say \"written by,\" not \"overseen by.\""
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I find out who is actually writing my code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ask for three things — named engineers, direct task-board and PR access, and direct contact with the authors. You don't need to read the code; the commit history shows who does the work. An agency that refuses read access to its delivery record has answered the question."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Aren't junior developers cheaper for the client?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Cheaper for the agency — that's the point of the model. The client pays the same seat rate either way; the difference is margin, not savings. The client's cost shows up later, as slipping velocity and rework."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Typography & Layout optimized for Long-Form Reading in Dark Theme */
+      .article-header {
+        padding: 80px 0 40px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .article-tag {
+        color: var(--brand-orange);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+        background: rgba(250, 98, 32, 0.1);
+        padding: 4px 12px;
+        border-radius: 4px;
+      }
+      .article-title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+      .article-title span {
+        color: var(--brand-orange);
+      }
+      .article-meta {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .article-container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+      }
+
+      .article-content {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #d1d5db;
+      }
+      .article-content h2 {
+        font-size: 2rem;
+        margin: 3rem 0 1.25rem;
+        color: var(--text-main);
+      }
+      .article-content h3 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        color: var(--text-main);
+      }
+      .article-content p {
+        margin-bottom: 1.5rem;
+      }
+      .article-content strong {
+        color: var(--text-main);
+      }
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+      }
+      .article-content li {
+        margin-bottom: 0.75rem;
+      }
+      .article-content a {
+        color: var(--brand-orange);
+        text-decoration: underline;
+        text-decoration-color: rgba(250, 98, 32, 0.4);
+        text-underline-offset: 4px;
+        transition: text-decoration-color 0.2s;
+      }
+      .article-content a:hover {
+        text-decoration-color: var(--brand-orange);
+      }
+
+      /* Custom Callout Boxes for TLDR & Hooks */
+      .content-callout {
+        background: rgba(255, 255, 255, 0.02);
+        border-left: 4px solid var(--brand-orange);
+        padding: 2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 2.5rem 0;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .content-callout h3 {
+        margin-top: 0;
+        color: var(--brand-orange);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .content-callout.alt {
+        background: rgba(0, 10, 51, 0.4);
+        border-left: none;
+        border-top: 4px solid var(--brand-orange);
+        border-radius: 8px;
+        text-align: center;
+      }
+      .content-callout.alt h3 {
+        justify-content: center;
+        color: var(--text-main);
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1.5rem;
+      }
+
+      /* Info/Blue tint for Case Studies or Logic Lessons */
+      .content-callout.info {
+        border-top-color: #3b82f6;
+        background: rgba(59, 130, 246, 0.05);
+      }
+      .content-callout.info h3 {
+        color: #60a5fa;
+      }
+
+      .cta-bottom {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        margin-top: 4rem;
+        border: 1px solid var(--border-color);
+      }
+      .cta-bottom h3 {
+        margin-top: 1rem;
+      }
+    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="You Hired Senior Engineers. Who's Actually Writing Your Code?" />
+    <meta name="twitter:description" content="The people who close your agency deal are rarely the people who write your code. How the junior hand-off works, five signs it's happening to you, and what to demand instead." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/esseal-junior-handoff-blog-social-card.webp" />
+    <meta name="twitter:image:alt" content="Esseal blog card — 'You hired senior engineers. Who's actually writing your code?' with the three demands: named engineers in the contract, direct task-board and PR access, answers from the person who wrote the code." />
+
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.esseal.co.uk/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.esseal.co.uk/blogs/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "You Hired Senior Engineers. Who's Actually Writing Your Code?",
+                        "item": "https://www.esseal.co.uk/blogs/junior-handoff-bait-and-switch"
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Header Section -->
+        <header class="article-header">
+          <span class="article-tag">Outsourcing</span>
+          <h1 class="article-title">
+            You Hired Senior Engineers. <br />
+            <span>Who's Actually Writing Your Code?</span>
+          </h1>
+          <div class="article-meta">
+            <span>By <strong>Talha Qureshi</strong></span>
+            <span>&bull;</span>
+            <span>Jul 26, 2026</span>
+            <span>&bull;</span>
+            <span>5 min read</span>
+          </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="article-container">
+          <div class="article-content">
+            <!-- EXECUTIVE SUMMARY (TLDR) -->
+            <div class="content-callout">
+              <h3>⚡ Executive Summary</h3>
+              <p style="margin-bottom: 0">
+                The people you meet during an agency's sales process are
+                usually not the people who write your code. The architects and
+                "20 years of experience" leads close the deal, sketch the
+                architecture, and hand delivery to the cheapest engineers the
+                agency can staff — while you're billed as if the people from
+                the sales call stayed in the room. Here's how the switch works,
+                five signs it's happening on your project, and the three things
+                to demand instead.
+              </p>
+            </div>
+
+            <h2>How does the junior hand-off actually work?</h2>
+
+            <p>
+              There's a bait-and-switch running through the agency industry
+              that's so normalised nobody calls it what it is. It isn't a
+              rogue-agency problem — it's the standard economic model. Agencies
+              profit on the spread between what they charge for a seat and what
+              the person in the seat costs. The steeper the seniority drop
+              after signature, the better the margin.
+            </p>
+
+            <p>
+              So the seniors do what maximises revenue: they sell. They turn up
+              to your calls, produce an architecture document, then move to the
+              next prospect. Delivery goes to whoever costs the agency least,
+              with the seniors "providing oversight." The client is the only
+              party in the room with no way to see it happening.
+            </p>
+
+            <h2>Why don't clients notice?</h2>
+
+            <p>
+              Because delivery is a black box. Clients see demos, staged
+              updates, and a project manager narrating progress — they don't
+              see commits, pull requests, or who actually resolved yesterday's
+              blocker. Ask an agency "who wrote this file?" and watch the
+              answer route through three layers of account management.
+            </p>
+
+            <p>The opacity isn't incidental. It's what makes the model work.</p>
+
+            <h2>What are the signs that juniors are writing your code?</h2>
+
+            <ul>
+              <li>
+                <strong>You can't name the engineers on your project.</strong>
+                Not the account lead — the people committing code. If you don't
+                know, that's the answer.
+              </li>
+              <li>
+                <strong>No direct access to the task board or PR history.</strong>
+                "We'll send weekly updates" is a substitute for visibility, not
+                a form of it.
+              </li>
+              <li>
+                <strong>"Senior oversight" language in the contract.</strong>
+                Oversight means juniors write it and a senior skims it. If
+                seniors were writing it, the contract would say so.
+              </li>
+              <li>
+                <strong>Velocity drops after month one.</strong> The seniors
+                built the scaffold and moved to the next sale; the hand-off is
+                where timelines quietly slip.
+              </li>
+              <li>
+                <strong>Questions get answered by people who didn't do the work.</strong>
+                Technical answers arriving via a PM, with a delay, mean the
+                person who knows isn't client-facing.
+              </li>
+            </ul>
+
+            <h2>What should you demand instead?</h2>
+
+            <p>Three things, none of them exotic:</p>
+
+            <ul>
+              <li>
+                <strong>Named engineers, contractually.</strong> The people
+                writing your code, identified in the agreement — not a team
+                description.
+              </li>
+              <li>
+                <strong>Direct read access to the task board and pull-request history.</strong>
+                Not summaries of them. The raw record of who did what, visible
+                to you at any time.
+              </li>
+              <li>
+                <strong>The right to ask the person who wrote the code about the code.</strong>
+                Directly, without a translation layer.
+              </li>
+            </ul>
+
+            <p>
+              Any competent agency can grant all three. The ones that won't are
+              telling you why.
+            </p>
+
+            <h2>Where Esseal stands</h2>
+
+            <p>
+              At Esseal this is structural, not aspirational: 100% of code is
+              written by a partner or a directly supervised senior engineer,
+              and every client gets direct access to task boards, PR histories,
+              and architecture logs from day one. Not because transparency is a
+              nice value — because it's the only arrangement under which
+              "senior-led" is verifiable rather than a claim. We publish this
+              so clients can hold us to it.
+            </p>
+
+            <h2>Frequently asked questions</h2>
+
+            <h3>What does "senior oversight" mean in an agency contract?</h3>
+
+            <p>
+              In practice: junior engineers write the code and a senior reviews
+              some of it, sometimes. It's the contractual language that makes
+              the junior hand-off legal without making it visible. If seniors
+              were doing the writing, the contract would say "written by," not
+              "overseen by."
+            </p>
+
+            <h3>How do I find out who is actually writing my code?</h3>
+
+            <p>
+              Ask for the three things above — named engineers, direct
+              task-board and PR access, and direct contact with the authors.
+              You don't need to read the code; the commit history shows who
+              does the work. An agency that refuses read access to its delivery
+              record has answered the question.
+            </p>
+
+            <h3>Aren't junior developers cheaper for the client?</h3>
+
+            <p>
+              Cheaper for the agency — that's the point of the model. The
+              client pays the same seat rate either way; the difference is
+              margin, not savings. The client's cost shows up later, as
+              slipping velocity and rework. We've made the full
+              cost-and-outcome argument in
+              <a href="/blogs/senior-led-mvp-vs-junior-team"
+                >Senior-Led MVPs vs. Junior Teams</a
+              >.
+            </p>
+
+            <h2>Ask your current agency these five questions</h2>
+
+            <p>
+              If you're mid-engagement and this post felt uncomfortably
+              familiar, put the checklist to work. Ask your agency: Who, by
+              name, committed code to my project last week? Can I have read
+              access to the task board and PR history? Does my contract say
+              "written by seniors" or "overseen by seniors"? Why did velocity
+              change after month one? And can I speak directly to the engineer
+              who built the last feature?
+            </p>
+
+            <!-- Bottom CTA -->
+            <div class="cta-bottom">
+              <span
+                style="font-size: 3rem; display: block; margin-bottom: 0.5rem"
+                >🔍</span
+              >
+              <p style="margin-bottom: 2rem">
+                Their reaction will tell you most of what you need to know. If
+                you'd like a second opinion on what you find, write to
+                <a href="mailto:inquiry@esseal.co.uk">inquiry@esseal.co.uk</a>.
+              </p>
+              <button type="button" class="btn-primary" data-open-booking>Schedule a Call</button>
+            </div>
+          </div>
+
+          <!-- Back to Blog Link -->
+          <div
+            style="
+              margin-top: 4rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--border-color);
+              text-align: center;
+            "
+          >
+            <a
+              href="./index"
+              style="
+                color: var(--text-main);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <span aria-hidden="true">&larr;</span> Back to All Articles
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+  <script src="/booking-modal.js" defer></script>
+  </body>
+</html>
