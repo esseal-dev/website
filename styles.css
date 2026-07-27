@@ -2438,3 +2438,339 @@ h4 {
     font-size: 2rem;
   }
 }
+
+/* ============================================================
+   BLOG POST TEMPLATE
+   Single source of truth for every file in /blogs/. Previously
+   duplicated as an inline <style> block in each post; consolidated
+   here so callout/FAQ changes apply to all posts at once.
+
+   Palette is navy + orange + greys only. No blue, no red — those
+   are not Esseal brand colours and must not reappear in callouts.
+   No decorative emoji in blog chrome or headings.
+   ============================================================ */
+
+.article-content {
+  /* Blog-scoped tokens (brand brief 2026-07-26) */
+  --blog-panel: #0c1030;
+  --blog-body: #c9ccda;
+  --blog-muted: #8b8fa3;
+  --blog-divider: #2a2e45;
+}
+
+/* --- Article header --- */
+.article-header {
+  padding: 80px 0 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article-tag {
+  color: var(--brand-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  background: rgba(250, 98, 32, 0.1);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.article-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.article-title span {
+  color: var(--brand-orange);
+}
+
+.article-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* --- Article body --- */
+.article-container {
+  max-width: 760px; /* Narrower width for optimal reading line-length */
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.article-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--blog-body);
+}
+
+.article-content h2 {
+  font-size: 2rem;
+  margin: 3rem 0 1.25rem;
+  color: var(--text-main);
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--text-main);
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-content strong {
+  color: var(--text-main);
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.75rem;
+}
+
+.article-content a {
+  color: var(--brand-orange);
+  text-decoration: underline;
+  text-decoration-color: rgba(250, 98, 32, 0.4);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s;
+}
+
+.article-content a:hover {
+  text-decoration-color: var(--brand-orange);
+}
+
+.article-content code {
+  font-family: "Fira Code", monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--brand-orange);
+}
+
+/* --- Callouts ---
+   One accent only (orange). Variants differentiate by border weight
+   and label treatment, never by hue. */
+.content-callout {
+  background: var(--blog-panel);
+  border-left: 4px solid var(--brand-orange);
+  padding: 2rem;
+  border-radius: 0 8px 8px 0;
+  margin: 2.5rem 0;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-callout h3 {
+  margin-top: 0;
+  color: var(--brand-orange);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Centred panel variant (CTA / pull-quote) */
+.content-callout.alt {
+  background: var(--blog-panel);
+  border-left: none;
+  border-top: 4px solid var(--brand-orange);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.content-callout.alt h3 {
+  justify-content: center;
+  color: var(--text-main);
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1.5rem;
+}
+
+/* Case study / logic lesson — distinguished by an all-caps label,
+   not by colour (previously a blue tint, off-brand). */
+.content-callout.info {
+  background: var(--blog-panel);
+  border-top-color: var(--brand-orange);
+  border-left-color: var(--brand-orange);
+}
+
+.content-callout.info h3 {
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+}
+
+/* Warning — distinguished by a heavier border, not by colour
+   (previously a coral-red tint, off-brand). */
+.content-callout.warning {
+  background: var(--blog-panel);
+  border-top-color: var(--brand-orange);
+  border-top-width: 6px;
+  border-left-color: var(--brand-orange);
+}
+
+.content-callout.warning h3 {
+  color: var(--brand-orange);
+}
+
+/* --- FAQ accordion ---
+   Markup: <section class="faq"> > <details class="faq-item">
+           > <summary><h3>Q</h3></summary> + <p>A</p>
+   Native <details> — no JS. Content stays in the DOM when closed,
+   so FAQPage JSON-LD and AI answer extraction still work.
+
+   Every rule below is scoped under .faq on purpose: case-study, service
+   and product pages use the older .faq-container/.faq-content accordion
+   which shares the .faq-item class name. That block sits earlier in this
+   file, so unscoped rules here would override it on ~15 non-blog pages. */
+.faq {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--blog-divider);
+}
+
+.faq > h2 {
+  margin-top: 0;
+}
+
+.faq .faq-item {
+  background: var(--blog-panel);
+  border: 1px solid var(--blog-divider);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq .faq-item summary {
+  cursor: pointer;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  list-style: none;
+  transition: color 0.2s;
+}
+
+/* Suppress the default disclosure triangle in favour of the +/- below */
+.faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq .faq-item summary::marker {
+  content: "";
+}
+
+.faq .faq-item summary h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+
+.faq .faq-item summary:hover h3,
+.faq .faq-item[open] summary h3 {
+  color: var(--brand-orange);
+}
+
+/* Custom indicator: + when closed, - when open.
+   position/transform are reset explicitly — the older accordion block
+   above absolutely-positions its own ::after, and that declaration would
+   otherwise still apply here, pulling the indicator out of the flex row
+   so long questions could run underneath it. */
+.faq .faq-item summary::after {
+  content: "+";
+  position: static;
+  transform: none;
+  flex-shrink: 0;
+  color: var(--brand-orange);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.faq .faq-item[open] summary::after {
+  content: "\2212"; /* minus sign */
+}
+
+.faq .faq-item > p {
+  margin: 0;
+  padding: 0 1.5rem 1.5rem;
+  color: var(--blog-body);
+}
+
+/* --- Bottom CTA card ---
+   Standard: booking button primary, email as secondary line, no emoji. */
+.cta-bottom {
+  text-align: center;
+  background: var(--blog-panel);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 4rem;
+  border: 1px solid var(--blog-divider);
+}
+
+.cta-bottom h3 {
+  margin-top: 1rem;
+}
+
+.cta-bottom h3:first-child {
+  margin-top: 0;
+}
+
+/* Email fallback under the booking button — always secondary to it */
+.cta-bottom .cta-secondary {
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--blog-muted);
+}
+
+/* --- Optional in-article table (jargon / cheat sheet) --- */
+.cheat-sheet-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 1px solid var(--blog-divider);
+  background: var(--blog-panel);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cheat-sheet-table th,
+.cheat-sheet-table td {
+  padding: 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--blog-divider);
+}
+
+.cheat-sheet-table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.cheat-sheet-table tr:last-child td {
+  border-bottom: none;
+}

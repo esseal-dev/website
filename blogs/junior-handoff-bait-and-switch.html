@@ -125,146 +125,6 @@
       }
     </script>
 
-    <style>
-      /* Typography & Layout optimized for Long-Form Reading in Dark Theme */
-      .article-header {
-        padding: 80px 0 40px;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .article-tag {
-        color: var(--brand-orange);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: 0.85rem;
-        display: inline-block;
-        margin-bottom: 1rem;
-        background: rgba(250, 98, 32, 0.1);
-        padding: 4px 12px;
-        border-radius: 4px;
-      }
-      .article-title {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-      }
-      .article-title span {
-        color: var(--brand-orange);
-      }
-      .article-meta {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .article-container {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 0 24px 80px;
-      }
-
-      .article-content {
-        font-size: 1.15rem;
-        line-height: 1.8;
-        color: #d1d5db;
-      }
-      .article-content h2 {
-        font-size: 2rem;
-        margin: 3rem 0 1.25rem;
-        color: var(--text-main);
-      }
-      .article-content h3 {
-        font-size: 1.5rem;
-        margin: 2rem 0 1rem;
-        color: var(--text-main);
-      }
-      .article-content p {
-        margin-bottom: 1.5rem;
-      }
-      .article-content strong {
-        color: var(--text-main);
-      }
-      .article-content ul,
-      .article-content ol {
-        margin-bottom: 2rem;
-        padding-left: 1.5rem;
-      }
-      .article-content li {
-        margin-bottom: 0.75rem;
-      }
-      .article-content a {
-        color: var(--brand-orange);
-        text-decoration: underline;
-        text-decoration-color: rgba(250, 98, 32, 0.4);
-        text-underline-offset: 4px;
-        transition: text-decoration-color 0.2s;
-      }
-      .article-content a:hover {
-        text-decoration-color: var(--brand-orange);
-      }
-
-      /* Custom Callout Boxes for TLDR & Hooks */
-      .content-callout {
-        background: rgba(255, 255, 255, 0.02);
-        border-left: 4px solid var(--brand-orange);
-        padding: 2rem;
-        border-radius: 0 8px 8px 0;
-        margin: 2.5rem 0;
-        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
-      }
-      .content-callout h3 {
-        margin-top: 0;
-        color: var(--brand-orange);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      .content-callout.alt {
-        background: rgba(0, 10, 51, 0.4);
-        border-left: none;
-        border-top: 4px solid var(--brand-orange);
-        border-radius: 8px;
-        text-align: center;
-      }
-      .content-callout.alt h3 {
-        justify-content: center;
-        color: var(--text-main);
-        text-transform: none;
-        letter-spacing: normal;
-        font-size: 1.5rem;
-      }
-
-      /* Info/Blue tint for Case Studies or Logic Lessons */
-      .content-callout.info {
-        border-top-color: #3b82f6;
-        background: rgba(59, 130, 246, 0.05);
-      }
-      .content-callout.info h3 {
-        color: #60a5fa;
-      }
-
-      .cta-bottom {
-        text-align: center;
-        background: rgba(255, 255, 255, 0.03);
-        padding: 3rem 2rem;
-        border-radius: 12px;
-        margin-top: 4rem;
-        border: 1px solid var(--border-color);
-      }
-      .cta-bottom h3 {
-        margin-top: 1rem;
-      }
-    </style>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="You Hired Senior Engineers. Who's Actually Writing Your Code?" />
     <meta name="twitter:description" content="The people who close your agency deal are rarely the people who write your code. How the junior hand-off works, five signs it's happening to you, and what to demand instead." />
@@ -345,7 +205,7 @@
           <div class="article-content">
             <!-- EXECUTIVE SUMMARY (TLDR) -->
             <div class="content-callout">
-              <h3>⚡ Executive Summary</h3>
+              <h3>Executive Summary</h3>
               <p style="margin-bottom: 0">
                 The people you meet during an agency's sales process are
                 usually not the people who write your code. The architects and
@@ -457,65 +317,88 @@
               so clients can hold us to it.
             </p>
 
-            <h2>Frequently asked questions</h2>
+            <section class="faq">
+              <h2>Frequently asked questions</h2>
 
-            <h3>What does "senior oversight" mean in an agency contract?</h3>
+              <details class="faq-item">
+                <summary>
+                  <h3>What does "senior oversight" mean in an agency contract?</h3>
+                </summary>
+                <p>
+                  In practice: junior engineers write the code and a senior
+                  reviews some of it, sometimes. It's the contractual language
+                  that makes the junior hand-off legal without making it
+                  visible. If seniors were doing the writing, the contract would
+                  say "written by," not "overseen by."
+                </p>
+              </details>
 
-            <p>
-              In practice: junior engineers write the code and a senior reviews
-              some of it, sometimes. It's the contractual language that makes
-              the junior hand-off legal without making it visible. If seniors
-              were doing the writing, the contract would say "written by," not
-              "overseen by."
-            </p>
+              <details class="faq-item">
+                <summary>
+                  <h3>How do I find out who is actually writing my code?</h3>
+                </summary>
+                <p>
+                  Ask for the three things above — named engineers, direct
+                  task-board and PR access, and direct contact with the authors.
+                  You don't need to read the code; the commit history shows who
+                  does the work. An agency that refuses read access to its
+                  delivery record has answered the question.
+                </p>
+              </details>
 
-            <h3>How do I find out who is actually writing my code?</h3>
-
-            <p>
-              Ask for the three things above — named engineers, direct
-              task-board and PR access, and direct contact with the authors.
-              You don't need to read the code; the commit history shows who
-              does the work. An agency that refuses read access to its delivery
-              record has answered the question.
-            </p>
-
-            <h3>Aren't junior developers cheaper for the client?</h3>
-
-            <p>
-              Cheaper for the agency — that's the point of the model. The
-              client pays the same seat rate either way; the difference is
-              margin, not savings. The client's cost shows up later, as
-              slipping velocity and rework. We've made the full
-              cost-and-outcome argument in
-              <a href="/blogs/senior-led-mvp-vs-junior-team"
-                >Senior-Led MVPs vs. Junior Teams</a
-              >.
-            </p>
+              <details class="faq-item">
+                <summary>
+                  <h3>Aren't junior developers cheaper for the client?</h3>
+                </summary>
+                <p>
+                  Cheaper for the agency — that's the point of the model. The
+                  client pays the same seat rate either way; the difference is
+                  margin, not savings. The client's cost shows up later, as
+                  slipping velocity and rework. We've made the full
+                  cost-and-outcome argument in
+                  <a href="/blogs/senior-led-mvp-vs-junior-team"
+                    >Senior-Led MVPs vs. Junior Teams</a
+                  >.
+                </p>
+              </details>
+            </section>
 
             <h2>Ask your current agency these five questions</h2>
 
             <p>
               If you're mid-engagement and this post felt uncomfortably
-              familiar, put the checklist to work. Ask your agency: Who, by
-              name, committed code to my project last week? Can I have read
-              access to the task board and PR history? Does my contract say
-              "written by seniors" or "overseen by seniors"? Why did velocity
-              change after month one? And can I speak directly to the engineer
-              who built the last feature?
+              familiar, put the checklist to work. Ask your agency these five
+              questions:
             </p>
+
+            <ol>
+              <li>Who, by name, committed code to my project last week?</li>
+              <li>
+                Can I have read access to the task board and PR history?
+              </li>
+              <li>
+                Does my contract say "written by seniors" or "overseen by
+                seniors"?
+              </li>
+              <li>Why did velocity change after month one?</li>
+              <li>
+                Can I speak directly to the engineer who built the last feature?
+              </li>
+            </ol>
 
             <!-- Bottom CTA -->
             <div class="cta-bottom">
-              <span
-                style="font-size: 3rem; display: block; margin-bottom: 0.5rem"
-                >🔍</span
-              >
               <p style="margin-bottom: 2rem">
                 Their reaction will tell you most of what you need to know. If
-                you'd like a second opinion on what you find, write to
-                <a href="mailto:inquiry@esseal.co.uk">inquiry@esseal.co.uk</a>.
+                you want a second opinion on what you find, book a short call —
+                no pitch, just an honest read on where your engagement actually
+                stands.
               </p>
               <button type="button" class="btn-primary" data-open-booking>Schedule a Call</button>
+              <p class="cta-secondary">
+                Prefer email? Write to
+                <a href="mailto:inquiry@esseal.co.uk">inquiry@esseal.co.uk</a>.
+              </p>
             </div>
           </div>
 
