@@ -2774,3 +2774,63 @@ h4 {
 .cheat-sheet-table tr:last-child td {
   border-bottom: none;
 }
+
+/* --- Blog template: small screens ---
+   The consolidation into this block left the blog classes with no
+   responsive rules at all, so .article-header (which has no horizontal
+   padding) ran edge-to-edge on mobile and clipped .article-meta, while
+   the body below stayed inset by .article-container's 24px. These rules
+   restore that and bring the fixed desktop paddings down to size. */
+@media (max-width: 768px) {
+  .article-header {
+    padding: 48px 24px 32px;
+  }
+
+  .article-title {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .article-meta {
+    gap: 8px;
+    font-size: 0.875rem;
+  }
+
+  .article-content {
+    font-size: 1.05rem;
+  }
+
+  .content-callout {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .faq .faq-item summary {
+    padding: 1rem 1.15rem;
+    gap: 1rem;
+  }
+
+  .faq .faq-item summary h3 {
+    font-size: 1.05rem;
+  }
+
+  .faq .faq-item > p {
+    padding: 0 1.15rem 1.15rem;
+  }
+
+  .cta-bottom {
+    padding: 2rem 1.25rem;
+    margin-top: 3rem;
+  }
+
+  /* Wide table: scroll it rather than let it force the page sideways */
+  .cheat-sheet-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .cheat-sheet-table th,
+  .cheat-sheet-table td {
+    padding: 0.875rem;
+  }
+}
