@@ -58,7 +58,7 @@
 
           '<div class="booking-cal-col">',
             '<h2 id="booking-title">Schedule a Call</h2>',
-            '<p class="booking-subtitle" id="booking-subtitle">30-60 min &middot; ' + userTZ + '</p>',
+            '<p class="booking-subtitle" id="booking-subtitle">30 min &middot; ' + userTZ + '</p>',
             '<div class="booking-cal-nav">',
               '<button class="cal-nav-btn" id="cal-prev" aria-label="Previous month">&#8249;</button>',
               '<span class="cal-month-label" id="cal-month-label"></span>',
@@ -174,22 +174,37 @@
       confirmBtn.textContent = "Sending…";
       confirmBtn.disabled = true;
 
-      postToSlack([
-        {
-          type: "header",
-          text: { type: "plain_text", text: "📅 New Consultation Booking", emoji: true },
-        },
-        {
-          type: "section",
-          fields: [
-            { type: "mrkdwn", text: "*Email:*\n" + email },
-            { type: "mrkdwn", text: "*Date:*\n" + localDate.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) },
-            { type: "mrkdwn", text: "*Time (local):*\n" + selectedSlot + " — " + userTZ },
-            { type: "mrkdwn", text: "*Time (UTC):*\n" + localDate.toUTCString() },
-            { type: "mrkdwn", text: "*Source:*\n" + window.location.href },
-          ],
-        },
-      ]).then(function () { close(); });
+      var endDate = new Date(localDate.getTime() + 30 * 60 * 1000);
+      var clientTimeString = localDate.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " at " + selectedSlot + " (" + userTZ + ")";
+
+      fetch("/send-booking.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          clientTime: clientTimeString,
+          timezone: userTZ,
+          startTimeIso: localDate.toISOString(),
+          endTimeIso: endDate.toISOString(),
+          sourceUrl: window.location.href,
+        }),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data && data.status === "success") {
+            confirmBtn.textContent = "Booked!";
+            setTimeout(function () { close(); }, 1200);
+          } else {
+            alert((data && data.message) || "Failed to process booking request.");
+            confirmBtn.textContent = "Confirm Booking";
+            confirmBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          alert("Network error. Please check your connection and try again.");
+          confirmBtn.textContent = "Confirm Booking";
+          confirmBtn.disabled = false;
+        });
 
     });
   }
