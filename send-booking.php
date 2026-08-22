@@ -83,8 +83,27 @@ $icsContent .= "SEQUENCE:0\r\n";
 $icsContent .= "END:VEVENT\r\n";
 $icsContent .= "END:VCALENDAR\r\n";
 
+// Plain Text Body (Essential for avoiding spam filters)
+$displayName = !empty($name) ? htmlspecialchars($name) : '';
+$greetingName = !empty($displayName) ? " {$displayName}" : "";
+
+$plain_text  = "Booking Confirmed{$greetingName}!\n\n";
+$plain_text .= "Thank you for scheduling a discovery and technical consultation with Esseal's senior engineering team.\n\n";
+$plain_text .= "MEETING DETAILS:\n";
+$plain_text .= "- Selected Date & Time: {$clientTime}\n";
+$plain_text .= "- Duration: 30 Minutes\n";
+$plain_text .= "- Location / Link: A meeting link will be shared 1 hour prior to the call.\n\n";
+if (!empty($project)) {
+    $plain_text .= "PROJECT / AGENDA NOTES:\n{$project}\n\n";
+}
+$plain_text .= "A calendar event file (invite.ics) is attached to this email so you can add this call to your calendar.\n\n";
+$plain_text .= "If you need to reschedule or cancel, please reply directly to this email.\n\n";
+$plain_text .= "Best regards,\n";
+$plain_text .= "The Esseal Team\n";
+$plain_text .= "inquiry@esseal.co.uk | www.esseal.co.uk\n";
+
 // HTML Email Body
-$displayName = !empty($name) ? htmlspecialchars($name) : 'there';
+$headingText = !empty($name) ? "Booking Confirmed, " . htmlspecialchars($name) . "!" : "Booking Confirmed!";
 $projectNotesSection = !empty($project) ? "
         <div style='background-color: #f8fafc; padding: 15px; border-radius: 6px; margin: 20px 0;'>
             <strong>Project / Agenda notes:</strong><br/>
@@ -101,7 +120,7 @@ $email_html = "
 <body style='font-family: \"Inter\", Arial, sans-serif; color: #000621; line-height: 1.6; padding: 20px; background-color: #f4f4f5;'>
     <div style='max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px; padding: 30px; background-color: #ffffff;'>
         
-        <h2 style='color: #000621; margin-top: 0;'>Booking Confirmed, {$displayName}!</h2>
+        <h2 style='color: #000621; margin-top: 0;'>{$headingText}</h2>
         <p>Thank you for scheduling a discovery and technical consultation with Esseal's senior engineering team.</p>
         
         <div style='border-left: 4px solid #fa6220; background-color: #f8fafc; padding: 15px 20px; margin: 20px 0; border-radius: 0 6px 6px 0;'>
@@ -124,32 +143,67 @@ $email_html = "
 </html>
 ";
 
-// MIME Multipart Construction
-$boundary = "----=_NextPart_" . md5(time());
+// Construct MIME Boundaries
+$mixedBoundary = "----=_MixedPart_" . md5(time() . "1");
+$altBoundary   = "----=_AltPart_" . md5(time() . "2");
 
 $to = $email;
 $subject = "Booking Confirmation: Strategy Call with Esseal";
 
+// Clean Headers (avoiding raw Bcc header penalty)
 $headers  = "From: Esseal <inquiry@esseal.co.uk>\r\n";
 $headers .= "Reply-To: inquiry@esseal.co.uk\r\n";
-$headers .= "Bcc: inquiry@esseal.co.uk\r\n";
+$headers .= "Date: " . date("r") . "\r\n";
+$headers .= "Message-ID: <" . $uid . ">\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n";
+$headers .= "Content-Type: multipart/mixed; boundary=\"{$mixedBoundary}\"\r\n";
 
-$body  = "--{$boundary}\r\n";
+// Multipart/Mixed Container
+$body  = "--{$mixedBoundary}\r\n";
+$body .= "Content-Type: multipart/alternative; boundary=\"{$altBoundary}\"\r\n\r\n";
+
+// Part A: Plain Text
+$body .= "--{$altBoundary}\r\n";
+$body .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$body .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+$body .= $plain_text . "\r\n\r\n";
+
+// Part B: HTML Text
+$body .= "--{$altBoundary}\r\n";
 $body .= "Content-Type: text/html; charset=UTF-8\r\n";
 $body .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
 $body .= $email_html . "\r\n\r\n";
+$body .= "--{$altBoundary}--\r\n\r\n";
 
-$body .= "--{$boundary}\r\n";
+// Part C: .ics Calendar Attachment
+$body .= "--{$mixedBoundary}\r\n";
 $body .= "Content-Type: text/calendar; method=REQUEST; name=\"invite.ics\"; charset=UTF-8\r\n";
 $body .= "Content-Transfer-Encoding: base64\r\n";
 $body .= "Content-Disposition: attachment; filename=\"invite.ics\"\r\n\r\n";
 $body .= chunk_split(base64_encode($icsContent)) . "\r\n";
-$body .= "--{$boundary}--";
+$body .= "--{$mixedBoundary}--";
 
-// Dispatch Email
+// Dispatch Client Email
 $mailSent = mail($to, $subject, $body, $headers);
+
+// Dispatch Separate Internal Notification Email to Esseal Team
+$internalSubject = "New Booking Request: {$email} ({$clientTime})";
+$internalHeaders  = "From: Esseal Booking System <inquiry@esseal.co.uk>\r\n";
+$internalHeaders .= "Reply-To: {$email}\r\n";
+$internalHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+$internalMessage  = "A new booking has been made on the website.\n\n";
+$internalMessage .= "Client Email: {$email}\n";
+$internalMessage .= "Selected Time: {$clientTime}\n";
+if (!empty($internalTime)) {
+    $internalMessage .= "Internal Time (GMT+5): {$internalTime}\n";
+}
+if (!empty($project)) {
+    $internalMessage .= "Project Notes: {$project}\n";
+}
+
+mail("inquiry@esseal.co.uk", $internalSubject, $internalMessage, $internalHeaders);
 
 if ($mailSent) {
     echo json_encode(['status' => 'success', 'message' => 'Booking confirmation email sent.']);
