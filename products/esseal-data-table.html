@@ -902,7 +902,7 @@
         <p>
           A fully-featured React data grid for complex enterprise applications.
           Row expansion panels, server-side pagination, true DOM virtualization,
-          zero Tailwind. <strong style="color:var(--text-main);">v2.5.2</strong> — zero runtime dependencies.
+          zero Tailwind. <strong style="color:var(--text-main);">v2.5.2</strong> - zero runtime dependencies.
         </p>
 
         <div class="cta-group">
@@ -962,7 +962,7 @@
             <p>
               Expand any row to reveal a custom full-width detail panel. Pass a
               <code>render</code> function to the <code>expandable</code> prop and return any
-              React content — charts, forms, nested tables, anything. Expanded row IDs
+              React content - charts, forms, nested tables, anything. Expanded row IDs
               are tracked in <code>TableState</code> and restored via <code>initialState</code>.
             </p>
           </article>
@@ -971,7 +971,7 @@
             <p>
               Switch to <code>paginationMode="server"</code> to delegate filtering, sorting,
               and paging to your API. A single <code>onServerRequest</code> callback fires on
-              every state change with full context — including a <code>direction</code> field
+              every state change with full context - including a <code>direction</code> field
               for cursor-based backends.
             </p>
           </article>
@@ -986,7 +986,7 @@
           <article class="card">
             <h3>DOM Virtualization</h3>
             <p>
-              True DOM virtualization — only the rows visible in the viewport are mounted.
+              True DOM virtualization - only the rows visible in the viewport are mounted.
               Handles 100,000+ rows without frame drops. Automatically disabled while any
               row is expanded so expansion panels render at their natural height.
             </p>
@@ -1010,8 +1010,8 @@
           <article class="card">
             <h3>State Persistence</h3>
             <p>
-              The full table state — sort, filters, page, pins, visibility, group expand,
-              and expanded rows — is broadcast via <code>onStateChange</code> as a plain JSON-safe
+              The full table state - sort, filters, page, pins, visibility, group expand,
+              and expanded rows - is broadcast via <code>onStateChange</code> as a plain JSON-safe
               object. Seed it back via <code>initialState</code> to restore exactly where the user left off.
             </p>
           </article>
@@ -1075,7 +1075,7 @@ export default function App() {
       <section id="demo" class="demo-section container">
         <h2 class="section-title">Interactive Preview</h2>
         <p style="text-align:center;color:var(--text-muted);margin-bottom:8px;max-width:800px;margin-left:auto;margin-right:auto;">
-          The actual <code>EssealDataTable</code> React component running live. Toggle every prop, expand rows, group, sort, filter — this is not a simulation.
+          The actual <code>EssealDataTable</code> React component running live. Toggle every prop, expand rows, group, sort, filter - this is not a simulation.
         </p>
         <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;font-size:0.875rem;">
           Enable <strong style="color:var(--text-main);">Row Expansion</strong> in the sidebar → click any ▶ chevron · Group by Department or Role · Resize columns by dragging header edges
@@ -1108,7 +1108,7 @@ export default function App() {
           engineered with:
         </p>
         <ul>
-          <li>Written in strict TypeScript — end-to-end generic type safety.</li>
+          <li>Written in strict TypeScript - end-to-end generic type safety.</li>
           <li>Zero runtime dependencies. No lodash, no date libraries, React only.</li>
           <li>Zero utility framework dependencies (no Tailwind CSS).</li>
           <li>O(1) lookup speeds for active filter and sort models.</li>
@@ -1155,8 +1155,8 @@ export default function App() {
               <summary>Can I save the user's grid state?</summary>
               <div class="faq-content">
                 <p>
-                  Yes. The grid broadcasts its full state — sort, filters, pagination, column
-                  pins, column visibility, expanded groups, and expanded rows — via the
+                  Yes. The grid broadcasts its full state - sort, filters, pagination, column
+                  pins, column visibility, expanded groups, and expanded rows - via the
                   <code>onStateChange</code> callback as a plain JSON-serialisable object.
                   Pass it back via <code>initialState</code> on the next mount to restore
                   exactly where the user left off.
@@ -1170,7 +1170,7 @@ export default function App() {
                   Pass an <code>expandable</code> prop with a <code>render</code> function:
                   <code>expandable={{ render: (row) => &lt;YourComponent row={row} /&gt; }}</code>.
                   A chevron column is automatically injected on the left. Clicking it expands
-                  a full-width panel below the row that renders whatever your function returns —
+                  a full-width panel below the row that renders whatever your function returns  - 
                   detail cards, charts, nested tables, forms, anything. Virtualization is
                   automatically disabled while any row is expanded so the panel can take its
                   natural height.
@@ -1183,7 +1183,7 @@ export default function App() {
                 <p>
                   Yes. Set <code>paginationMode="server"</code> and provide <code>rowCount</code>
                   and an <code>onServerRequest</code> callback. The callback fires on mount and on
-                  every page, sort, filter, or page-size change with the full current state —
+                  every page, sort, filter, or page-size change with the full current state  - 
                   including a <code>direction</code> field (<code>'first' | 'next' | 'prev'</code>)
                   that lets cursor-based APIs know which cursor to use. Filter changes are
                   debounced (default 300 ms) so you don't fire a request on every keystroke.
@@ -1211,7 +1211,7 @@ import 'esseal-data-table/style.css';</code></pre>
         </div>
 
         <h3>Component Props</h3>
-        <p>Props are grouped by feature area. TypeScript enforces discriminated unions — invalid combinations (e.g. both <code>groupBy</code> and <code>serverGroups</code>) are caught at compile time.</p>
+        <p>Props are grouped by feature area. TypeScript enforces discriminated unions - invalid combinations (e.g. both <code>groupBy</code> and <code>serverGroups</code>) are caught at compile time.</p>
 
         <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Core</p>
         <div class="props-table-wrapper">
@@ -1220,7 +1220,7 @@ import 'esseal-data-table/style.css';</code></pre>
             <tbody>
               <tr><td><code>rows</code></td><td><code>T[]</code></td><td>Required</td><td>Array of row data objects.</td></tr>
               <tr><td><code>columns</code></td><td><code>GridColDef&lt;T&gt;[]</code></td><td>Required</td><td>Column definitions.</td></tr>
-              <tr><td><code>getRowId</code></td><td><code>(row: T) =&gt; string | number</code></td><td>—</td><td>Derives a unique ID from each row. Required when <code>T</code> does not have an <code>id</code> field.</td></tr>
+              <tr><td><code>getRowId</code></td><td><code>(row: T) =&gt; string | number</code></td><td> - </td><td>Derives a unique ID from each row. Required when <code>T</code> does not have an <code>id</code> field.</td></tr>
               <tr><td><code>height</code></td><td><code>number | string</code></td><td><code>'100%'</code></td><td>Table height. Accepts a pixel number or any CSS string (<code>'50vh'</code>, <code>'calc(100% - 64px)'</code>).</td></tr>
               <tr><td><code>rowHeight</code></td><td><code>number</code></td><td><code>40</code></td><td>Row height in pixels. Must be accurate for virtualization to work correctly.</td></tr>
               <tr><td><code>loading</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Renders a full-table loading overlay.</td></tr>
@@ -1228,7 +1228,7 @@ import 'esseal-data-table/style.css';</code></pre>
           </table>
         </div>
 
-        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination — Client (default)</p>
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination - Client (default)</p>
         <div class="props-table-wrapper">
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
@@ -1240,14 +1240,14 @@ import 'esseal-data-table/style.css';</code></pre>
           </table>
         </div>
 
-        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination — Server</p>
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination - Server</p>
         <div class="props-table-wrapper">
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>paginationMode</code></td><td><code>'server'</code></td><td>—</td><td>Delegates filtering, sorting, and paging to your API.</td></tr>
-              <tr><td><code>rowCount</code></td><td><code>number</code></td><td>—</td><td>Total dataset size — drives footer display and page count.</td></tr>
-              <tr><td><code>onServerRequest</code></td><td><code>(params: ServerRequestParams) =&gt; void</code></td><td>—</td><td>Fires on mount and on every page, sort, filter, or page-size change.</td></tr>
+              <tr><td><code>paginationMode</code></td><td><code>'server'</code></td><td> - </td><td>Delegates filtering, sorting, and paging to your API.</td></tr>
+              <tr><td><code>rowCount</code></td><td><code>number</code></td><td> - </td><td>Total dataset size - drives footer display and page count.</td></tr>
+              <tr><td><code>onServerRequest</code></td><td><code>(params: ServerRequestParams) =&gt; void</code></td><td> - </td><td>Fires on mount and on every page, sort, filter, or page-size change.</td></tr>
               <tr><td><code>filterDebounceMs</code></td><td><code>number</code></td><td><code>300</code></td><td>Milliseconds to debounce filter input changes before calling <code>onServerRequest</code>.</td></tr>
             </tbody>
           </table>
@@ -1259,8 +1259,8 @@ import 'esseal-data-table/style.css';</code></pre>
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
               <tr><td><code>groupBy</code></td><td><code>(keyof T)[]</code></td><td><code>[]</code></td><td>Client-side grouping. Multiple fields create nested groups in array order.</td></tr>
-              <tr><td><code>serverGroups</code></td><td><code>ServerGroupDef&lt;T&gt;[]</code></td><td>—</td><td>Server-side grouping. Mutually exclusive with <code>groupBy</code>. Provides field, group values, and server-computed counts.</td></tr>
-              <tr><td><code>onLoadGroupData</code></td><td><code>(params) =&gt; Promise&lt;LoadGroupDataResult&lt;T&gt;&gt;</code></td><td>—</td><td>Required with <code>serverGroups</code>. Called when a group is expanded or "Load more" is clicked.</td></tr>
+              <tr><td><code>serverGroups</code></td><td><code>ServerGroupDef&lt;T&gt;[]</code></td><td> - </td><td>Server-side grouping. Mutually exclusive with <code>groupBy</code>. Provides field, group values, and server-computed counts.</td></tr>
+              <tr><td><code>onLoadGroupData</code></td><td><code>(params) =&gt; Promise&lt;LoadGroupDataResult&lt;T&gt;&gt;</code></td><td> - </td><td>Required with <code>serverGroups</code>. Called when a group is expanded or "Load more" is clicked.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1271,7 +1271,7 @@ import 'esseal-data-table/style.css';</code></pre>
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
               <tr><td><code>checkboxSelection</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Adds a checkbox column for multi-row selection with select-all.</td></tr>
-              <tr><td><code>onSelectionChange</code></td><td><code>(ids: (string | number)[]) =&gt; void</code></td><td>—</td><td>Fires whenever the set of selected row IDs changes. Receives the full current selection. Persists across page changes.</td></tr>
+              <tr><td><code>onSelectionChange</code></td><td><code>(ids: (string | number)[]) =&gt; void</code></td><td> - </td><td>Fires whenever the set of selected row IDs changes. Receives the full current selection. Persists across page changes.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1281,7 +1281,7 @@ import 'esseal-data-table/style.css';</code></pre>
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>expandable</code></td><td><code>ExpandableConfig&lt;T&gt;</code></td><td>—</td><td>Enables row expansion. A chevron column is injected on the left. Clicking it reveals a full-width panel below the row. Pass <code>{ render: (row) =&gt; ReactNode }</code>. Virtualization is disabled while any row is expanded.</td></tr>
+              <tr><td><code>expandable</code></td><td><code>ExpandableConfig&lt;T&gt;</code></td><td> - </td><td>Enables row expansion. A chevron column is injected on the left. Clicking it reveals a full-width panel below the row. Pass <code>{ render: (row) =&gt; ReactNode }</code>. Virtualization is disabled while any row is expanded.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1291,7 +1291,7 @@ import 'esseal-data-table/style.css';</code></pre>
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>rowActions</code></td><td><code>(row: T) =&gt; GridAction&lt;T&gt;[]</code></td><td>—</td><td>Returns the action list for a given row. Called per visible row on every render.</td></tr>
+              <tr><td><code>rowActions</code></td><td><code>(row: T) =&gt; GridAction&lt;T&gt;[]</code></td><td> - </td><td>Returns the action list for a given row. Called per visible row on every render.</td></tr>
               <tr><td><code>maxVisibleActions</code></td><td><code>number</code></td><td><code>1</code></td><td>Inline action buttons shown before collapsing the rest into an overflow <code>⋮</code> menu.</td></tr>
             </tbody>
           </table>
@@ -1302,9 +1302,9 @@ import 'esseal-data-table/style.css';</code></pre>
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>toolbar</code></td><td><code>ReactNode</code></td><td>—</td><td>Custom content rendered in the toolbar, to the right of the built-in Columns button.</td></tr>
+              <tr><td><code>toolbar</code></td><td><code>ReactNode</code></td><td> - </td><td>Custom content rendered in the toolbar, to the right of the built-in Columns button.</td></tr>
               <tr><td><code>disableColumnMenu</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Hides the built-in Columns visibility button.</td></tr>
-              <tr><td><code>getRowClassName</code></td><td><code>(row: T) =&gt; string</code></td><td>—</td><td>Returns a CSS class applied to the row's container <code>div</code>.</td></tr>
+              <tr><td><code>getRowClassName</code></td><td><code>(row: T) =&gt; string</code></td><td> - </td><td>Returns a CSS class applied to the row's container <code>div</code>.</td></tr>
             </tbody>
           </table>
         </div>
@@ -1314,8 +1314,8 @@ import 'esseal-data-table/style.css';</code></pre>
           <table class="props-table">
             <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
             <tbody>
-              <tr><td><code>initialState</code></td><td><code>Partial&lt;TableState&gt;</code></td><td>—</td><td>Seeds internal state on first render. Fields omitted use their defaults. Has no effect after mount.</td></tr>
-              <tr><td><code>onStateChange</code></td><td><code>(state: TableState) =&gt; void</code></td><td>—</td><td>Called after every state change. Not called on the initial render. Wrap in <code>useCallback</code> to keep the reference stable.</td></tr>
+              <tr><td><code>initialState</code></td><td><code>Partial&lt;TableState&gt;</code></td><td> - </td><td>Seeds internal state on first render. Fields omitted use their defaults. Has no effect after mount.</td></tr>
+              <tr><td><code>onStateChange</code></td><td><code>(state: TableState) =&gt; void</code></td><td> - </td><td>Called after every state change. Not called on the initial render. Wrap in <code>useCallback</code> to keep the reference stable.</td></tr>
             </tbody>
           </table>
         </div>

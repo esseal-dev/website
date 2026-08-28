@@ -1,4 +1,4 @@
-# esseal.co.uk — robots.txt
+# esseal.co.uk - robots.txt
 # All search engines and AI crawlers are explicitly welcome.
 
 # -----------------------------------------------

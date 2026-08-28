@@ -77,7 +77,7 @@
   <!-- ── HEADER ── -->
   <rect x="200" y="0" width="1080" height="56" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
   <text x="222" y="24" font-size="16" font-weight="700" fill="#c94070">Live Dispatch</text>
-  <text x="222" y="42" font-size="11" fill="#aaa">Today — Tuesday, Apr 14, 2026  ·  Auto-refreshing every 30s</text>
+  <text x="222" y="42" font-size="11" fill="#aaa">Today - Tuesday, Apr 14, 2026  ·  Auto-refreshing every 30s</text>
   <!-- Filter tabs -->
   <rect x="600" y="14" width="74" height="28" rx="14" fill="#ffb2cd"/>
   <text x="637" y="32" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">All (24)</text>
@@ -103,7 +103,7 @@
   <line x1="210" y1="108" x2="670" y2="108" stroke="#ffd8e6" stroke-width="1"/>
 
   <!-- Booking rows -->
-  <!-- Row 1 — In Progress -->
+  <!-- Row 1 - In Progress -->
   <rect x="211" y="109" width="458" height="52" fill="#f8fff4"/>
   <rect x="211" y="109" width="3" height="52" fill="#97d679"/>
   <text x="230" y="126" font-size="12" font-weight="600" fill="#333">Sarah M.</text>
@@ -114,7 +114,7 @@
   <rect x="548" y="120" width="84" height="22" rx="11" fill="#d4f5c0" stroke="#97d679" stroke-width="1"/>
   <text x="590" y="135" font-size="10" fill="#3a8a20" text-anchor="middle" font-weight="600">In Progress</text>
 
-  <!-- Row 2 — En Route -->
+  <!-- Row 2 - En Route -->
   <line x1="210" y1="161" x2="670" y2="161" stroke="#ffeef4" stroke-width="1"/>
   <rect x="211" y="162" width="458" height="52" fill="#fff8fb"/>
   <rect x="211" y="162" width="3" height="52" fill="#ffb2cd"/>
@@ -126,7 +126,7 @@
   <rect x="548" y="172" width="78" height="22" rx="11" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1"/>
   <text x="587" y="187" font-size="10" fill="#c94070" text-anchor="middle" font-weight="600">En Route</text>
 
-  <!-- Row 3 — Upcoming -->
+  <!-- Row 3 - Upcoming -->
   <line x1="210" y1="214" x2="670" y2="214" stroke="#ffeef4" stroke-width="1"/>
   <text x="230" y="232" font-size="12" fill="#555">Mariana D.</text>
   <text x="230" y="248" font-size="10" fill="#aaa">Gel Pedi · 2:00 PM</text>
@@ -136,7 +136,7 @@
   <rect x="548" y="224" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
   <text x="588" y="239" font-size="10" fill="#999" text-anchor="middle">Upcoming</text>
 
-  <!-- Row 4 — Upcoming -->
+  <!-- Row 4 - Upcoming -->
   <line x1="210" y1="266" x2="670" y2="266" stroke="#ffeef4" stroke-width="1"/>
   <text x="230" y="284" font-size="12" fill="#555">Jennifer W.</text>
   <text x="230" y="300" font-size="10" fill="#aaa">Classic Mani · 2:30 PM</text>
@@ -156,7 +156,7 @@
   <rect x="548" y="328" width="80" height="22" rx="11" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
   <text x="588" y="343" font-size="10" fill="#999" text-anchor="middle">Upcoming</text>
 
-  <!-- Row 6 — Complete -->
+  <!-- Row 6 - Complete -->
   <line x1="210" y1="370" x2="670" y2="370" stroke="#ffeef4" stroke-width="1"/>
   <text x="230" y="388" font-size="12" fill="#aaa">Rachel F.</text>
   <text x="230" y="404" font-size="10" fill="#ccc">Gel Mani · 9:00 AM</text>
@@ -166,7 +166,7 @@
   <rect x="548" y="380" width="76" height="22" rx="11" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
   <text x="586" y="395" font-size="10" fill="#bbb" text-anchor="middle">Complete</text>
 
-  <!-- Row 7 — Complete -->
+  <!-- Row 7 - Complete -->
   <line x1="210" y1="422" x2="670" y2="422" stroke="#ffeef4" stroke-width="1"/>
   <text x="230" y="440" font-size="12" fill="#aaa">Olivia T.</text>
   <text x="230" y="456" font-size="10" fill="#ccc">Classic Pedi · 9:30 AM</text>
@@ -192,7 +192,7 @@
   <rect x="688" y="70" width="572" height="370" rx="10" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
   <rect x="688" y="70" width="572" height="38" rx="10" fill="#fff3f8"/>
   <rect x="688" y="92" width="572" height="16" fill="#fff3f8"/>
-  <text x="708" y="96" font-size="12" font-weight="600" fill="#c94070">Coverage Map — NYC + NJ</text>
+  <text x="708" y="96" font-size="12" font-weight="600" fill="#c94070">Coverage Map - NYC + NJ</text>
   <text x="1236" y="96" font-size="10" fill="#97d679" text-anchor="end">● 11 providers live</text>
   <line x1="688" y1="108" x2="1260" y2="108" stroke="#ffd8e6" stroke-width="1"/>
 
@@ -212,17 +212,17 @@
   <text x="1020" y="180" font-size="11" fill="#ffb2cd" opacity="0.8">Queens</text>
   <text x="730" y="380" font-size="11" fill="#ffb2cd" opacity="0.7">NJ</text>
 
-  <!-- Provider pins — In Progress (green) -->
+  <!-- Provider pins - In Progress (green) -->
   <circle cx="780" cy="192" r="12" fill="#a8f08e" stroke="#ffffff" stroke-width="2"/>
   <text x="780" y="197" font-size="8" fill="#2d6e14" text-anchor="middle" font-weight="700">J</text>
   <text x="780" y="212" font-size="8" fill="#3a8a20" text-anchor="middle">In Prog</text>
 
-  <!-- Provider pins — En Route (pink) -->
+  <!-- Provider pins - En Route (pink) -->
   <circle cx="900" cy="310" r="12" fill="#ffb2cd" stroke="#ffffff" stroke-width="2"/>
   <text x="900" y="315" font-size="8" fill="#c94070" text-anchor="middle" font-weight="700">P</text>
   <text x="900" y="328" font-size="8" fill="#c94070" text-anchor="middle">En Route</text>
 
-  <!-- Provider pins — Upcoming/idle (light pink) -->
+  <!-- Provider pins - Upcoming/idle (light pink) -->
   <circle cx="1040" cy="195" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
   <text x="1040" y="199" font-size="8" fill="#c94070" text-anchor="middle">A</text>
   <circle cx="760" cy="355" r="10" fill="#ffd8e6" stroke="#ffb2cd" stroke-width="1.5"/>
@@ -254,7 +254,7 @@
   <rect x="688" y="456" width="572" height="252" rx="10" fill="#ffffff" stroke="#ffd8e6" stroke-width="1"/>
   <rect x="688" y="456" width="572" height="38" rx="10" fill="#fff3f8"/>
   <rect x="688" y="478" width="572" height="16" fill="#fff3f8"/>
-  <text x="708" y="482" font-size="12" font-weight="600" fill="#c94070">Providers — Today</text>
+  <text x="708" y="482" font-size="12" font-weight="600" fill="#c94070">Providers - Today</text>
   <line x1="688" y1="494" x2="1260" y2="494" stroke="#ffd8e6" stroke-width="1"/>
 
   <!-- Provider table headers -->

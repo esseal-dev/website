@@ -26,7 +26,7 @@
   <rect x="224" y="0" width="1056" height="52" fill="#161b22"/>
   <rect x="224" y="52" width="1056" height="1" fill="#30363d"/>
   <text x="244" y="22" font-size="12" fill="#7d8590">Contracts  /  Birmingham HS2 Interchange  /  NEC4 ECC</text>
-  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Contract: NEC4 ECC — Civils Package A</text>
+  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Contract: NEC4 ECC - Civils Package A</text>
   <rect x="1058" y="13" width="180" height="28" rx="6" fill="#fa6220"/>
   <text x="1148" y="31" font-size="12" fill="#fff" text-anchor="middle" font-weight="500">✦ AI Review Active</text>
 
@@ -58,10 +58,10 @@
 
   <!-- Doc page content -->
   <text x="320" y="136" font-size="11" fill="#374151" font-weight="600" text-anchor="middle">NEC4 ENGINEERING AND CONSTRUCTION CONTRACT</text>
-  <text x="320" y="152" font-size="10" fill="#6b7280" text-anchor="middle">Birmingham HS2 Interchange Hub — Civils Package A</text>
+  <text x="320" y="152" font-size="10" fill="#6b7280" text-anchor="middle">Birmingham HS2 Interchange Hub - Civils Package A</text>
   <line x1="264" y1="162" x2="844" y2="162" stroke="#e5e7eb" stroke-width="1"/>
 
-  <text x="264" y="182" font-size="11" fill="#374151" font-weight="700">Clause 60 — Compensation Events</text>
+  <text x="264" y="182" font-size="11" fill="#374151" font-weight="700">Clause 60 - Compensation Events</text>
   <text x="264" y="200" font-size="10" fill="#374151">60.1  The following are compensation events:</text>
 
   <!-- Normal text lines -->
@@ -81,7 +81,7 @@
   <text x="278" y="358" font-size="9.5" fill="#374151">(5)  The Employer or Others do not work within the times shown on the Accepted Programme.</text>
   <text x="278" y="374" font-size="9.5" fill="#374151">(6)  The Employer or Others do not work within the conditions stated in the Scope.</text>
 
-  <!-- Highlighted clause (AI flagged — risk) -->
+  <!-- Highlighted clause (AI flagged - risk) -->
   <rect x="264" y="386" width="580" height="52" rx="3" fill="#fee2e2" opacity="0.5"/>
   <rect x="264" y="386" width="3" height="52" fill="#ef4444"/>
   <text x="278" y="402" font-size="9.5" fill="#374151" font-weight="500">(7)  A weather measurement is recorded within a calendar month before the Completion Date which is</text>
@@ -95,13 +95,13 @@
   <text x="278" y="508" font-size="9.5" fill="#374151">     Date to have such a small chance of occurring that it would have been unreasonable to allow</text>
   <text x="278" y="522" font-size="9.5" fill="#374151">     for it.</text>
 
-  <text x="264" y="545" font-size="11" fill="#374151" font-weight="700">Clause 61 — Notifying Compensation Events</text>
+  <text x="264" y="545" font-size="11" fill="#374151" font-weight="700">Clause 61 - Notifying Compensation Events</text>
   <text x="264" y="563" font-size="10" fill="#374151">61.1  For compensation events which arise from the Project Manager or the Supervisor giving an</text>
   <text x="272" y="577" font-size="10" fill="#374151">       instruction or changing an earlier decision, the Project Manager notifies the Contractor of</text>
   <text x="272" y="591" font-size="10" fill="#374151">       the compensation event at the time of the instruction.</text>
 
   <!-- Page number -->
-  <text x="554" y="684" font-size="9" fill="#9ca3af" text-anchor="middle">— 14 —</text>
+  <text x="554" y="684" font-size="9" fill="#9ca3af" text-anchor="middle"> -  14  - </text>
 
   <!-- Right: AI panel (395px) -->
   <rect x="885" y="53" width="395" height="667" fill="#161b22"/>
@@ -132,7 +132,7 @@
   <text x="909" y="200" font-size="12" font-weight="600" fill="#e6edf3">8-week notification window</text>
   <text x="909" y="218" font-size="11" fill="#7d8590">Instruction issued 14 Jan. Deadline to notify</text>
   <text x="909" y="232" font-size="11" fill="#7d8590">Project Manager: 11 Mar 2025 (43 days away).</text>
-  <text x="909" y="250" font-size="11" fill="#d29922">Action: Draft CE notification — assign to T. Okafor</text>
+  <text x="909" y="250" font-size="11" fill="#d29922">Action: Draft CE notification - assign to T. Okafor</text>
   <rect x="909" y="264" width="120" height="20" rx="5" fill="#d29922" opacity="0.2"/>
   <text x="969" y="278" font-size="11" fill="#d29922" text-anchor="middle">Create Notification</text>
   <rect x="1038" y="264" width="80" height="20" rx="5" fill="#21262d"/>
@@ -147,9 +147,9 @@
   <rect x="1196" y="309" width="64" height="18" rx="4" fill="#21262d"/>
   <text x="1228" y="322" font-size="10" fill="#7d8590" text-anchor="middle">Go to ↗</text>
   <text x="909" y="344" font-size="12" font-weight="600" fill="#e6edf3">Exceptional weather clause unpriced</text>
-  <text x="909" y="362" font-size="11" fill="#7d8590">Met Office data shows Jan–Mar above 10yr</text>
+  <text x="909" y="362" font-size="11" fill="#7d8590">Met Office data shows Jan-Mar above 10yr</text>
   <text x="909" y="376" font-size="11" fill="#7d8590">average for rainfall. No Z-clause inserted.</text>
-  <text x="909" y="394" font-size="11" fill="#f85149">Potential unrecovered cost: £120k–£340k</text>
+  <text x="909" y="394" font-size="11" fill="#f85149">Potential unrecovered cost: £120k-£340k</text>
   <rect x="909" y="408" width="140" height="20" rx="5" fill="#f85149" opacity="0.2"/>
   <text x="979" y="422" font-size="11" fill="#f85149" text-anchor="middle">Review X Weather Clauses</text>
 
@@ -159,7 +159,7 @@
   <rect x="909" y="455" width="44" height="18" rx="9" fill="#1f3b1f"/>
   <text x="931" y="468" font-size="10" fill="#3fb950" text-anchor="middle">OK</text>
   <text x="960" y="464" font-size="10" fill="#7d8590">Clause 61.1</text>
-  <text x="909" y="488" font-size="12" font-weight="600" fill="#e6edf3">PM notification obligations — compliant</text>
+  <text x="909" y="488" font-size="12" font-weight="600" fill="#e6edf3">PM notification obligations - compliant</text>
   <text x="909" y="506" font-size="11" fill="#7d8590">All 4 instructions issued in last 30 days have</text>
   <text x="909" y="520" font-size="11" fill="#7d8590">matching CE notifications on file. No gaps.</text>
   <text x="909" y="544" font-size="11" fill="#3fb950">✓ No action required</text>

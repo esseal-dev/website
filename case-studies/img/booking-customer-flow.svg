@@ -49,7 +49,7 @@
 
   <!-- Page title -->
   <text x="640" y="96" font-size="22" font-weight="700" fill="#c94070" text-anchor="middle">Choose Your Service</text>
-  <text x="640" y="116" font-size="12" fill="#aaa" text-anchor="middle">All services performed at your location — Manhattan, Brooklyn, Queens, Northern NJ</text>
+  <text x="640" y="116" font-size="12" fill="#aaa" text-anchor="middle">All services performed at your location - Manhattan, Brooklyn, Queens, Northern NJ</text>
 
   <!-- ── SERVICE GRID ── -->
   <!-- Row 1 -->
@@ -153,7 +153,7 @@
   <text x="302" y="538" font-size="12" fill="#555" text-anchor="middle">11</text>
   <text x="342" y="538" font-size="12" fill="#555" text-anchor="middle">12</text>
 
-  <!-- Week row 3 — 14th selected -->
+  <!-- Week row 3 - 14th selected -->
   <text x="102" y="562" font-size="12" fill="#555" text-anchor="middle">13</text>
   <circle cx="142" cy="556" r="14" fill="#ffb2cd"/>
   <text x="142" y="562" font-size="12" fill="#ffffff" font-weight="700" text-anchor="middle">14</text>
@@ -179,7 +179,7 @@
   <text x="222" y="610" font-size="12" fill="#555" text-anchor="middle">30</text>
 
   <!-- Time slots -->
-  <text x="420" y="470" font-size="11" font-weight="600" fill="#555">Available Times — Tue Apr 14</text>
+  <text x="420" y="470" font-size="11" font-weight="600" fill="#555">Available Times - Tue Apr 14</text>
   <!-- Time slot grid -->
   <rect x="420" y="480" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
   <text x="459" y="499" font-size="11" fill="#aaa" text-anchor="middle">9:00 AM</text>
@@ -208,7 +208,7 @@
   <rect x="690" y="560" width="78" height="30" rx="8" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
   <text x="729" y="579" font-size="11" fill="#aaa" text-anchor="middle">8:00 PM</text>
 
-  <text x="420" y="616" font-size="10" fill="#aaa">Real-time availability — reflects actual provider capacity</text>
+  <text x="420" y="616" font-size="10" fill="#aaa">Real-time availability - reflects actual provider capacity</text>
   <text x="420" y="632" font-size="10" fill="#a8f08e">● Green = last spot remaining</text>
 
   <!-- ── BOOKING SUMMARY ── -->
@@ -244,7 +244,7 @@
   <text x="1049" y="675" font-size="13" font-weight="700" fill="#2d6e14" text-anchor="middle">Continue to Address &amp; Pay →</text>
 
   <!-- Automation note -->
-  <text x="640" y="712" font-size="10" fill="#bbb" text-anchor="middle">Confirmation, reminders &amp; post-service follow-up sent automatically — no staff involvement</text>
+  <text x="640" y="712" font-size="10" fill="#bbb" text-anchor="middle">Confirmation, reminders &amp; post-service follow-up sent automatically - no staff involvement</text>
 
   </g>
 </svg>

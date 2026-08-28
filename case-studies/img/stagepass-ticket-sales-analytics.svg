@@ -31,7 +31,7 @@
   <line x1="620" y1="0" x2="620" y2="720" stroke="#1e1e1e" stroke-width="1"/>
 
   <!-- ══════════════════════════════════════════════════════
-       LEFT PANEL — Public ticket sales page
+       LEFT PANEL - Public ticket sales page
   ══════════════════════════════════════════════════════ -->
 
   <!-- Browser chrome -->
@@ -68,7 +68,7 @@
 
   <!-- GA Floor -->
   <rect x="30" y="288" width="560" height="62" rx="8" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
-  <text x="50" y="314" font-size="13" font-weight="600" fill="#fff">General Admission — Floor</text>
+  <text x="50" y="314" font-size="13" font-weight="600" fill="#fff">General Admission - Floor</text>
   <text x="50" y="330" font-size="11" fill="#555">Standing · Unreserved</text>
   <text x="440" y="314" font-size="15" font-weight="700" fill="#c8ff00" text-anchor="end">$28.00</text>
   <text x="440" y="330" font-size="10" fill="#444" text-anchor="end">+ $3.20 fee</text>
@@ -81,8 +81,8 @@
   <!-- Reserved Orchestra -->
   <rect x="30" y="358" width="560" height="62" rx="8" fill="#111" stroke="#c8ff00" stroke-width="1.5"/>
   <rect x="30" y="358" width="4" height="62" rx="2" fill="#c8ff00"/>
-  <text x="50" y="384" font-size="13" font-weight="600" fill="#fff">Orchestra — Reserved Seating</text>
-  <text x="50" y="400" font-size="11" fill="#555">Rows A–J · Assigned seats · Best views</text>
+  <text x="50" y="384" font-size="13" font-weight="600" fill="#fff">Orchestra - Reserved Seating</text>
+  <text x="50" y="400" font-size="11" fill="#555">Rows A-J · Assigned seats · Best views</text>
   <text x="440" y="384" font-size="15" font-weight="700" fill="#c8ff00" text-anchor="end">$55.00</text>
   <text x="440" y="400" font-size="10" fill="#444" text-anchor="end">+ $5.80 fee</text>
   <rect x="454" y="372" width="124" height="36" rx="8" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
@@ -92,8 +92,8 @@
 
   <!-- Mezzanine -->
   <rect x="30" y="428" width="560" height="62" rx="8" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
-  <text x="50" y="454" font-size="13" font-weight="600" fill="#fff">Mezzanine — Reserved</text>
-  <text x="50" y="470" font-size="11" fill="#555">Rows K–O · Elevated view</text>
+  <text x="50" y="454" font-size="13" font-weight="600" fill="#fff">Mezzanine - Reserved</text>
+  <text x="50" y="470" font-size="11" fill="#555">Rows K-O · Elevated view</text>
   <text x="440" y="454" font-size="15" font-weight="700" fill="#ffffff" text-anchor="end">$42.00</text>
   <text x="440" y="470" font-size="10" fill="#444" text-anchor="end">+ $4.50 fee</text>
   <rect x="454" y="442" width="124" height="36" rx="8" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
@@ -103,8 +103,8 @@
 
   <!-- Balcony -->
   <rect x="30" y="498" width="560" height="62" rx="8" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="1"/>
-  <text x="50" y="524" font-size="13" font-weight="600" fill="#666">Balcony — Reserved</text>
-  <text x="50" y="540" font-size="11" fill="#444">Rows P–S · Limited availability</text>
+  <text x="50" y="524" font-size="13" font-weight="600" fill="#666">Balcony - Reserved</text>
+  <text x="50" y="540" font-size="11" fill="#444">Rows P-S · Limited availability</text>
   <text x="440" y="524" font-size="15" font-weight="700" fill="#666" text-anchor="end">$32.00</text>
   <text x="440" y="540" font-size="10" fill="#333" text-anchor="end">+ $3.80 fee</text>
   <rect x="454" y="512" width="124" height="36" rx="8" fill="#141414" stroke="#222" stroke-width="1"/>
@@ -126,7 +126,7 @@
   <text x="310" y="682" font-size="14" font-weight="800" fill="#000" text-anchor="middle" letter-spacing="0.5">CHECKOUT →</text>
 
   <!-- ══════════════════════════════════════════════════════
-       RIGHT PANEL — Organiser analytics
+       RIGHT PANEL - Organiser analytics
   ══════════════════════════════════════════════════════ -->
 
   <!-- Panel header -->
@@ -258,14 +258,14 @@
   <!-- Seat heatmap section -->
   <rect x="630" y="346" width="630" height="194" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
   <text x="650" y="370" font-size="11" font-weight="600" fill="#fff">Seat Purchase Heatmap</text>
-  <text x="650" y="386" font-size="10" fill="#444">Sold seats coloured by purchase order — neon = sold first</text>
+  <text x="650" y="386" font-size="10" fill="#444">Sold seats coloured by purchase order - neon = sold first</text>
 
   <!-- STAGE label -->
   <rect x="790" y="396" width="120" height="18" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="1"/>
   <text x="850" y="408" font-size="9" fill="#555" text-anchor="middle" letter-spacing="2">STAGE</text>
 
   <!-- Seat rows heatmap (simplified circles showing sold pattern) -->
-  <!-- Row A – VIP/sold first = brightest lime -->
+  <!-- Row A - VIP/sold first = brightest lime -->
   <text x="640" y="430" font-size="8" fill="#333">A</text>
   <!-- 14 seats row A -->
   <circle cx="660" cy="426" r="5" fill="#c8ff00" opacity="0.95"/>
@@ -320,7 +320,7 @@
   <circle cx="900" cy="454" r="5" fill="#555" opacity="0.35"/>
   <circle cx="912" cy="454" r="5" fill="#333" stroke="#333" stroke-width="1" opacity="0.5"/>
 
-  <!-- Row D–E (medium fill) -->
+  <!-- Row D-E (medium fill) -->
   <text x="640" y="472" font-size="8" fill="#333">D</text>
   <circle cx="660" cy="468" r="5" fill="#c8ff00" opacity="0.5"/>
   <circle cx="672" cy="468" r="5" fill="#c8ff00" opacity="0.45"/>

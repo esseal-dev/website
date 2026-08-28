@@ -105,7 +105,7 @@
   <rect x="244" y="258" width="756" height="48" fill="#161b22"/>
   <rect x="244" y="306" width="756" height="1" fill="#21262d"/>
   <rect x="258" y="270" width="3" height="24" rx="2" fill="#3fb950"/>
-  <text x="270" y="285" font-size="13" font-weight="500" fill="#e6edf3">Canary Wharf Tower E — Phase 2</text>
+  <text x="270" y="285" font-size="13" font-weight="500" fill="#e6edf3">Canary Wharf Tower E - Phase 2</text>
   <text x="270" y="300" font-size="11" fill="#7d8590">Ref: BT-2024-047</text>
   <text x="492" y="286" font-size="12" fill="#7d8590">Galliard Homes</text>
   <rect x="612" y="268" width="72" height="20" rx="10" fill="#1f3b1f"/>
@@ -151,7 +151,7 @@
   <rect x="244" y="402" width="756" height="48" fill="#161b22"/>
   <rect x="244" y="450" width="756" height="1" fill="#21262d"/>
   <rect x="258" y="414" width="3" height="24" rx="2" fill="#3fb950"/>
-  <text x="270" y="429" font-size="13" font-weight="500" fill="#e6edf3">Leeds City Centre Apartments — Block C</text>
+  <text x="270" y="429" font-size="13" font-weight="500" fill="#e6edf3">Leeds City Centre Apartments - Block C</text>
   <text x="270" y="444" font-size="11" fill="#7d8590">Ref: BT-2024-055</text>
   <text x="492" y="430" font-size="12" fill="#7d8590">Urban Splash</text>
   <rect x="612" y="412" width="72" height="20" rx="10" fill="#1f3b1f"/>
@@ -230,7 +230,7 @@
   <circle cx="1042" cy="244" r="8" fill="#1f3b1f"/>
   <text x="1042" y="248" font-size="9" fill="#3fb950" text-anchor="middle">✓</text>
   <text x="1058" y="241" font-size="12" font-weight="500" fill="#e6edf3">Milestone approved</text>
-  <text x="1058" y="255" font-size="11" fill="#7d8590">Canary Wharf — Foundation</text>
+  <text x="1058" y="255" font-size="11" fill="#7d8590">Canary Wharf - Foundation</text>
   <text x="1058" y="268" font-size="10" fill="#4a5568">2 hours ago</text>
 
   <rect x="1034" y="278" width="208" height="1" fill="#21262d"/>
@@ -238,7 +238,7 @@
   <circle cx="1042" cy="298" r="8" fill="#3b1f1f"/>
   <text x="1042" y="302" font-size="9" fill="#f85149" text-anchor="middle">!</text>
   <text x="1058" y="295" font-size="12" font-weight="500" fill="#e6edf3">Delay flagged</text>
-  <text x="1058" y="309" font-size="11" fill="#7d8590">Salford — Steel delivery</text>
+  <text x="1058" y="309" font-size="11" fill="#7d8590">Salford - Steel delivery</text>
   <text x="1058" y="322" font-size="10" fill="#4a5568">4 hours ago</text>
 
   <rect x="1034" y="332" width="208" height="1" fill="#21262d"/>
@@ -246,7 +246,7 @@
   <circle cx="1042" cy="352" r="8" fill="#21262d"/>
   <text x="1042" y="356" font-size="9" fill="#7d8590" text-anchor="middle">📄</text>
   <text x="1058" y="349" font-size="12" font-weight="500" fill="#e6edf3">NEC clause updated</text>
-  <text x="1058" y="363" font-size="11" fill="#7d8590">Birmingham HS2 — Cl. 60.1</text>
+  <text x="1058" y="363" font-size="11" fill="#7d8590">Birmingham HS2 - Cl. 60.1</text>
   <text x="1058" y="376" font-size="10" fill="#4a5568">Yesterday</text>
 
   <rect x="1034" y="386" width="208" height="1" fill="#21262d"/>
@@ -262,7 +262,7 @@
   <circle cx="1042" cy="460" r="8" fill="#1f3b1f"/>
   <text x="1042" y="464" font-size="9" fill="#3fb950" text-anchor="middle">✓</text>
   <text x="1058" y="457" font-size="12" font-weight="500" fill="#e6edf3">Snag list cleared</text>
-  <text x="1058" y="471" font-size="11" fill="#7d8590">Edinburgh — Level 3</text>
+  <text x="1058" y="471" font-size="11" fill="#7d8590">Edinburgh - Level 3</text>
   <text x="1058" y="484" font-size="10" fill="#4a5568">2 days ago</text>
 
   <rect x="1034" y="494" width="208" height="1" fill="#21262d"/>
@@ -270,7 +270,7 @@
   <circle cx="1042" cy="514" r="8" fill="#312a1f"/>
   <text x="1042" y="518" font-size="9" fill="#d29922" text-anchor="middle">⚠</text>
   <text x="1058" y="511" font-size="12" font-weight="500" fill="#e6edf3">Budget variance</text>
-  <text x="1058" y="525" font-size="11" fill="#7d8590">Manchester — +£84k</text>
+  <text x="1058" y="525" font-size="11" fill="#7d8590">Manchester - +£84k</text>
   <text x="1058" y="538" font-size="10" fill="#4a5568">3 days ago</text>
 
   <rect x="1034" y="548" width="208" height="1" fill="#21262d"/>
@@ -278,7 +278,7 @@
   <circle cx="1042" cy="568" r="8" fill="#21262d"/>
   <text x="1042" y="572" font-size="9" fill="#7d8590" text-anchor="middle">👤</text>
   <text x="1058" y="565" font-size="12" font-weight="500" fill="#e6edf3">Subcontractor onboarded</text>
-  <text x="1058" y="579" font-size="11" fill="#7d8590">Leeds — Apex M&amp;E Ltd</text>
+  <text x="1058" y="579" font-size="11" fill="#7d8590">Leeds - Apex M&amp;E Ltd</text>
   <text x="1058" y="592" font-size="10" fill="#4a5568">4 days ago</text>
 
   </g>

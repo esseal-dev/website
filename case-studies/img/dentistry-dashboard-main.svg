@@ -174,7 +174,7 @@
   <text x="352" y="371" font-size="9" fill="#0369a1" text-anchor="middle" font-weight="700">MT</text>
   <text x="372" y="366" font-size="12" font-weight="600" fill="#0f172a">Marcus Thompson</text>
   <text x="372" y="380" font-size="10" fill="#94a3b8">NHS · #P-10234</text>
-  <text x="520" y="372" font-size="12" fill="#0f172a">Root canal — UL6</text>
+  <text x="520" y="372" font-size="12" fill="#0f172a">Root canal - UL6</text>
   <text x="680" y="372" font-size="12" fill="#0f172a">Dr. Owen</text>
   <rect x="762" y="358" width="68" height="20" rx="10" fill="#ede9fe"/>
   <text x="796" y="372" font-size="10" fill="#7c3aed" text-anchor="middle" font-weight="500">In Chair</text>
@@ -204,7 +204,7 @@
   <text x="352" y="461" font-size="9" fill="#16a34a" text-anchor="middle" font-weight="700">AK</text>
   <text x="372" y="456" font-size="12" font-weight="500" fill="#0f172a">Amara Kofi</text>
   <text x="372" y="470" font-size="10" fill="#94a3b8">NHS · #P-11102</text>
-  <text x="520" y="462" font-size="12" fill="#475569">Extraction — LR8</text>
+  <text x="520" y="462" font-size="12" fill="#475569">Extraction - LR8</text>
   <text x="680" y="462" font-size="12" fill="#475569">Dr. Owen</text>
   <rect x="762" y="448" width="72" height="20" rx="10" fill="#e0f2fe"/>
   <text x="798" y="462" font-size="10" fill="#0369a1" text-anchor="middle" font-weight="500">Confirmed</text>
@@ -212,7 +212,7 @@
   <!-- Row: lunch -->
   <rect x="253" y="486" width="660" height="36" fill="#f8fafc"/>
   <rect x="253" y="522" width="660" height="1" fill="#e2e8f0"/>
-  <text x="270" y="508" font-size="11" fill="#94a3b8">13:00  —  Lunch Break</text>
+  <text x="270" y="508" font-size="11" fill="#94a3b8">13:00  -  Lunch Break</text>
 
   <!-- Row: confirmed -->
   <rect x="253" y="523" width="660" height="44" fill="#ffffff"/>
@@ -258,7 +258,7 @@
   <rect x="949" y="292" width="292" height="1" fill="#f1f5f9"/>
 
   <text x="949" y="314" font-size="11" font-weight="600" fill="#475569">TODAY'S TREATMENT</text>
-  <text x="949" y="332" font-size="13" font-weight="600" fill="#0f172a">Root Canal Treatment — UL6</text>
+  <text x="949" y="332" font-size="13" font-weight="600" fill="#0f172a">Root Canal Treatment - UL6</text>
   <text x="949" y="348" font-size="11" fill="#94a3b8">Session 2 of 2  ·  Endodontics</text>
   <text x="949" y="366" font-size="11" fill="#475569">Anaesthetic: Lignospan 2%</text>
   <text x="949" y="380" font-size="11" fill="#475569">Files used: 15, 20, 25, 30</text>
@@ -286,7 +286,7 @@
   <rect x="949" y="550" width="292" height="1" fill="#f1f5f9"/>
 
   <rect x="949" y="560" width="10" height="10" rx="2" fill="#06b6d4"/>
-  <text x="967" y="570" font-size="11" font-weight="600" fill="#0f172a">Send recall — 47 patients</text>
+  <text x="967" y="570" font-size="11" font-weight="600" fill="#0f172a">Send recall - 47 patients</text>
   <text x="967" y="584" font-size="10" fill="#475569">6-month recalls overdue. Auto-SMS ready.</text>
   <rect x="1161" y="562" width="60" height="18" rx="4" fill="#e0f9ff"/>
   <text x="1191" y="574" font-size="10" fill="#0891b2" text-anchor="middle">Review →</text>
@@ -294,7 +294,7 @@
   <rect x="949" y="598" width="292" height="1" fill="#f1f5f9"/>
 
   <rect x="949" y="608" width="10" height="10" rx="2" fill="#10b981"/>
-  <text x="967" y="618" font-size="11" font-weight="600" fill="#0f172a">Gap at 16:30 — book walk-in</text>
+  <text x="967" y="618" font-size="11" font-weight="600" fill="#0f172a">Gap at 16:30 - book walk-in</text>
   <text x="967" y="632" font-size="10" fill="#475569">Cancellation freed slot. 3 waitlisted patients.</text>
   <rect x="1161" y="610" width="60" height="18" rx="4" fill="#d1fae5"/>
   <text x="1191" y="622" font-size="10" fill="#059669" text-anchor="middle">Notify →</text>

@@ -26,7 +26,7 @@
   <rect x="224" y="0" width="1056" height="52" fill="#161b22"/>
   <rect x="224" y="52" width="1056" height="1" fill="#30363d"/>
   <text x="244" y="22" font-size="12" fill="#7d8590">Projects  /  Canary Wharf Tower E  /  Schedule</text>
-  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Construction Schedule — Phase 2</text>
+  <text x="244" y="42" font-size="16" font-weight="600" fill="#e6edf3">Construction Schedule - Phase 2</text>
 
   <!-- AI badge -->
   <rect x="958" y="13" width="132" height="28" rx="14" fill="#fa6220" opacity="0.15"/>
@@ -99,12 +99,12 @@
   <rect x="530" y="169" width="200" height="20" rx="4" fill="#3fb950" opacity="0.25"/>
   <rect x="530" y="169" width="200" height="20" rx="4" fill="none" stroke="#3fb950" stroke-width="1"/>
   <rect x="530" y="169" width="200" height="20" rx="4" fill="#3fb950" opacity="0.6"/>
-  <text x="534" y="183" font-size="10" fill="#fff" opacity="0.9">Piling — Jan 6 → Jan 28</text>
+  <text x="534" y="183" font-size="10" fill="#fff" opacity="0.9">Piling - Jan 6 → Jan 28</text>
 
   <!-- Row 2 -->
   <rect x="224" y="199" width="1056" height="40" fill="#161b22"/>
   <rect x="224" y="239" width="1056" height="1" fill="#21262d"/>
-  <text x="252" y="224" font-size="12" fill="#e6edf3">Concrete pour — B1 slab</text>
+  <text x="252" y="224" font-size="12" fill="#e6edf3">Concrete pour - B1 slab</text>
   <text x="400" y="224" font-size="11" fill="#7d8590">T. Okafor</text>
   <rect x="468" y="212" width="72" height="18" rx="9" fill="#1f2a3b"/>
   <text x="504" y="225" font-size="10" fill="#58a6ff" text-anchor="middle">In Progress</text>
@@ -128,7 +128,7 @@
   <!-- AI suggestion tooltip -->
   <rect x="820" y="228" width="220" height="44" rx="6" fill="#1c2128" stroke="#fa6220" stroke-width="1"/>
   <text x="836" y="242" font-size="10" fill="#fa6220" font-weight="600">✦ AI Suggestion</text>
-  <text x="836" y="256" font-size="10" fill="#7d8590">Move to Mar 18 — steel delivery</text>
+  <text x="836" y="256" font-size="10" fill="#7d8590">Move to Mar 18 - steel delivery</text>
   <text x="836" y="268" font-size="10" fill="#7d8590">now confirmed for Mar 15</text>
   <line x1="900" y1="272" x2="900" y2="279" stroke="#fa6220" stroke-width="1"/>
   <polygon points="894,279 906,279 900,286" fill="#1c2128" stroke="#fa6220" stroke-width="1"/>
@@ -145,7 +145,7 @@
   <rect x="468" y="320" width="60" height="18" rx="9" fill="#1f3b1f"/>
   <text x="498" y="333" font-size="10" fill="#3fb950" text-anchor="middle">Done</text>
   <rect x="530" y="317" width="250" height="20" rx="4" fill="#3fb950" opacity="0.5"/>
-  <text x="534" y="331" font-size="10" fill="#fff" opacity="0.9">Steel fab — Jan 2 → Feb 20</text>
+  <text x="534" y="331" font-size="10" fill="#fff" opacity="0.9">Steel fab - Jan 2 → Feb 20</text>
 
   <!-- Row 5 -->
   <rect x="224" y="347" width="1056" height="40" fill="#161b22"/>
@@ -162,7 +162,7 @@
   <!-- Row 6 AI-predicted -->
   <rect x="224" y="387" width="1056" height="40" fill="#161b22"/>
   <rect x="224" y="427" width="1056" height="1" fill="#21262d"/>
-  <text x="252" y="412" font-size="12" fill="#e6edf3">Floors 1–5 erection</text>
+  <text x="252" y="412" font-size="12" fill="#e6edf3">Floors 1-5 erection</text>
   <text x="400" y="412" font-size="11" fill="#7d8590">Severfield</text>
   <rect x="468" y="400" width="80" height="18" rx="9" fill="#1f2535"/>
   <rect x="468" y="400" width="80" height="18" rx="9" fill="none" stroke="#fa6220" stroke-width="1" opacity="0.6"/>
@@ -208,7 +208,7 @@
   <rect x="224" y="620" width="1056" height="1" fill="#30363d"/>
   <rect x="244" y="636" width="560" height="68" rx="8" fill="#1c2128" stroke="#fa6220" stroke-width="1" opacity="0.8"/>
   <text x="264" y="656" font-size="12" font-weight="600" fill="#fa6220">✦  AI Schedule Analysis</text>
-  <text x="264" y="674" font-size="11" fill="#7d8590">Critical path delay detected — retaining wall pushback may impact steel erection by +9 days.</text>
+  <text x="264" y="674" font-size="11" fill="#7d8590">Critical path delay detected - retaining wall pushback may impact steel erection by +9 days.</text>
   <text x="264" y="690" font-size="11" fill="#7d8590">Recommended action: parallel pour schedule for B2 slab to recover 5 days. View revised plan →</text>
 
   <rect x="826" y="636" width="150" height="32" rx="6" fill="#fa6220"/>

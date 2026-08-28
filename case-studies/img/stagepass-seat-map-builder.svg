@@ -84,10 +84,10 @@
   <text x="62" y="540" font-size="9" fill="#444444" letter-spacing="2">ORCHESTRA</text>
   <line x1="62" y1="542" x2="62" y2="480" stroke="#333333" stroke-width="1"/>
 
-  <!-- Orchestra rows — drawn as individual seats -->
+  <!-- Orchestra rows - drawn as individual seats -->
   <!-- Seat: sold = fill="#1e1e1e" stroke="#2a2a2a"; available = fill="none" stroke="#3a3a3a"; VIP avail = fill="none" stroke="#4a4a4a"; selected (white) = fill="#ffffff"; selected (neon) = fill="#c8ff00" -->
 
-  <!-- Row A (16 seats, y=540, x start=417, spacing=17) — SOLD OUT (VIP) -->
+  <!-- Row A (16 seats, y=540, x start=417, spacing=17) - SOLD OUT (VIP) -->
   <circle cx="417" cy="540" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="434" cy="540" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="451" cy="540" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
@@ -106,7 +106,7 @@
   <circle cx="672" cy="540" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <text x="409" y="542" font-size="8" fill="#3a6a00" text-anchor="end">A</text>
 
-  <!-- Row B (18 seats, y=521) — SOLD OUT (VIP) -->
+  <!-- Row B (18 seats, y=521) - SOLD OUT (VIP) -->
   <circle cx="408" cy="521" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="425" cy="521" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="442" cy="521" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
@@ -127,7 +127,7 @@
   <circle cx="697" cy="521" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <text x="400" y="523" font-size="8" fill="#3a6a00" text-anchor="end">B</text>
 
-  <!-- Row C (20 seats, y=502) — 18 sold, 2 available (VIP, end of VIP zone) -->
+  <!-- Row C (20 seats, y=502) - 18 sold, 2 available (VIP, end of VIP zone) -->
   <circle cx="399" cy="502" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="416" cy="502" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
   <circle cx="433" cy="502" r="5" fill="#0d1a00" stroke="#2a4a00" stroke-width="1"/>
@@ -150,7 +150,7 @@
   <circle cx="722" cy="502" r="5" fill="none" stroke="#3a6a00" stroke-width="1"/>
   <text x="391" y="504" font-size="8" fill="#3a6a00" text-anchor="end">C</text>
 
-  <!-- Row D (20 seats, y=483) — 15 sold, 5 available (standard) -->
+  <!-- Row D (20 seats, y=483) - 15 sold, 5 available (standard) -->
   <circle cx="399" cy="483" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="416" cy="483" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="433" cy="483" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -173,7 +173,7 @@
   <circle cx="722" cy="483" r="5" fill="none" stroke="#404040" stroke-width="1"/>
   <text x="391" y="485" font-size="8" fill="#444444" text-anchor="end">D</text>
 
-  <!-- Row E (22 seats, y=464) — 14 sold, 8 available -->
+  <!-- Row E (22 seats, y=464) - 14 sold, 8 available -->
   <circle cx="390" cy="464" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="407" cy="464" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="424" cy="464" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -198,7 +198,7 @@
   <circle cx="747" cy="464" r="5" fill="none" stroke="#404040" stroke-width="1"/>
   <text x="382" y="466" font-size="8" fill="#444444" text-anchor="end">E</text>
 
-  <!-- Row F (22 seats, y=445) — 10 sold, 12 available — SELECTED seats in neon -->
+  <!-- Row F (22 seats, y=445) - 10 sold, 12 available - SELECTED seats in neon -->
   <circle cx="390" cy="445" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="407" cy="445" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="424" cy="445" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -217,7 +217,7 @@
   <circle cx="628" cy="445" r="6" fill="#c8ff00" stroke="#c8ff00" stroke-width="1"/>
   <!-- Selection tooltip -->
   <rect x="566" y="420" width="100" height="26" rx="4" fill="#111111" stroke="#c8ff00" stroke-width="1"/>
-  <text x="616" y="431" font-size="9" fill="#c8ff00" text-anchor="middle" font-weight="600">F7–F10 selected</text>
+  <text x="616" y="431" font-size="9" fill="#c8ff00" text-anchor="middle" font-weight="600">F7-F10 selected</text>
   <text x="616" y="442" font-size="8" fill="#888888" text-anchor="middle">$36 × 4 = $144</text>
   <polygon points="610,446 620,446 615,454" fill="#111111" stroke="#c8ff00" stroke-width="0.5"/>
 
@@ -230,7 +230,7 @@
   <circle cx="747" cy="445" r="5" fill="none" stroke="#404040" stroke-width="1"/>
   <text x="382" y="447" font-size="8" fill="#444444" text-anchor="end">F</text>
 
-  <!-- Row G (24 seats, y=426) — 8 sold, 16 available -->
+  <!-- Row G (24 seats, y=426) - 8 sold, 16 available -->
   <circle cx="381" cy="426" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="398" cy="426" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="415" cy="426" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -257,7 +257,7 @@
   <circle cx="772" cy="426" r="5" fill="none" stroke="#404040" stroke-width="1"/>
   <text x="373" y="428" font-size="8" fill="#444444" text-anchor="end">G</text>
 
-  <!-- Row H (24 seats, y=407) — 5 sold, 19 available -->
+  <!-- Row H (24 seats, y=407) - 5 sold, 19 available -->
   <circle cx="381" cy="407" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="398" cy="407" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="415" cy="407" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -284,7 +284,7 @@
   <circle cx="772" cy="407" r="5" fill="none" stroke="#3a3a3a" stroke-width="1"/>
   <text x="373" y="409" font-size="8" fill="#444444" text-anchor="end">H</text>
 
-  <!-- Row I (24 seats, y=388) — 3 sold -->
+  <!-- Row I (24 seats, y=388) - 3 sold -->
   <circle cx="381" cy="388" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="398" cy="388" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="415" cy="388" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
@@ -311,7 +311,7 @@
   <circle cx="772" cy="388" r="5" fill="none" stroke="#333333" stroke-width="1"/>
   <text x="373" y="390" font-size="8" fill="#444444" text-anchor="end">I</text>
 
-  <!-- Row J (24 seats, y=369) — 2 sold -->
+  <!-- Row J (24 seats, y=369) - 2 sold -->
   <circle cx="381" cy="369" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="398" cy="369" r="5" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
   <circle cx="415" cy="369" r="5" fill="none" stroke="#333333" stroke-width="1"/>

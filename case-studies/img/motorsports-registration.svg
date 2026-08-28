@@ -66,9 +66,9 @@
   <text x="76" y="86" font-size="11" fill="#444"> / </text>
   <text x="88" y="86" font-size="11" fill="#555">Time Trial</text>
   <text x="136" y="86" font-size="11" fill="#444"> / </text>
-  <text x="148" y="86" font-size="11" fill="#CF2027">Spring Time Trial — Road America</text>
+  <text x="148" y="86" font-size="11" fill="#CF2027">Spring Time Trial - Road America</text>
   <!-- Event title -->
-  <text x="40" y="124" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Spring Time Trial — Road America</text>
+  <text x="40" y="124" font-size="28" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Spring Time Trial - Road America</text>
   <!-- Meta -->
   <text x="40" y="152" font-size="12" fill="#888">📅  May 3, 2026</text>
   <text x="148" y="152" font-size="12" fill="#888">📍  Elkhart Lake, WI</text>
@@ -136,7 +136,7 @@
   <rect x="378" y="238" width="876" height="22" fill="#0d0d0d"/>
   <text x="400" y="244" font-size="12" font-weight="600" fill="#ffffff">Registration Form</text>
   <!-- Progress steps -->
-  <text x="850" y="244" font-size="10" fill="#CF2027" font-weight="600">Step 2 of 3 — Vehicle &amp; Class</text>
+  <text x="850" y="244" font-size="10" fill="#CF2027" font-weight="600">Step 2 of 3 - Vehicle &amp; Class</text>
   <!-- Progress bar -->
   <rect x="378" y="258" width="876" height="4" fill="#1a1a1a"/>
   <rect x="378" y="258" width="584" height="4" fill="url(#progressFill)"/>
@@ -153,8 +153,8 @@
 
   <!-- Driver info summary (completed step) -->
   <rect x="398" y="290" width="836" height="60" rx="6" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
-  <text x="418" y="312" font-size="10" fill="#555" letter-spacing="1">DRIVER — STEP 1 COMPLETE</text>
-  <text x="418" y="332" font-size="12" fill="#888">Michael R. Castellano  ·  SCCA# 287441  ·  License: Club Racing — Full  ·  Member since 2018</text>
+  <text x="418" y="312" font-size="10" fill="#555" letter-spacing="1">DRIVER - STEP 1 COMPLETE</text>
+  <text x="418" y="332" font-size="12" fill="#888">Michael R. Castellano  ·  SCCA# 287441  ·  License: Club Racing - Full  ·  Member since 2018</text>
   <text x="1210" y="322" font-size="11" fill="#CF2027" text-anchor="end">Edit ✎</text>
 
   <!-- Vehicle form section -->
@@ -181,7 +181,7 @@
   <!-- Row 2: Class / Run group -->
   <text x="398" y="472" font-size="11" fill="#888">Car Class</text>
   <rect x="398" y="478" width="320" height="36" rx="5" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
-  <text x="418" y="501" font-size="12" fill="#aaa">GT4 — Class 5 (Street Prepared)</text>
+  <text x="418" y="501" font-size="12" fill="#aaa">GT4 - Class 5 (Street Prepared)</text>
   <text x="704" y="501" font-size="11" fill="#333">▾</text>
 
   <text x="740" y="472" font-size="11" fill="#888">Run Group</text>
@@ -198,7 +198,7 @@
 
   <rect x="398" y="548" width="20" height="20" rx="4" fill="#CF2027"/>
   <text x="408" y="562" font-size="10" fill="#fff" text-anchor="middle">✓</text>
-  <text x="426" y="562" font-size="12" fill="#aaa">Helmet — Snell SA2020 certified</text>
+  <text x="426" y="562" font-size="12" fill="#aaa">Helmet - Snell SA2020 certified</text>
 
   <rect x="398" y="576" width="20" height="20" rx="4" fill="#CF2027"/>
   <text x="408" y="590" font-size="10" fill="#fff" text-anchor="middle">✓</text>
@@ -211,7 +211,7 @@
 
   <!-- Tech inspection note -->
   <rect x="398" y="632" width="836" height="32" rx="5" fill="#1a0a00" stroke="#CF2027" stroke-width="0.8" opacity="0.8"/>
-  <text x="418" y="652" font-size="11" fill="#CF2027">⚑  Tech inspection slot auto-booked: Sat 7:00–7:45 AM. Bring car and logbook.</text>
+  <text x="418" y="652" font-size="11" fill="#CF2027">⚑  Tech inspection slot auto-booked: Sat 7:00-7:45 AM. Bring car and logbook.</text>
 
   <!-- Bottom action bar -->
   <rect x="378" y="666" width="876" height="38" rx="8" fill="#0d0d0d"/>

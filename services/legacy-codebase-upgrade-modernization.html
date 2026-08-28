@@ -76,6 +76,38 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you rewrite the application from scratch or upgrade the existing code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We strongly advocate against 'big bang' rewrites from scratch. Instead, we reverse engineer your existing codebase, map critical structures, and incrementally refactor deprecated sections within an isolated staging environment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you ensure the legacy upgrade doesn't break our live application?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Risk mitigation is our top priority. All code is rewritten in a dedicated staging environment. Before deployment, our QA team runs thorough side-by-side testing, comparing the behavior of the upgraded staging environment directly to production to guarantee zero downtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which legacy languages and frameworks do you specialize in modernizing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our senior engineers specialize in modernizing outdated PHP (including PHP 3-5 to Laravel 12) and Ruby on Rails applications, migrating legacy scripts into modern, secure, and supported frameworks."
+            }
+          }
+        ]
+      }
+    </script>
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Legacy Codebase Modernization | PHP & Ruby Upgrades | Esseal" />
     <meta name="twitter:description" content="Secure, risk-free legacy system upgrades. We reverse engineer, refactor deprecated code, and run extensive parallel QA against production environments." />

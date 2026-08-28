@@ -182,7 +182,7 @@
     <text x="1020" y="510" font-size="10" fill="#804020" text-anchor="middle">Based on current speed &amp; distance</text>
 
     <rect x="918" y="530" width="204" height="36" rx="10" fill="#f5450a"/>
-    <text x="1020" y="552" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">I'm Ready — Open Up! ✓</text>
+    <text x="1020" y="552" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="600">I'm Ready - Open Up! ✓</text>
 
     <text x="1020" y="582" font-size="10" fill="#444444" text-anchor="middle">Dismiss</text>
 
@@ -195,7 +195,7 @@
 
   <!-- Center headline -->
   <text x="640" y="150" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">The mechanic that closed the round</text>
-  <text x="640" y="174" font-size="13" fill="#707070" text-anchor="middle">When a user navigates to a vendor and hits 100m — the vendor gets a real-time ping.</text>
+  <text x="640" y="174" font-size="13" fill="#707070" text-anchor="middle">When a user navigates to a vendor and hits 100m - the vendor gets a real-time ping.</text>
   <text x="640" y="192" font-size="13" fill="#707070" text-anchor="middle">The first proof of app-driven foot traffic for informal businesses.</text>
 
   </g>

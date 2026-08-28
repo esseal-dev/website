@@ -1,5 +1,5 @@
 /* ============================================================
-   LOCAL FONTS — Inter (self-hosted, no Google Fonts CDN)
+   LOCAL FONTS - Inter (self-hosted, no Google Fonts CDN)
    ============================================================ */
 @font-face {
   font-family: "Inter";
@@ -2445,7 +2445,7 @@ h4 {
    duplicated as an inline <style> block in each post; consolidated
    here so callout/FAQ changes apply to all posts at once.
 
-   Palette is navy + orange + greys only. No blue, no red — those
+   Palette is navy + orange + greys only. No blue, no red - those
    are not Esseal brand colours and must not reappear in callouts.
    No decorative emoji in blog chrome or headings.
    ============================================================ */
@@ -2603,7 +2603,7 @@ h4 {
   font-size: 1.5rem;
 }
 
-/* Case study / logic lesson — distinguished by an all-caps label,
+/* Case study / logic lesson - distinguished by an all-caps label,
    not by colour (previously a blue tint, off-brand). */
 .content-callout.info {
   background: var(--blog-panel);
@@ -2618,7 +2618,7 @@ h4 {
   font-size: 1.15rem;
 }
 
-/* Warning — distinguished by a heavier border, not by colour
+/* Warning - distinguished by a heavier border, not by colour
    (previously a coral-red tint, off-brand). */
 .content-callout.warning {
   background: var(--blog-panel);
@@ -2634,7 +2634,7 @@ h4 {
 /* --- FAQ accordion ---
    Markup: <section class="faq"> > <details class="faq-item">
            > <summary><h3>Q</h3></summary> + <p>A</p>
-   Native <details> — no JS. Content stays in the DOM when closed,
+   Native <details> - no JS. Content stays in the DOM when closed,
    so FAQPage JSON-LD and AI answer extraction still work.
 
    Every rule below is scoped under .faq on purpose: case-study, service
@@ -2693,7 +2693,7 @@ h4 {
 }
 
 /* Custom indicator: + when closed, - when open.
-   position/transform are reset explicitly — the older accordion block
+   position/transform are reset explicitly - the older accordion block
    above absolutely-positions its own ::after, and that declaration would
    otherwise still apply here, pulling the indicator out of the flex row
    so long questions could run underneath it. */
@@ -2737,7 +2737,7 @@ h4 {
   margin-top: 0;
 }
 
-/* Email fallback under the booking button — always secondary to it */
+/* Email fallback under the booking button - always secondary to it */
 .cta-bottom .cta-secondary {
   margin: 1.5rem 0 0;
   font-size: 0.95rem;

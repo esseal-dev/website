@@ -60,7 +60,7 @@
   <!-- Shipment found banner -->
   <rect x="100" y="252" width="1080" height="58" rx="12" fill="#eff6ff"/>
   <rect x="100" y="252" width="6" height="58" rx="3" fill="#1d4ed8"/>
-  <text x="124" y="276" font-size="13" font-weight="700" fill="#1d4ed8">Shipment Found — DNG-2025-8841</text>
+  <text x="124" y="276" font-size="13" font-weight="700" fill="#1d4ed8">Shipment Found - DNG-2025-8841</text>
   <text x="124" y="296" font-size="11" fill="#475569">Apex Manufacturing  ·  FTL  ·  Est. delivery: Mon 31 Mar 2026</text>
   <rect x="1030" y="264" width="136" height="26" rx="6" fill="#dbeafe"/>
   <text x="1098" y="281" font-size="11" fill="#1d4ed8" text-anchor="middle" font-weight="600">● In Transit</text>
@@ -89,7 +89,7 @@
   <circle cx="140" cy="558" r="16" fill="#1d4ed8" stroke="#93c5fd" stroke-width="3"/>
   <text x="140" y="563" font-size="11" fill="#ffffff" text-anchor="middle">●</text>
   <line x1="140" y1="574" x2="140" y2="612" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,3"/>
-  <text x="168" y="552" font-size="12" font-weight="700" fill="#1d4ed8">In Transit — Now</text>
+  <text x="168" y="552" font-size="12" font-weight="700" fill="#1d4ed8">In Transit - Now</text>
   <text x="168" y="568" font-size="11" fill="#64748b">Last ping: I-80 W near Gary, IN · 30 Mar 2026, 12:04 PM</text>
   <rect x="168" y="576" width="136" height="20" rx="6" fill="#dbeafe"/>
   <text x="236" y="590" font-size="10" fill="#1d4ed8" text-anchor="middle" font-weight="600">Approx. 94 miles remaining</text>
@@ -164,7 +164,7 @@
   <rect x="976" y="602" width="192" height="92" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
   <text x="996" y="624" font-size="10" fill="#94a3b8" letter-spacing="1">EST. DELIVERY</text>
   <text x="996" y="648" font-size="16" font-weight="700" fill="#1d4ed8">Mon 31 Mar</text>
-  <text x="996" y="666" font-size="10" fill="#64748b">Between 9:00 AM – 1:00 PM</text>
+  <text x="996" y="666" font-size="10" fill="#64748b">Between 9:00 AM - 1:00 PM</text>
   <text x="996" y="682" font-size="10" fill="#16a34a" font-weight="600">On schedule ✓</text>
 
   </g>

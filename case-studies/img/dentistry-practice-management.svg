@@ -114,7 +114,7 @@
   <!-- ── Revenue chart ── -->
   <rect x="253" y="184" width="580" height="280" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
   <text x="273" y="210" font-size="14" font-weight="700" fill="#0f172a">Monthly Revenue</text>
-  <text x="273" y="226" font-size="11" fill="#94a3b8">All practices combined  ·  Mar 2025 – Mar 2026</text>
+  <text x="273" y="226" font-size="11" fill="#94a3b8">All practices combined  ·  Mar 2025 - Mar 2026</text>
 
   <!-- Y-axis labels -->
   <text x="274" y="274" font-size="9" fill="#94a3b8">£25k</text>
@@ -169,7 +169,7 @@
   <rect x="767" y="288" width="28" height="160" rx="4" fill="url(#chartBar)" opacity="0.9"/>
   <text x="781" y="460" font-size="8" fill="#94a3b8" text-anchor="middle">Feb</text>
 
-  <!-- Mar26 current (partial) — highlight -->
+  <!-- Mar26 current (partial) - highlight -->
   <rect x="801" y="308" width="28" height="140" rx="4" fill="#7c3aed" opacity="0.25"/>
   <rect x="801" y="308" width="28" height="140" rx="4" fill="none" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
   <text x="815" y="460" font-size="8" fill="#7c3aed" text-anchor="middle" font-weight="600">Mar*</text>

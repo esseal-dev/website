@@ -58,7 +58,7 @@
   <!-- Week 4: from row start (x=749) to date 23 center (x=836) -->
   <rect x="749" y="315" width="87" height="34" fill="rgba(250,98,32,0.18)" />
 
-  <!-- Week 1: 1–7 (outside range, dim) -->
+  <!-- Week 1: 1-7 (outside range, dim) -->
   <text x="778" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">1</text>
   <text x="836" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">2</text>
   <text x="894" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">3</text>
@@ -67,19 +67,19 @@
   <text x="1068" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">6</text>
   <text x="1126" y="212" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">7</text>
 
-  <!-- Week 2: 8–14 (8–9 outside range, 10 = start, 11–14 in range) -->
+  <!-- Week 2: 8-14 (8-9 outside range, 10 = start, 11-14 in range) -->
   <text x="778" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">8</text>
   <text x="836" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">9</text>
   <!-- Start date: 10 -->
   <circle cx="894" cy="252" r="16" fill="#fa6220" />
   <text x="894" y="257" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
-  <!-- In-range dates 11–14 (brighter) -->
+  <!-- In-range dates 11-14 (brighter) -->
   <text x="952" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">11</text>
   <text x="1010" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">12</text>
   <text x="1068" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">13</text>
   <text x="1126" y="252" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">14</text>
 
-  <!-- Week 3: 15–21 (all in range, bright) -->
+  <!-- Week 3: 15-21 (all in range, bright) -->
   <text x="778" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">15</text>
   <text x="836" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">16</text>
   <text x="894" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">17</text>
@@ -88,19 +88,19 @@
   <text x="1068" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">20</text>
   <text x="1126" y="292" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">21</text>
 
-  <!-- Week 4: 22 in range, 23 = end, 24–28 outside range -->
+  <!-- Week 4: 22 in range, 23 = end, 24-28 outside range -->
   <text x="778" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.75)" text-anchor="middle">22</text>
   <!-- End date: 23 -->
   <circle cx="836" cy="332" r="16" fill="#fa6220" />
   <text x="836" y="337" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">23</text>
-  <!-- Outside range 24–28 (dim) -->
+  <!-- Outside range 24-28 (dim) -->
   <text x="894" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">24</text>
   <text x="952" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">25</text>
   <text x="1010" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">26</text>
   <text x="1068" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">27</text>
   <text x="1126" y="332" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">28</text>
 
-  <!-- Week 5: 29–31 (outside range, dim) -->
+  <!-- Week 5: 29-31 (outside range, dim) -->
   <text x="778" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">29</text>
   <text x="836" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">30</text>
   <text x="894" y="372" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.38)" text-anchor="middle">31</text>

@@ -190,7 +190,7 @@
   <line x1="230" y1="489" x2="990" y2="489" stroke="#f1f5f9" stroke-width="1"/>
   <text x="252" y="517" font-size="12" fill="#475569">DNG-2025-8828</text>
   <text x="372" y="517" font-size="12" fill="#1e293b">Irongate Steel</text>
-  <text x="502" y="517" font-size="12" fill="#94a3b8">— Unassigned</text>
+  <text x="502" y="517" font-size="12" fill="#94a3b8"> -  Unassigned</text>
   <text x="566" y="511" font-size="11" fill="#64748b">Rahway NJ</text>
   <text x="566" y="526" font-size="11" fill="#64748b">→ Philadelphia PA</text>
   <rect x="718" y="501" width="80" height="22" rx="6" fill="#fef3c7"/>
