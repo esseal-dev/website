@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <meta
+      name="description"
+      content="A technical deep-dive into legacy PHP modernization - how Esseal rescues critical apps using Docker, shared sessions, and incremental extraction."
+    />
+    <meta
+      name="keywords"
+      content="PHP Modernization, Laravel Migration, Legacy Code Rescue, Technical Debt, Software Engineering Strategy, Docker Containerization, Strangler Fig Pattern"
+    />
+    <meta name="author" content="Esseal" />
+    <meta name="robots" content="index, follow" />
+
+    <title>PHP 3 to Laravel 12: Anatomy of a Rescue Mission | Esseal</title>
+
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta
+      property="og:title"
+      content="From PHP 3 to Laravel 12: Anatomy of a Rescue Mission"
+    />
+    <meta
+      property="og:description"
+      content="The high-stakes world of legacy software rescue. How we modernize 20-year-old codebases safely."
+    />
+    <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="2026-02-10T09:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-02-10T09:00:00+00:00" />
+    <meta property="article:author" content="Basil Meer" />
+<meta
+      property="og:url"
+      content="https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization"
+    />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/social-card-legacy.webp"
+    />
+
+        <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+<link rel="icon" href="../favicon.webp" />
+<link rel="stylesheet" href="../styles.css?v=20260727" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization"
+            },
+            "headline": "PHP 3 to Laravel 12: Anatomy of a Rescue Mission",
+            "description": "A technical deep-dive into legacy PHP modernization. Learn how Esseal rescues mission-critical applications from technical debt using Docker, Shared Sessions, and Incremental Extraction.",
+            "image": "https://www.esseal.co.uk/social-card-legacy.webp",
+            "author": {
+              "@type": "Person",
+              "name": "Basil Meer",
+              "jobTitle": "Co-Founder & Head of Infrastructure",
+              "sameAs": "https://www.linkedin.com/in/basilmeer/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.esseal.co.uk/esseal-logo.webp"
+              }
+            },
+            "datePublished": "2026-02-10",
+            "dateModified": "2026-02-10"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do you modernize a legacy PHP 3 application without downtime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The rescue involves three key phases: Stabilization via Docker to ensure environment parity, creating a Bridge Layer for shared sessions between legacy PHP and Laravel 12, and Incremental Extraction of features using a Reverse Proxy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is the 'Big Bang' rewrite approach risky for legacy systems?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A 'Big Bang' rewrite introduces extreme operational risk. In legacy systems powering mission-critical infrastructure, even small logic mismatches can halt operations. Incremental modernization allows for continuous testing and deployment without service interruption."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="From PHP 3 to Laravel 12: Anatomy of a Rescue Mission" />
+    <meta name="twitter:description" content="The high-stakes world of legacy software rescue. How we modernize 20-year-old codebases safely." />
+    <meta name="twitter:image" content="https://www.esseal.co.uk/social-card-legacy.webp" />
+
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.esseal.co.uk/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://www.esseal.co.uk/blogs/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "PHP 3 to Laravel 12: Legacy Code Modernization",
+                        "item": "https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization"
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Header Section -->
+        <header class="article-header">
+          <span class="article-tag">Rescue Engineering</span>
+          <h1 class="article-title">
+            PHP 3 to Laravel 12: <br />
+            <span>Anatomy of a Rescue Mission</span>
+          </h1>
+          <div class="article-meta">
+            <span>By <strong>Basil Meer</strong></span>
+            <span>&bull;</span>
+            <span>Mar 5, 2024</span>
+            <span>&bull;</span>
+            <span>8 min read</span>
+          </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="article-container">
+          <div class="article-content">
+            <!-- EXECUTIVE SUMMARY (TLDR) -->
+            <div class="content-callout">
+              <h3>Executive Summary</h3>
+              <ul>
+                <li>
+                  <strong>The Challenge:</strong> Mission-critical legacy
+                  systems (PHP 3) are "museum pieces" that
+                  <a href="/blogs/hidden-risks-outdated-software-security-compliance">risk operational
+                  failure and total business disruption</a>.
+                </li>
+                <li>
+                  <strong>The Strategy:</strong> Avoid the "Big Bang" rewrite.
+                  Use "Rescue Engineering" protocols: Stabilization via Docker,
+                  Bridging via Shared Sessions, and Incremental Extraction.
+                </li>
+                <li>
+                  <strong>The Outcome:</strong> A seamless transition to Laravel
+                  12 <a href="/blogs/modernizing-monoliths-zero-downtime">without downtime</a>, resulting in a testable, scalable
+                  codebase that attracts top engineering talent.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Intro -->
+            <p class="intro">
+              The codebase was a museum of early 2000s web development. Raw SQL
+              queries in the view files, global variables everywhere, and a
+              server running a PHP version so old it belonged in a history book.
+            </p>
+            <p>
+              For this client, a major logistics provider, this system wasn't
+              just old; it was the backbone of their operations. A failure meant
+              trucks stopped moving. This wasn't just a rewrite; it was
+              <strong>Rescue Engineering.</strong>
+            </p>
+
+            <!-- The Rescue Protocol -->
+            <div class="content-callout alt">
+              <h3>The Rescue Protocol</h3>
+              <ul style="text-align: left; margin-bottom: 0">
+                <li>
+                  <strong>1. Stabilization:</strong> Moving the legacy code into
+                  a Docker container to ensure environment parity and eliminate
+                  "works on my machine" issues.
+                </li>
+                <li>
+                  <strong>2. The Bridge:</strong> Implementing a service layer
+                  that allows Laravel 12 and legacy PHP to share session data
+                  seamlessly.
+                </li>
+                <li>
+                  <strong>3. Incremental Extraction:</strong> Moving features
+                  one-by-one from the monolith to modern Laravel controllers
+                  while maintaining a single user interface.
+                </li>
+              </ul>
+            </div>
+
+            <h2>Stabilizing the "Patient"</h2>
+            <p>
+              Before we touch a single line of code, we stabilize the
+              environment. <a href="/services/legacy-codebase-upgrade-modernization">Legacy systems</a> often fail because they rely on
+              specific, outdated OS configurations that are impossible to
+              replicate on modern hardware. By "containerizing" the monolith
+              with Docker, we create a safe, reproducible environment that can
+              run alongside modern cloud infrastructure.
+            </p>
+
+            <!-- Hook Warning -->
+            <div class="content-callout alt warning">
+              <h3>Own a Legacy Disaster?</h3>
+              <p>
+                Is your core software reaching end-of-life? We specialize in
+                "impossible" rescues that other agencies won't touch.
+              </p>
+              <a
+                href="../contact"
+                style="
+                  font-weight: 600;
+                  font-size: 1.1rem;
+                  display: inline-block;
+                  margin-top: 1rem;
+                  color: var(--brand-orange);
+                "
+              >
+                Request a Rescue Audit &rarr;
+              </a>
+            </div>
+
+            <h2>Building the Laravel Bridge</h2>
+            <p>
+              The biggest hurdle in a long-term rescue is keeping the user
+              experience seamless. We implemented a "shared session"
+              architecture. When a user logged into the old PHP 3 system, the
+              modern Laravel 12 application knew exactly who they were via a
+              shared Redis session store.
+            </p>
+            <p>
+              This allowed us to rewrite the <em>Dashboard</em> in Laravel while
+              the <em>Reporting</em> engine was still running on the old code.
+              To the end-user, it looked like one unified, modernized system.
+            </p>
+
+            <h2>The "Big Bang" Myth</h2>
+            <p>
+              In rescue engineering, the "Big Bang" (switching off the old and
+              switching on the new) is almost always a mistake. It introduces
+              unacceptable risk. Instead, we used a
+              <strong>Reverse Proxy</strong> (Nginx) to route traffic. If a
+              feature had been modernized, Laravel handled it. If not, the
+              request was passed through to the legacy server silently.
+            </p>
+
+            <h2>The Result: Technical Freedom</h2>
+            <p>
+              After 12 months, the legacy server was finally decommissioned. The
+              logistics provider now has a codebase that is testable, scalable,
+              and; most importantly; secured a long-term, reliable partner to
+              ensure their operations run smoothly for the next decade.
+            </p>
+
+            <div class="content-callout">
+              <h3>Related Reading</h3>
+              <ul>
+                <li><a href="/blogs/modernizing-monoliths-zero-downtime">Modernizing Monoliths without Downtime</a></li>
+                <li><a href="/blogs/hidden-risks-outdated-software-security-compliance">Hidden Risks of Outdated Software</a></li>
+                <li><a href="/services/legacy-codebase-upgrade-modernization">Legacy Codebase Modernization</a></li>
+              </ul>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="cta-bottom">
+              <h3 style="margin-top: 0">
+                Stop firefighting. Start innovating.
+              </h3>
+              <p style="margin-bottom: 2rem">
+                Your legacy code doesn't have to be a liability. Let our senior
+                architects show you the path from "Rescue" to "Modernization."
+              </p>
+              <a
+                href="../contact"
+                class="btn-primary"
+                style="padding: 14px 32px; text-decoration: none"
+              >
+                Consult with Our Rescue Team
+              </a>
+            </div>
+          </div>
+
+          <!-- Back to Blog Link -->
+          <div
+            style="
+              margin-top: 4rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--border-color);
+              text-align: center;
+            "
+          >
+            <a
+              href="./index"
+              style="
+                color: var(--text-main);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              <span aria-hidden="true">&larr;</span> Back to All Articles
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

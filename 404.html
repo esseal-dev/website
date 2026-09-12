@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <title>404 - Page Not Found | Esseal</title>
+
+    <link rel="icon" href="favicon.webp" />
+<link rel="stylesheet" href="styles.css?v=20260727" />
+    <link rel="preload" href="/fonts/inter-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <style>
+      /* Specific styles for the 404 layout */
+      .error-wrapper {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: radial-gradient(
+          circle at center,
+          rgba(250, 98, 32, 0.05) 0%,
+          transparent 70%
+        );
+      }
+      .error-container {
+        max-width: 600px;
+        padding: 40px 20px;
+      }
+      .error-code {
+        font-size: clamp(6rem, 15vw, 10rem);
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          180deg,
+          var(--text-main) 0%,
+          var(--brand-orange) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.9;
+      }
+      .error-message {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+      }
+      .error-desc {
+        color: var(--text-muted);
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Visual decorative element */
+      .glitch-layer {
+        position: relative;
+        display: inline-block;
+      }
+      .glitch-layer::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 20%;
+        right: 20%;
+        height: 2px;
+        background: var(--brand-orange);
+        box-shadow: 0 0 15px var(--brand-orange);
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="error-wrapper">
+      <div class="error-container">
+        <div class="glitch-layer">
+          <h1 class="error-code">404</h1>
+        </div>
+        <p class="error-message">Looks like this path is under construction.</p>
+        <p class="error-desc">
+          The page you are looking for might have been moved, deleted, or
+          perhaps it never existed in this architecture. Let's get you back on
+          track.
+        </p>
+        <div class="cta-group">
+          <a href="/" class="btn-primary back-home">
+            &larr; Return to Safety
+          </a>
+          <a href="/contact" class="btn-secondary"> Report a Problem </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

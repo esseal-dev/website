@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EssealDataTable Playground</title>
+    <style>
+      /* ── Esseal dark palette: override --dg-* variables ────────────────── */
+      :root {
+        --dg-primary:        #fa6220;
+        --dg-primary-hover:  #e05417;
+        --dg-primary-light:  rgba(250, 98, 32, 0.12);
+        --dg-selection-bg:   rgba(250, 98, 32, 0.08);
+
+        --dg-surface:        #0a1130;
+        --dg-surface-alt:    #000621;
+        --dg-surface-hover:  #111b3a;
+
+        --dg-border:         #1a2347;
+        --dg-border-light:   #1a2347;
+
+        --dg-text-primary:   #f8fafc;
+        --dg-text-secondary: #94a3b8;
+        --dg-text-muted:     #64748b;
+
+        --dg-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+        --dg-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+      }
+
+      /* ── Override hardcoded 'white' values in library CSS ───────────────── */
+      .dg-toolbar-btn    { background: #0a1130; }
+      .dg-menu           { background: #0a1130; }
+      .dg-column-filter  { background: #000621; color: #f8fafc; }
+      .dg-page-btn       { background: #0a1130; color: #94a3b8; }
+      .dg-action-btn     { background: #0a1130; border-color: #1a2347; color: #94a3b8; }
+      .dg-action-dropdown { background: #0a1130; border-color: #1a2347; }
+      .dg-page-size-select { background: #0a1130; border-color: #1a2347; color: #f8fafc; }
+
+      /* Pinned column separators (hardcoded in library as #cbd5e1) */
+      .pinned-left  { border-right-color: #1a2347 !important; }
+      .pinned-right { border-left-color:  #1a2347 !important; }
+
+      /* Scrollbar */
+      .dg-viewport::-webkit-scrollbar-thumb       { background: #1a2347; }
+      .dg-viewport::-webkit-scrollbar-thumb:hover { background: #2a3460; }
+
+      /* Loading overlay */
+      .dg-overlay { background: rgba(0, 6, 33, 0.75); }
+
+      /* Row class overrides for dark theme */
+      .row-inactive .dg-cell { background: rgba(248, 113, 113, 0.07) !important; }
+      .cell-on-leave         { background: rgba(251, 191, 36, 0.07) !important;  }
+    </style>
+    <script type="module" crossorigin src="./assets/index-3OSbUKwf.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CntdWr5c.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,1349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- SEO & GEO Tags START -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+    <title>
+      EssealDatePicker | Enterprise-Grade Lightweight JS Date Picker
+    </title>
+    <meta
+      name="description"
+      content="Download EssealDatePicker: A zero-dependency, enterprise-grade JavaScript date picker. Under 5kb gzipped, framework-agnostic, and highly customizable."
+    />
+    <meta
+      name="keywords"
+      content="javascript date picker, js calendar library, lightweight datepicker, esseal date picker, react date picker, vanilla js datepicker, momentjs alternative datepicker, tailwind-free datepicker"
+    />
+    <meta name="author" content="Esseal" />
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/products/esseal-date-picker"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/products/esseal-date-picker"
+    />
+    <meta
+      property="og:title"
+      content="EssealDatePicker | Enterprise-Grade Vanilla JS Date Picker"
+    />
+    <meta
+      property="og:description"
+      content="The zero-dependency solution engineered for reliability. Built for complex enterprise dashboards and web applications."
+    />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/social-card-date-picker.webp"
+    />
+
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "EssealDatePicker",
+            "operatingSystem": "Web",
+            "applicationCategory": "DeveloperApplication",
+            "description": "A high-performance, zero-dependency JavaScript date picker library engineered for enterprise web applications.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "url": "https://www.esseal.co.uk",
+              "logo": "https://www.esseal.co.uk/esseal-logo.webp"
+            },
+            "featureList": [
+              "Zero external dependencies",
+              "~8KB minified (v1.1.0)",
+              "Single date and date range modes",
+              "Optional confirm/cancel action buttons (showActions)",
+              "Built-in locale detection via Intl API",
+              "ARIA accessibility support",
+              "minDate and maxDate constraints",
+              "Customisable primaryColor and textColor",
+              "Framework-agnostic (React, Vue, Angular, Vanilla JS)",
+              "Lifecycle methods: open(), close(), destroy()"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does EssealDatePicker require Moment.js or jQuery?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. EssealDatePicker is a strictly zero-dependency library. It does not require Moment.js, jQuery, or any other external date manipulation libraries, ensuring maximum performance and security."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is EssealDatePicker compatible with React and Vue?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. As a framework-agnostic vanilla JavaScript library, EssealDatePicker integrates seamlessly into React, Vue, Angular, and standard server-rendered HTML applications without conflicting with virtual DOMs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How large is the EssealDatePicker package?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "EssealDatePicker v1.1.0 weighs approximately 8KB minified. The additional size compared to v1.0 comes from the new ARIA accessibility layer, built-in locale detection via the Intl API, and the expanded configuration API - all shipped with zero external dependencies."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- SEO & GEO Tags END -->
+
+    <link rel="icon" href="/favicon.webp" sizes="192x192" />
+    <link rel="stylesheet" href="/styles.css?v=20260727" />
+    <style>
+      :root {
+        /* Updated Brand Palette */
+        --brand-dark: #000621; /* Deepest Navy (Background) */
+        --brand-surface: #0a1133; /* Slightly lighter for cards/surfaces */
+        --brand-primary: #fa6220; /* Vibrant Orange (Action/Brand) */
+        --brand-primary-hover: #e0551a;
+        --brand-accent: #ff8e5c; /* Lighter Orange for gradients */
+
+        --text-main: #ffffff;
+        --text-muted: #9ca3af;
+        --text-on-light: #000621;
+
+        --border-dark: #1f2947;
+        --border-light: #e5e7eb;
+
+        --light-bg: #f3f4f6;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--brand-dark);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* --- Animations --- */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 20px rgba(250, 98, 32, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(250, 98, 32, 0.4);
+        }
+        100% {
+          box-shadow: 0 0 20px rgba(250, 98, 32, 0.2);
+        }
+      }
+
+      /* --- Hero Section --- */
+      .hero {
+        padding: 180px 0 120px;
+        /* Gradient using the new dark blue and a hint of lighter blue/purple for depth */
+        background: radial-gradient(
+          circle at top right,
+          #111b47 0%,
+          #000621 50%
+        );
+        position: relative;
+        display: block;
+        height: auto;
+      }
+
+      /* Subtle grid background pattern */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        pointer-events: none;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 80px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-content {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(250, 98, 32, 0.1);
+        border: 1px solid rgba(250, 98, 32, 0.3);
+        color: var(--brand-primary);
+        padding: 6px 16px;
+        border-radius: 99px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 28px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 3.75rem;
+        line-height: 1.1;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      h1 span {
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary) 0%,
+          var(--brand-accent) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-text {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        margin-bottom: 40px;
+        max-width: 540px;
+        font-weight: 400;
+      }
+
+      .cta-group {
+        display: flex;
+        gap: 16px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background: var(--brand-primary);
+        color: white;
+        border: 1px solid var(--brand-primary);
+      }
+      .btn-primary:hover {
+        background: var(--brand-primary-hover);
+        box-shadow: 0 0 20px rgba(250, 98, 32, 0.4);
+        transform: translateY(-1px);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .btn-secondary:hover {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      /* --- Dark Glass Demo Card --- */
+      .demo-wrapper {
+        position: relative;
+        animation:
+          fadeIn 1s ease-out 0.2s backwards,
+          float 8s ease-in-out infinite;
+      }
+
+      /* Glow effect behind the card */
+      .demo-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        background: var(--brand-primary);
+        filter: blur(80px);
+        opacity: 0.15;
+        z-index: -1;
+      }
+
+      .demo-card {
+        background: rgba(
+          10,
+          17,
+          51,
+          0.7
+        ); /* Darker glass using brand surface */
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        max-width: 440px;
+        margin-left: auto;
+      }
+
+      .input-group {
+        margin-bottom: 24px;
+      }
+      .input-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #cbd5e1;
+        margin-bottom: 10px;
+      }
+
+      .custom-input {
+        width: 100%;
+        padding: 14px 16px;
+        padding-left: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.2s;
+        background: rgba(0, 6, 33, 0.6); /* Dark input bg */
+        color: white;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'%3F%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 16px center;
+        background-size: 20px;
+      }
+
+      .custom-input:focus {
+        border-color: var(--brand-primary);
+        box-shadow: 0 0 0 2px rgba(250, 98, 32, 0.25);
+        background: rgba(0, 6, 33, 0.8);
+      }
+
+      .demo-status {
+        margin-top: 32px;
+        padding: 16px;
+        background: rgba(250, 98, 32, 0.08);
+        border-left: 3px solid var(--brand-primary);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #cbd5e1;
+      }
+      .demo-status strong {
+        color: white;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      /* --- Features Grid (Light Section) --- */
+      .features-section {
+        padding: 120px 0;
+        background: white;
+        position: relative;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 70px;
+      }
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--text-on-light);
+        margin-bottom: 16px;
+        letter-spacing: -0.03em;
+      }
+      .section-header p {
+        color: var(--text-muted);
+        font-size: 1.15rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns on desktop */
+        gap: 24px; /* Reduced gap */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .feature-item {
+        padding: 30px; /* Reduced padding */
+        border-radius: 20px;
+        background: #fff;
+        border: 1px solid var(--border-light);
+        transition: all 0.3s ease;
+      }
+      .feature-item:hover {
+        border-color: var(--brand-primary);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+      }
+
+      .icon-box {
+        width: 56px;
+        height: 56px;
+        background: #fff0eb; /* Very light orange background */
+        color: var(--brand-primary);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      .icon-box svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .feature-item h3 {
+        font-size: 1.35rem;
+        margin-bottom: 12px;
+        color: var(--text-on-light);
+        font-weight: 700;
+      }
+      .feature-item p {
+        color: #64748b;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      /* --- FAQ Section --- */
+      .faq-section {
+        padding: 120px 0;
+        background: var(--brand-dark);
+        position: relative;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .faq-item {
+        background: var(--brand-surface);
+        border: 1px solid var(--border-dark);
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        padding: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        color: var(--text-main);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--brand-primary);
+        font-size: 1.5rem;
+      }
+
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+
+      .faq-content {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+      }
+
+      /* --- Code Section --- */
+      .code-section {
+        padding: 120px 0;
+        background: #02081d; /* Slightly darker than brand-dark for contrast */
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .code-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .code-window {
+        background: var(--brand-surface);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        font-family: "Fira Code", monospace;
+        font-size: 0.95rem;
+        border: 1px solid #1f2947;
+      }
+      .window-header {
+        background: #000418;
+        padding: 16px 20px;
+        display: flex;
+        gap: 8px;
+        border-bottom: 1px solid #1f2947;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      .red {
+        background: #ef4444;
+      }
+      .yellow {
+        background: #f59e0b;
+      }
+      .green {
+        background: #10b981;
+      }
+
+      .code-content {
+        padding: 32px;
+        color: #e2e8f0;
+        line-height: 1.7;
+        overflow-x: auto;
+      }
+      .k {
+        color: #c084fc;
+      } /* purple keyword */
+      .s {
+        color: #818cf8;
+      } /* lighter indigo for strings */
+      .f {
+        color: var(--brand-primary);
+      } /* orange function */
+      .c {
+        color: #64748b;
+      } /* gray comment */
+
+      /* --- Interactive Demo Controls --- */
+      .demo-controls {
+        margin: 18px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding-top: 16px;
+      }
+
+      .control-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .control-label {
+        font-size: 0.8rem;
+        color: #94a3b8;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+
+      .mode-buttons {
+        display: flex;
+        gap: 3px;
+        background: rgba(0, 6, 33, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        padding: 3px;
+      }
+
+      .mode-btn {
+        padding: 4px 14px;
+        border-radius: 4px;
+        border: none;
+        background: transparent;
+        color: #94a3b8;
+        font-size: 0.78rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .mode-btn.active {
+        background: var(--brand-primary);
+        color: white;
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 38px;
+        height: 21px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-track {
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 99px;
+        transition: background 0.2s;
+      }
+
+      .toggle-track::after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+        transition: transform 0.2s;
+      }
+
+      .toggle-switch input:checked + .toggle-track {
+        background: var(--brand-primary);
+      }
+
+      .toggle-switch input:checked + .toggle-track::after {
+        transform: translateX(17px);
+      }
+
+      .color-swatches {
+        display: flex;
+        gap: 7px;
+      }
+
+      .swatch {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 0;
+        outline: none;
+      }
+
+      .swatch.active {
+        border-color: white;
+        transform: scale(1.25);
+      }
+
+      .demo-divider {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        margin: 4px 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero {
+          padding: 140px 0 80px;
+        }
+        .hero-container,
+        .code-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        } /* Stack on mobile */
+        .hero h1 {
+          font-size: 2.75rem;
+        }
+        .hero-text {
+          margin: 0 auto 32px;
+        }
+        .cta-group {
+          justify-content: center;
+        }
+        .demo-card {
+          margin: 0 auto;
+          width: 100%;
+        }
+        .demo-wrapper {
+          animation: none;
+          margin-top: 40px;
+        }
+        .nav-links {
+          display: none;
+        } /* Simplified for mobile */
+      }
+    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="EssealDatePicker | Enterprise-Grade Vanilla JS Date Picker"
+    />
+    <meta
+      name="twitter:description"
+      content="The zero-dependency solution engineered for reliability. Built for complex enterprise dashboards and web applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.esseal.co.uk/social-card-date-picker.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.esseal.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.esseal.co.uk/products/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "EssealDatePicker",
+            "item": "https://www.esseal.co.uk/products/esseal-date-picker"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="badge">Production Ready v1.1.0</span>
+          <h1>
+            Scalable Date Picker for <br /><span
+              >Modern Javascript Applications</span
+            >
+          </h1>
+          <p class="hero-text">
+            The zero-dependency solution engineered for reliability. Built to
+            perform at scale for complex data dashboards and critical business
+            applications.
+          </p>
+          <div class="cta-group">
+            <a href="#usage" class="btn btn-primary">Start Integration</a>
+            <a
+              href="https://www.npmjs.com/package/esseal-date-picker"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                style="margin-right: 8px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"
+                />
+              </svg>
+              View on npm
+            </a>
+          </div>
+        </div>
+
+        <div class="demo-wrapper">
+          <div class="demo-card">
+            <h3 style="margin-bottom: 6px; font-weight: 700; color: white">
+              Interactive Playground
+            </h3>
+            <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 18px">Toggle options to explore the API</p>
+
+            <div class="input-group">
+              <label id="demo-input-label">Select date</label>
+              <input
+                type="text"
+                id="demo-input"
+                class="custom-input"
+                placeholder="Click to open picker..."
+                aria-label="Date picker demo"
+                readonly
+              />
+            </div>
+
+            <div class="demo-controls">
+              <div class="control-row">
+                <span class="control-label">MODE</span>
+                <div class="mode-buttons" role="group" aria-label="Picker mode">
+                  <button class="mode-btn active" data-mode="single">Single</button>
+                  <button class="mode-btn" data-mode="range">Range</button>
+                </div>
+              </div>
+              <hr class="demo-divider" />
+              <div class="control-row">
+                <span class="control-label">Confirm / Cancel buttons</span>
+                <label class="toggle-switch" aria-label="Toggle confirm buttons">
+                  <input type="checkbox" id="toggle-actions" />
+                  <span class="toggle-track"></span>
+                </label>
+              </div>
+              <div class="control-row">
+                <span class="control-label">Future dates only</span>
+                <label class="toggle-switch" aria-label="Toggle future dates only">
+                  <input type="checkbox" id="toggle-future" />
+                  <span class="toggle-track"></span>
+                </label>
+              </div>
+              <hr class="demo-divider" />
+              <div class="control-row">
+                <span class="control-label">ACCENT COLOR</span>
+                <div class="color-swatches" role="group" aria-label="Accent color">
+                  <button class="swatch active" data-color="#fa6220" style="background:#fa6220" aria-label="Orange"></button>
+                  <button class="swatch" data-color="#7c3aed" style="background:#7c3aed" aria-label="Purple"></button>
+                  <button class="swatch" data-color="#3b82f6" style="background:#3b82f6" aria-label="Blue"></button>
+                  <button class="swatch" data-color="#10b981" style="background:#10b981" aria-label="Green"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-status">
+              <strong>Output:</strong>
+              <span id="hero-log" style="font-family:'Fira Code',monospace;color:var(--brand-primary)">Awaiting interaction...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semantic Feature Descriptions for SEO/GEO -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Why Leading Teams Choose Esseal</h2>
+        <p>
+          Engineered for performance, maintainability, and senior-level
+          architectural standards.
+        </p>
+      </div>
+      <div class="grid-3">
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <h3>High Performance Architecture</h3>
+          <p>
+            EssealDatePicker guarantees zero bloat. Clocking in at ~8KB
+            minified, it ensures your enterprise dashboards load instantly
+            without layout shifts, jank, or main-thread blocking.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>Strictly Dependency Free</h3>
+          <p>
+            EssealDatePicker does not rely on Moment.js or jQuery. It is built
+            using pure vanilla JavaScript, allowing it to integrate seamlessly
+            and securely into any legacy or modern codebase.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+          </div>
+          <h3>Framework Agnostic Integration</h3>
+          <p>
+            Architected to respect the DOM. EssealDatePicker works flawlessly
+            alongside React, Vue, Angular, or standard server-rendered HTML
+            applications without virtual DOM conflicts.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Built-in Locale Detection</h3>
+          <p>
+            Automatically resolves the user's locale via the native Intl API. Date formatting adapts to regional conventions out of the box, with a <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">locale</code> option for explicit override.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <h3>Accessibility First (ARIA)</h3>
+          <p>
+            Full ARIA role and attribute support baked in from the ground up. Keyboard navigation, screen reader announcements, and focus management meet enterprise accessibility standards without any additional configuration.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+            </svg>
+          </div>
+          <h3>Full Configuration API</h3>
+          <p>
+            Single and range modes, optional confirm/cancel action buttons, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">minDate</code>/<code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">maxDate</code> constraints, custom <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">primaryColor</code>, and lifecycle methods <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">open()</code>, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">close()</code>, <code style="font-size:0.85em;background:rgba(0,0,0,0.08);padding:1px 5px;border-radius:3px">destroy()</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Declarative GEO FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header" style="margin-bottom: 40px">
+        <h2 style="color: white">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Does EssealDatePicker require Moment.js or jQuery?</summary>
+          <div class="faq-content">
+            <p>
+              No. EssealDatePicker is a strictly zero-dependency library. It
+              does not require Moment.js, jQuery, or any other external date
+              manipulation libraries, ensuring maximum performance and security
+              for your application.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is EssealDatePicker compatible with React and Vue?</summary>
+          <div class="faq-content">
+            <p>
+              Yes. As a framework-agnostic vanilla JavaScript library,
+              EssealDatePicker integrates seamlessly into React, Vue, Angular,
+              and standard server-rendered HTML applications without conflicting
+              with virtual DOMs.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How large is the EssealDatePicker package?</summary>
+          <div class="faq-content">
+            <p>
+              EssealDatePicker v1.1.0 weighs approximately 8KB minified. The
+              additional size compared to v1.0 comes from the new ARIA
+              accessibility layer, locale detection via the Intl API, and the
+              expanded configuration API - all zero external dependencies, all
+              shipped in a single file.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="usage" class="code-section">
+      <div class="code-container">
+        <div>
+          <h2
+            style="
+              font-size: 2.5rem;
+              margin-bottom: 20px;
+              color: white;
+              font-weight: 800;
+            "
+          >
+            Developer First API
+          </h2>
+          <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 30px">
+            Integration is trivial. Initialize on any input element with a clean
+            configuration object. Designed for readability and ease of
+            maintenance.
+          </p>
+          <div style="display: flex; gap: 15px; flex-wrap: wrap">
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                color: #cbd5e1;
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-family: monospace;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+            >
+              npm install esseal-date-picker
+            </div>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                color: #cbd5e1;
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-family: monospace;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+            >
+              yarn add esseal-date-picker
+            </div>
+            <div
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                color: #cbd5e1;
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-family: monospace;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                width: 110%;
+                font-size: 0.85rem;
+                word-break: break-all;
+              "
+            >
+              https://cdn.jsdelivr.net/npm/esseal-date-picker@1.1.0
+            </div>
+          </div>
+        </div>
+        <div class="code-window">
+          <div class="window-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <div class="code-content">
+            <div class="line">
+              <span class="k">import</span> EssealDatePicker
+              <span class="k">from</span>
+              <span class="s">'esseal-date-picker'</span>;
+            </div>
+            <br />
+            <div class="line">
+              <span class="c">// v1.1.0 - full configuration API</span>
+            </div>
+            <div class="line">
+              <span class="k">const</span> picker = <span class="k">new</span>
+              <span class="f">EssealDatePicker</span>(<span class="s">'#date-input'</span>, {
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;mode: <span class="s">'range'</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;showActions: <span class="k">true</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;locale: <span class="s">'en-GB'</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;primaryColor: <span class="s">'#FA6220'</span>,
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;minDate: <span class="k">new</span> <span class="f">Date</span>(),
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;onChange: (<span class="f">result</span>) => {
+            </div>
+            <div class="line">
+              &nbsp;&nbsp;&nbsp;&nbsp;console.<span class="f">log</span>(<span class="s">'Payload:'</span>, result);
+            </div>
+            <div class="line">&nbsp;&nbsp;}</div>
+            <div class="line">});</div>
+            <br />
+            <div class="line">
+              <span class="c">// Lifecycle methods</span>
+            </div>
+            <div class="line">picker.<span class="f">open</span>();&nbsp;&nbsp;<span class="c">// open programmatically</span></div>
+            <div class="line">picker.<span class="f">destroy</span>();&nbsp;<span class="c">// clean up</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+
+    <!-- DEMO INIT -->
+    <script type="module">
+      import EssealDatePicker from "https://cdn.jsdelivr.net/npm/esseal-date-picker@1.1.0";
+
+      const log = document.getElementById("hero-log");
+      const inputLabel = document.getElementById("demo-input-label");
+
+      let currentPicker = null;
+      const config = {
+        mode: "single",
+        primaryColor: "#fa6220",
+        showActions: false,
+        minDate: null,
+      };
+
+      function rebuildPicker() {
+        if (currentPicker) {
+          currentPicker.destroy();
+          currentPicker = null;
+        }
+        document.getElementById("demo-input").value = "";
+        log.innerHTML = "Awaiting interaction...";
+        log.style.color = config.primaryColor;
+
+        inputLabel.textContent =
+          config.mode === "range" ? "Select date range" : "Select date";
+
+        currentPicker = new EssealDatePicker("#demo-input", {
+          mode: config.mode,
+          primaryColor: config.primaryColor,
+          showActions: config.showActions,
+          minDate: config.minDate,
+          onChange: (result) => {
+            if (config.mode === "range") {
+              const start = result.start
+                ? result.start.toLocaleDateString()
+                : "...";
+              const end = result.end ? result.end.toLocaleDateString() : "...";
+              log.innerHTML = `${start} &rarr; ${end}`;
+            } else {
+              log.innerHTML = result.toLocaleDateString();
+            }
+            log.style.color = config.primaryColor;
+          },
+        });
+      }
+
+      // Mode toggle
+      document.querySelectorAll(".mode-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".mode-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          config.mode = btn.dataset.mode;
+          rebuildPicker();
+        });
+      });
+
+      // showActions toggle
+      document.getElementById("toggle-actions").addEventListener("change", (e) => {
+        config.showActions = e.target.checked;
+        rebuildPicker();
+      });
+
+      // Future dates only toggle
+      document.getElementById("toggle-future").addEventListener("change", (e) => {
+        config.minDate = e.target.checked ? new Date() : null;
+        rebuildPicker();
+      });
+
+      // Color swatches
+      document.querySelectorAll(".swatch").forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+          document
+            .querySelectorAll(".swatch")
+            .forEach((s) => s.classList.remove("active"));
+          swatch.classList.add("active");
+          config.primaryColor = swatch.dataset.color;
+          rebuildPicker();
+        });
+      });
+
+      rebuildPicker();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.region" content="GB-ENG" />
+    <meta name="geo.placename" content="London, England" />
+    <meta name="geo.position" content="51.5074;-0.1278" />
+    <meta name="ICBM" content="51.5074, -0.1278" />
+
+    <!-- SEO Meta Tags -->
+    <title>Esseal DataTable | High-Performance Virtualized React Grid</title>
+    <meta
+      name="description"
+      content="Download Esseal DataTable: A blazing fast, virtualized React data grid built with pure Vanilla CSS. Features column pinning, multi-level grouping, and zero Tailwind bloat."
+    />
+    <meta
+      name="keywords"
+      content="React data table, React grid, virtualized data grid, pure CSS React table, Esseal, React data grid, performance data table, tailwind-free React components, enterprise react grid"
+    />
+    <meta name="author" content="Esseal" />
+    <link rel="icon" href="/favicon.webp" sizes="192x192" />
+    <link
+      rel="canonical"
+      href="https://www.esseal.co.uk/products/esseal-data-table"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.esseal.co.uk/products/esseal-data-table"
+    />
+    <meta
+      property="og:title"
+      content="Esseal DataTable | The Ultimate Vanilla CSS React Grid"
+    />
+    <meta
+      property="og:description"
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise applications."
+    />
+    <meta
+      property="og:image"
+      content="https://www.esseal.co.uk/social-card-data-table.webp"
+    />
+
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- GEO & SEO Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Esseal DataTable",
+            "operatingSystem": "Web",
+            "applicationCategory": "DeveloperApplication",
+            "description": "A high-performance, virtualized data table for React applications. Built entirely with Vanilla CSS, featuring column pinning, row grouping, resizing, and state persistence.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "creator": {
+              "@type": "Organization",
+              "name": "Esseal",
+              "url": "https://www.esseal.co.uk",
+              "logo": "https://www.esseal.co.uk/esseal-logo.webp",
+              "sameAs": ["https://www.linkedin.com/company/esseal"]
+            },
+            "featureList": [
+              "Row expansion panels with custom React content",
+              "Server-side pagination and lazy group loading",
+              "DOM Virtualization for 100,000+ row datasets",
+              "Column Pinning (Left/Right) with runtime pin icon",
+              "Multi-level Row Grouping (client and server-side)",
+              "Pure Vanilla CSS architecture without Tailwind",
+              "Built-in state persistence including expanded rows",
+              "Full ARIA accessibility support",
+              "valueGetter for nested and computed fields",
+              "Custom cell rendering with renderCell"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does Esseal DataTable handle massive datasets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Esseal DataTable utilizes strict true DOM virtualization. Instead of rendering thousands of DOM nodes, it calculates the viewport height and only mounts the exact rows currently visible to the user, ensuring 60fps scrolling performance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Esseal DataTable require Tailwind CSS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Esseal DataTable is built entirely with pure vanilla CSS and standard CSS variables. It has zero utility framework dependencies, preventing CSS bloat and making it highly customizable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I save the user's grid state?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The grid automatically extracts and broadcasts its full state (filters, sorting, pins, expanded rows) via the onStateChange callback, allowing you to easily persist views to a database or local storage."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css?v=20260727" />
+    <style>
+      /* Pure Vanilla CSS - Zero Tailwind - Esseal Brand Colors */
+      :root {
+        --primary: #fa6220;
+        --primary-hover: #e05417; /* Slightly darker for hover states */
+        --bg-color: #000621;
+        --surface: #0a1130; /* Slightly elevated from bg for cards */
+        --surface-border: #1a2347;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --font-family: "Inter", system-ui, -apple-system, sans-serif;
+        --max-width: 1200px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 100px 0 80px;
+        text-align: center;
+        display: block;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        letter-spacing: -0.03em;
+        background: linear-gradient(to right, #fff, #cbd5e1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+
+      .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--text-main);
+        border: 1px solid var(--surface-border);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      .install-box {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-family: monospace;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .install-box button {
+        background: transparent;
+        border: 1px solid var(--surface-border);
+        color: var(--text-main);
+        padding: 4px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .install-box button:hover {
+        background: var(--surface-border);
+        color: var(--primary);
+      }
+
+      /* Features Grid */
+      .features {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 48px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        padding: 32px;
+        border-radius: 12px;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary);
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        color: var(--primary);
+      }
+
+      .card p {
+        color: var(--text-muted);
+      }
+
+      /* Code Highlight Section */
+      .code-section {
+        background: var(--surface);
+        border-top: 1px solid var(--surface-border);
+        border-bottom: 1px solid var(--surface-border);
+        padding: 80px 0;
+      }
+
+      .code-container {
+        background: var(--bg-color);
+        border-radius: 12px;
+        padding: 24px;
+        overflow-x: auto;
+        font-family: monospace;
+        color: #e2e8f0;
+        border: 1px solid var(--surface-border);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Demo Section Styles */
+      .demo-section {
+        padding: 80px 0;
+      }
+      .dg-container {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      .dg-toolbar {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--surface-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 6, 33, 0.5);
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .dg-toolbar-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+        color: var(--text-main);
+        background: var(--surface-border);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+      }
+      .dg-toolbar-btn:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dg-toolbar-btn.active {
+        background: rgba(250, 98, 32, 0.2);
+        color: var(--primary);
+        border-color: rgba(250, 98, 32, 0.5);
+      }
+
+      /* Menus & Dropdowns */
+      .dg-menu {
+        position: absolute;
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        border-radius: 6px;
+        z-index: 50;
+        min-width: 140px;
+        padding: 8px;
+        display: none;
+      }
+      .dg-menu.show {
+        display: block;
+      }
+      .dg-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 8px;
+        font-size: 13px;
+        color: var(--text-main);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .dg-menu-item:hover {
+        background: var(--surface-border);
+        color: var(--primary);
+      }
+
+      /* Viewport & Grid */
+      .dg-viewport {
+        overflow-y: auto;
+        overflow-x: auto;
+        height: 500px;
+        position: relative;
+      }
+      .dg-viewport::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .dg-viewport::-webkit-scrollbar-track {
+        background: var(--bg-color);
+      }
+      .dg-viewport::-webkit-scrollbar-thumb {
+        background: var(--surface-border);
+        border-radius: 4px;
+      }
+
+      .dg-header-row {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--surface-border);
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--text-muted);
+        width: fit-content;
+        min-width: 100%;
+      }
+      .dg-header-cell {
+        padding: 8px 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid var(--surface-border);
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.2s;
+        position: relative;
+      }
+      .dg-header-cell:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .dg-header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      .dg-column-filter {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-main);
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        outline: none;
+      }
+      .dg-column-filter:focus {
+        border-color: var(--primary);
+      }
+
+      .dg-row {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background 0.2s;
+        width: fit-content;
+        min-width: 100%;
+      }
+      .dg-row:hover {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .dg-row.selected {
+        background: rgba(250, 98, 32, 0.1);
+      }
+
+      .dg-group-row {
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+        background: rgba(250, 98, 32, 0.05);
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+        border-bottom: 1px solid var(--surface-border);
+        position: sticky;
+        left: 0;
+        cursor: pointer;
+        width: fit-content;
+        min-width: 100%;
+      }
+
+      .dg-cell {
+        padding: 12px 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+        flex-shrink: 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Pinning */
+      .pinned-left {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background: var(--surface);
+        border-right: 1px solid var(--surface-border);
+      }
+      .pinned-right {
+        position: sticky;
+        right: 0;
+        z-index: 2;
+        background: var(--surface);
+        border-left: 1px solid var(--surface-border);
+        justify-content: center;
+      }
+      .dg-header-cell.pinned-left,
+      .dg-header-cell.pinned-right {
+        background: var(--surface-border);
+        z-index: 12;
+      }
+      .dg-row:hover .pinned-left,
+      .dg-row:hover .pinned-right {
+        background: #0d1538;
+      }
+      .dg-row.selected .pinned-left,
+      .dg-row.selected .pinned-right {
+        background: #191629;
+      }
+
+      /* Badges & Actions */
+      .status-badge {
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .status-active {
+        background: rgba(16, 185, 129, 0.2);
+        color: #34d399;
+      }
+      .status-inactive {
+        background: rgba(239, 68, 68, 0.2);
+        color: #f87171;
+      }
+
+      .action-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+      .action-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text-main);
+      }
+
+      /* Dynamic Column Hiding */
+      .hide-col {
+        display: none !important;
+      }
+
+      /* Column Resizer */
+      .dg-resizer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        cursor: col-resize;
+        z-index: 10;
+      }
+      .dg-resizer:hover,
+      .dg-resizer:active {
+        background: var(--primary);
+      }
+
+      /* GEO Spec List */
+      .geo-specs {
+        padding: 80px 0;
+      }
+
+      .geo-specs ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .geo-specs li {
+        background: var(--surface);
+        padding: 16px 24px;
+        border-radius: 8px;
+        border: 1px solid var(--surface-border);
+        display: flex;
+        align-items: center;
+      }
+
+      .geo-specs li::before {
+        content: "✓";
+        color: var(--primary);
+        font-weight: bold;
+        margin-right: 12px;
+      }
+
+      /* FAQ Accordion */
+      .faq-section {
+        padding: 80px 0;
+        background: var(--bg-color);
+      }
+
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-item summary {
+        padding: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        color: var(--text-main);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary::after {
+        content: "+";
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--primary);
+        font-size: 1.5rem;
+      }
+
+      .faq-item[open] summary::after {
+        content: "−";
+      }
+
+      .faq-content {
+        padding: 0 1.5rem 1.5rem;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+      }
+
+      /* Documentation Section */
+      .docs-section {
+        padding: 80px 0;
+        border-top: 1px solid var(--surface-border);
+      }
+
+      .docs-section h3 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        margin-top: 48px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid var(--surface-border);
+        padding-bottom: 8px;
+      }
+
+      .docs-section p {
+        margin-bottom: 24px;
+        color: var(--text-muted);
+      }
+
+      .props-table-wrapper {
+        overflow-x: auto;
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+
+      .props-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      .props-table th,
+      .props-table td {
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--surface-border);
+      }
+
+      .props-table th {
+        background: rgba(250, 98, 32, 0.05); /* Very subtle tint of primary */
+        color: var(--text-main);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .props-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .props-table code {
+        background: var(--bg-color);
+        color: var(--primary);
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--surface-border);
+        font-family: monospace;
+        font-size: 0.9em;
+      }
+
+      /* On Leave status */
+      .status-on-leave {
+        background: rgba(251, 191, 36, 0.15);
+        color: #fbbf24;
+      }
+
+      /* Expand button */
+      .dg-expand-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dg-expand-btn:hover { color: var(--primary); }
+      .dg-expand-btn.expanded { color: var(--primary); }
+
+      /* Expanded panel */
+      .dg-expanded-panel {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 14px 16px 14px 56px;
+        background: rgba(250, 98, 32, 0.04);
+        border-bottom: 1px solid var(--surface-border);
+      }
+      .ep-avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(250, 98, 32, 0.12);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .ep-fields { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+      .ep-field { min-width: 80px; }
+      .ep-label {
+        font-size: 10px;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 2px;
+      }
+      .ep-value { font-size: 13px; color: var(--text-main); font-weight: 500; }
+
+      /* Performance bar */
+      .perf-bar-wrap { display: flex; align-items: center; gap: 6px; width: 100%; }
+      .perf-bar-track {
+        flex: 1;
+        background: rgba(255,255,255,0.08);
+        border-radius: 3px;
+        height: 5px;
+        overflow: hidden;
+      }
+      .perf-bar-fill { height: 100%; border-radius: 3px; }
+      .perf-bar-label { font-size: 11px; color: var(--text-muted); min-width: 28px; text-align: right; }
+
+      footer {
+        text-align: center;
+        padding: 40px 0;
+        color: var(--text-muted);
+        border-top: 1px solid var(--surface-border);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .cta-group {
+          flex-direction: column;
+        }
+        .geo-specs ul {
+          grid-template-columns: 1fr;
+        }
+        .props-table th,
+        .props-table td {
+          padding: 12px 16px;
+        }
+      }
+    </style>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Esseal DataTable | The Ultimate Vanilla CSS React Grid"
+    />
+    <meta
+      name="twitter:description"
+      content="A blazing fast, virtualized React data table built with pure Vanilla CSS. Massive performance for enterprise applications."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.esseal.co.uk/social-card-data-table.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.esseal.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.esseal.co.uk/products/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Esseal DataTable",
+            "item": "https://www.esseal.co.uk/products/esseal-data-table"
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <img
+            src="/esseal-logo.webp"
+            width="180"
+            height="48"
+            alt="Esseal Enterprise Software Development Logo"
+          />
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" class="btn-primary">Let's Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <h1>The High-Performance,<br />Vanilla CSS React Grid</h1>
+        <p>
+          A fully-featured React data grid for complex enterprise applications.
+          Row expansion panels, server-side pagination, true DOM virtualization,
+          zero Tailwind. <strong style="color:var(--text-main);">v2.5.2</strong> - zero runtime dependencies.
+        </p>
+
+        <div class="cta-group">
+          <a href="#docs" class="btn btn-primary">Read the Docs</a>
+          <a
+            href="https://github.com/esseal-dev/esseal-data-table-community"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="margin-bottom: -4px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <!-- <a href="https://www.npmjs.com/package/esseal-data-table" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View on npm</a> -->
+          <a
+            href="https://www.npmjs.com/package/esseal-data-table"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="margin-bottom: -4px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"
+              />
+            </svg>
+          </a>
+          <div class="install-box">
+            <code id="install-cmd">npm i esseal-data-table</code>
+            <button onclick="copyInstall()">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section for SEO/GEO -->
+      <section id="features" class="features container">
+        <h2 class="section-title">Core Architecture & Capabilities</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Row Expansion</h3>
+            <p>
+              Expand any row to reveal a custom full-width detail panel. Pass a
+              <code>render</code> function to the <code>expandable</code> prop and return any
+              React content - charts, forms, nested tables, anything. Expanded row IDs
+              are tracked in <code>TableState</code> and restored via <code>initialState</code>.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Server-Side Data</h3>
+            <p>
+              Switch to <code>paginationMode="server"</code> to delegate filtering, sorting,
+              and paging to your API. A single <code>onServerRequest</code> callback fires on
+              every state change with full context - including a <code>direction</code> field
+              for cursor-based backends.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Pure Vanilla CSS</h3>
+            <p>
+              Built entirely with pure vanilla CSS and standard CSS variables. Zero Tailwind,
+              zero CSS-in-JS runtimes. Fully themeable via the <code>.dg-</code> class prefix
+              and a clean set of CSS custom properties.
+            </p>
+          </article>
+          <article class="card">
+            <h3>DOM Virtualization</h3>
+            <p>
+              True DOM virtualization - only the rows visible in the viewport are mounted.
+              Handles 100,000+ rows without frame drops. Automatically disabled while any
+              row is expanded so expansion panels render at their natural height.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Advanced Column Control</h3>
+            <p>
+              Native sticky left/right column pinning, configurable at runtime via the pin
+              icon in each header. Drag-to-resize handles. Column visibility toggle via the
+              built-in Columns menu. Extra container space is distributed evenly across columns.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Multi-Level Grouping</h3>
+            <p>
+              Client-side grouping by any combination of fields with automatic title-case
+              normalisation of snake_case and kebab-case values. Server-side grouping via
+              <code>serverGroups</code> lazy-loads rows on expand with load-more pagination within each group.
+            </p>
+          </article>
+          <article class="card">
+            <h3>State Persistence</h3>
+            <p>
+              The full table state - sort, filters, page, pins, visibility, group expand,
+              and expanded rows - is broadcast via <code>onStateChange</code> as a plain JSON-safe
+              object. Seed it back via <code>initialState</code> to restore exactly where the user left off.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Smart Row Actions</h3>
+            <p>
+              Define inline action buttons per row with optional icons, tooltips, and a
+              <code>disabled</code> state based on row data. Overflow actions collapse into a
+              portal-positioned <code>⋮</code> menu that auto-positions above the trigger when
+              space is tight.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Code Example -->
+      <section class="code-section">
+        <div class="container">
+          <h2 class="section-title">Developer-First API</h2>
+          <div class="code-container">
+            <pre><code>import { EssealDataTable } from 'esseal-data-table';
+import 'esseal-data-table/style.css';
+
+const columns = [
+  { field: 'id',          headerName: 'ID',          width: 70,  pinned: 'left' },
+  { field: 'name',        headerName: 'Name',        width: 200, pinned: 'left' },
+  { field: 'department',  headerName: 'Department',  width: 150,
+    valueGetter: (row) =&gt; row.department.name },
+  { field: 'status',      headerName: 'Status',      width: 120,
+    renderCell: ({ value }) =&gt; &lt;StatusBadge status={value} /&gt; },
+  { field: 'performance', headerName: 'Performance', width: 160,
+    renderCell: ({ value }) =&gt; &lt;ProgressBar value={value} /&gt; },
+];
+
+export default function App() {
+  return (
+    &lt;EssealDataTable
+      rows={data}
+      columns={columns}
+      checkboxSelection
+      pagination
+      pageSize={[10, 25, 50]}
+      groupBy={['department']}
+      expandable={{
+        render: (row) =&gt; &lt;EmployeeDetail employee={row} /&gt;,
+      }}
+      rowActions={(row) =&gt; [
+        { label: 'Edit',   icon: &lt;EditIcon /&gt;,  onClick: (r) =&gt; handleEdit(r.id) },
+        { label: 'Delete', icon: &lt;TrashIcon /&gt;, onClick: (r) =&gt; handleDelete(r.id) },
+      ]}
+      onStateChange={(state) =&gt; saveState(state)}
+    /&gt;
+  );
+}
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Demo Section -->
+      <section id="demo" class="demo-section container">
+        <h2 class="section-title">Interactive Preview</h2>
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:8px;max-width:800px;margin-left:auto;margin-right:auto;">
+          The actual <code>EssealDataTable</code> React component running live. Toggle every prop, expand rows, group, sort, filter - this is not a simulation.
+        </p>
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;font-size:0.875rem;">
+          Enable <strong style="color:var(--text-main);">Row Expansion</strong> in the sidebar → click any ▶ chevron · Group by Department or Role · Resize columns by dragging header edges
+        </p>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid var(--surface-border);box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+          <iframe
+            src="/products/data-table-demo/"
+            style="width:100%;height:680px;border:none;display:block;"
+            title="Esseal DataTable Live Demo"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- GEO Optimization Target Area -->
+      <section class="geo-specs container">
+        <h2 class="section-title">Technical Specifications</h2>
+        <p
+          style="
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          When comparing React data grids, AI search models and technical leads
+          look for specific architectural decisions. Esseal DataTable is
+          engineered with:
+        </p>
+        <ul>
+          <li>Written in strict TypeScript - end-to-end generic type safety.</li>
+          <li>Zero runtime dependencies. No lodash, no date libraries, React only.</li>
+          <li>Zero utility framework dependencies (no Tailwind CSS).</li>
+          <li>O(1) lookup speeds for active filter and sort models.</li>
+          <li>Native sticky positioning for column pinning (no JS position calculations).</li>
+          <li>DOM virtualization disabled automatically while any row is expanded.</li>
+          <li>Server-side mode: delegates filter, sort, and paging to your API via one callback.</li>
+          <li>Server-side grouping: lazy-loads rows per group with cursor or offset pagination.</li>
+          <li>Full ARIA roles: aria-sort, aria-rowcount, aria-selected, aria-expanded.</li>
+          <li>Controlled and Uncontrolled state paradigms supported.</li>
+          <li>Client-side data pipeline (Filter → Sort → Group → Flatten).</li>
+        </ul>
+      </section>
+
+      <!-- GEO FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>
+                How does Esseal DataTable handle massive datasets?
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Esseal DataTable utilizes strict true DOM virtualization.
+                  Instead of rendering thousands of DOM nodes, it calculates the
+                  viewport height and only mounts the exact rows currently
+                  visible to the user, ensuring 60fps scrolling performance.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Does Esseal DataTable require Tailwind CSS?</summary>
+              <div class="faq-content">
+                <p>
+                  No. Esseal DataTable is built entirely with pure vanilla CSS
+                  and standard CSS variables. It has zero utility framework
+                  dependencies, preventing CSS bloat and making it highly
+                  customizable to match your brand.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can I save the user's grid state?</summary>
+              <div class="faq-content">
+                <p>
+                  Yes. The grid broadcasts its full state - sort, filters, pagination, column
+                  pins, column visibility, expanded groups, and expanded rows - via the
+                  <code>onStateChange</code> callback as a plain JSON-serialisable object.
+                  Pass it back via <code>initialState</code> on the next mount to restore
+                  exactly where the user left off.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How does row expansion work?</summary>
+              <div class="faq-content">
+                <p>
+                  Pass an <code>expandable</code> prop with a <code>render</code> function:
+                  <code>expandable={{ render: (row) => &lt;YourComponent row={row} /&gt; }}</code>.
+                  A chevron column is automatically injected on the left. Clicking it expands
+                  a full-width panel below the row that renders whatever your function returns  - 
+                  detail cards, charts, nested tables, forms, anything. Virtualization is
+                  automatically disabled while any row is expanded so the panel can take its
+                  natural height.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Does it support server-side pagination and filtering?</summary>
+              <div class="faq-content">
+                <p>
+                  Yes. Set <code>paginationMode="server"</code> and provide <code>rowCount</code>
+                  and an <code>onServerRequest</code> callback. The callback fires on mount and on
+                  every page, sort, filter, or page-size change with the full current state  - 
+                  including a <code>direction</code> field (<code>'first' | 'next' | 'prev'</code>)
+                  that lets cursor-based APIs know which cursor to use. Filter changes are
+                  debounced (default 300 ms) so you don't fire a request on every keystroke.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Documentation Section -->
+      <section id="docs" class="docs-section container">
+        <h2 class="section-title">Documentation</h2>
+
+        <h3>Installation</h3>
+        <p>
+          Install the package via npm or yarn. Ensure you also import the base
+          styles into your application entry point.
+        </p>
+        <div class="code-container" style="margin-bottom: 40px">
+          <pre><code>npm i esseal-data-table
+
+// In your app entry point:
+import 'esseal-data-table/style.css';</code></pre>
+        </div>
+
+        <h3>Component Props</h3>
+        <p>Props are grouped by feature area. TypeScript enforces discriminated unions - invalid combinations (e.g. both <code>groupBy</code> and <code>serverGroups</code>) are caught at compile time.</p>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Core</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>rows</code></td><td><code>T[]</code></td><td>Required</td><td>Array of row data objects.</td></tr>
+              <tr><td><code>columns</code></td><td><code>GridColDef&lt;T&gt;[]</code></td><td>Required</td><td>Column definitions.</td></tr>
+              <tr><td><code>getRowId</code></td><td><code>(row: T) =&gt; string | number</code></td><td> - </td><td>Derives a unique ID from each row. Required when <code>T</code> does not have an <code>id</code> field.</td></tr>
+              <tr><td><code>height</code></td><td><code>number | string</code></td><td><code>'100%'</code></td><td>Table height. Accepts a pixel number or any CSS string (<code>'50vh'</code>, <code>'calc(100% - 64px)'</code>).</td></tr>
+              <tr><td><code>rowHeight</code></td><td><code>number</code></td><td><code>40</code></td><td>Row height in pixels. Must be accurate for virtualization to work correctly.</td></tr>
+              <tr><td><code>loading</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Renders a full-table loading overlay.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination - Client (default)</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>pagination</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Enables built-in page navigation controls in the footer.</td></tr>
+              <tr><td><code>pageSize</code></td><td><code>number | number[]</code></td><td><code>10</code></td><td>Rows per page. Pass an array (e.g. <code>[10, 25, 50]</code>) to show a page-size selector in the footer.</td></tr>
+              <tr><td><code>paginationMode</code></td><td><code>'client'</code></td><td><code>'client'</code></td><td>Explicitly sets client mode. Omitting this prop is equivalent.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Pagination - Server</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>paginationMode</code></td><td><code>'server'</code></td><td> - </td><td>Delegates filtering, sorting, and paging to your API.</td></tr>
+              <tr><td><code>rowCount</code></td><td><code>number</code></td><td> - </td><td>Total dataset size - drives footer display and page count.</td></tr>
+              <tr><td><code>onServerRequest</code></td><td><code>(params: ServerRequestParams) =&gt; void</code></td><td> - </td><td>Fires on mount and on every page, sort, filter, or page-size change.</td></tr>
+              <tr><td><code>filterDebounceMs</code></td><td><code>number</code></td><td><code>300</code></td><td>Milliseconds to debounce filter input changes before calling <code>onServerRequest</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Grouping</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>groupBy</code></td><td><code>(keyof T)[]</code></td><td><code>[]</code></td><td>Client-side grouping. Multiple fields create nested groups in array order.</td></tr>
+              <tr><td><code>serverGroups</code></td><td><code>ServerGroupDef&lt;T&gt;[]</code></td><td> - </td><td>Server-side grouping. Mutually exclusive with <code>groupBy</code>. Provides field, group values, and server-computed counts.</td></tr>
+              <tr><td><code>onLoadGroupData</code></td><td><code>(params) =&gt; Promise&lt;LoadGroupDataResult&lt;T&gt;&gt;</code></td><td> - </td><td>Required with <code>serverGroups</code>. Called when a group is expanded or "Load more" is clicked.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Selection</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>checkboxSelection</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Adds a checkbox column for multi-row selection with select-all.</td></tr>
+              <tr><td><code>onSelectionChange</code></td><td><code>(ids: (string | number)[]) =&gt; void</code></td><td> - </td><td>Fires whenever the set of selected row IDs changes. Receives the full current selection. Persists across page changes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Row Expansion</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>expandable</code></td><td><code>ExpandableConfig&lt;T&gt;</code></td><td> - </td><td>Enables row expansion. A chevron column is injected on the left. Clicking it reveals a full-width panel below the row. Pass <code>{ render: (row) =&gt; ReactNode }</code>. Virtualization is disabled while any row is expanded.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Row Actions</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>rowActions</code></td><td><code>(row: T) =&gt; GridAction&lt;T&gt;[]</code></td><td> - </td><td>Returns the action list for a given row. Called per visible row on every render.</td></tr>
+              <tr><td><code>maxVisibleActions</code></td><td><code>number</code></td><td><code>1</code></td><td>Inline action buttons shown before collapsing the rest into an overflow <code>⋮</code> menu.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">Toolbar &amp; Styling</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>toolbar</code></td><td><code>ReactNode</code></td><td> - </td><td>Custom content rendered in the toolbar, to the right of the built-in Columns button.</td></tr>
+              <tr><td><code>disableColumnMenu</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Hides the built-in Columns visibility button.</td></tr>
+              <tr><td><code>getRowClassName</code></td><td><code>(row: T) =&gt; string</code></td><td> - </td><td>Returns a CSS class applied to the row's container <code>div</code>.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-weight:600;color:var(--text-main);margin-bottom:8px;">State Persistence</p>
+        <div class="props-table-wrapper">
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>initialState</code></td><td><code>Partial&lt;TableState&gt;</code></td><td> - </td><td>Seeds internal state on first render. Fields omitted use their defaults. Has no effect after mount.</td></tr>
+              <tr><td><code>onStateChange</code></td><td><code>(state: TableState) =&gt; void</code></td><td> - </td><td>Called after every state change. Not called on the initial render. Wrap in <code>useCallback</code> to keep the reference stable.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Column Definition (GridColDef)</h3>
+        <p>
+          Customize individual columns by passing an array of these
+          configuration objects to the <code>columns</code> prop.
+        </p>
+        <div class="code-container">
+          <pre><code>interface GridColDef&lt;T = any&gt; {
+  field: keyof T | string;           // Key in your data object
+  headerName: string;                // Display name in the column header
+  width: number;                     // Initial width in pixels (min 50px on drag)
+  pinned?: 'left' | 'right' | false; // Stick column to the side of the viewport
+  hide?: boolean;                    // Initially hide the column
+  sortable?: boolean;                // Enable/disable sorting (default: true)
+  filterable?: boolean;              // Enable/disable text filtering (default: true)
+  valueGetter?: (row: T) =&gt; string | number; // Extract from nested/computed fields
+  renderCell?: (params: GridRenderCellParams&lt;T&gt;) =&gt; ReactNode; // Custom cell render
+  cellClassName?: (row: T) =&gt; string; // CSS class applied per cell based on row data
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img
+              src="/esseal-logo.webp"
+              width="180"
+              height="48"
+              alt="Esseal Enterprise Software Development"
+            />
+          </a>
+          <p>
+            Senior-Led Software Solutions That Drive Corporate Growth. On time,
+            on budget, always.
+          </p>
+          <p class="company-registration">
+            Registered in England &amp; Wales No. 17026190
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="/blogs/">Blogs</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Most Requested Services</h4>
+          <ul>
+            <li>
+              <a href="/services/internal-tools-dashboards"
+                >Tools &amp; Dashboards</a
+              >
+            </li>
+            <li>
+              <a href="/services/fullstack-development"
+                >Full Stack Development</a
+              >
+            </li>
+            <li>
+              <a href="/services/mvp-development">Strategic MVP Development</a>
+            </li>
+            <li>
+              <a href="/services/legacy-codebase-upgrade-modernization"
+                >Legacy Codebase Modernization</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; 2026 Esseal. All rights reserved. | Global Operations: London,
+          UK &amp; Lahore, PK
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function copyInstall() {
+        const text = document.getElementById("install-cmd").innerText;
+        /* Using older execCommand fallback since navigator.clipboard might fail in some specific cross-origin iframe contexts, though modern browsers prefer clipboard API. */
+        try {
+          navigator.clipboard.writeText(text).then(updateBtn);
+        } catch (err) {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+          updateBtn();
+        }
+
+        function updateBtn() {
+          const btn = document.querySelector(".install-box button");
+          btn.innerText = "Copied!";
+          setTimeout(() => {
+            btn.innerText = "Copy";
+          }, 2000);
+        }
+      }
+
+    </script>
+  </body>
+</html>
