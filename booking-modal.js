@@ -1,20 +1,6 @@
 (function () {
   "use strict";
 
-  /* ── SLACK ── */
-  var SLACK_WEBHOOK = "https://hooks.slack.com/services/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";
-
-  function postToSlack(blocks) {
-    return fetch(SLACK_WEBHOOK, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: "payload=" + encodeURIComponent(JSON.stringify({ blocks: blocks })),
-    }).catch(function () {});
-  }
-
-  window.postToSlack = postToSlack;
-
   var SLOTS = (function () {
     var s = [];
     for (var h = 0; h < 24; h++) {
@@ -35,34 +21,32 @@
   var MONTHS_SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   var viewYear, viewMonth, selectedDate, selectedSlot;
+  var isInlineMode = false;
 
   /* ── TIMEZONE ── */
   var userTZ = (function () {
     try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) { return "UTC"; }
   })();
 
-  /* ── MODAL HTML ── */
-  function injectModal() {
-    if (document.getElementById("booking-modal")) return;
+  function escapeHtml(str) {
+    var d = document.createElement("div");
+    d.textContent = str;
+    return d.innerHTML;
+  }
 
-    var el = document.createElement("div");
-    el.id = "booking-modal";
-    el.className = "booking-overlay";
-    el.setAttribute("role", "dialog");
-    el.setAttribute("aria-modal", "true");
-    el.setAttribute("aria-labelledby", "booking-title");
-    el.innerHTML = [
-      '<div class="booking-modal" id="booking-modal-inner">',
-        '<button class="booking-close" id="booking-close-btn" aria-label="Close">&times;</button>',
+  function getWidgetMarkup(isModal) {
+    return [
+      '<div class="booking-modal' + (isModal ? '' : ' booking-modal--inline') + '" id="booking-modal-inner">',
+        (isModal ? '<button class="booking-close" id="booking-close-btn" aria-label="Close">&times;</button>' : ''),
         '<div class="booking-layout">',
 
           '<div class="booking-cal-col">',
             '<h2 id="booking-title">Schedule a Call</h2>',
             '<p class="booking-subtitle" id="booking-subtitle">30 min &middot; ' + userTZ + '</p>',
             '<div class="booking-cal-nav">',
-              '<button class="cal-nav-btn" id="cal-prev" aria-label="Previous month">&#8249;</button>',
+              '<button class="cal-nav-btn" id="cal-prev" aria-label="Previous month" type="button">&#8249;</button>',
               '<span class="cal-month-label" id="cal-month-label"></span>',
-              '<button class="cal-nav-btn" id="cal-next" aria-label="Next month">&#8250;</button>',
+              '<button class="cal-nav-btn" id="cal-next" aria-label="Next month" type="button">&#8250;</button>',
             '</div>',
             '<div class="cal-weekdays">',
               DAYS_SHORT.map(function(d){ return '<span>'+d+'</span>'; }).join(''),
@@ -86,145 +70,214 @@
 
         '<div class="booking-footer">',
           '<div class="booking-email-group">',
-            '<label for="booking-email">Your Email <span aria-hidden="true">*</span></label>',
+            '<label for="booking-email">Work Email <span aria-hidden="true">*</span></label>',
             '<input type="email" id="booking-email" name="email" autocomplete="email" placeholder="you@company.com" />',
             '<span class="booking-email-error" id="booking-email-error" aria-live="polite"></span>',
           '</div>',
-          '<button class="btn-primary btn-confirm" id="btn-confirm" disabled>Confirm Booking</button>',
+          '<button class="btn-primary btn-confirm" id="btn-confirm" type="button" disabled>Confirm Booking</button>',
         '</div>',
 
       '</div>',
     ].join("");
+  }
 
-    document.body.appendChild(el);
+  function bindEvents(isModal) {
+    if (isModal) {
+      var closeBtn = document.getElementById("booking-close-btn");
+      if (closeBtn) closeBtn.addEventListener("click", close);
+      var overlay = document.getElementById("booking-modal");
+      if (overlay) {
+        overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && overlay && overlay.classList.contains("is-open")) close();
+      });
+    }
 
-    /* close events */
-    document.getElementById("booking-close-btn").addEventListener("click", close);
-
-    document.getElementById("slots-back-btn").addEventListener("click", function () {
-      selectedDate = null;
-      selectedSlot = null;
-      document.getElementById("booking-modal-inner").classList.remove("date-selected");
-      renderCalendar();
-      renderSlots();
-    });
-
-    document.getElementById("booking-email").addEventListener("input", function () {
-      this.classList.remove("is-invalid");
-      document.getElementById("booking-email-error").textContent = "";
-    });
-    el.addEventListener("click", function (e) { if (e.target === el) close(); });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && el.classList.contains("is-open")) close();
-    });
-
-    /* month navigation */
-    document.getElementById("cal-prev").addEventListener("click", function () {
-      var now = new Date();
-      if (viewYear > now.getFullYear() || viewMonth > now.getMonth()) {
-        viewMonth--;
-        if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+    var backBtn = document.getElementById("slots-back-btn");
+    if (backBtn) {
+      backBtn.addEventListener("click", function () {
+        selectedDate = null;
+        selectedSlot = null;
+        var inner = document.getElementById("booking-modal-inner");
+        if (inner) inner.classList.remove("date-selected");
         renderCalendar();
-      }
-    });
-    document.getElementById("cal-next").addEventListener("click", function () {
-      var now  = new Date();
-      var maxM = now.getMonth() + 2;
-      var maxY = now.getFullYear() + Math.floor(maxM / 12);
-      maxM = maxM % 12;
-      if (viewYear < maxY || (viewYear === maxY && viewMonth < maxM)) {
-        viewMonth++;
-        if (viewMonth > 11) { viewMonth = 0; viewYear++; }
-        renderCalendar();
-      }
-    });
+        renderSlots();
+      });
+    }
 
-    /* confirm */
-    document.getElementById("btn-confirm").addEventListener("click", function () {
-      if (!selectedDate || !selectedSlot) return;
+    var emailInput = document.getElementById("booking-email");
+    if (emailInput) {
+      emailInput.addEventListener("input", function () {
+        this.classList.remove("is-invalid");
+        var err = document.getElementById("booking-email-error");
+        if (err) err.textContent = "";
+      });
+    }
 
-      var emailInput = document.getElementById("booking-email");
-      var emailError = document.getElementById("booking-email-error");
-      var email = emailInput.value.trim();
-      var validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    var prevBtn = document.getElementById("cal-prev");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        var now = new Date();
+        if (viewYear > now.getFullYear() || viewMonth > now.getMonth()) {
+          viewMonth--;
+          if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+          renderCalendar();
+        }
+      });
+    }
 
-      if (!email || !validEmail) {
-        emailInput.classList.add("is-invalid");
-        emailError.textContent = email ? "Please enter a valid email address." : "Email is required.";
-        emailInput.focus();
-        return;
-      }
-      emailInput.classList.remove("is-invalid");
-      emailError.textContent = "";
+    var nextBtn = document.getElementById("cal-next");
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        var now  = new Date();
+        var maxM = now.getMonth() + 2;
+        var maxY = now.getFullYear() + Math.floor(maxM / 12);
+        maxM = maxM % 12;
+        if (viewYear < maxY || (viewYear === maxY && viewMonth < maxM)) {
+          viewMonth++;
+          if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+          renderCalendar();
+        }
+      });
+    }
 
-      var match = selectedSlot.match(/^(\d+):(\d+)\s*(AM|PM)$/i);
-      var h = parseInt(match[1], 10);
-      var ampm = match[3].toUpperCase();
-      if (ampm === "PM" && h !== 12) h += 12;
-      if (ampm === "AM" && h === 12) h = 0;
+    var confirmBtn = document.getElementById("btn-confirm");
+    if (confirmBtn) {
+      confirmBtn.addEventListener("click", function () {
+        if (!selectedDate || !selectedSlot) return;
 
-      var localDate = new Date(
-        selectedDate.getFullYear(),
-        selectedDate.getMonth(),
-        selectedDate.getDate(),
-        h, 0, 0, 0
-      );
+        var emailInput = document.getElementById("booking-email");
+        var emailError = document.getElementById("booking-email-error");
+        var email = emailInput.value.trim();
+        var validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
 
-      var confirmBtn = document.getElementById("btn-confirm");
-      confirmBtn.textContent = "Sending…";
-      confirmBtn.disabled = true;
+        if (!email || !validEmail) {
+          emailInput.classList.add("is-invalid");
+          emailError.textContent = email ? "Please enter a valid email address." : "Work email is required.";
+          emailInput.focus();
+          return;
+        }
+        emailInput.classList.remove("is-invalid");
+        emailError.textContent = "";
 
-      var endDate = new Date(localDate.getTime() + 30 * 60 * 1000);
-      var clientTimeString = localDate.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " at " + selectedSlot + " (" + userTZ + ")";
+        var match = selectedSlot.match(/^(\d+):(\d+)\s*(AM|PM)$/i);
+        var h = parseInt(match[1], 10);
+        var ampm = match[3].toUpperCase();
+        if (ampm === "PM" && h !== 12) h += 12;
+        if (ampm === "AM" && h === 12) h = 0;
 
-      fetch("/send-booking.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email,
-          clientTime: clientTimeString,
-          timezone: userTZ,
-          startTimeIso: localDate.toISOString(),
-          endTimeIso: endDate.toISOString(),
-          sourceUrl: window.location.href,
-        }),
-      })
-        .then(function (res) { return res.json(); })
-        .then(function (data) {
-          if (data && data.status === "success") {
-            confirmBtn.textContent = "Booked!";
-            setTimeout(function () { close(); }, 1200);
-          } else {
-            alert((data && data.message) || "Failed to process booking request.");
+        var localDate = new Date(
+          selectedDate.getFullYear(),
+          selectedDate.getMonth(),
+          selectedDate.getDate(),
+          h, 0, 0, 0
+        );
+
+        confirmBtn.textContent = "Sending…";
+        confirmBtn.disabled = true;
+
+        var endDate = new Date(localDate.getTime() + 30 * 60 * 1000);
+        var clientTimeString = localDate.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " at " + selectedSlot + " (" + userTZ + ")";
+
+        fetch("/send-booking.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: email,
+            clientTime: clientTimeString,
+            timezone: userTZ,
+            startTimeIso: localDate.toISOString(),
+            endTimeIso: endDate.toISOString(),
+            sourceUrl: window.location.href,
+          }),
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data && data.status === "success") {
+              confirmBtn.textContent = "Booked!";
+              if (isInlineMode) {
+                var inner = document.getElementById("booking-modal-inner");
+                if (inner) {
+                  inner.innerHTML = [
+                    '<div class="booking-success-message">',
+                      '<div class="booking-success-icon">',
+                        '<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fa6220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
+                      '</div>',
+                      '<h3>Consultation Booked</h3>',
+                      '<p>We have reserved your 30-minute session and emailed a calendar invitation (.ics) to <strong>' + escapeHtml(email) + '</strong>.</p>',
+                      '<div class="booking-success-time">' + escapeHtml(clientTimeString) + '</div>',
+                      '<p class="booking-success-note">You will speak directly with senior engineering leadership. If you need to reschedule or share project context beforehand, simply reply to the calendar email.</p>',
+                    '</div>'
+                  ].join("");
+                }
+              } else {
+                setTimeout(function () { close(); }, 1200);
+              }
+            } else {
+              alert((data && data.message) || "Failed to process booking request.");
+              confirmBtn.textContent = "Confirm Booking";
+              confirmBtn.disabled = false;
+            }
+          })
+          .catch(function () {
+            alert("Network error. Please check your connection and try again.");
             confirmBtn.textContent = "Confirm Booking";
             confirmBtn.disabled = false;
-          }
-        })
-        .catch(function () {
-          alert("Network error. Please check your connection and try again.");
-          confirmBtn.textContent = "Confirm Booking";
-          confirmBtn.disabled = false;
-        });
+          });
+      });
+    }
+  }
 
-    });
+  /* ── INLINE INJECTION ── */
+  function injectInline(container) {
+    isInlineMode = true;
+    container.innerHTML = getWidgetMarkup(false);
+    var now = new Date();
+    viewYear  = now.getFullYear();
+    viewMonth = now.getMonth();
+    selectedDate = null;
+    selectedSlot = null;
+    bindEvents(false);
+    renderCalendar();
+    renderSlots();
+  }
+
+  /* ── MODAL INJECTION ── */
+  function injectModal() {
+    if (document.getElementById("booking-modal")) return;
+
+    var el = document.createElement("div");
+    el.id = "booking-modal";
+    el.className = "booking-overlay";
+    el.setAttribute("role", "dialog");
+    el.setAttribute("aria-modal", "true");
+    el.setAttribute("aria-labelledby", "booking-title");
+    el.innerHTML = getWidgetMarkup(true);
+
+    document.body.appendChild(el);
+    bindEvents(true);
   }
 
   /* ── CALENDAR RENDER ── */
   function renderCalendar() {
-    document.getElementById("cal-month-label").textContent = MONTHS[viewMonth] + " " + viewYear;
+    var monthLabel = document.getElementById("cal-month-label");
+    if (!monthLabel) return;
+    monthLabel.textContent = MONTHS[viewMonth] + " " + viewYear;
 
     var now   = new Date();
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-    /* disable prev when already at current month */
     var prevBtn = document.getElementById("cal-prev");
-    var atMin   = viewYear === now.getFullYear() && viewMonth === now.getMonth();
-    prevBtn.disabled = atMin;
+    if (prevBtn) {
+      var atMin = viewYear === now.getFullYear() && viewMonth === now.getMonth();
+      prevBtn.disabled = atMin;
+    }
 
     var container = document.getElementById("cal-days");
+    if (!container) return;
     container.innerHTML = "";
 
-    /* offset: Monday = 0 */
     var firstDow = new Date(viewYear, viewMonth, 1).getDay();
     firstDow = (firstDow + 6) % 7;
 
@@ -261,7 +314,8 @@
           btn.addEventListener("click", function () {
             selectedDate = capturedDate;
             selectedSlot = null;
-            document.getElementById("booking-modal-inner").classList.add("date-selected");
+            var inner = document.getElementById("booking-modal-inner");
+            if (inner) inner.classList.add("date-selected");
             renderCalendar();
             renderSlots();
           });
@@ -279,9 +333,12 @@
     var gridEl    = document.getElementById("slots-grid");
     var confirmEl = document.getElementById("btn-confirm");
 
+    if (!emptyEl || !listEl || !gridEl) return;
+
     if (!selectedDate) {
       emptyEl.style.display = "";
       listEl.style.display  = "none";
+      if (confirmEl) confirmEl.disabled = true;
       return;
     }
 
@@ -291,8 +348,9 @@
     var dateStr = DAYS_FULL[selectedDate.getDay()] + ", " +
       MONTHS_SHORT[selectedDate.getMonth()] + " " +
       selectedDate.getDate();
-    labelEl.textContent = dateStr;
-    document.getElementById("slots-back-label").textContent = dateStr;
+    if (labelEl) labelEl.textContent = dateStr;
+    var backLabel = document.getElementById("slots-back-label");
+    if (backLabel) backLabel.textContent = dateStr;
 
     var now     = new Date();
     var isToday = selectedDate.toDateString() === now.toDateString();
@@ -330,25 +388,36 @@
       gridEl.appendChild(btn);
     });
 
-    confirmEl.disabled = !selectedSlot;
+    if (confirmEl) confirmEl.disabled = !selectedSlot;
   }
 
   /* ── OPEN / CLOSE ── */
   function open() {
+    var inlineContainer = document.getElementById("inline-booking-widget");
+    if (inlineContainer) {
+      inlineContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
     injectModal();
     var now = new Date();
     viewYear  = now.getFullYear();
     viewMonth = now.getMonth();
     selectedDate = null;
     selectedSlot = null;
-    document.getElementById("booking-modal-inner").classList.remove("date-selected");
+    var inner = document.getElementById("booking-modal-inner");
+    if (inner) inner.classList.remove("date-selected");
     var emailInput = document.getElementById("booking-email");
-    emailInput.value = "";
-    emailInput.classList.remove("is-invalid");
-    document.getElementById("booking-email-error").textContent = "";
+    if (emailInput) {
+      emailInput.value = "";
+      emailInput.classList.remove("is-invalid");
+    }
+    var err = document.getElementById("booking-email-error");
+    if (err) err.textContent = "";
     renderCalendar();
     renderSlots();
-    document.getElementById("booking-modal").classList.add("is-open");
+    var modal = document.getElementById("booking-modal");
+    if (modal) modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
 
@@ -364,6 +433,11 @@
   window.openBookingModal = open;
 
   document.addEventListener("DOMContentLoaded", function () {
+    var inlineContainer = document.getElementById("inline-booking-widget");
+    if (inlineContainer) {
+      injectInline(inlineContainer);
+    }
+
     document.querySelectorAll("[data-open-booking]").forEach(function (el) {
       el.addEventListener("click", function (e) {
         e.preventDefault();

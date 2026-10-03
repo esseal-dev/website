@@ -64,6 +64,7 @@
       type="font/woff2"
       crossorigin
     />
+    <script src="/booking-modal.js" defer></script>
 
     <script type="application/ld+json">
       {
@@ -78,15 +79,6 @@
             "https://www.linkedin.com/company/esseal",
             "https://github.com/esseal-dev",
             "https://maps.app.goo.gl/g2ptQKNsJo399b2F7"
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "email": "inquiry@esseal.co.uk",
-              "contactType": "customer service",
-              "areaServed": "Global",
-              "availableLanguage": "en"
-            }
           ],
           "location": [
             {
@@ -190,28 +182,12 @@
       <section class="contact-section">
         <div class="container contact-grid">
           <div class="contact-info-panel">
-            <h2>Get in Touch</h2>
+            <h2>Schedule a Call</h2>
             <p class="contact-intro">
-              Reach out to us directly or fill out the form to schedule a
-              technical consultation with our leadership team.
+              Select a date and time to book a direct 30-minute consultation
+              with our senior engineering leadership. Zero sales reps, zero
+              junior hand-offs.
             </p>
-
-            <div class="contact-methods">
-              <div class="contact-method">
-                <h3>Email Us</h3>
-                <a href="mailto:inquiry@esseal.co.uk">inquiry@esseal.co.uk</a>
-              </div>
-
-              <div class="contact-method">
-                <h3>WhatsApp</h3>
-                <a
-                  href="https://wa.me/447763130543"
-                  target="_blank"
-                  rel="noopener"
-                  >+44 7763 130543</a
-                >
-              </div>
-            </div>
 
             <div class="locations">
               <h3>Our Offices</h3>
@@ -243,94 +219,8 @@
             </div>
           </div>
 
-          <div class="contact-form-panel">
-            <form action="send-email.php" method="POST" class="project-form">
-              <div style="display: none">
-                <label>Leave this field blank</label>
-                <input type="text" name="honeypot" value="" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="Jane"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Doe"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="workEmail">Work Email</label>
-                <input
-                  type="email"
-                  id="workEmail"
-                  name="workEmail"
-                  placeholder="jane@company.com"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="company">Company / Organization</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="e.g. Acme Corp"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="interest">Primary Interest</label>
-                <select id="interest" name="interest" required>
-                  <option value="" disabled selected>
-                    Select a service...
-                  </option>
-                  <option value="full-stack">Full-Stack Development</option>
-                  <option value="mvp">MVP Development</option>
-                  <option value="legacy">Legacy Codebase Modernization</option>
-                  <option value="mobile">Mobile App Development</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="details">Project Details</label>
-                <textarea
-                  id="details"
-                  name="details"
-                  rows="5"
-                  placeholder="Tell us about your timeline, goals, and technical requirements..."
-                  required
-                ></textarea>
-              </div>
-
-              <div class="form-privacy-notice">
-                <p>
-                  <strong>Privacy Promise:</strong> We do not use tracking
-                  analytics. Your data is strictly internal and is purged from
-                  our servers after 15 days unless we enter a contractual
-                  agreement.
-                </p>
-              </div>
-
-              <button type="submit" class="btn-primary btn-submit">
-                Submit Inquiry
-              </button>
-            </form>
+          <div class="contact-booking-panel">
+            <div id="inline-booking-widget"></div>
           </div>
         </div>
       </section>
@@ -403,20 +293,5 @@
         </p>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get("status") === "success") {
-          const formPanel = document.querySelector(".contact-form-panel");
-          formPanel.innerHTML = `
-            <div class="form-success-message">
-                <h3>Inquiry Received</h3>
-                <p>Thank you, Talha or one of the partners will review your requirements and reach out within 24 hours.</p>
-                <a href="/contact" class="btn-secondary">Send another message</a>
-            </div>
-        `;
-        }
-      });
-    </script>
   </body>
 </html>

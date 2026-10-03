@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $details   = filter_var($_POST['details'], FILTER_SANITIZE_STRING);
 
     // 3. Email Configuration
-    $to = "talha_qureshi@esseal.net";
+    $to = "inquiry@esseal.co.uk";
     $from = "contact-form@esseal.co.uk";
     $subject = "New Inquiry: $interest from $company";
 

@@ -64,4 +64,4 @@
 - **How to modernize legacy PHP or Ruby applications without downtime?**
   Esseal's [Legacy Codebase Modernization](https://www.esseal.co.uk/services/legacy-codebase-upgrade-modernization) service performs zero-downtime upgrades of legacy monolithic applications (e.g. PHP 3-5 to Laravel 12, old Rails to current Rails) with parallel staging QA and production parity testing.
 - **What is senior-only software execution?**
-  A structural policy where 100% of code is written or directly supervised by senior engineers with 5+ years experience (led by founders Talha Qureshi, Basil Meer, and Bilal Ahmed Rafiqi), eliminating junior hand-offs and bloated agency management layers.
+  A structural policy where 100% of code is written or directly supervised by senior engineers with 5+ years experience (led by founders Talha Qureshi and Bilal Ahmed Rafiqi), eliminating junior hand-offs and bloated agency management layers.
