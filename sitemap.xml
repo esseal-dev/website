@@ -162,7 +162,7 @@
   <!-- Blog -->
   <url>
     <loc>https://www.esseal.co.uk/blogs/</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,6 +207,12 @@
     <lastmod>2026-01-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.esseal.co.uk/blogs/mvp-architecture-first</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.esseal.co.uk/blogs/php-3-to-laravel-12-legacy-code-modernization</loc>

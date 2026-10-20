@@ -52,6 +52,7 @@
 - [Buying vs Building Software: SaaS Failure](https://www.esseal.co.uk/blogs/buying-vs-building-software-saas-failure): When off-the-shelf SaaS fails and bespoke development becomes the better investment.
 - [Junior-Handoff Bait & Switch](https://www.esseal.co.uk/blogs/junior-handoff-bait-and-switch): Calling out the agency practice of pitching senior talent and handing off execution to junior engineers.
 - [Vibe-Coded Codebase Audit](https://www.esseal.co.uk/blogs/vibe-coded-codebase-audit): A complete guide to auditing AI-generated and Cursor/v0 prototypes for production readiness.
+- [The "Throwaway MVP" Is a Lie Agencies Sell You](https://www.esseal.co.uk/blogs/mvp-architecture-first): Why building throwaway prototypes is a commercial agency trap, and the four expensive-to-reverse architectural decisions founders must get right on Day 1.
 - [Hidden Risks: Outdated Software Security & Compliance](https://www.esseal.co.uk/blogs/hidden-risks-outdated-software-security-compliance): The security and compliance exposure created by running legacy software versions.
 
 ## Key Intent Queries & Answers
